@@ -1,0 +1,64 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Corporation//Outlook for Mac MIMEDIR//EN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:Canberra, Melbourne, Sydney
+X-ENTOURAGE-CFTIMEZONE:Australia/Canberra
+X-ENTOURAGE-TZID:51
+BEGIN:STANDARD
+RRULE:FREQ=YEARLY;INTERVAL=1;BYSECOND=0;BYMINUTE=0;BYHOUR=3;BYDAY=1SU;BYMO
+ NTH=4
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+DTSTART:20080406T030000
+END:STANDARD
+BEGIN:DAYLIGHT
+RRULE:FREQ=YEARLY;INTERVAL=1;BYSECOND=0;BYMINUTE=0;BYHOUR=2;BYDAY=1SU;BYMO
+ NTH=10
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+DTSTART:20081005T020000
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:040000008200E00074C5B7101A82E00800000000CA6E084CC41ED60100000000000000
+ 0010000000B619FAD1E2A6C14AB299504490420822
+X-ENTOURAGE_UUID:6214B759-42BC-482B-8104-552DED344EB1
+X-MICROSOFT-EXCHANGE-ID:AAMkADUyNzE2MmM2LTAyN2UtNGI1Yi04ZmVhLTU0YjI4YmVjNm
+ FkMwBGAAAAAAD7VT0BE_xIQ67AU_7i8HF0BwBgSF0mdtDaR6dZil2MenXGAAAAByDwAADNbdA2
+ Ty27QYBF753sYdI3AAFvbj4DAAA=
+X-MICROSOFT-EXCHANGE-CHANGEKEY:zW3QNk8tu0GARe+d7GHSNwABbuBjXw==
+DTSTAMP:20200430T075512Z
+DTSTART;TZID="Canberra, Melbourne, Sydney":20200506T100000
+DTEND;TZID="Canberra, Melbourne, Sydney":20200506T110000
+LAST-MODIFIED:20200430T075512Z
+SUMMARY:[OWARS] Katja Hanewald (UNSW\, Sydney)
+DESCRIPTION:Speaker: Katja Hanewald (UNSW) on "Long-term care insurance
+  financing using home equity release: Evidence from an experimental
+  study."\n\n\n\nAbstract: We explore new mechanisms to fund long-term
+  care using housing wealth. We conduct and analyze an online experimental
+  survey fielded to a representative sample of 1\,200 Chinese homeowners
+  aged 45-64 to assess the potential demand for new financial products
+  that allow individuals to access their housing wealth to buy long-term
+  care insurance. We find that the stated demand for long-term care
+  insurance increases when individuals can use housing wealth in addition
+  to savings to purchase long-term care insurance. Individuals prefer to
+  access housing wealth through a reverse mortgage loan rather than home
+  reversion (a partial sale of housing wealth). Our results inform current
+  policy reforms in China which aim at developing the private market for
+  health and long-term care insurance products.\n\n\n
+ORGANIZER:MAILTO:munir.hiabu@sydney.edu.au
+SEQUENCE:0
+X-MICROSOFT-CDO-BUSYSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-CDO-INSTTYPE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT00H15M00S
+END:VALARM
+END:VEVENT
+END:VCALENDAR

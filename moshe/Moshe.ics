@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Speaker: Moshe Milevsky (York University) on "Is Covid-19 a parallel shift of the term structure of mortality? Implications for annuity pricing."\n\nAbstract: This presentation – which admittedly is rather speculative – examines the financial implications of a sudden shock to mortality on the pricing of pension & life annuities. Now\, a textbook approach would suggest that holding interest rates constant\, an increase in mortality reduces the discounted value of longevity-contingent claims. Stated simply\, life insurance gets expensive and annuities become cheaper. However\, if the shock to mortality actually weeds-out the frail and merely advances imminent deaths\, then survivors will find that (counter-intuitively) annuities are suddenly dearer. Add plummeting interest rates and depressed equity markets to the mix and soon-to-be retirees might be facing an exceedingly higher "cost of retirement" post 2020. Technically speaking these matters tie into so-called compensation laws and the convergence of the term structure of (stochastic) mortality at very advanced ages. These matters also relate to the distinction between chronological age versus biological age and the relevant clock for measuring any shocks to mortality. In sum\, this (conjectural) presentation speculates on how to “think” about covid-19 from the perspective of retirement income planning. One thing is for certain\, the first-order independence between shocks to mortality (i.e. the insurance measure) and the economy (i.e. the financial measure) can no longer be assumed\, even for textbook actuarial models.\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20200520T120000Z
+DTEND:20200520T130000Z
+LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
+SUMMARY;LANGUAGE=en-us:[OWARS] Moshe Milevsky (York University, Toronto)
+END:VEVENT
+END:VCALENDAR

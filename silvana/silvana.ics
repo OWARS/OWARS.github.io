@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Speakers: Silvana Pesenti (University of Toronto\, Canada)\n\nTitle: Reverse Sensitivity Analysis for Risk Modelling\n\nAbstract: \nWe consider the problem where a modeller conducts sensitivity analysis of a model consisting of random input factors\, a corresponding random output of interest\, and a baseline probability measure. The modeller seeks to understand how the model (the distribution of the input factors as well as the output) changes under a stress on the output's distribution. Specifically\, for a stress on the output random variable\, we derive the unique stressed distribution of the output that is closest in the Wasserstein distance to the baseline output's distribution and satisfies the stress. We further derive the stressed model\, including the stressed distribution of the inputs\, which can be calculated in a numerically efficient way from a set of baseline Monte Carlo samples. The proposed reverse sensitivity analysis framework is model-free and allows for stresses on the output such as (i) the mean and variance\, (ii) any distortion risk measure including the Value-at-Risk and Expected-Shortfall\, and (iii) expected utility type constraints\, thus making the reverse sensitivity analysis framework suitable for risk models.\nFurther details: http://www.maths.usyd.edu.au/u/munir/owars/\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20210310T140000Z
+DTEND:20210310T151500Z
+LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
+SUMMARY;LANGUAGE=en-us:[OWARS]  Silvana Pesenti  (University of Toronto, Canada)
+END:VEVENT
+END:VCALENDAR

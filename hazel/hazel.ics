@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Speakers: Hazel Bateman (University of New South Wales\, Australia)\n\nTitle: TBA\nAbstract: TBA\n\nFurther details: http://www.maths.usyd.edu.au/u/munir/owars/\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20201021T080000Z
+DTEND:20201021T093000Z
+LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
+SUMMARY;LANGUAGE=en-us:[OWARS]  Hazel Bateman (University of New South Wales, Australia)
+END:VEVENT
+END:VCALENDAR
