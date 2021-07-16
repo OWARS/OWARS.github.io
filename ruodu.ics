@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Speaker: Moshe Milevsky (York University) \n\nTitle: PELVE: Probability Equivalent Level of VaR and ES\n\nAbstract: Inspired by the recent transition from the 99% Value-at-Risk (VaR) to the 97.5% Expected Shortfall (ES) for internal market risk models in the Fundamental Review of the Trading Book (FRTB)\, we introduce a new distributional index\, the probability equivalence level of VaR and ES (PELVE)\, which identifies the balancing point for the equivalence between VaR and ES. PELVE enjoys many desirable theoretical properties and it distinguishes heavy-tailed distributions from light-tailed ones via a threshold 2.72. Applying PELVE to financial asset and portfolio data leads to interesting observations that are not captured by VaR or ES alone. For instance\, empirical PELVE exhibit unprecedented jumps during the COVID-19 period\, which is not the case for VaR or ES. Moreover\, the transition from VaR to ES in the FRTB yields an increase in risk capital for single-asset portfolios\, but for well-diversified portfolios\, the capital requirement remains almost unchanged. This leads to both a theoretical justification and an empirical evidence for that the use of ES rewards portfolio diversification more than the use of VaR. The talk is based on joint work with Hengxin Li (University of California\, Berkeley).\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20200603T150000Z
+DTEND:20200603T160000Z
+LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
+SUMMARY;LANGUAGE=en-us:[OWARS] Ruodu Wang (University of Waterloo, Waterloo)
+END:VEVENT
+END:VCALENDAR

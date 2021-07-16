@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Speakers: Natalia Nolde (University of British Columbia\, Canada)\n\nTitle: An extreme value approach to CoVaR estimation\n\nAbstract:\nThe global financial crisis of 2007-2009 highlighted the crucial role systemic risk plays in ensuring stability of financial markets. Accurate assessment of systemic risk would enable regulators to introduce suitable policies to mitigate the risk as well as allow individual institutions to monitor their vulnerability to market movements. One popular measure of systemic risk is CoVaR. We propose a methodology to estimate CoVaR semi-parametrically within the classical framework of multivariate extreme value theory. According to its definition\, CoVaR can be viewed as a high quantile of a conditional distribution where the conditioning event corresponds to large losses of a given institution. We relate this conditional distribution to the tail dependence function. In the estimation procedure\, we combine parametric modelling of the tail dependence function to address the issue of data sparsity in the joint tail regions and semi-parametric univariate high quantile estimation techniques. We prove consistency of the estimator\, and illustrate its performance via simulation studies and a real data example. This is a joint work with Chen Zhou (Erasmus University) and Menglin Zhou (University of British Columbia).\n\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20210602T160000Z
+DTEND:20210602T171500Z
+LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
+SUMMARY;LANGUAGE=en-us:[OWARS]  Natalia Nolde (University of British Columbia, Canada)
+END:VEVENT
+END:VCALENDAR
