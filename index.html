@@ -200,6 +200,118 @@ height: 100%;
 
 
 
+<br>
+
+
+
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="hamza/hamza.webp" alt="Avatar" height="250" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2021-08-18T08:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month99 = monthNames99[date99.getMonth()];
+var year99 = date99.getFullYear();
+var strTime99 = day99 + " " + month99 + " " +  year99;
+localStorage.setItem('mytime0', strTime99);
+document.write(strTime99);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date99).find((part) => part.type == 'timeZoneName').value;
+  var hours = date99.getHours();
+  var minutes = date99.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2021-08-18T08:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b>
+<a href="https://research.monash.edu/en/persons/hamza-hanbali" target="_blank"> Hamza Hanbali (Monash University) 
+</a>
+
+</div>
+
+<br>
+
+
+<div class="container">
+<div class="row row-grid">
+
+
+  
+<div class="col-md-8">
+  <b>Title:</b>
+
+     Detection of insurance price cycles using neural networks
+<br> 
+<b>Abstract:</b>
+The underwriting cycle refers to the repetitive patterns of ups and downs in premium rates of property-liability insurance. Since the U.S. liability crisis of the 1980's, the underwriting cycle has become a central topic in the research agenda of the insurance economics literature. Virtually all existing studies have used accounting data to study cycles in loss ratios, which is a measure of profitability, and not a measure of price. This is because insurance companies typically do not report price and quantity separately. Although the cyclical patterns in profitability are suspected to be inherited from those in prices, there is, to the best of knowledge, no evidence that premium rates exhibit a cyclical behavior. Further, recent studies argue that insurance cycles do not exist at all. They question the relevance of AR(2) processes, which is the usual methodology used to identify cycles in profitability, and argue that they can lead to the detection of spurious cycles in what could simply be random walks.
+ The present work addresses two related questions. Namely, do insurance prices exhibit a cyclical behavior? and in case they do, how can these patterns be detected in a reliable way? Based on a simulation study, the paper investigates the performance of difference cycle detection methods, and finds that a hybrid neural network architecture combining both convolutional and recurrent layers achieves a high accuracy of 98.06%. This architecture is then applied to market premium rates from the Brazilian automobile insurance industry for a large number of different risk profiles. The results provide strong evidence that premiums for most risk profiles exhibit a cyclical behavior.
+      </div>
+
+<div class="col-md-4">
+</div>
+
+</div>
+</div>
 
 
 
@@ -308,35 +420,173 @@ window.player = player;
  
 
 
-   
   
+  <tr>
+    <td class = "date"><b>18 August 2021 8am (UTC) </b> <br> In your local time: <br>
+      <script type="text/javascript"> 
+var date100 = new Date('2021-08-18T08:00:00Z');
+var day100 = date100.getDate();
+const monthNames100 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month100 = monthNames100[date100.getMonth()];
+var year100 = date100.getFullYear();
+var strTime100 = day100 + " " + month100 + " " +  year100;
+document.write(strTime100);
+  const dtf100 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone100 = dtf100.formatToParts(date100).find((part) => part.type == 'timeZoneName').value;
+  var hours100 = date100.getHours();
+  var minutes100 = date100.getMinutes();
+  var ampm100 = hours100 >= 12 ? 'pm' : 'am';
+hours100 = hours100 % 12;
+hours100 = hours100 ? hours100 : 12; // the hour '0' should be '12'
+minutes100 = minutes100 < 10 ? '0'+minutes100 : minutes100;
+var strTime2100 = hours100 + ':' + minutes100 +ampm100 + ' ' + "(" +zone100+")";
+document.write("<br>");
+document.write(strTime2100);
+</script>
 
- 
-  
-
-  
-
-  
-  
-  
-
-
-  
- 
-   <tr style="border-bottom:1px solid black">
-    <td colspan="100%"></td>
-  </tr>
-   <tr>
-    <td class = "date"> 
+<br>
+<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Hamza%20Hanbali%20(Monash%20University%2C%20Australia)&dates=20210818T080000Z/20210818T091000Z&details=Speakers%3A%20Hamza%20Hanbali%20(Monash%20University%2C%20Australia)%0A%0ATitle%3A%20Detection%20of%20insurance%20price%20cycles%20using%20neural%20networks%0A%0AAbstract%3A%0AThe%20underwriting%20cycle%20refers%20to%20the%20repetitive%20patterns%20of%20ups%20and%20downs%20in%20premium%20rates%20of%20property-liability%20insurance.%20Since%20the%20U.S.%20liability%20crisis%20of%20the%201980's%2C%20the%20underwriting%20cycle%20has%20become%20a%20central%20topic%20in%20the%20research%20agenda%20of%20the%20insurance%20economics%20literature.%20Virtually%20all%20existing%20studies%20have%20used%20accounting%20data%20to%20study%20cycles%20in%20loss%20ratios%2C%20which%20is%20a%20measure%20of%20profitability%2C%20and%20not%20a%20measure%20of%20price.%20This%20is%20because%20insurance%20companies%20typically%20do%20not%20report%20price%20and%20quantity%20separately.%20Although%20the%20cyclical%20patterns%20in%20profitability%20are%20suspected%20to%20be%20inherited%20from%20those%20in%20prices%2C%20there%20is%2C%20to%20the%20best%20of%20knowledge%2C%20no%20evidence%20that%20premium%20rates%20exhibit%20a%20cyclical%20behavior.%20Further%2C%20recent%20studies%20argue%20that%20insurance%20cycles%20do%20not%20exist%20at%20all.%20They%20question%20the%20relevance%20of%20AR(2)%20processes%2C%20which%20is%20the%20usual%20methodology%20used%20to%20identify%20cycles%20in%20profitability%2C%20and%20argue%20that%20they%20can%20lead%20to%20the%20detection%20of%20spurious%20cycles%20in%20what%20could%20simply%20be%20random%20walks.%0A%20The%20present%20work%20addresses%20two%20related%20questions.%20Namely%2C%20do%20insurance%20prices%20exhibit%20a%20cyclical%20behavior%3F%20and%20in%20case%20they%20do%2C%20how%20can%20these%20patterns%20be%20detected%20in%20a%20reliable%20way%3F%20Based%20on%20a%20simulation%20study%2C%20the%20paper%20investigates%20the%20performance%20of%20difference%20cycle%20detection%20methods%2C%20and%20finds%20that%20a%20hybrid%20neural%20network%20architecture%20combining%20both%20convolutional%20and%20recurrent%20layers%20achieves%20a%20high%20accuracy%20of%2098.06%25.%20This%20architecture%20is%20then%20applied%20to%20market%20premium%20rates%20from%20the%20Brazilian%20automobile%20insurance%20industry%20for%20a%20large%20number%20of%20different%20risk%20profiles.%20The%20results%20provide%20strong%20evidence%20that%20premiums%20for%20most%20risk%20profiles%20exhibit%20a%20cyclical%20behavior.%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+<a href="hamza/hamza.ics" download>
+ Outlook calendar
+</a>
     </td>
 
-     <td class = "speaker"><b>Summer Break</b></td>
-    <td class = "title"> First talk after the break is on the 18th August 2021</td>
-  <td> </td>
-  </tr>
-  <tr style="border-bottom:1px solid black">
-    <td colspan="100%"></td>
-  </tr>
+     <td class = "speaker"><a href="https://www.stat.ubc.ca/~natalia/" target="_blank">  Hamza Hanbali  (Monash University, Australia)</a></td>
+    <td class = "title"> Detection of insurance price cycles using neural networks
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+The underwriting cycle refers to the repetitive patterns of ups and downs in premium rates of property-liability insurance. Since the U.S. liability crisis of the 1980's, the underwriting cycle has become a central topic in the research agenda of the insurance economics literature. Virtually all existing studies have used accounting data to study cycles in loss ratios, which is a measure of profitability, and not a measure of price. This is because insurance companies typically do not report price and quantity separately. Although the cyclical patterns in profitability are suspected to be inherited from those in prices, there is, to the best of knowledge, no evidence that premium rates exhibit a cyclical behavior. Further, recent studies argue that insurance cycles do not exist at all. They question the relevance of AR(2) processes, which is the usual methodology used to identify cycles in profitability, and argue that they can lead to the detection of spurious cycles in what could simply be random walks.
+ The present work addresses two related questions. Namely, do insurance prices exhibit a cyclical behavior? and in case they do, how can these patterns be detected in a reliable way? Based on a simulation study, the paper investigates the performance of difference cycle detection methods, and finds that a hybrid neural network architecture combining both convolutional and recurrent layers achieves a high accuracy of 98.06%. This architecture is then applied to market premium rates from the Brazilian automobile insurance industry for a large number of different risk profiles. The results provide strong evidence that premiums for most risk profiles exhibit a cyclical behavior.
+</details></td>
+  <td>
+    </td>
+  </tr> 
+  
+    <tr>
+   <td class = "date"><b>01 September 2021 3pm (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript"> 
+    var date101 = new Date('2021-09-01T15:00:00Z');
+    var day101 = date101.getDate();
+    const monthNames101 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month101 = monthNames101[date101.getMonth()];
+    var year101 = date101.getFullYear();
+    var strTime101 = day101 + " " + month101 + " " +  year101;
+    document.write(strTime101);
+    const dtf101 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone101 = dtf101.formatToParts(date101).find((part) => part.type == 'timeZoneName').value;
+    var hours101 = date101.getHours();
+    var minutes101 = date101.getMinutes();
+    var ampm101 = hours101 >= 12 ? 'pm' : 'am';
+    hours101 = hours101 % 12;
+    hours101 = hours101 ? hours101 : 12; // the hour '0' should be '12'
+    minutes101 = minutes101 < 10 ? '0'+minutes101 : minutes101;
+    var strTime2101 = hours101 + ':' + minutes101 +ampm101 + ' ' + "(" +zone101+")";
+    document.write("<br>");
+    document.write(strTime2101);
+    </script>
+      
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Nora%20Muler%20(Universidad%20Torcuato%20Di%20Tella%2C%20Argentina)&dates=20210901T150000Z/20210901T161000Z&details=Speakers%3A%20Hamza%20Hanbali%20(Monash%20University%2C%20Australia)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="nora/nora.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+      
+     <td class = "speaker"><a href="https://www.utdt.edu/ver_contenido.php?id_contenido=13433&id_item_menu=23838" target="_blank">  Nora Muler (Universidad Torcuato Di Tella, Argentina)</a></td>
+    <td class = "title"> TBA
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+TBA
+</details></td>
+  <td>
+    </td>
+  </tr> 
+  
+   <tr>
+   <td class = "date"><b>15 September 2021 12pm (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript"> 
+    var date102 = new Date('2021-09-15T12:00:00Z');
+    var day102 = date102.getDate();
+    const monthNames102 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month102 = monthNames102[date102.getMonth()];
+    var year102 = date102.getFullYear();
+    var strTime102 = day102 + " " + month102 + " " +  year102;
+    document.write(strTime102);
+    const dtf102 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone102 = dtf102.formatToParts(date102).find((part) => part.type == 'timeZoneName').value;
+    var hours102 = date102.getHours();
+    var minutes102 = date102.getMinutes();
+    var ampm102 = hours102 >= 12 ? 'pm' : 'am';
+    hours102 = hours102 % 12;
+    hours102 = hours102 ? hours102 : 12; // the hour '0' should be '12'
+    minutes102 = minutes102 < 10 ? '0'+minutes102 : minutes102;
+    var strTime2102 = hours102 + ':' + minutes102 +ampm102 + ' ' + "(" +zone102+")";
+    document.write("<br>");
+    document.write(strTime2102);
+    </script>
+      
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Caroline%20Hillairet%20(ENSAE-Paris%2C%20FRANCE)&dates=20210915T120000Z/20210915T131000Z&details=Speakers%3A%20Caroline%20Hillairet%20(ENSAE-Paris%2C%20FRANCE)%0A%0ATitle%3A%20Propagation%20of%20cyber%20incidents%20in%20an%20insurance%20portfolio%0A%0AAbstract%3A%20In%20this%20talk%2C%20we%20propose%20a%20general%20framework%20to%20design%20accumulation%20scenarios%20that%20can%20be%20used%20to%20anticipate%20the%20impact%20of%20a%20massive%20cyber%20attack%20on%20an%20insurance%20portfolio.%20The%20aim%20is%20also%20to%20emphasize%20the%20role%20of%20countermeasures%20in%20stopping%20the%20spread%20of%20the%20attack%20over%20the%20portfolio%2C%20and%20to%20quantify%20the%20benefits%20of%20implementing%20such%20strategies%20of%20response.%20Our%20approach%20consists%20of%20separating%20the%20global%20dynamic%20of%20the%20cyber%20event%20(that%20can%20be%20described%20through%20compartmental%20epidemiological%20models)%2C%20the%20effect%20on%20the%20portfolio%2C%20and%20the%20response%20strategy.%20This%20general%20framework%20allows%20us%20to%20obtain%20Gaussian%20approximations%20for%20the%20corresponding%20processes%2C%20and%20sharp%20confidence%20bounds%20for%20the%20losses.%20A%20detailed%20simulation%20study%2C%20which%20mimics%20the%20effects%20of%20a%20Wannacry%20scenario%2C%20illustrates%20the%20practical%20implementation%20of%20the%0Amethod.%20Joint%20work%20with%20Olivier%20Lopez.%0Ahttps%3A%2F%2Fhal.archives-ouvertes.fr%2Fhal-02564462v2%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="caroline/caroline.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+      
+     <td class = "speaker"><a href="https://sites.google.com/site/carolinehillairet/" target="_blank">  Caroline Hillairet (ENSAE-Paris, FRANCE)</a></td>
+    <td class = "title"> Propagation of cyber incidents in an insurance portfolio
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+In this talk, we propose a general framework to design accumulation scenarios that can be used to anticipate the impact of a massive cyber attack on an insurance portfolio. The aim is also to emphasize the role of countermeasures in stopping the spread of the attack over the portfolio, and to quantify the benefits of implementing such strategies of response. Our approach consists of separating the global dynamic of the cyber event (that can be described through compartmental epidemiological models), the effect on the portfolio, and the response strategy. This general framework allows us to obtain Gaussian approximations for the corresponding processes, and sharp confidence bounds for the losses. A detailed simulation study, which mimics the effects of a Wannacry scenario, illustrates the practical implementation of the
+method. Joint work with Olivier Lopez.
+https://hal.archives-ouvertes.fr/hal-02564462v2
+</details></td>
+  <td>
+    </td>
+  </tr> 
+  
+  <tr>
+   <td class = "date"><b>29 September 2021 3pm (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript"> 
+    var date103 = new Date('2021-09-29T15:00:00Z');
+    var day103 = date103.getDate();
+    const monthNames103 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month103 = monthNames103[date103.getMonth()];
+    var year103 = date103.getFullYear();
+    var strTime103 = day103 + " " + month103 + " " +  year103;
+    document.write(strTime103);
+    const dtf103 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone103 = dtf103.formatToParts(date103).find((part) => part.type == 'timeZoneName').value;
+    var hours103 = date103.getHours();
+    var minutes103 = date103.getMinutes();
+    var ampm103 = hours103 >= 12 ? 'pm' : 'am';
+    hours103 = hours103 % 12;
+    hours103 = hours103 ? hours103 : 12; // the hour '0' should be '12'
+    minutes103 = minutes103 < 10 ? '0'+minutes103 : minutes103;
+    var strTime2103 = hours103 + ':' + minutes103 +ampm103 + ' ' + "(" +zone103+")";
+    document.write("<br>");
+    document.write(strTime2103);
+    </script>
+      
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Daniel%20Bauer%20(University%20of%20Wisconsin%E2%80%93Madison%2C%20USA)&dates=20210929T150000Z/20210929T161000Z&details=Speakers%3A%20Caroline%20Hillairet%20(ENSAE-Paris%2C%20FRANCE)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="daniel/daniel.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+      
+     <td class = "speaker"><a href="https://business.wisc.edu/directory/profile/daniel-bauer/" target="_blank">  Daniel Bauer (University of Wisconsin–Madison, USA)</a></td>
+    <td class = "title"> TBA
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+TBA
+</details></td>
+  <td>
+    </td>
+  </tr> 
 </tbody>
 </table>
 
