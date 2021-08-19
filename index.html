@@ -203,115 +203,53 @@ height: 100%;
 <br>
 
 
-
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
-
-</h2>
+ <div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
 
-     
 
 
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="hamza/hamza.webp" alt="Avatar" height="250" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date99 = new Date('2021-08-18T08:00:00Z')
-var day99 = date99.getDate();
-const monthNames99 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month99 = monthNames99[date99.getMonth()];
-var year99 = date99.getFullYear();
-var strTime99 = day99 + " " + month99 + " " +  year99;
-localStorage.setItem('mytime0', strTime99);
-document.write(strTime99);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date99).find((part) => part.type == 'timeZoneName').value;
-  var hours = date99.getHours();
-  var minutes = date99.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime999 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime999);
-document.write(strTime999);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2021-08-18T08:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b>
-<a href="https://research.monash.edu/en/persons/hamza-hanbali" target="_blank"> Hamza Hanbali (Monash University) 
-</a>
-
-</div>
-
-<br>
-
-
-<div class="container">
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+
+
+
+
+
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/3zDySSVWKQE">
+</iframe>
+
+
+
+    
+
+</div>
 
   
-<div class="col-md-8">
+<div class="col-md-6">
+  <b>Speaker: </b><a href="https://research.monash.edu/en/persons/hamza-hanbali" target="_blank"> Hamza Hanbali (Monash University)
+</a>
+<br>
   <b>Title:</b>
-
-     Detection of insurance price cycles using neural networks
+   Detection of insurance price cycles using neural networks
 <br> 
-<b>Abstract:</b>
-The underwriting cycle refers to the repetitive patterns of ups and downs in premium rates of property-liability insurance. Since the U.S. liability crisis of the 1980's, the underwriting cycle has become a central topic in the research agenda of the insurance economics literature. Virtually all existing studies have used accounting data to study cycles in loss ratios, which is a measure of profitability, and not a measure of price. This is because insurance companies typically do not report price and quantity separately. Although the cyclical patterns in profitability are suspected to be inherited from those in prices, there is, to the best of knowledge, no evidence that premium rates exhibit a cyclical behavior. Further, recent studies argue that insurance cycles do not exist at all. They question the relevance of AR(2) processes, which is the usual methodology used to identify cycles in profitability, and argue that they can lead to the detection of spurious cycles in what could simply be random walks.
- The present work addresses two related questions. Namely, do insurance prices exhibit a cyclical behavior? and in case they do, how can these patterns be detected in a reliable way? Based on a simulation study, the paper investigates the performance of difference cycle detection methods, and finds that a hybrid neural network architecture combining both convolutional and recurrent layers achieves a high accuracy of 98.06%. This architecture is then applied to market premium rates from the Brazilian automobile insurance industry for a large number of different risk profiles. The results provide strong evidence that premiums for most risk profiles exhibit a cyclical behavior.
-      </div>
-
-<div class="col-md-4">
+<details>
+<summary>Abstract (click to expand)</summary>
+The underwriting cycle refers to the repetitive patterns of ups and downs in premium rates of property-liability insurance. Since the U.S. liability crisis of the 1980's, the underwriting cycle has become a central topic in the research agenda of the insurance economics literature. Virtually all existing studies have used accounting data to study cycles in loss ratios, which is a measure of profitability, and not a measure of price. This is because insurance companies typically do not report price and quantity separately. Although the cyclical patterns in profitability are suspected to be inherited from those in prices, there is, to the best of knowledge, no evidence that premium rates exhibit a cyclical behavior. Further, recent studies argue that insurance cycles do not exist at all. They question the relevance of AR(2) processes, which is the usual methodology used to identify cycles in profitability, and argue that they can lead to the detection of spurious cycles in what could simply be random walks. The present work addresses two related questions. Namely, do insurance prices exhibit a cyclical behavior? and in case they do, how can these patterns be detected in a reliable way? Based on a simulation study, the paper investigates the performance of difference cycle detection methods, and finds that a hybrid neural network architecture combining both convolutional and recurrent layers achieves a high accuracy of 98.06%. This architecture is then applied to market premium rates from the Brazilian automobile insurance industry for a large number of different risk profiles. The results provide strong evidence that premiums for most risk profiles exhibit a cyclical behavior.
+</details>
 </div>
 
+<div class="col-md-2">
+
 </div>
+
+
+
 </div>
+
 
 
 
