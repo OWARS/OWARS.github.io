@@ -202,52 +202,109 @@ height: 100%;
 
 <br>
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
+</h2>
 </div>
 
+     
 
 
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="nora/nora.png" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2021-04-21T09:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2021-04-21T09:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://www.utdt.edu/ver_contenido.php?id_contenido=13433&id_item_menu=23838" target="_blank"> Nora Muler (Universidad Torcuato Di Tella, Argentina)
+</a>
+
+</div>
+
+<br>
+
+
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/3zDySSVWKQE">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-  <b>Speaker: </b><a href="https://research.monash.edu/en/persons/hamza-hanbali" target="_blank"> Hamza Hanbali (Monash University)
-</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-   Detection of insurance price cycles using neural networks
+Optimal dividend payment under constraints
 <br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-The underwriting cycle refers to the repetitive patterns of ups and downs in premium rates of property-liability insurance. Since the U.S. liability crisis of the 1980's, the underwriting cycle has become a central topic in the research agenda of the insurance economics literature. Virtually all existing studies have used accounting data to study cycles in loss ratios, which is a measure of profitability, and not a measure of price. This is because insurance companies typically do not report price and quantity separately. Although the cyclical patterns in profitability are suspected to be inherited from those in prices, there is, to the best of knowledge, no evidence that premium rates exhibit a cyclical behavior. Further, recent studies argue that insurance cycles do not exist at all. They question the relevance of AR(2) processes, which is the usual methodology used to identify cycles in profitability, and argue that they can lead to the detection of spurious cycles in what could simply be random walks. The present work addresses two related questions. Namely, do insurance prices exhibit a cyclical behavior? and in case they do, how can these patterns be detected in a reliable way? Based on a simulation study, the paper investigates the performance of difference cycle detection methods, and finds that a hybrid neural network architecture combining both convolutional and recurrent layers achieves a high accuracy of 98.06%. This architecture is then applied to market premium rates from the Brazilian automobile insurance industry for a large number of different risk profiles. The results provide strong evidence that premiums for most risk profiles exhibit a cyclical behavior.
-</details>
+<b>Abstract:</b>
+In this talk we will discuss the problem of optimal dividend rate payment (with a giving ceiling on dividend rates) for a surplus process under the additional constraint of drawdown; that is dividend rates should not decrease more than a given fraction b∈(0,1) of the historical peak. We also address the case in which b=1, this corresponds to a ratcheting constraint on dividends (i.e. the dividend payment rate can never decrease). We maximize the expectation of the discounted cumulative dividend payment up to ruin time. Using the Dynamic Programming Principle, we can show that the optimal value function is the unique viscosity solution of the corresponding two dimensional Hamilton-Jacobi-Bellman equation. In the case that the surplus follows a Brownian motion and the dividend payment rates have a ratcheting constraint, we find the value function corresponding to one-curve strategies (that are the natural extension to two dimensions of the threshold strategies). In these type of strategies, the curve partitions the state space in two regions: one in which the dividends are paid at the current dividend rate and the other in which the dividend rates increases. Afterwards,we use calculus of variations in order to obtain the best value function among these type of curve strategies. The optimal curve is obtained as the unique solution of an ODE. In the case that the dividend payment rate has a drawdown constraint we find value functions corresponding to two-curve strategies. In these type of strategies, the two curves partition the state space in three regions:a region in which dividends are paid at b times the historical peak rate (minimum rate allowed), a region (that is located in between the two curves) in which dividend rates are paid at the historical peak and a region in which dividend rates increases above the historical peak. One more time, we use calculus of variations to obtain the best strategy but this time among these two-curves strategies. These optimal two curves are obtained as the unique solution of a system of ODE's. We present numerical examples and show how the drawdown case, as b decreases from 1 to 0, approach the (usual) one dimensional problem without constraints on dividend rates (which corresponds to b=0). Additionally, we study the limit problem when the ceiling on dividend rates go to infinity. This is a joint work with Hansjoerg Albrecher and Pablo Azcue.      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
 </div>
-
-
-
 </div>
 
 
@@ -359,47 +416,7 @@ window.player = player;
 
 
   
-  <tr>
-    <td class = "date"><b>18 August 2021 8am (UTC) </b> <br> In your local time: <br>
-      <script type="text/javascript"> 
-var date100 = new Date('2021-08-18T08:00:00Z');
-var day100 = date100.getDate();
-const monthNames100 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month100 = monthNames100[date100.getMonth()];
-var year100 = date100.getFullYear();
-var strTime100 = day100 + " " + month100 + " " +  year100;
-document.write(strTime100);
-  const dtf100 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone100 = dtf100.formatToParts(date100).find((part) => part.type == 'timeZoneName').value;
-  var hours100 = date100.getHours();
-  var minutes100 = date100.getMinutes();
-  var ampm100 = hours100 >= 12 ? 'pm' : 'am';
-hours100 = hours100 % 12;
-hours100 = hours100 ? hours100 : 12; // the hour '0' should be '12'
-minutes100 = minutes100 < 10 ? '0'+minutes100 : minutes100;
-var strTime2100 = hours100 + ':' + minutes100 +ampm100 + ' ' + "(" +zone100+")";
-document.write("<br>");
-document.write(strTime2100);
-</script>
 
-<br>
-<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Hamza%20Hanbali%20(Monash%20University%2C%20Australia)&dates=20210818T080000Z/20210818T091000Z&details=Speakers%3A%20Hamza%20Hanbali%20(Monash%20University%2C%20Australia)%0A%0ATitle%3A%20Detection%20of%20insurance%20price%20cycles%20using%20neural%20networks%0A%0AAbstract%3A%0AThe%20underwriting%20cycle%20refers%20to%20the%20repetitive%20patterns%20of%20ups%20and%20downs%20in%20premium%20rates%20of%20property-liability%20insurance.%20Since%20the%20U.S.%20liability%20crisis%20of%20the%201980's%2C%20the%20underwriting%20cycle%20has%20become%20a%20central%20topic%20in%20the%20research%20agenda%20of%20the%20insurance%20economics%20literature.%20Virtually%20all%20existing%20studies%20have%20used%20accounting%20data%20to%20study%20cycles%20in%20loss%20ratios%2C%20which%20is%20a%20measure%20of%20profitability%2C%20and%20not%20a%20measure%20of%20price.%20This%20is%20because%20insurance%20companies%20typically%20do%20not%20report%20price%20and%20quantity%20separately.%20Although%20the%20cyclical%20patterns%20in%20profitability%20are%20suspected%20to%20be%20inherited%20from%20those%20in%20prices%2C%20there%20is%2C%20to%20the%20best%20of%20knowledge%2C%20no%20evidence%20that%20premium%20rates%20exhibit%20a%20cyclical%20behavior.%20Further%2C%20recent%20studies%20argue%20that%20insurance%20cycles%20do%20not%20exist%20at%20all.%20They%20question%20the%20relevance%20of%20AR(2)%20processes%2C%20which%20is%20the%20usual%20methodology%20used%20to%20identify%20cycles%20in%20profitability%2C%20and%20argue%20that%20they%20can%20lead%20to%20the%20detection%20of%20spurious%20cycles%20in%20what%20could%20simply%20be%20random%20walks.%0A%20The%20present%20work%20addresses%20two%20related%20questions.%20Namely%2C%20do%20insurance%20prices%20exhibit%20a%20cyclical%20behavior%3F%20and%20in%20case%20they%20do%2C%20how%20can%20these%20patterns%20be%20detected%20in%20a%20reliable%20way%3F%20Based%20on%20a%20simulation%20study%2C%20the%20paper%20investigates%20the%20performance%20of%20difference%20cycle%20detection%20methods%2C%20and%20finds%20that%20a%20hybrid%20neural%20network%20architecture%20combining%20both%20convolutional%20and%20recurrent%20layers%20achieves%20a%20high%20accuracy%20of%2098.06%25.%20This%20architecture%20is%20then%20applied%20to%20market%20premium%20rates%20from%20the%20Brazilian%20automobile%20insurance%20industry%20for%20a%20large%20number%20of%20different%20risk%20profiles.%20The%20results%20provide%20strong%20evidence%20that%20premiums%20for%20most%20risk%20profiles%20exhibit%20a%20cyclical%20behavior.%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-<a href="hamza/hamza.ics" download>
- Outlook calendar
-</a>
-    </td>
-
-     <td class = "speaker"><a href="https://research.monash.edu/en/persons/hamza-hanbali" target="_blank">  Hamza Hanbali  (Monash University, Australia)</a></td>
-    <td class = "title"> Detection of insurance price cycles using neural networks
-<br> <details>
-<summary>Abstract (click to expand)</summary>
-The underwriting cycle refers to the repetitive patterns of ups and downs in premium rates of property-liability insurance. Since the U.S. liability crisis of the 1980's, the underwriting cycle has become a central topic in the research agenda of the insurance economics literature. Virtually all existing studies have used accounting data to study cycles in loss ratios, which is a measure of profitability, and not a measure of price. This is because insurance companies typically do not report price and quantity separately. Although the cyclical patterns in profitability are suspected to be inherited from those in prices, there is, to the best of knowledge, no evidence that premium rates exhibit a cyclical behavior. Further, recent studies argue that insurance cycles do not exist at all. They question the relevance of AR(2) processes, which is the usual methodology used to identify cycles in profitability, and argue that they can lead to the detection of spurious cycles in what could simply be random walks.
- The present work addresses two related questions. Namely, do insurance prices exhibit a cyclical behavior? and in case they do, how can these patterns be detected in a reliable way? Based on a simulation study, the paper investigates the performance of difference cycle detection methods, and finds that a hybrid neural network architecture combining both convolutional and recurrent layers achieves a high accuracy of 98.06%. This architecture is then applied to market premium rates from the Brazilian automobile insurance industry for a large number of different risk profiles. The results provide strong evidence that premiums for most risk profiles exhibit a cyclical behavior.
-</details></td>
-  <td>
-    </td>
-  </tr> 
   
     <tr>
    <td class = "date"><b>01 September 2021 3pm (UTC) </b> <br> In your local time: <br>
@@ -1036,6 +1053,49 @@ document.write(strTime);
 <br> <details>
 <summary>Abstract (click to expand)</summary>
 The global financial crisis of 2007-2009 highlighted the crucial role systemic risk plays in ensuring stability of financial markets. Accurate assessment of systemic risk would enable regulators to introduce suitable policies to mitigate the risk as well as allow individual institutions to monitor their vulnerability to market movements. One popular measure of systemic risk is CoVaR. We propose a methodology to estimate CoVaR semi-parametrically within the classical framework of multivariate extreme value theory. According to its definition, CoVaR can be viewed as a high quantile of a conditional distribution where the conditioning event corresponds to large losses of a given institution. We relate this conditional distribution to the tail dependence function. In the estimation procedure, we combine parametric modelling of the tail dependence function to address the issue of data sparsity in the joint tail regions and semi-parametric univariate high quantile estimation techniques. We prove consistency of the estimator, and illustrate its performance via simulation studies and a real data example. This is a joint work with Chen Zhou (Erasmus University) and Menglin Zhou (University of British Columbia).
+</details></td>
+  <td>
+    </td>
+  </tr> 
+  
+  
+    <tr>
+    <td class = "date"><b>18 August 2021 8am (UTC) </b> <br> In your local time: <br>
+      <script type="text/javascript"> 
+var date100 = new Date('2021-08-18T08:00:00Z');
+var day100 = date100.getDate();
+const monthNames100 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month100 = monthNames100[date100.getMonth()];
+var year100 = date100.getFullYear();
+var strTime100 = day100 + " " + month100 + " " +  year100;
+document.write(strTime100);
+  const dtf100 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone100 = dtf100.formatToParts(date100).find((part) => part.type == 'timeZoneName').value;
+  var hours100 = date100.getHours();
+  var minutes100 = date100.getMinutes();
+  var ampm100 = hours100 >= 12 ? 'pm' : 'am';
+hours100 = hours100 % 12;
+hours100 = hours100 ? hours100 : 12; // the hour '0' should be '12'
+minutes100 = minutes100 < 10 ? '0'+minutes100 : minutes100;
+var strTime2100 = hours100 + ':' + minutes100 +ampm100 + ' ' + "(" +zone100+")";
+document.write("<br>");
+document.write(strTime2100);
+</script>
+
+<br>
+<a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Hamza%20Hanbali%20(Monash%20University%2C%20Australia)&dates=20210818T080000Z/20210818T091000Z&details=Speakers%3A%20Hamza%20Hanbali%20(Monash%20University%2C%20Australia)%0A%0ATitle%3A%20Detection%20of%20insurance%20price%20cycles%20using%20neural%20networks%0A%0AAbstract%3A%0AThe%20underwriting%20cycle%20refers%20to%20the%20repetitive%20patterns%20of%20ups%20and%20downs%20in%20premium%20rates%20of%20property-liability%20insurance.%20Since%20the%20U.S.%20liability%20crisis%20of%20the%201980's%2C%20the%20underwriting%20cycle%20has%20become%20a%20central%20topic%20in%20the%20research%20agenda%20of%20the%20insurance%20economics%20literature.%20Virtually%20all%20existing%20studies%20have%20used%20accounting%20data%20to%20study%20cycles%20in%20loss%20ratios%2C%20which%20is%20a%20measure%20of%20profitability%2C%20and%20not%20a%20measure%20of%20price.%20This%20is%20because%20insurance%20companies%20typically%20do%20not%20report%20price%20and%20quantity%20separately.%20Although%20the%20cyclical%20patterns%20in%20profitability%20are%20suspected%20to%20be%20inherited%20from%20those%20in%20prices%2C%20there%20is%2C%20to%20the%20best%20of%20knowledge%2C%20no%20evidence%20that%20premium%20rates%20exhibit%20a%20cyclical%20behavior.%20Further%2C%20recent%20studies%20argue%20that%20insurance%20cycles%20do%20not%20exist%20at%20all.%20They%20question%20the%20relevance%20of%20AR(2)%20processes%2C%20which%20is%20the%20usual%20methodology%20used%20to%20identify%20cycles%20in%20profitability%2C%20and%20argue%20that%20they%20can%20lead%20to%20the%20detection%20of%20spurious%20cycles%20in%20what%20could%20simply%20be%20random%20walks.%0A%20The%20present%20work%20addresses%20two%20related%20questions.%20Namely%2C%20do%20insurance%20prices%20exhibit%20a%20cyclical%20behavior%3F%20and%20in%20case%20they%20do%2C%20how%20can%20these%20patterns%20be%20detected%20in%20a%20reliable%20way%3F%20Based%20on%20a%20simulation%20study%2C%20the%20paper%20investigates%20the%20performance%20of%20difference%20cycle%20detection%20methods%2C%20and%20finds%20that%20a%20hybrid%20neural%20network%20architecture%20combining%20both%20convolutional%20and%20recurrent%20layers%20achieves%20a%20high%20accuracy%20of%2098.06%25.%20This%20architecture%20is%20then%20applied%20to%20market%20premium%20rates%20from%20the%20Brazilian%20automobile%20insurance%20industry%20for%20a%20large%20number%20of%20different%20risk%20profiles.%20The%20results%20provide%20strong%20evidence%20that%20premiums%20for%20most%20risk%20profiles%20exhibit%20a%20cyclical%20behavior.%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+<a href="hamza/hamza.ics" download>
+ Outlook calendar
+</a>
+    </td>
+
+     <td class = "speaker"><a href="https://research.monash.edu/en/persons/hamza-hanbali" target="_blank">  Hamza Hanbali  (Monash University, Australia)</a></td>
+    <td class = "title"> Detection of insurance price cycles using neural networks
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+The underwriting cycle refers to the repetitive patterns of ups and downs in premium rates of property-liability insurance. Since the U.S. liability crisis of the 1980's, the underwriting cycle has become a central topic in the research agenda of the insurance economics literature. Virtually all existing studies have used accounting data to study cycles in loss ratios, which is a measure of profitability, and not a measure of price. This is because insurance companies typically do not report price and quantity separately. Although the cyclical patterns in profitability are suspected to be inherited from those in prices, there is, to the best of knowledge, no evidence that premium rates exhibit a cyclical behavior. Further, recent studies argue that insurance cycles do not exist at all. They question the relevance of AR(2) processes, which is the usual methodology used to identify cycles in profitability, and argue that they can lead to the detection of spurious cycles in what could simply be random walks.
+ The present work addresses two related questions. Namely, do insurance prices exhibit a cyclical behavior? and in case they do, how can these patterns be detected in a reliable way? Based on a simulation study, the paper investigates the performance of difference cycle detection methods, and finds that a hybrid neural network architecture combining both convolutional and recurrent layers achieves a high accuracy of 98.06%. This architecture is then applied to market premium rates from the Brazilian automobile insurance industry for a large number of different risk profiles. The results provide strong evidence that premiums for most risk profiles exhibit a cyclical behavior.
 </details></td>
   <td>
     </td>
