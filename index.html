@@ -202,110 +202,56 @@ height: 100%;
 
 <br>
 
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
-</h2>
+ <div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
 
-     
 
 
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="nora/nora.png" alt="Avatar" height="120" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2021-09-01T15:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2021-09-01T15:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="https://www.utdt.edu/ver_contenido.php?id_contenido=13433&id_item_menu=23838" target="_blank"> Nora Muler (Universidad Torcuato Di Tella, Argentina)
-</a>
-
-</div>
-
-<br>
-
-
-<div class="container">
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+
+
+
+
+
+<iframe width="100%" height="315"
+src="https://youtu.be/bwoNNjkZdL8">
+</iframe>
+
+
+
+    
+
+</div>
 
   
-<div class="col-md-8">
+<div class="col-md-6">
+  <b>Speaker: </b><a href="https://www.utdt.edu/ver_contenido.php?id_contenido=13433&id_item_menu=23838" target="_blank"> Nora Muler (Universidad Torcuato Di Tella, Argentina)
+</a>
+<br>
   <b>Title:</b>
 Optimal dividend payment under constraints
 <br> 
-<b>Abstract:</b>
-In this talk we will discuss the problem of optimal dividend rate payment (with a giving ceiling on dividend rates) for a surplus process under the additional constraint of drawdown; that is dividend rates should not decrease more than a given fraction b∈(0,1) of the historical peak. We also address the case in which b=1, this corresponds to a ratcheting constraint on dividends (i.e. the dividend payment rate can never decrease). We maximize the expectation of the discounted cumulative dividend payment up to ruin time. Using the Dynamic Programming Principle, we can show that the optimal value function is the unique viscosity solution of the corresponding two dimensional Hamilton-Jacobi-Bellman equation. In the case that the surplus follows a Brownian motion and the dividend payment rates have a ratcheting constraint, we find the value function corresponding to one-curve strategies (that are the natural extension to two dimensions of the threshold strategies). In these type of strategies, the curve partitions the state space in two regions: one in which the dividends are paid at the current dividend rate and the other in which the dividend rates increases. Afterwards,we use calculus of variations in order to obtain the best value function among these type of curve strategies. The optimal curve is obtained as the unique solution of an ODE. In the case that the dividend payment rate has a drawdown constraint we find value functions corresponding to two-curve strategies. In these type of strategies, the two curves partition the state space in three regions:a region in which dividends are paid at b times the historical peak rate (minimum rate allowed), a region (that is located in between the two curves) in which dividend rates are paid at the historical peak and a region in which dividend rates increases above the historical peak. One more time, we use calculus of variations to obtain the best strategy but this time among these two-curves strategies. These optimal two curves are obtained as the unique solution of a system of ODE's. We present numerical examples and show how the drawdown case, as b decreases from 1 to 0, approach the (usual) one dimensional problem without constraints on dividend rates (which corresponds to b=0). Additionally, we study the limit problem when the ceiling on dividend rates go to infinity. This is a joint work with Hansjoerg Albrecher and Pablo Azcue.      </div>
-
-<div class="col-md-4">
+<details>
+<summary>Abstract (click to expand)</summary>
+In this talk we will discuss the problem of optimal dividend rate payment (with a giving ceiling on dividend rates) for a surplus process under the additional constraint of drawdown; that is dividend rates should not decrease more than a given fraction b∈(0,1) of the historical peak. We also address the case in which b=1, this corresponds to a ratcheting constraint on dividends (i.e. the dividend payment rate can never decrease). We maximize the expectation of the discounted cumulative dividend payment up to ruin time. Using the Dynamic Programming Principle, we can show that the optimal value function is the unique viscosity solution of the corresponding two dimensional Hamilton-Jacobi-Bellman equation. In the case that the surplus follows a Brownian motion and the dividend payment rates have a ratcheting constraint, we find the value function corresponding to one-curve strategies (that are the natural extension to two dimensions of the threshold strategies). In these type of strategies, the curve partitions the state space in two regions: one in which the dividends are paid at the current dividend rate and the other in which the dividend rates increases. Afterwards,we use calculus of variations in order to obtain the best value function among these type of curve strategies. The optimal curve is obtained as the unique solution of an ODE. In the case that the dividend payment rate has a drawdown constraint we find value functions corresponding to two-curve strategies. In these type of strategies, the two curves partition the state space in three regions:a region in which dividends are paid at b times the historical peak rate (minimum rate allowed), a region (that is located in between the two curves) in which dividend rates are paid at the historical peak and a region in which dividend rates increases above the historical peak. One more time, we use calculus of variations to obtain the best strategy but this time among these two-curves strategies. These optimal two curves are obtained as the unique solution of a system of ODE's. We present numerical examples and show how the drawdown case, as b decreases from 1 to 0, approach the (usual) one dimensional problem without constraints on dividend rates (which corresponds to b=0). Additionally, we study the limit problem when the ceiling on dividend rates go to infinity. This is a joint work with Hansjoerg Albrecher and Pablo Azcue. 
+</details>
 </div>
 
+<div class="col-md-2">
+
 </div>
+
+
+
 </div>
+
+
+
 
 
 
