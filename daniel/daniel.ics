@@ -2,9 +2,9 @@ BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
 CLASS:PUBLIC
-DESCRIPTION:Speakers: Caroline Hillairet (ENSAE-Paris\, FRANCE)\n\nTitle: TBA\n\nAbstract:  TBA\n\nFurther details: https://owars.info\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
-DTSTART:20210929T150000Z
-DTEND:20210929T161000Z
+DESCRIPTION:[OWARS] Daniel Bauer (University of Wisconsin–Madison\, USA)\nDate and Time - Sep 29\, 2021 5:00 PM to 6:10 PM\nVenue - https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\nSpeaker: Daniel Bauer (University of Wisconsin–Madison\, USA)\n\nTitle: The Marginal Cost of Risk and Capital Allocation in a Property and Casualty Insurance Company (with Qiheng Guo and George H. Zanjani)\n\nAbstract: Abstract: We develop a multi-period profit maximization model for a property and casualty (P&C) insurance company and use it for determining the marginal cost of risk for different lines of business and resulting economic capital allocations. In contrast to previous literature\, our model features a loss structure that matches the characteristics of a P&C company\, comprising so-called “short-tailed” and “long-tailed” business lines with different expected settlement terms. As one key contribution\, our theoretical and numerical results show that lines with different terms are assessed differently\, depending on the company’s financial situation.\nPaper link: https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf\n\nFurther details: https://owars.info\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20210929T170000Z
+DTEND:20210929T181000Z
 LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
 SUMMARY;LANGUAGE=en-us:[OWARS] Daniel Bauer (University of Wisconsin–Madison, USA)
 END:VEVENT

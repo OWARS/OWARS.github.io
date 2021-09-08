@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:[OWARS] Filip Lindskog (Stockholm University\, Sweden)\nDate and Time - Oct 13\, 2021 9:00 AM to 10:10 AM\nVenue - https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\nSpeaker: Filip Lindskog (Stockholm University\, Sweden)\n\nTitle: TBA\n\nAbstract: TBA\n\nFurther details: https://owars.info\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20211013T090000Z
+DTEND:20211013T101000Z
+LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
+SUMMARY;LANGUAGE=en-us:[OWARS] Filip Lindskog (Stockholm University, Sweden)
+END:VEVENT
+END:VCALENDAR
