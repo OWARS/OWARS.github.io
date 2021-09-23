@@ -203,50 +203,112 @@ height: 100%;
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
 </div>
 
+     
 
 
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="daniel/Bauer_Daniel_0918_PN22264Square-2048x2048.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2021-09-29T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2021-09-29T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://business.wisc.edu/directory/profile/daniel-bauer/" target="_blank"> Daniel Bauer (University of Wisconsin–Madison, USA)
+</a>
+
+</div>
+
+<br>
+
+
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/3tPXNEC41SU">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-  <b>Speaker: </b><a href="https://sites.google.com/site/carolinehillairet/" target="_blank"> Caroline Hillairet (ENSAE-Paris, FRANCE)
-</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-   Propagation of cyber incidents in an insurance portfolio
+
+   The Marginal Cost of Risk and Capital Allocation in a Property and Casualty Insurance Company (with Qiheng Guo and George H. Zanjani)
 <br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-In this talk, we propose a general framework to design accumulation scenarios that can be used to anticipate the impact of a massive cyber attack on an insurance portfolio. The aim is also to emphasize the role of countermeasures in stopping the spread of the attack over the portfolio, and to quantify the benefits of implementing such strategies of response. Our approach consists of separating the global dynamic of the cyber event (that can be described through compartmental epidemiological models), the effect on the portfolio, and the response strategy. This general framework allows us to obtain Gaussian approximations for the corresponding processes, and sharp confidence bounds for the losses. A detailed simulation study, which mimics the effects of a Wannacry scenario, illustrates the practical implementation of the method.
-Joint work with Olivier Lopez.
-</details>
+<b>Abstract:</b>
+We develop a multi-period profit maximization model for a property and casualty (P&C) insurance company and use it for determining the marginal cost of risk for different lines of business and resulting economic capital allocations. In contrast to previous literature, our model features a loss structure that matches the characteristics of a P&C company, comprising so-called “short-tailed” and “long-tailed” business lines with different expected settlement terms. As one key contribution, our theoretical and numerical results show that lines with different terms are assessed differently, depending on the company’s financial situation. Paper link: <a href="https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf">https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf</a>
+      </div>
+
+<div class="col-md-4">
 </div>
 
-
-
 </div>
-
+</div>
 
 
 
