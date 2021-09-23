@@ -422,48 +422,7 @@ window.player = player;
 
 
 
-   <tr>
-   <td class = "date"><b>15 September 2021 12pm (UTC) </b> <br> In your local time: <br>
-  <script type="text/javascript">
-    var date102 = new Date('2021-09-15T12:00:00Z');
-    var day102 = date102.getDate();
-    const monthNames102 = ["January", "February", "March", "April", "May", "June",
-                           "July", "August", "September", "October", "November", "December"];
-    var month102 = monthNames102[date102.getMonth()];
-    var year102 = date102.getFullYear();
-    var strTime102 = day102 + " " + month102 + " " +  year102;
-    document.write(strTime102);
-    const dtf102 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-    var zone102 = dtf102.formatToParts(date102).find((part) => part.type == 'timeZoneName').value;
-    var hours102 = date102.getHours();
-    var minutes102 = date102.getMinutes();
-    var ampm102 = hours102 >= 12 ? 'pm' : 'am';
-    hours102 = hours102 % 12;
-    hours102 = hours102 ? hours102 : 12; // the hour '0' should be '12'
-    minutes102 = minutes102 < 10 ? '0'+minutes102 : minutes102;
-    var strTime2102 = hours102 + ':' + minutes102 +ampm102 + ' ' + "(" +zone102+")";
-    document.write("<br>");
-    document.write(strTime2102);
-    </script>
-
-      <br>
-      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Caroline%20Hillairet%20(ENSAE-Paris%2C%20FRANCE)&dates=20210915T120000Z/20210915T131000Z&details=Speakers%3A%20Caroline%20Hillairet%20(ENSAE-Paris%2C%20FRANCE)%0A%0ATitle%3A%20Propagation%20of%20cyber%20incidents%20in%20an%20insurance%20portfolio%0A%0AAbstract%3A%20In%20this%20talk%2C%20we%20propose%20a%20general%20framework%20to%20design%20accumulation%20scenarios%20that%20can%20be%20used%20to%20anticipate%20the%20impact%20of%20a%20massive%20cyber%20attack%20on%20an%20insurance%20portfolio.%20The%20aim%20is%20also%20to%20emphasize%20the%20role%20of%20countermeasures%20in%20stopping%20the%20spread%20of%20the%20attack%20over%20the%20portfolio%2C%20and%20to%20quantify%20the%20benefits%20of%20implementing%20such%20strategies%20of%20response.%20Our%20approach%20consists%20of%20separating%20the%20global%20dynamic%20of%20the%20cyber%20event%20(that%20can%20be%20described%20through%20compartmental%20epidemiological%20models)%2C%20the%20effect%20on%20the%20portfolio%2C%20and%20the%20response%20strategy.%20This%20general%20framework%20allows%20us%20to%20obtain%20Gaussian%20approximations%20for%20the%20corresponding%20processes%2C%20and%20sharp%20confidence%20bounds%20for%20the%20losses.%20A%20detailed%20simulation%20study%2C%20which%20mimics%20the%20effects%20of%20a%20Wannacry%20scenario%2C%20illustrates%20the%20practical%20implementation%20of%20the%0Amethod.%20Joint%20work%20with%20Olivier%20Lopez.%0Ahttps%3A%2F%2Fhal.archives-ouvertes.fr%2Fhal-02564462v2%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-      <a href="caroline/caroline.ics" download>
-      Outlook calendar
-    </a>
-      </td>
-
-     <td class = "speaker"><a href="https://sites.google.com/site/carolinehillairet/" target="_blank">  Caroline Hillairet (ENSAE-Paris, FRANCE)</a></td>
-    <td class = "title"> Propagation of cyber incidents in an insurance portfolio
-<br> <details>
-<summary>Abstract (click to expand)</summary>
-In this talk, we propose a general framework to design accumulation scenarios that can be used to anticipate the impact of a massive cyber attack on an insurance portfolio. The aim is also to emphasize the role of countermeasures in stopping the spread of the attack over the portfolio, and to quantify the benefits of implementing such strategies of response. Our approach consists of separating the global dynamic of the cyber event (that can be described through compartmental epidemiological models), the effect on the portfolio, and the response strategy. This general framework allows us to obtain Gaussian approximations for the corresponding processes, and sharp confidence bounds for the losses. A detailed simulation study, which mimics the effects of a Wannacry scenario, illustrates the practical implementation of the
-method. Joint work with Olivier Lopez.
-https://hal.archives-ouvertes.fr/hal-02564462v2
-</details></td>
-  <td><a href="caroline/Carolie_Hillairet_OWARS.pdf" target="_blank">Slides</a>
-    </td>
-  </tr>
+ 
 
   <tr>
    <td class = "date"><b>29 September 2021 3pm (UTC) </b> <br> In your local time: <br>
@@ -1231,6 +1190,48 @@ In this talk we will discuss the problem of optimal dividend rate payment (with 
     This is a joint work with Hansjoerg Albrecher and Pablo Azcue.
 </details></td>
   <td>
+    </td>
+  </tr>
+    <tr>
+   <td class = "date"><b>15 September 2021 12pm (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript">
+    var date102 = new Date('2021-09-15T12:00:00Z');
+    var day102 = date102.getDate();
+    const monthNames102 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month102 = monthNames102[date102.getMonth()];
+    var year102 = date102.getFullYear();
+    var strTime102 = day102 + " " + month102 + " " +  year102;
+    document.write(strTime102);
+    const dtf102 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone102 = dtf102.formatToParts(date102).find((part) => part.type == 'timeZoneName').value;
+    var hours102 = date102.getHours();
+    var minutes102 = date102.getMinutes();
+    var ampm102 = hours102 >= 12 ? 'pm' : 'am';
+    hours102 = hours102 % 12;
+    hours102 = hours102 ? hours102 : 12; // the hour '0' should be '12'
+    minutes102 = minutes102 < 10 ? '0'+minutes102 : minutes102;
+    var strTime2102 = hours102 + ':' + minutes102 +ampm102 + ' ' + "(" +zone102+")";
+    document.write("<br>");
+    document.write(strTime2102);
+    </script>
+
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Caroline%20Hillairet%20(ENSAE-Paris%2C%20FRANCE)&dates=20210915T120000Z/20210915T131000Z&details=Speakers%3A%20Caroline%20Hillairet%20(ENSAE-Paris%2C%20FRANCE)%0A%0ATitle%3A%20Propagation%20of%20cyber%20incidents%20in%20an%20insurance%20portfolio%0A%0AAbstract%3A%20In%20this%20talk%2C%20we%20propose%20a%20general%20framework%20to%20design%20accumulation%20scenarios%20that%20can%20be%20used%20to%20anticipate%20the%20impact%20of%20a%20massive%20cyber%20attack%20on%20an%20insurance%20portfolio.%20The%20aim%20is%20also%20to%20emphasize%20the%20role%20of%20countermeasures%20in%20stopping%20the%20spread%20of%20the%20attack%20over%20the%20portfolio%2C%20and%20to%20quantify%20the%20benefits%20of%20implementing%20such%20strategies%20of%20response.%20Our%20approach%20consists%20of%20separating%20the%20global%20dynamic%20of%20the%20cyber%20event%20(that%20can%20be%20described%20through%20compartmental%20epidemiological%20models)%2C%20the%20effect%20on%20the%20portfolio%2C%20and%20the%20response%20strategy.%20This%20general%20framework%20allows%20us%20to%20obtain%20Gaussian%20approximations%20for%20the%20corresponding%20processes%2C%20and%20sharp%20confidence%20bounds%20for%20the%20losses.%20A%20detailed%20simulation%20study%2C%20which%20mimics%20the%20effects%20of%20a%20Wannacry%20scenario%2C%20illustrates%20the%20practical%20implementation%20of%20the%0Amethod.%20Joint%20work%20with%20Olivier%20Lopez.%0Ahttps%3A%2F%2Fhal.archives-ouvertes.fr%2Fhal-02564462v2%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="caroline/caroline.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+
+     <td class = "speaker"><a href="https://sites.google.com/site/carolinehillairet/" target="_blank">  Caroline Hillairet (ENSAE-Paris, FRANCE)</a></td>
+    <td class = "title"> Propagation of cyber incidents in an insurance portfolio
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+In this talk, we propose a general framework to design accumulation scenarios that can be used to anticipate the impact of a massive cyber attack on an insurance portfolio. The aim is also to emphasize the role of countermeasures in stopping the spread of the attack over the portfolio, and to quantify the benefits of implementing such strategies of response. Our approach consists of separating the global dynamic of the cyber event (that can be described through compartmental epidemiological models), the effect on the portfolio, and the response strategy. This general framework allows us to obtain Gaussian approximations for the corresponding processes, and sharp confidence bounds for the losses. A detailed simulation study, which mimics the effects of a Wannacry scenario, illustrates the practical implementation of the
+method. Joint work with Olivier Lopez.
+https://hal.archives-ouvertes.fr/hal-02564462v2
+</details></td>
+  <td><a href="caroline/Carolie_Hillairet_OWARS.pdf" target="_blank">Slides</a>
     </td>
   </tr>
 </tbody>
