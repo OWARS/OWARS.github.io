@@ -437,50 +437,7 @@ window.player = player;
 
 
 
- <tr>
-  <td class = "date"><b>sadfnask (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date104 = new Date('2021-09-29T15:00:00Z');
-      var day104 = date104.getDate();
-      const monthNames104 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month104 = monthNames104[date104.getMonth()];
-      var year104 = date104.getFullYear();
-      var strTime104 = day104 + " " + month104 + " " +  year104;
-      document.write(strTime104);
-      const dtf104 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone104 = dtf104.formatToParts(date104).find((part) => part.type == 'timeZoneName').value;
-      var hours104 = date104.getHours();
-      var minutes104 = date104.getMinutes();
-      var ampm104 = hours104 >= 12 ? 'pm' : 'am';
-      hours104 = hours104 % 12;
-      hours104 = hours104 ? hours104 : 12; // the hour '0' should be '12'
-      minutes104 = minutes104 < 10 ? '0'+minutes104 : minutes104;
-      var strTime2104 = hours104 + ':' + minutes104 +ampm104 + ' ' + "(" +zone104+")";
-      document.write("<br>");
-      document.write(strTime2104);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Daniel%20Bauer%20(University%20of%20Wisconsin%E2%80%93Madison%2C%20USA)&dates=20210929T170000Z/20210929T181000Z&details=%5BOWARS%5D%20Daniel%20Bauer%20(University%20of%20Wisconsin%E2%80%93Madison%2C%20USA)%0ADate%20and%20Time%3A%20Sep%2029%2C%202021%205%3A00%20PM%20-%206%3A10%20PM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Daniel%20Bauer%20(University%20of%20Wisconsin%E2%80%93Madison%2C%20USA)%0A%0ATitle%3A%20The%20Marginal%20Cost%20of%20Risk%20and%20Capital%20Allocation%20in%20a%20Property%20and%20Casualty%20Insurance%20Company%20(with%20Qiheng%20Guo%20and%20George%20H.%20Zanjani)%0A%0AAbstract%3A%20Abstract%3A%20We%20develop%20a%20multi-period%20profit%20maximization%20model%20for%20a%20property%20and%20casualty%20(P%26C)%20insurance%20company%20and%20use%20it%20for%20determining%20the%20marginal%20cost%20of%20risk%20for%20different%20lines%20of%20business%20and%20resulting%20economic%20capital%20allocations.%20In%20contrast%20to%20previous%20literature%2C%20our%20model%20features%20a%20loss%20structure%20that%20matches%20the%20characteristics%20of%20a%20P%26C%20company%2C%20comprising%20so-called%20%E2%80%9Cshort-tailed%E2%80%9D%20and%20%E2%80%9Clong-tailed%E2%80%9D%20business%20lines%20with%20different%20expected%20settlement%20terms.%20As%20one%20key%20contribution%2C%20our%20theoretical%20and%20numerical%20results%20show%20that%20lines%20with%20different%20terms%20are%20assessed%20differently%2C%20depending%20on%20the%20company%E2%80%99s%20financial%20situation.%0APaper%20link%3A%20https%3A%2F%2Fdanielbaueracademic.files.wordpress.com%2F2021%2F09%2Fguobauerzanjani_pandcallocation.pdf%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="daniel/daniel.ics" download>
-        Outlook calendar
-      </a>
-        </td>
-        
-        <td class = "speaker"><a href="https://business.wisc.edu/directory/profile/daniel-bauer/" target="_blank">  Daniel Bauer (University of Wisconsin–Madison, USA)</a></td>
-        <td class = "title"> The Marginal Cost of Risk and Capital Allocation in a Property and Casualty Insurance Company (with Qiheng Guo and George H. Zanjani)
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-        We develop a multi-period profit maximization model for a property and casualty (P&C) insurance company and use it for determining the marginal cost of risk for different lines of business and resulting economic capital allocations. In contrast to previous literature, our model features a loss structure that matches the characteristics of a P&C company, comprising so-called “short-tailed” and “long-tailed” business lines with different expected settlement terms. As one key contribution, our theoretical and numerical results show that lines with different terms are assessed differently, depending on the company’s financial situation.
-      Paper link:
-        <a href="https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf">
-        https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf
-      </a>
-        </details></td>
-        <td>
-        </td>
-        </tr>
+
 
   <tr>
    <td class = "date"><b>29 September 2021 3pm (UTC) </b> <br> In your local time: <br>
