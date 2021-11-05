@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Speaker: Luitgard Veraart (London School of Economics\, UK)\n\nTitle: When does portfolio compression reduce systemic risk?\n\nAbstract:  We analyse the consequences of portfolio compression on systemic risk. Portfolio compression is a post-trading netting mechanism that reduces gross positions while keeping net positions unchanged and it is part of the financial legislation in the US (Dodd-Frank Act) and in Europe (European Market Infrastructure Regulation). We derive necessary structural conditions for portfolio compression to be harmful and discuss policy implications. In particular\, we show that the potential danger of portfolio compression comes from defaults of firms that conduct portfolio compression. If no defaults occur among those firms that engage in compression\, then portfolio compression always reduces systemic risk.\n\nFurther details: https://owars.info\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20211124T120000Z
+DTEND:20211124T131000Z
+LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
+SUMMARY;LANGUAGE=en-us:[OWARS]  Luitgard Veraart (London School of Economics, UK)
+END:VEVENT
+END:VCALENDAR

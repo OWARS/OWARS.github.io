@@ -209,65 +209,119 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
 
 
+<div class="round" style="font-size:120%">
 
+<img class="img-responsive" src="anne/anne.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2021-11-10T16:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2021-11-10T16:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://annemackay.github.io/" target="_blank">  Anne MacKay	(UQAM Montréal, Canada)
+</a>
+
+</div>
 
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/jeub5297KIM">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-  <b>Speaker: </b><a href="https://sites.google.com/view/wenjun-zhu" target="_blank"> Wenjun Zhu (Nanyang Technological University, Singapore)
-</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-   Duration-Hedging Trades, Return Momentum and Reversal
+
+    VIX-linked fee analysis via continuous-time Markov chain methods
 <br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-We study the duration-hedging trades of duration-sensitive strategic investors, i.e., pensions and life insurers. We use longevity shocks to identify their duration-hedging trades. Longevity shocks affect these investors’ liability duration and induce them to adjust their asset duration. When longevity shocks are low (high), they buy more short- (long-) duration stocks and sell more long- (short-) duration stocks. Because prior winners (losers) have shorter (longer) duration, they behave like momentum (contrarian) traders when longevity shocks are low (high). We further verify this channel using capital flows and cross-state longevity variations.
-</details>
+<b>Abstract:</b>
+We consider variable annuity (VA) contracts in which the insurance fee is linked to the VIX index and study the impact of the fee structure on the optimal surrender strategy. Approximating the VA account value and the volatility processes by a two-layer continuous-time Markov chain allows us to work with various VIX-linked fee structures and a wide class of stochastic volatility models, thus generalizing the framework of Cui et al. (2017). We discuss a simple condition under which early surrenders are suboptimal, and present a fast algorithm to approximate the value of the VA contract when this condition is not satisfied. Extensive numerical examples are carried out to illustrate the impact of the fee structure on optimal policyholder behaviour.
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
 </div>
-
-
-
 </div>
 
 
 
 
-<br>
-<br>
+
+
+
 
 
 <br>
@@ -388,135 +442,6 @@ window.player = player;
 
 
   <tr>
-   <td class = "date"><b>29 September 2021 3pm (UTC) </b> <br> In your local time: <br>
-  <script type="text/javascript">
-    var date103 = new Date('2021-09-29T15:00:00Z');
-    var day103 = date103.getDate();
-    const monthNames103 = ["January", "February", "March", "April", "May", "June",
-                           "July", "August", "September", "October", "November", "December"];
-    var month103 = monthNames103[date103.getMonth()];
-    var year103 = date103.getFullYear();
-    var strTime103 = day103 + " " + month103 + " " +  year103;
-    document.write(strTime103);
-    const dtf103 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-    var zone103 = dtf103.formatToParts(date103).find((part) => part.type == 'timeZoneName').value;
-    var hours103 = date103.getHours();
-    var minutes103 = date103.getMinutes();
-    var ampm103 = hours103 >= 12 ? 'pm' : 'am';
-    hours103 = hours103 % 12;
-    hours103 = hours103 ? hours103 : 12; // the hour '0' should be '12'
-    minutes103 = minutes103 < 10 ? '0'+minutes103 : minutes103;
-    var strTime2103 = hours103 + ':' + minutes103 +ampm103 + ' ' + "(" +zone103+")";
-    document.write("<br>");
-    document.write(strTime2103);
-    </script>
-
-      <br>
-      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Daniel%20Bauer%20(University%20of%20Wisconsin%E2%80%93Madison%2C%20USA)&dates=20210929T170000Z/20210929T181000Z&details=%5BOWARS%5D%20Daniel%20Bauer%20(University%20of%20Wisconsin%E2%80%93Madison%2C%20USA)%0ADate%20and%20Time%3A%20Sep%2029%2C%202021%205%3A00%20PM%20-%206%3A10%20PM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Daniel%20Bauer%20(University%20of%20Wisconsin%E2%80%93Madison%2C%20USA)%0A%0ATitle%3A%20The%20Marginal%20Cost%20of%20Risk%20and%20Capital%20Allocation%20in%20a%20Property%20and%20Casualty%20Insurance%20Company%20(with%20Qiheng%20Guo%20and%20George%20H.%20Zanjani)%0A%0AAbstract%3A%20Abstract%3A%20We%20develop%20a%20multi-period%20profit%20maximization%20model%20for%20a%20property%20and%20casualty%20(P%26C)%20insurance%20company%20and%20use%20it%20for%20determining%20the%20marginal%20cost%20of%20risk%20for%20different%20lines%20of%20business%20and%20resulting%20economic%20capital%20allocations.%20In%20contrast%20to%20previous%20literature%2C%20our%20model%20features%20a%20loss%20structure%20that%20matches%20the%20characteristics%20of%20a%20P%26C%20company%2C%20comprising%20so-called%20%E2%80%9Cshort-tailed%E2%80%9D%20and%20%E2%80%9Clong-tailed%E2%80%9D%20business%20lines%20with%20different%20expected%20settlement%20terms.%20As%20one%20key%20contribution%2C%20our%20theoretical%20and%20numerical%20results%20show%20that%20lines%20with%20different%20terms%20are%20assessed%20differently%2C%20depending%20on%20the%20company%E2%80%99s%20financial%20situation.%0APaper%20link%3A%20https%3A%2F%2Fdanielbaueracademic.files.wordpress.com%2F2021%2F09%2Fguobauerzanjani_pandcallocation.pdf%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-      <a href="daniel/daniel.ics" download>
-      Outlook calendar
-    </a>
-      </td>
-
-     <td class = "speaker"><a href="https://business.wisc.edu/directory/profile/daniel-bauer/" target="_blank">  Daniel Bauer (University of Wisconsin–Madison, USA)</a></td>
-    <td class = "title"> The Marginal Cost of Risk and Capital Allocation in a Property and Casualty Insurance Company (with Qiheng Guo and George H. Zanjani)
-<br> <details>
-<summary>Abstract (click to expand)</summary>
-We develop a multi-period profit maximization model for a property and casualty (P&C) insurance company and use it for determining the marginal cost of risk for different lines of business and resulting economic capital allocations. In contrast to previous literature, our model features a loss structure that matches the characteristics of a P&C company, comprising so-called “short-tailed” and “long-tailed” business lines with different expected settlement terms. As one key contribution, our theoretical and numerical results show that lines with different terms are assessed differently, depending on the company’s financial situation.
-Paper link:
-<a href="https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf">
- https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf
-</a>
-</details></td>
-  <td>
-    </td>
-  </tr>
-
-  <tr>
-   <td class = "date"><b>13 October 2021 9am (UTC) </b> <br> In your local time: <br>
-  <script type="text/javascript">
-    var date104 = new Date('2021-10-13T09:00:00Z');
-    var day104 = date104.getDate();
-    const monthNames104 = ["January", "February", "March", "April", "May", "June",
-                           "July", "August", "September", "October", "November", "December"];
-    var month104 = monthNames104[date104.getMonth()];
-    var year104 = date104.getFullYear();
-    var strTime104 = day104 + " " + month104 + " " +  year104;
-    document.write(strTime104);
-    const dtf104 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-    var zone104 = dtf104.formatToParts(date104).find((part) => part.type == 'timeZoneName').value;
-    var hours104 = date104.getHours();
-    var minutes104 = date104.getMinutes();
-    var ampm104 = hours104 >= 12 ? 'pm' : 'am';
-    hours104 = hours104 % 12;
-    hours104 = hours104 ? hours104 : 12; // the hour '0' should be '12'
-    minutes104 = minutes104 < 10 ? '0'+minutes104 : minutes104;
-    var strTime2104 = hours104 + ':' + minutes104 +ampm104 + ' ' + "(" +zone104+")";
-    document.write("<br>");
-    document.write(strTime2104);
-    </script>
-
-      <br>
-      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Filip%20Lindskog%20(Stockholm%20University%2C%20Sweden)&dates=20211013T090000Z/20211013T101000Z&details=%5BOWARS%5D%20Filip%20Lindskog%20(Stockholm%20University%2C%20Sweden)%0ADate%20and%20Time%3A%20Oct%2013%2C%202021%209%3A00%20AM%20-%2010%3A10%20AM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Filip%20Lindskog%20(Stockholm%20University%2C%20Sweden)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-      <a href="filip/filip.ics" download>
-      Outlook calendar
-    </a>
-      </td>
-
-     <td class = "speaker"><a href="https://staff.math.su.se/lindskog/" target="_blank">  Filip Lindskog (Stockholm University, Sweden)</a></td>
-    <td class = "title"> Multiple-prior valuation of cash flows subject to capital requirements
-<br> <details>
-<summary>Abstract (click to expand)</summary>
-We study market-consistent valuation of liability cash flows motivated by current regulatory frameworks for the insurance industry. Building on the theory on multiple-prior optimal stopping we propose a valuation functional with sound economic properties that applies to any liability cash flow. Whereas a replicable cash flow is assigned the market value of the replicating portfolio, a cash flow that is not fully replicable is assigned a value which is the sum of the market value of a replicating portfolio and a positive margin. The margin is a direct consequence of considering a hypothetical transfer of the liability cash flow from an insurance company to an empty corporate entity set up with the sole purpose to manage the liability run-off, subject to repeated capital requirements, and considering the valuation of this entity from the owner's perspective taking model uncertainty into account. Aiming for applicability, we consider a detailed insurance application and explain how the optimisation problems over sets of probability measures can be cast as simpler optimisation problems over parameter sets corresponding to parameterised density processes appearing in applications.
-Joint work with Hampus Engsner and Julie Thøgersen
-</details></td>
-  <td>
-    </td>
-  </tr>
-
-  <tr>
-   <td class = "date"><b>27 October 2021 8am (UTC) </b> <br> In your local time: <br>
- <script type="text/javascript">
-  var date105 = new Date('2021-10-27T08:00:00Z');
-  var day105 = date105.getDate();
-  const monthNames105 = ["January", "February", "March", "April", "May", "June",
-                         "July", "August", "September", "October", "November", "December"];
-  var month105 = monthNames105[date105.getMonth()];
-  var year105 = date105.getFullYear();
-  var strTime105 = day105 + " " + month105 + " " +  year105;
-  document.write(strTime105);
-  const dtf105 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone105 = dtf105.formatToParts(date105).find((part) => part.type == 'timeZoneName').value;
-  var hours105 = date105.getHours();
-  var minutes105 = date105.getMinutes();
-  var ampm105 = hours105 >= 12 ? 'pm' : 'am';
-  hours105 = hours105 % 12;
-  hours105 = hours105 ? hours105 : 12; // the hour '0' should be '12'
-  minutes105 = minutes105 < 10 ? '0'+minutes105 : minutes105;
-  var strTime2105 = hours105 + ':' + minutes105 +ampm105 + ' ' + "(" +zone105+")";
-  document.write("<br>");
-  document.write(strTime2105);
-  </script>
-
-      <br>
-      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Wenjun%20Zhu%20(Nanyang%20Technological%20University%2C%20Singapore)&dates=20211027T080000Z/20211027T091000Z&details=%5BOWARS%5D%20Wenjun%20Zhu%20(Nanyang%20Technological%20University%2C%20Singapore)%0ADate%20and%20Time%3A%20Oct%2027%2C%202021%208%3A00%20AM%20-%209%3A10%20PM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Wenjun%20Zhu%20(Nanyang%20Technological%20University%2C%20Singapore)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-      <a href="wenjun/wenjun.ics" download>
-      Outlook calendar
-    </a>
-    <br>
-    (There was a typo in the calendar entries for the end-time. This is fixed now.)
-      </td>
-
-     <td class = "speaker"><a href="https://sites.google.com/view/wenjun-zhu" target="_blank">  Wenjun Zhu (Nanyang Technological University, Singapore)</a></td>
-    <td class = "title"> Duration-Hedging Trades, Return Momentum and Reversal
-<br> <details>
-<summary>Abstract (click to expand)</summary>
-We study the duration-hedging trades of duration-sensitive strategic investors, i.e., pensions and life insurers. We use longevity shocks to identify their duration-hedging trades. Longevity shocks affect these investors’ liability duration and induce them to adjust their asset duration. When longevity shocks are low (high), they buy more short- (long-) duration stocks and sell more long- (short-) duration stocks. Because prior winners (losers) have shorter (longer) duration, they behave like momentum (contrarian) traders when longevity shocks are low (high). We further verify this channel using capital flows and cross-state longevity variations.
-</details></td>
-  <td>
-    </td>
-  </tr>
-  <tr>
    <td class = "date"><b>10 November 2021 4pm (UTC) </b> <br> In your local time: <br>
 <script type="text/javascript">
   var date106 = new Date('2021-11-10T16:00:00Z');
@@ -547,7 +472,91 @@ We study the duration-hedging trades of duration-sensitive strategic investors, 
     </a>
       </td>
 
-     <td class = "speaker"><a href="https://annemackay.github.io/" target="_blank">  Anne McKay	(UQAM Montréal, Canada)</a></td>
+     <td class = "speaker"><a href="https://annemackay.github.io/" target="_blank">   Anne MacKay	(UQAM Montréal, Canada)</a></td>
+    <td class = "title"> VIX-linked fee analysis via continuous-time Markov chain methods
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+We consider variable annuity (VA) contracts in which the insurance fee is linked to the VIX index and study the impact of the fee structure on the optimal surrender strategy. Approximating the VA account value and the volatility processes by a two-layer continuous-time Markov chain allows us to work with various VIX-linked fee structures and a wide class of stochastic volatility models, thus generalizing the framework of Cui et al. (2017). We discuss a simple condition under which early surrenders are suboptimal, and present a fast algorithm to approximate the value of the VA contract when this condition is not satisfied. Extensive numerical examples are carried out to illustrate the impact of the fee structure on optimal policyholder behaviour.
+</details></td>
+  <td>
+    </td>
+  </tr>
+
+  <tr>
+<td class = "date"><b>24 November 2021 12pm (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript">
+    var date107 = new Date('2021-11-24T12:00:00Z');
+    var day107 = date107.getDate();
+    const monthNames107 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month107 = monthNames107[date107.getMonth()];
+    var year107 = date107.getFullYear();
+    var strTime107 = day107 + " " + month107 + " " +  year107;
+    document.write(strTime107);
+    const dtf107 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone107 = dtf107.formatToParts(date107).find((part) => part.type == 'timeZoneName').value;
+    var hours107 = date107.getHours();
+    var minutes107 = date107.getMinutes();
+    var ampm107 = hours107 >= 12 ? 'pm' : 'am';
+    hours107 = hours107 % 12;
+    hours107 = hours107 ? hours107 : 12; // the hour '0' should be '12'
+    minutes107 = minutes107 < 10 ? '0'+minutes107 : minutes107;
+    var strTime2107 = hours107 + ':' + minutes107 +ampm107 + ' ' + "(" +zone107+")";
+    document.write("<br>");
+    document.write(strTime2107);
+    </script>
+      
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Luitgard%20Veraart%20(London%20School%20of%20Economics%2C%20UK)&dates=20211124T120000Z/20211124T131000Z&details=Speaker%3A%20Luitgard%20Veraart%20(London%20School%20of%20Economics%2C%20UK)%0A%0ATitle%3A%20When%20does%20portfolio%20compression%20reduce%20systemic%20risk%3F%0A%0AAbstract%3A%20%20We%20analyse%20the%20consequences%20of%20portfolio%20compression%20on%20systemic%20risk.%20Portfolio%20compression%20is%20a%20post-trading%20netting%20mechanism%20that%20reduces%20gross%20positions%20while%20keeping%20net%20positions%20unchanged%20and%20it%20is%20part%20of%20the%20financial%20legislation%20in%20the%20US%20(Dodd-Frank%20Act)%20and%20in%20Europe%20(European%20Market%20Infrastructure%20Regulation).%20We%20derive%20necessary%20structural%20conditions%20for%20portfolio%20compression%20to%20be%20harmful%20and%20discuss%20policy%20implications.%20In%20particular%2C%20we%20show%20that%20the%20potential%20danger%20of%20portfolio%20compression%20comes%20from%20defaults%20of%20firms%20that%20conduct%20portfolio%20compression.%20If%20no%20defaults%20occur%20among%20those%20firms%20that%20engage%20in%20compression%2C%20then%20portfolio%20compression%20always%20reduces%20systemic%20risk.%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="luitgard/luitgard.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+      
+      
+
+     <td class = "speaker"><a href="https://personal.lse.ac.uk/veraart/" target="_blank"> Luitgard Veraart (London School of Economics, UK)</a></td>
+    <td class = "title">When does portfolio compression reduce systemic risk?
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+We analyse the consequences of portfolio compression on systemic risk. Portfolio compression is a post-trading netting mechanism that reduces gross positions while keeping net positions unchanged and it is part of the financial legislation in the US (Dodd-Frank Act) and in Europe (European Market Infrastructure Regulation). We derive necessary structural conditions for portfolio compression to be harmful and discuss policy implications. In particular, we show that the potential danger of portfolio compression comes from defaults of firms that conduct portfolio compression. If no defaults occur among those firms that engage in compression, then portfolio compression always reduces systemic risk.
+</details></td>
+  <td>
+    </td>
+  </tr>
+
+  <tr>
+ <td class = "date"><b>08 December 2021 4pm (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript">
+    var date108 = new Date('2021-12-08T16:00:00Z');
+    var day108 = date108.getDate();
+    const monthNames108 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month108 = monthNames108[date108.getMonth()];
+    var year108 = date108.getFullYear();
+    var strTime108 = day108 + " " + month108 + " " +  year108;
+    document.write(strTime108);
+    const dtf108 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone108 = dtf108.formatToParts(date108).find((part) => part.type == 'timeZoneName').value;
+    var hours108 = date108.getHours();
+    var minutes108 = date108.getMinutes();
+    var ampm108 = hours108 >= 12 ? 'pm' : 'am';
+    hours108 = hours108 % 12;
+    hours108 = hours108 ? hours108 : 12; // the hour '0' should be '12'
+    minutes108 = minutes108 < 10 ? '0'+minutes108 : minutes108;
+    var strTime2108 = hours108 + ':' + minutes108 +ampm108 + ' ' + "(" +zone108+")";
+    document.write("<br>");
+    document.write(strTime2108);
+    </script>
+      
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Shengchao%20Zhuang%20(University%20of%20Nebraska-Lincoln%2C%20USA)&dates=20211208T160000Z/20211208T171000Z&details=%5BOWARS%5D%20%20Shengchao%20Zhuang%20(University%20of%20Nebraska-Lincoln%2C%20USA)%0ADate%20and%20Time%3A%20Dec%208%2C%202021%204%3A00%20PM%20-%205%3A10%20PM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Shengchao%20Zhuang%20(University%20of%20Nebraska-Lincoln%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="shengchao/shengchao.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+
+     <td class = "speaker"><a href="https://business.unl.edu/people/szhuang" target="_blank">  Shengchao Zhuang (University of Nebraska-Lincoln, USA)</a></td>
     <td class = "title"> TBA
 <br> <details>
 <summary>Abstract (click to expand)</summary>
@@ -556,7 +565,6 @@ TBA
   <td>
     </td>
   </tr>
-
 
 </tbody>
 </table>
@@ -1196,6 +1204,137 @@ method. Joint work with Olivier Lopez.
 https://hal.archives-ouvertes.fr/hal-02564462v2
 </details></td>
   <td><a href="caroline/Carolie_Hillairet_OWARS.pdf" target="_blank">Slides</a>
+    </td>
+  </tr>
+  
+  
+  <tr>
+   <td class = "date"><b>29 September 2021 3pm (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript">
+    var date103 = new Date('2021-09-29T15:00:00Z');
+    var day103 = date103.getDate();
+    const monthNames103 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month103 = monthNames103[date103.getMonth()];
+    var year103 = date103.getFullYear();
+    var strTime103 = day103 + " " + month103 + " " +  year103;
+    document.write(strTime103);
+    const dtf103 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone103 = dtf103.formatToParts(date103).find((part) => part.type == 'timeZoneName').value;
+    var hours103 = date103.getHours();
+    var minutes103 = date103.getMinutes();
+    var ampm103 = hours103 >= 12 ? 'pm' : 'am';
+    hours103 = hours103 % 12;
+    hours103 = hours103 ? hours103 : 12; // the hour '0' should be '12'
+    minutes103 = minutes103 < 10 ? '0'+minutes103 : minutes103;
+    var strTime2103 = hours103 + ':' + minutes103 +ampm103 + ' ' + "(" +zone103+")";
+    document.write("<br>");
+    document.write(strTime2103);
+    </script>
+
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Daniel%20Bauer%20(University%20of%20Wisconsin%E2%80%93Madison%2C%20USA)&dates=20210929T170000Z/20210929T181000Z&details=%5BOWARS%5D%20Daniel%20Bauer%20(University%20of%20Wisconsin%E2%80%93Madison%2C%20USA)%0ADate%20and%20Time%3A%20Sep%2029%2C%202021%205%3A00%20PM%20-%206%3A10%20PM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Daniel%20Bauer%20(University%20of%20Wisconsin%E2%80%93Madison%2C%20USA)%0A%0ATitle%3A%20The%20Marginal%20Cost%20of%20Risk%20and%20Capital%20Allocation%20in%20a%20Property%20and%20Casualty%20Insurance%20Company%20(with%20Qiheng%20Guo%20and%20George%20H.%20Zanjani)%0A%0AAbstract%3A%20Abstract%3A%20We%20develop%20a%20multi-period%20profit%20maximization%20model%20for%20a%20property%20and%20casualty%20(P%26C)%20insurance%20company%20and%20use%20it%20for%20determining%20the%20marginal%20cost%20of%20risk%20for%20different%20lines%20of%20business%20and%20resulting%20economic%20capital%20allocations.%20In%20contrast%20to%20previous%20literature%2C%20our%20model%20features%20a%20loss%20structure%20that%20matches%20the%20characteristics%20of%20a%20P%26C%20company%2C%20comprising%20so-called%20%E2%80%9Cshort-tailed%E2%80%9D%20and%20%E2%80%9Clong-tailed%E2%80%9D%20business%20lines%20with%20different%20expected%20settlement%20terms.%20As%20one%20key%20contribution%2C%20our%20theoretical%20and%20numerical%20results%20show%20that%20lines%20with%20different%20terms%20are%20assessed%20differently%2C%20depending%20on%20the%20company%E2%80%99s%20financial%20situation.%0APaper%20link%3A%20https%3A%2F%2Fdanielbaueracademic.files.wordpress.com%2F2021%2F09%2Fguobauerzanjani_pandcallocation.pdf%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="daniel/daniel.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+
+     <td class = "speaker"><a href="https://business.wisc.edu/directory/profile/daniel-bauer/" target="_blank">  Daniel Bauer (University of Wisconsin–Madison, USA)</a></td>
+    <td class = "title"> The Marginal Cost of Risk and Capital Allocation in a Property and Casualty Insurance Company (with Qiheng Guo and George H. Zanjani)
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+We develop a multi-period profit maximization model for a property and casualty (P&C) insurance company and use it for determining the marginal cost of risk for different lines of business and resulting economic capital allocations. In contrast to previous literature, our model features a loss structure that matches the characteristics of a P&C company, comprising so-called “short-tailed” and “long-tailed” business lines with different expected settlement terms. As one key contribution, our theoretical and numerical results show that lines with different terms are assessed differently, depending on the company’s financial situation.
+Paper link:
+<a href="https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf">
+ https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf
+</a>
+</details></td>
+  <td>
+    </td>
+  </tr>
+
+  <tr>
+   <td class = "date"><b>13 October 2021 9am (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript">
+    var date104 = new Date('2021-10-13T09:00:00Z');
+    var day104 = date104.getDate();
+    const monthNames104 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month104 = monthNames104[date104.getMonth()];
+    var year104 = date104.getFullYear();
+    var strTime104 = day104 + " " + month104 + " " +  year104;
+    document.write(strTime104);
+    const dtf104 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone104 = dtf104.formatToParts(date104).find((part) => part.type == 'timeZoneName').value;
+    var hours104 = date104.getHours();
+    var minutes104 = date104.getMinutes();
+    var ampm104 = hours104 >= 12 ? 'pm' : 'am';
+    hours104 = hours104 % 12;
+    hours104 = hours104 ? hours104 : 12; // the hour '0' should be '12'
+    minutes104 = minutes104 < 10 ? '0'+minutes104 : minutes104;
+    var strTime2104 = hours104 + ':' + minutes104 +ampm104 + ' ' + "(" +zone104+")";
+    document.write("<br>");
+    document.write(strTime2104);
+    </script>
+
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Filip%20Lindskog%20(Stockholm%20University%2C%20Sweden)&dates=20211013T090000Z/20211013T101000Z&details=%5BOWARS%5D%20Filip%20Lindskog%20(Stockholm%20University%2C%20Sweden)%0ADate%20and%20Time%3A%20Oct%2013%2C%202021%209%3A00%20AM%20-%2010%3A10%20AM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Filip%20Lindskog%20(Stockholm%20University%2C%20Sweden)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="filip/filip.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+
+     <td class = "speaker"><a href="https://staff.math.su.se/lindskog/" target="_blank">  Filip Lindskog (Stockholm University, Sweden)</a></td>
+    <td class = "title"> Multiple-prior valuation of cash flows subject to capital requirements
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+We study market-consistent valuation of liability cash flows motivated by current regulatory frameworks for the insurance industry. Building on the theory on multiple-prior optimal stopping we propose a valuation functional with sound economic properties that applies to any liability cash flow. Whereas a replicable cash flow is assigned the market value of the replicating portfolio, a cash flow that is not fully replicable is assigned a value which is the sum of the market value of a replicating portfolio and a positive margin. The margin is a direct consequence of considering a hypothetical transfer of the liability cash flow from an insurance company to an empty corporate entity set up with the sole purpose to manage the liability run-off, subject to repeated capital requirements, and considering the valuation of this entity from the owner's perspective taking model uncertainty into account. Aiming for applicability, we consider a detailed insurance application and explain how the optimisation problems over sets of probability measures can be cast as simpler optimisation problems over parameter sets corresponding to parameterised density processes appearing in applications.
+Joint work with Hampus Engsner and Julie Thøgersen
+</details></td>
+  <td>
+    </td>
+  </tr>
+
+  <tr>
+   <td class = "date"><b>27 October 2021 8am (UTC) </b> <br> In your local time: <br>
+ <script type="text/javascript">
+  var date105 = new Date('2021-10-27T08:00:00Z');
+  var day105 = date105.getDate();
+  const monthNames105 = ["January", "February", "March", "April", "May", "June",
+                         "July", "August", "September", "October", "November", "December"];
+  var month105 = monthNames105[date105.getMonth()];
+  var year105 = date105.getFullYear();
+  var strTime105 = day105 + " " + month105 + " " +  year105;
+  document.write(strTime105);
+  const dtf105 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone105 = dtf105.formatToParts(date105).find((part) => part.type == 'timeZoneName').value;
+  var hours105 = date105.getHours();
+  var minutes105 = date105.getMinutes();
+  var ampm105 = hours105 >= 12 ? 'pm' : 'am';
+  hours105 = hours105 % 12;
+  hours105 = hours105 ? hours105 : 12; // the hour '0' should be '12'
+  minutes105 = minutes105 < 10 ? '0'+minutes105 : minutes105;
+  var strTime2105 = hours105 + ':' + minutes105 +ampm105 + ' ' + "(" +zone105+")";
+  document.write("<br>");
+  document.write(strTime2105);
+  </script>
+
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Wenjun%20Zhu%20(Nanyang%20Technological%20University%2C%20Singapore)&dates=20211027T080000Z/20211027T091000Z&details=%5BOWARS%5D%20Wenjun%20Zhu%20(Nanyang%20Technological%20University%2C%20Singapore)%0ADate%20and%20Time%3A%20Oct%2027%2C%202021%208%3A00%20AM%20-%209%3A10%20PM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Wenjun%20Zhu%20(Nanyang%20Technological%20University%2C%20Singapore)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="wenjun/wenjun.ics" download>
+      Outlook calendar
+    </a>
+    <br>
+    (There was a typo in the calendar entries for the end-time. This is fixed now.)
+      </td>
+
+     <td class = "speaker"><a href="https://sites.google.com/view/wenjun-zhu" target="_blank">  Wenjun Zhu (Nanyang Technological University, Singapore)</a></td>
+    <td class = "title"> Duration-Hedging Trades, Return Momentum and Reversal
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+We study the duration-hedging trades of duration-sensitive strategic investors, i.e., pensions and life insurers. We use longevity shocks to identify their duration-hedging trades. Longevity shocks affect these investors’ liability duration and induce them to adjust their asset duration. When longevity shocks are low (high), they buy more short- (long-) duration stocks and sell more long- (short-) duration stocks. Because prior winners (losers) have shorter (longer) duration, they behave like momentum (contrarian) traders when longevity shocks are low (high). We further verify this channel using capital flows and cross-state longevity variations.
+</details></td>
+  <td>
     </td>
   </tr>
 </tbody>
