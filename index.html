@@ -210,114 +210,66 @@ height: 100%;
 
 
 
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
-</h2>
+
+
+
+
+<br>
+
+
+ <div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
 
-     
 
 
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="shengchao/shengchao.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2021-12-08T16:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2021-12-08T16:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="https://business.unl.edu/people/szhuang" target="_blank"> Shengchao Zhuang (University of Nebraska-Lincoln, USA)
-</a>
-
-</div>
-
-<br>
-
-
-<div class="container">
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+
+
+
+
+
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/Ko7hZjCBM9Y">
+</iframe>
+
+
+
+    
+
+</div>
 
   
-<div class="col-md-8">
+<div class="col-md-6">
+  <b>Speaker: </b><a href="https://business.unl.edu/people/szhuang" target="_blank"> Shengchao Zhuang (University of Nebraska-Lincoln, USA)
+</a>
+<br>
   <b>Title:</b>
-    S-shaped narrow framing, skewness and the demand for insurance
+   S-shaped narrow framing, skewness and the demand for insurance
 <br> 
-<b>Abstract:</b>
+<details>
+<summary>Abstract (click to expand)</summary>
 The existing literature in insurance economics has shown that narrow framing can explain why people buy too little insurance compared to what standard theory predicts. However, there is also ample evidence suggesting people sometimes buy too much insurance. In this paper, we assume S-shaped narrow framing, i.e., the local utility function for evaluating the net insurance payoff is convex in the loss domain but concave in the gain domain, and show that it can reconcile with both insurance puzzles simultaneously. Especially, we show the policyholder under S-shaped narrow framing is more likely to underinsure more negatively skewed risks of loss but to overinsure less negatively skewed risks of loss when only coinsurance is offered. We further characterize the optimal insurance scheme under S-shaped narrow framing while incentive compatibility is satisfied. It contains a straight deductible when the net insurance payoff is negative but partial insurance when the net insurance payoff is positive. This is a joint work with Jiakun Zheng and Yichun Chi.
-
-      </div>
-
-<div class="col-md-4">
+</details>
 </div>
 
-</div>
+<div class="col-md-2">
+
 </div>
 
 
+
+</div>
+
+
+
+
+<br>
+<br>
 
 
 
