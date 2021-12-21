@@ -80,6 +80,9 @@ td.speaker {
   width: 200px;
 }
 td.title {
+  width: 300px;
+}
+td.misc {
   width: 550px;
 }
 
@@ -216,68 +219,6 @@ height: 100%;
 
 
 <br>
-
-
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
-<div class="row row-grid">
-
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/Ko7hZjCBM9Y">
-</iframe>
-
-
-
-    
-
-</div>
-
-  
-<div class="col-md-6">
-  <b>Speaker: </b><a href="https://business.unl.edu/people/szhuang" target="_blank"> Shengchao Zhuang (University of Nebraska-Lincoln, USA)
-</a>
-<br>
-  <b>Title:</b>
-   S-shaped narrow framing, skewness and the demand for insurance
-<br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-The existing literature in insurance economics has shown that narrow framing can explain why people buy too little insurance compared to what standard theory predicts. However, there is also ample evidence suggesting people sometimes buy too much insurance. In this paper, we assume S-shaped narrow framing, i.e., the local utility function for evaluating the net insurance payoff is convex in the loss domain but concave in the gain domain, and show that it can reconcile with both insurance puzzles simultaneously. Especially, we show the policyholder under S-shaped narrow framing is more likely to underinsure more negatively skewed risks of loss but to overinsure less negatively skewed risks of loss when only coinsurance is offered. We further characterize the optimal insurance scheme under S-shaped narrow framing while incentive compatibility is satisfied. It contains a straight deductible when the net insurance payoff is negative but partial insurance when the net insurance payoff is positive. This is a joint work with Jiakun Zheng and Yichun Chi.
-</details>
-</div>
-
-<div class="col-md-2">
-
-</div>
-
-
-
-</div>
-
-
-
-
-<br>
-<br>
-
-
-
-
-
-
-
-<br>
 <br>
 
 
@@ -394,131 +335,98 @@ window.player = player;
 
 
 
-  <tr>
-   <td class = "date"><b>10 November 2021 4pm (UTC) </b> <br> In your local time: <br>
-<script type="text/javascript">
-  var date106 = new Date('2021-11-10T16:00:00Z');
-  var day106 = date106.getDate();
-  const monthNames106 = ["January", "February", "March", "April", "May", "June",
-                         "July", "August", "September", "October", "November", "December"];
-  var month106 = monthNames106[date106.getMonth()];
-  var year106 = date106.getFullYear();
-  var strTime106 = day106 + " " + month106 + " " +  year106;
-  document.write(strTime106);
-  const dtf106 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone106 = dtf106.formatToParts(date106).find((part) => part.type == 'timeZoneName').value;
-  var hours106 = date106.getHours();
-  var minutes106 = date106.getMinutes();
-  var ampm106 = hours106 >= 12 ? 'pm' : 'am';
-  hours106 = hours106 % 12;
-  hours106 = hours106 ? hours106 : 12; // the hour '0' should be '12'
-  minutes106 = minutes106 < 10 ? '0'+minutes106 : minutes106;
-  var strTime2106 = hours106 + ':' + minutes106 +ampm106 + ' ' + "(" +zone106+")";
-  document.write("<br>");
-  document.write(strTime2106);
-  </script>
-
-      <br>
-      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Anne%20McKay%09(UQAM%20Montr%C3%A9al%2C%20Canada)&dates=20211110T160000Z/20211110T171000Z&details=%5BOWARS%5D%20Anne%20McKay%09(UQAM%20Montr%C3%A9al%2C%20Canada)%0ADate%20and%20Time%3A%20Nov%2010%2C%202021%204%3A00%20PM%20-%205%3A10%20PM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Anne%20McKay%09(UQAM%20Montr%C3%A9al%2C%20Canada)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-      <a href="anne/anne.ics" download>
-      Outlook calendar
-    </a>
-      </td>
-
-     <td class = "speaker"><a href="https://annemackay.github.io/" target="_blank">   Anne MacKay	(UQAM Montréal, Canada)</a></td>
-    <td class = "title"> VIX-linked fee analysis via continuous-time Markov chain methods
-<br> <details>
-<summary>Abstract (click to expand)</summary>
-We consider variable annuity (VA) contracts in which the insurance fee is linked to the VIX index and study the impact of the fee structure on the optimal surrender strategy. Approximating the VA account value and the volatility processes by a two-layer continuous-time Markov chain allows us to work with various VIX-linked fee structures and a wide class of stochastic volatility models, thus generalizing the framework of Cui et al. (2017). We discuss a simple condition under which early surrenders are suboptimal, and present a fast algorithm to approximate the value of the VA contract when this condition is not satisfied. Extensive numerical examples are carried out to illustrate the impact of the fee structure on optimal policyholder behaviour.
-</details></td>
-  <td>
-    </td>
-  </tr>
-
-  <tr>
-<td class = "date"><b>24 November 2021 12pm (UTC) </b> <br> In your local time: <br>
-  <script type="text/javascript">
-    var date107 = new Date('2021-11-24T12:00:00Z');
-    var day107 = date107.getDate();
-    const monthNames107 = ["January", "February", "March", "April", "May", "June",
-                           "July", "August", "September", "October", "November", "December"];
-    var month107 = monthNames107[date107.getMonth()];
-    var year107 = date107.getFullYear();
-    var strTime107 = day107 + " " + month107 + " " +  year107;
-    document.write(strTime107);
-    const dtf107 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-    var zone107 = dtf107.formatToParts(date107).find((part) => part.type == 'timeZoneName').value;
-    var hours107 = date107.getHours();
-    var minutes107 = date107.getMinutes();
-    var ampm107 = hours107 >= 12 ? 'pm' : 'am';
-    hours107 = hours107 % 12;
-    hours107 = hours107 ? hours107 : 12; // the hour '0' should be '12'
-    minutes107 = minutes107 < 10 ? '0'+minutes107 : minutes107;
-    var strTime2107 = hours107 + ':' + minutes107 +ampm107 + ' ' + "(" +zone107+")";
-    document.write("<br>");
-    document.write(strTime2107);
-    </script>
+<tr>
+  <td class = "date"><b>12 January 2022 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date109 = new Date('2022-01-12T15:00:00Z');
+      var day109 = date109.getDate();
+      const monthNames109 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month109 = monthNames109[date109.getMonth()];
+      var year109 = date109.getFullYear();
+      var strTime109 = day109 + " " + month109 + " " +  year109;
+      document.write(strTime109);
+      const dtf109 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone109 = dtf109.formatToParts(date109).find((part) => part.type == 'timeZoneName').value;
+      var hours109 = date109.getHours();
+      var minutes109 = date109.getMinutes();
+      var ampm109 = hours109 >= 12 ? 'pm' : 'am';
+      hours109 = hours109 % 12;
+      hours109 = hours109 ? hours109 : 12; // the hour '0' should be '12'
+      minutes109 = minutes109 < 10 ? '0'+minutes109 : minutes109;
+      var strTime2109 = hours109 + ':' + minutes109 +ampm109 + ' ' + "(" +zone109+")";
+      document.write("<br>");
+      document.write(strTime2109);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Virginia%20Young%20(University%20of%20Michigan%2C%20USA)&dates=20220112T150000Z/20220112T161000Z&details=Speaker%3A%20Virginia%20Young%20(University%20of%20Michigan%2C%20USA)%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="virginia/virginia.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://lsa.umich.edu/math/people/faculty/vryoung.html" target="_blank"> Virginia Young (University of Michigan, USA)</a>
       
-      <br>
-      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Luitgard%20Veraart%20(London%20School%20of%20Economics%2C%20UK)&dates=20211124T120000Z/20211124T131000Z&details=Speaker%3A%20Luitgard%20Veraart%20(London%20School%20of%20Economics%2C%20UK)%0A%0ATitle%3A%20When%20does%20portfolio%20compression%20reduce%20systemic%20risk%3F%0A%0AAbstract%3A%20%20We%20analyse%20the%20consequences%20of%20portfolio%20compression%20on%20systemic%20risk.%20Portfolio%20compression%20is%20a%20post-trading%20netting%20mechanism%20that%20reduces%20gross%20positions%20while%20keeping%20net%20positions%20unchanged%20and%20it%20is%20part%20of%20the%20financial%20legislation%20in%20the%20US%20(Dodd-Frank%20Act)%20and%20in%20Europe%20(European%20Market%20Infrastructure%20Regulation).%20We%20derive%20necessary%20structural%20conditions%20for%20portfolio%20compression%20to%20be%20harmful%20and%20discuss%20policy%20implications.%20In%20particular%2C%20we%20show%20that%20the%20potential%20danger%20of%20portfolio%20compression%20comes%20from%20defaults%20of%20firms%20that%20conduct%20portfolio%20compression.%20If%20no%20defaults%20occur%20among%20those%20firms%20that%20engage%20in%20compression%2C%20then%20portfolio%20compression%20always%20reduces%20systemic%20risk.%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-      <a href="luitgard/luitgard.ics" download>
-      Outlook calendar
-    </a>
-      </td>
-      
-      
+        </td>
+        <td class = "title"> TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+       TBA
+      </details></td>
+        <td>
+                   
+         <b>Host:</b> <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/pietro-millossovich"target="_blank">Pietro Millossovich  </a>
+          <br>
+        <b>Questions: </b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
 
-     <td class = "speaker"><a href="https://personal.lse.ac.uk/veraart/" target="_blank"> Luitgard Veraart (London School of Economics, UK)</a></td>
-    <td class = "title">When does portfolio compression reduce systemic risk?
-<br> <details>
-<summary>Abstract (click to expand)</summary>
-We analyse the consequences of portfolio compression on systemic risk. Portfolio compression is a post-trading netting mechanism that reduces gross positions while keeping net positions unchanged and it is part of the financial legislation in the US (Dodd-Frank Act) and in Europe (European Market Infrastructure Regulation). We derive necessary structural conditions for portfolio compression to be harmful and discuss policy implications. In particular, we show that the potential danger of portfolio compression comes from defaults of firms that conduct portfolio compression. If no defaults occur among those firms that engage in compression, then portfolio compression always reduces systemic risk.
-</details></td>
-  <td>
-    </td>
-  </tr>
-
-  <tr>
- <td class = "date"><b>08 December 2021 4pm (UTC) </b> <br> In your local time: <br>
-  <script type="text/javascript">
-    var date108 = new Date('2021-12-08T16:00:00Z');
-    var day108 = date108.getDate();
-    const monthNames108 = ["January", "February", "March", "April", "May", "June",
-                           "July", "August", "September", "October", "November", "December"];
-    var month108 = monthNames108[date108.getMonth()];
-    var year108 = date108.getFullYear();
-    var strTime108 = day108 + " " + month108 + " " +  year108;
-    document.write(strTime108);
-    const dtf108 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-    var zone108 = dtf108.formatToParts(date108).find((part) => part.type == 'timeZoneName').value;
-    var hours108 = date108.getHours();
-    var minutes108 = date108.getMinutes();
-    var ampm108 = hours108 >= 12 ? 'pm' : 'am';
-    hours108 = hours108 % 12;
-    hours108 = hours108 ? hours108 : 12; // the hour '0' should be '12'
-    minutes108 = minutes108 < 10 ? '0'+minutes108 : minutes108;
-    var strTime2108 = hours108 + ':' + minutes108 +ampm108 + ' ' + "(" +zone108+")";
-    document.write("<br>");
-    document.write(strTime2108);
-    </script>
-      
-      <br>
-      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Shengchao%20Zhuang%20(University%20of%20Nebraska-Lincoln%2C%20USA)&dates=20211208T160000Z/20211208T171000Z&details=%5BOWARS%5D%20%20Shengchao%20Zhuang%20(University%20of%20Nebraska-Lincoln%2C%20USA)%0ADate%20and%20Time%3A%20Dec%208%2C%202021%204%3A00%20PM%20-%205%3A10%20PM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Shengchao%20Zhuang%20(University%20of%20Nebraska-Lincoln%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-      <a href="shengchao/shengchao.ics" download>
-      Outlook calendar
-    </a>
-      </td>
-
-     <td class = "speaker"><a href="https://business.unl.edu/people/szhuang" target="_blank">  Shengchao Zhuang (University of Nebraska-Lincoln, USA)</a></td>
-    <td class = "title"> S-shaped narrow framing, skewness and the demand for insurance
-<br> <details>
-<summary>Abstract (click to expand)</summary>
- The existing literature in insurance economics has shown that narrow framing can explain why people buy too little insurance compared to what standard theory predicts. However, there is also ample evidence suggesting people sometimes buy too much insurance. In this paper, we assume S-shaped narrow framing, i.e., the local utility function for evaluating the net insurance payoff is convex in the loss domain but concave in the gain domain, and show that it can reconcile with both insurance puzzles simultaneously. Especially, we show the policyholder under S-shaped narrow framing is more likely to underinsure more negatively skewed risks of loss but to overinsure less negatively skewed risks of loss when only coinsurance is offered. We further characterize the optimal insurance scheme under S-shaped narrow framing while incentive compatibility is satisfied. It contains a straight deductible when the net insurance payoff is negative but partial insurance when the net insurance payoff is positive. This is a joint work with Jiakun Zheng and Yichun Chi.
-</details></td>
-  <td>
-    </td>
-  </tr>
-
+        </td>
+        </tr>
+        
+<tr>
+  <td class = "date"><b>26 January 2022 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date110 = new Date('2022-01-26T15:00:00Z');
+      var day110 = date110.getDate();
+      const monthNames110 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month110 = monthNames110[date110.getMonth()];
+      var year110 = date110.getFullYear();
+      var strTime110 = day110 + " " + month110 + " " +  year110;
+      document.write(strTime110);
+      const dtf110 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone110 = dtf110.formatToParts(date110).find((part) => part.type == 'timeZoneName').value;
+      var hours110 = date110.getHours();
+      var minutes110 = date110.getMinutes();
+      var ampm110 = hours110 >= 12 ? 'pm' : 'am';
+      hours110 = hours110 % 12;
+      hours110 = hours110 ? hours110 : 12; // the hour '0' should be '12'
+      minutes110 = minutes110 < 10 ? '0'+minutes110 : minutes110;
+      var strTime2110 = hours110 + ':' + minutes110 +ampm110 + ' ' + "(" +zone110+")";
+      document.write("<br>");
+      document.write(strTime2110);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Emanuela%20Rosazza%20Gianin%20(University%20of%20Milano-Bicocca%20%2C%20Italy)&dates=20220126T150000Z/20220126T161000Z&details=Speaker%3A%20Emanuela%20Rosazza%20Gianin%20(University%20of%20Milano-Bicocca%20%2C%20Italy)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="emanuela/emanuela.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://www.unimib.it/emanuela-rosazza-gianin" target="_blank"> Emanuela Rosazza Gianin (University of Milano-Bicocca , Italy)</a></td>
+        <td class = "title"> TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        TBA
+      </details></td>
+        <td>
+                       
+         <b>Host:</b> <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
+          <br>
+        <b>Questions: </b><a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
+        </td>
+        </tr>
 </tbody>
 </table>
 
@@ -1286,6 +1194,132 @@ Joint work with Hampus Engsner and Julie Thøgersen
 <br> <details>
 <summary>Abstract (click to expand)</summary>
 We study the duration-hedging trades of duration-sensitive strategic investors, i.e., pensions and life insurers. We use longevity shocks to identify their duration-hedging trades. Longevity shocks affect these investors’ liability duration and induce them to adjust their asset duration. When longevity shocks are low (high), they buy more short- (long-) duration stocks and sell more long- (short-) duration stocks. Because prior winners (losers) have shorter (longer) duration, they behave like momentum (contrarian) traders when longevity shocks are low (high). We further verify this channel using capital flows and cross-state longevity variations.
+</details></td>
+  <td>
+    </td>
+  </tr>
+  
+  
+  <tr>
+   <td class = "date"><b>10 November 2021 4pm (UTC) </b> <br> In your local time: <br>
+<script type="text/javascript">
+  var date106 = new Date('2021-11-10T16:00:00Z');
+  var day106 = date106.getDate();
+  const monthNames106 = ["January", "February", "March", "April", "May", "June",
+                         "July", "August", "September", "October", "November", "December"];
+  var month106 = monthNames106[date106.getMonth()];
+  var year106 = date106.getFullYear();
+  var strTime106 = day106 + " " + month106 + " " +  year106;
+  document.write(strTime106);
+  const dtf106 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone106 = dtf106.formatToParts(date106).find((part) => part.type == 'timeZoneName').value;
+  var hours106 = date106.getHours();
+  var minutes106 = date106.getMinutes();
+  var ampm106 = hours106 >= 12 ? 'pm' : 'am';
+  hours106 = hours106 % 12;
+  hours106 = hours106 ? hours106 : 12; // the hour '0' should be '12'
+  minutes106 = minutes106 < 10 ? '0'+minutes106 : minutes106;
+  var strTime2106 = hours106 + ':' + minutes106 +ampm106 + ' ' + "(" +zone106+")";
+  document.write("<br>");
+  document.write(strTime2106);
+  </script>
+
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Anne%20McKay%09(UQAM%20Montr%C3%A9al%2C%20Canada)&dates=20211110T160000Z/20211110T171000Z&details=%5BOWARS%5D%20Anne%20McKay%09(UQAM%20Montr%C3%A9al%2C%20Canada)%0ADate%20and%20Time%3A%20Nov%2010%2C%202021%204%3A00%20PM%20-%205%3A10%20PM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Anne%20McKay%09(UQAM%20Montr%C3%A9al%2C%20Canada)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="anne/anne.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+
+     <td class = "speaker"><a href="https://annemackay.github.io/" target="_blank">   Anne MacKay	(UQAM Montréal, Canada)</a></td>
+    <td class = "title"> VIX-linked fee analysis via continuous-time Markov chain methods
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+We consider variable annuity (VA) contracts in which the insurance fee is linked to the VIX index and study the impact of the fee structure on the optimal surrender strategy. Approximating the VA account value and the volatility processes by a two-layer continuous-time Markov chain allows us to work with various VIX-linked fee structures and a wide class of stochastic volatility models, thus generalizing the framework of Cui et al. (2017). We discuss a simple condition under which early surrenders are suboptimal, and present a fast algorithm to approximate the value of the VA contract when this condition is not satisfied. Extensive numerical examples are carried out to illustrate the impact of the fee structure on optimal policyholder behaviour.
+</details></td>
+  <td>
+    </td>
+  </tr>
+
+  <tr>
+<td class = "date"><b>24 November 2021 12pm (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript">
+    var date107 = new Date('2021-11-24T12:00:00Z');
+    var day107 = date107.getDate();
+    const monthNames107 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month107 = monthNames107[date107.getMonth()];
+    var year107 = date107.getFullYear();
+    var strTime107 = day107 + " " + month107 + " " +  year107;
+    document.write(strTime107);
+    const dtf107 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone107 = dtf107.formatToParts(date107).find((part) => part.type == 'timeZoneName').value;
+    var hours107 = date107.getHours();
+    var minutes107 = date107.getMinutes();
+    var ampm107 = hours107 >= 12 ? 'pm' : 'am';
+    hours107 = hours107 % 12;
+    hours107 = hours107 ? hours107 : 12; // the hour '0' should be '12'
+    minutes107 = minutes107 < 10 ? '0'+minutes107 : minutes107;
+    var strTime2107 = hours107 + ':' + minutes107 +ampm107 + ' ' + "(" +zone107+")";
+    document.write("<br>");
+    document.write(strTime2107);
+    </script>
+      
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Luitgard%20Veraart%20(London%20School%20of%20Economics%2C%20UK)&dates=20211124T120000Z/20211124T131000Z&details=Speaker%3A%20Luitgard%20Veraart%20(London%20School%20of%20Economics%2C%20UK)%0A%0ATitle%3A%20When%20does%20portfolio%20compression%20reduce%20systemic%20risk%3F%0A%0AAbstract%3A%20%20We%20analyse%20the%20consequences%20of%20portfolio%20compression%20on%20systemic%20risk.%20Portfolio%20compression%20is%20a%20post-trading%20netting%20mechanism%20that%20reduces%20gross%20positions%20while%20keeping%20net%20positions%20unchanged%20and%20it%20is%20part%20of%20the%20financial%20legislation%20in%20the%20US%20(Dodd-Frank%20Act)%20and%20in%20Europe%20(European%20Market%20Infrastructure%20Regulation).%20We%20derive%20necessary%20structural%20conditions%20for%20portfolio%20compression%20to%20be%20harmful%20and%20discuss%20policy%20implications.%20In%20particular%2C%20we%20show%20that%20the%20potential%20danger%20of%20portfolio%20compression%20comes%20from%20defaults%20of%20firms%20that%20conduct%20portfolio%20compression.%20If%20no%20defaults%20occur%20among%20those%20firms%20that%20engage%20in%20compression%2C%20then%20portfolio%20compression%20always%20reduces%20systemic%20risk.%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="luitgard/luitgard.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+      
+      
+
+     <td class = "speaker"><a href="https://personal.lse.ac.uk/veraart/" target="_blank"> Luitgard Veraart (London School of Economics, UK)</a></td>
+    <td class = "title">When does portfolio compression reduce systemic risk?
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+We analyse the consequences of portfolio compression on systemic risk. Portfolio compression is a post-trading netting mechanism that reduces gross positions while keeping net positions unchanged and it is part of the financial legislation in the US (Dodd-Frank Act) and in Europe (European Market Infrastructure Regulation). We derive necessary structural conditions for portfolio compression to be harmful and discuss policy implications. In particular, we show that the potential danger of portfolio compression comes from defaults of firms that conduct portfolio compression. If no defaults occur among those firms that engage in compression, then portfolio compression always reduces systemic risk.
+</details></td>
+  <td>
+    </td>
+  </tr>
+
+  <tr>
+ <td class = "date"><b>08 December 2021 4pm (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript">
+    var date108 = new Date('2021-12-08T16:00:00Z');
+    var day108 = date108.getDate();
+    const monthNames108 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month108 = monthNames108[date108.getMonth()];
+    var year108 = date108.getFullYear();
+    var strTime108 = day108 + " " + month108 + " " +  year108;
+    document.write(strTime108);
+    const dtf108 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone108 = dtf108.formatToParts(date108).find((part) => part.type == 'timeZoneName').value;
+    var hours108 = date108.getHours();
+    var minutes108 = date108.getMinutes();
+    var ampm108 = hours108 >= 12 ? 'pm' : 'am';
+    hours108 = hours108 % 12;
+    hours108 = hours108 ? hours108 : 12; // the hour '0' should be '12'
+    minutes108 = minutes108 < 10 ? '0'+minutes108 : minutes108;
+    var strTime2108 = hours108 + ':' + minutes108 +ampm108 + ' ' + "(" +zone108+")";
+    document.write("<br>");
+    document.write(strTime2108);
+    </script>
+      
+      <br>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Shengchao%20Zhuang%20(University%20of%20Nebraska-Lincoln%2C%20USA)&dates=20211208T160000Z/20211208T171000Z&details=%5BOWARS%5D%20%20Shengchao%20Zhuang%20(University%20of%20Nebraska-Lincoln%2C%20USA)%0ADate%20and%20Time%3A%20Dec%208%2C%202021%204%3A00%20PM%20-%205%3A10%20PM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Shengchao%20Zhuang%20(University%20of%20Nebraska-Lincoln%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+      <a href="shengchao/shengchao.ics" download>
+      Outlook calendar
+    </a>
+      </td>
+
+     <td class = "speaker"><a href="https://business.unl.edu/people/szhuang" target="_blank">  Shengchao Zhuang (University of Nebraska-Lincoln, USA)</a></td>
+    <td class = "title"> S-shaped narrow framing, skewness and the demand for insurance
+<br> <details>
+<summary>Abstract (click to expand)</summary>
+ The existing literature in insurance economics has shown that narrow framing can explain why people buy too little insurance compared to what standard theory predicts. However, there is also ample evidence suggesting people sometimes buy too much insurance. In this paper, we assume S-shaped narrow framing, i.e., the local utility function for evaluating the net insurance payoff is convex in the loss domain but concave in the gain domain, and show that it can reconcile with both insurance puzzles simultaneously. Especially, we show the policyholder under S-shaped narrow framing is more likely to underinsure more negatively skewed risks of loss but to overinsure less negatively skewed risks of loss when only coinsurance is offered. We further characterize the optimal insurance scheme under S-shaped narrow framing while incentive compatibility is satisfied. It contains a straight deductible when the net insurance payoff is negative but partial insurance when the net insurance payoff is positive. This is a joint work with Jiakun Zheng and Yichun Chi.
 </details></td>
   <td>
     </td>
