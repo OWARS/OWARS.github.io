@@ -3,8 +3,8 @@ VERSION:2.0
 BEGIN:VEVENT
 CLASS:PUBLIC
 DESCRIPTION:Speaker: Christian Furrer (University of Copenhagen\, Denmark)\n\nTitle: Change of measure techniques for scaled insurance cash flows\n\nAbstract: Incidental policyholder behavior\, including free policy conversion and stochastic retirement\, may have a significant impact on the market value of a life insurance contract\; consequently\, models should account for this. However\, the inclusion of incidental policyholder behavior typically leads to duration effects and thus an increase in computational complexity. In this talk\, I show how change of measure techniques can be used to conveniently deal with this added layer of complication.\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
-DTSTART:20220209T120000Z
-DTEND:20220209T131000Z
+DTSTART:20220420T120000Z
+DTEND:20220420T131000Z
 LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
 SUMMARY;LANGUAGE=en-us:[OWARS] Christian Furrer (University of Copenhagen, Denmark)
 END:VEVENT
