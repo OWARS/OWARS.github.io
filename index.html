@@ -205,71 +205,112 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
 
 
+<div class="round" style="font-size:120%">
 
+<img class="img-responsive" src="alfred/alfred.png" alt="Avatar" height="120" align='left' border-radius= "50%" >
 
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2022-03-23T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
 
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2022-03-23T15:00:00Z").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function() {
 
+  // Get today's date and time
+  var now = new Date().getTime();
 
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
 
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://www.uni-siegen.de/fb6/src/mueller/" target="_blank"> Alfred Müller (University of Siegen, Germany)
+</a>
+
+</div>
 
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/t-0MdYUkh68">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-  <b>Speaker: </b><a href="https://www.unsw.edu.au/staff/fei-huang" target="_blank"> Fei Huang (University of New South Wales, Australia)
-</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
- Insurance Discrimination and Pricing Fairness
+   Decisions under uncertainty: sufficient conditions for almost stochastic dominance
 <br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-On the issue of insurance discrimination, a grey area in regulation has resulted from the growing use of big data analytics by insurance companies – direct discrimination is prohibited, but indirect discrimination using proxies or more complex and opaque algorithms can be tolerated without restrictions. This phenomenon has recently attracted the attention of insurance regulators all over the world, and stricter insurance discrimination regulations are being discussed and considered by regulators. Meanwhile, various fairness criteria and fair machine learning algorithms have been proposed and flourish in the machine learning literature with the rapid growth of artificial intelligence (AI) in the past decade, which mostly focus on classification decisions. In this presentation, I will firstly review social and economic principles that can be used to assess the appropriateness of insurance discrimination. I will then introduce the fairness criteria that are potentially applicable to insurance pricing, match them with different levels of potential and existing anti-discrimination regulations, and implement them into a series of existing and newly proposed anti-discrimination insurance pricing models. Finally, I will compare the outcome of different models from the perspectives of both group fairness and individual fairness and show the cost of fairness.
-</details>
+<b>Abstract:</b>
+Decision making under risk in actuarial sciences as well as in other disciplines involves a ranking of distributions, which is typically based on a method for assigning a real number to a distribution using a risk measure, a premium principle or a context of expected utility. As it is typically difficult to assess a concrete risk measure or utility function it is a well established idea to use stochastic dominance rules in form of stochastic orders to compare distributions. However, it is often equally difficult to completely specify a distribution. Therefore it is an interesting question whether one can derive unambiguous decisions under partial knowledge of the distributions. In this talk we in particular address this question under the condition that we only know the mean and variance of the involved distributions or that we know the marginal distributions but not the copulas in a multivariate context. Under such assumptions we derive sufficient conditions for concepts of almost stochastic dominance that are based on restrictions on marginal utilities. The talk is based on joint work with Marco Scarsini, Ilia Tsetlin and Robert L. Winkler
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
+</div>
 </div>
 
-
-
-</div>
-
-
-
-
-<br>
-<br>
 
 
 
@@ -395,112 +436,10 @@ window.player = player;
 
 
         
-     
-<tr>
-  <td class = "date"><b>23 February 2022 3pm (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date112 = new Date('2022-02-23T15:00:00Z');
-      var day112 = date112.getDate();
-      const monthNames112 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month112 = monthNames112[date112.getMonth()];
-      var year112 = date112.getFullYear();
-      var strTime112 = day112 + " " + month112 + " " +  year112;
-      document.write(strTime112);
-      const dtf112 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone112 = dtf112.formatToParts(date112).find((part) => part.type == 'timeZoneName').value;
-      var hours112 = date112.getHours();
-      var minutes112 = date112.getMinutes();
-      var ampm112 = hours112 >= 12 ? 'pm' : 'am';
-      hours112 = hours112 % 12;
-      hours112 = hours112 ? hours112 : 12; // the hour '0' should be '12'
-      minutes112 = minutes112 < 10 ? '0'+minutes112 : minutes112;
-      var strTime2112 = hours112 + ':' + minutes112 +ampm112 + ' ' + "(" +zone112+")";
-      document.write("<br>");
-      document.write(strTime2112);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Julien%20Trufin%20(Universit%C3%A9%20Libre%20de%20Bruxelles%2C%20Belgium)&dates=20220223T150000Z/20220223T161000Z&details=Speaker%3A%20Julien%20Trufin%20(Universit%C3%A9%20Libre%20de%20Bruxelles%2C%20Belgium)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3ATBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="julien/julien.ics" download>
-        Outlook calendar
-      </a>
-        </td>
-        
-        <td class = "speaker"><a href="http://homepages.ulb.ac.be/~jtrufin/" target="_blank"> Julien Trufin (Université Libre de Bruxelles, Belgium)</a></td>
-        <td class = "title"> Testing for more positive expectation dependence with application to model comparison and autocalibrated models.
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-        Modern data science tools are effective to produce predictions that strongly correlate with responses.
-Model comparison can therefore be based on the strength of dependence between responses and their predictions.
-Positive expectation dependence turns out to be attractive in that respect. 
-The present talk proposes an effective testing procedure for this dependence concept and applies it to compare two models.
-A simulation study is performed to evaluate the performances of the proposed testing procedure.
-Empirical illustrations using insurance loss data demonstrate the relevance of the approach
-for model selection in supervised learning.
-The most positively expectation dependent predictor can then be autocalibrated to obtain its balance-corrected version that appears to be
-optimal with respect to Bregman, or forecast dominance.
-Under autocalibration, it is shown that Lorenz curve and concentration curve coincide and that the integral of the concentration
-curve is equivalent to Gini coefficient.
-      </details></td>
-        <td>
-        
-      <a href="julien/slides.pdf" target="_blank"> <b>Slides</b></a>
-         <br>
-          <br>
-        <b>Host:</b> <a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
-        <br>
-        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
-               
-        </td>
-        </tr>   
-
-<tr>
-  <td class = "date"><b>09 March 2022 9am (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date113 = new Date('2022-03-09T09:00:00Z');
-      var day113 = date113.getDate();
-      const monthNames113 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month113 = monthNames113[date113.getMonth()];
-      var year113 = date113.getFullYear();
-      var strTime113 = day113 + " " + month113 + " " +  year113;
-      document.write(strTime113);
-      const dtf113 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone113 = dtf113.formatToParts(date113).find((part) => part.type == 'timeZoneName').value;
-      var hours113 = date113.getHours();
-      var minutes113 = date113.getMinutes();
-      var ampm113 = hours113 >= 12 ? 'pm' : 'am';
-      hours113 = hours113 % 12;
-      hours113 = hours113 ? hours113 : 12; // the hour '0' should be '12'
-      minutes113 = minutes113 < 10 ? '0'+minutes113 : minutes113;
-      var strTime2113 = hours113 + ':' + minutes113 +ampm113 + ' ' + "(" +zone113+")";
-      document.write("<br>");
-      document.write(strTime2113);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Fei%20Huang%20(University%20of%20New%20South%20Wales%2C%20Australia)&dates=20220309T090000Z/20220309T101000Z&details=Speaker%3A%20Fei%20Huang%20(University%20of%20New%20South%20Wales%2C%20Australia)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="fei/fei.ics" download>
-        Outlook calendar
-      </a>
-        </td>
-        
-        <td class = "speaker"><a href="https://www.unsw.edu.au/staff/fei-huang" target="_blank"> Fei Huang (University of New South Wales, Australia)</a></td>
-        <td class = "title">Insurance Discrimination and Pricing Fairness
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-On the issue of insurance discrimination, a grey area in regulation has resulted from the growing use of big data analytics by insurance companies – direct discrimination is prohibited, but indirect discrimination using proxies or more complex and opaque algorithms can be tolerated without restrictions. This phenomenon has recently attracted the attention of insurance regulators all over the world, and stricter insurance discrimination regulations are being discussed and considered by regulators. Meanwhile, various fairness criteria and fair machine learning algorithms have been proposed and flourish in the machine learning literature with the rapid growth of artificial intelligence (AI) in the past decade, which mostly focus on classification decisions. In this presentation, I will firstly review social and economic principles that can be used to assess the appropriateness of insurance discrimination. I will then introduce the fairness criteria that are potentially applicable to insurance pricing, match them with different levels of potential and existing anti-discrimination regulations, and implement them into a series of existing and newly proposed anti-discrimination insurance pricing models.  Finally, I will compare the outcome of different models from the perspectives of both group fairness and individual fairness and show the cost of fairness.      </details></td>
-        <td>
-        
-        <b>Host:</b> <a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
-        <br>
-        <b>Questions: </b><a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
-        </td>
-        </tr>      
+   
            
 <tr>
-  <td class = "date"><b>23 March 2022 3Pm (UTC) </b> <br> In your local time: <br>
+  <td class = "date"><b>23 March 2022 3pm (UTC) </b> <br> In your local time: <br>
     <script type="text/javascript">
       var date114 = new Date('2022-03-23T15:00:00Z');
       var day114 = date114.getDate();
@@ -543,8 +482,15 @@ On the issue of insurance discrimination, a grey area in regulation has resulted
         <b>Questions: </b> <a href=" https://sas.uwaterloo.ca/~wang/"target="_blank"> Ruodu Wang</a>
         </td>
         </tr>  
-        
         <tr>
+    <td class = "date"> <b> 6 April 2022</b>
+    </td>
+
+     <td class = "speaker"><b>Spring Break</b></td>
+    <td class = "title"></td>
+  <td> </td>
+  </tr>
+<tr>
   <td class = "date"><b>20 April 2022 12pm (UTC) </b> <br> In your local time: <br>
     <script type="text/javascript">
       var date111 = new Date('2022-04-20T12:00:00Z');
@@ -588,7 +534,98 @@ On the issue of insurance discrimination, a grey area in regulation has resulted
         <b>Questions: </b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
         </td>
         </tr>   
+        
+    <tr>
+  <td class = "date"><b>04 May 2022 8am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date112 = new Date('2022-05-04T08:00:00Z');
+      var day112 = date112.getDate();
+      const monthNames112 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month112 = monthNames112[date112.getMonth()];
+      var year112 = date112.getFullYear();
+      var strTime112 = day112 + " " + month112 + " " +  year112;
+      document.write(strTime112);
+      const dtf112 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone112 = dtf112.formatToParts(date112).find((part) => part.type == 'timeZoneName').value;
+      var hours112 = date112.getHours();
+      var minutes112 = date112.getMinutes();
+      var ampm112 = hours112 >= 12 ? 'pm' : 'am';
+      hours112 = hours112 % 12;
+      hours112 = hours112 ? hours112 : 12; // the hour '0' should be '12'
+      minutes112 = minutes112 < 10 ? '0'+minutes112 : minutes112;
+      var strTime2112 = hours112 + ':' + minutes112 +ampm112 + ' ' + "(" +zone112+")";
+      document.write("<br>");
+      document.write(strTime2112);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Annamaria%20Olivieri%20(University%20of%20Parma%2C%20Italy)&dates=20220504T070000Z/20220504T081000Z&details=Speaker%3A%20%20Annamaria%20Olivieri%20(University%20of%20Parma%2C%20Italy)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="Annamaria/Annamaria.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://personale.unipr.it/en/ugovdocenti/person/15493" target="_blank"> Annamaria Olivieri (University of Parma, Italy)</a></td>
+        <td class = "title">TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        TBA
+      </details></td>
+        <td>
+        
+        <b>Host:</b> TBA
+        <br>
+        <b>Questions: </b>TBA
+        </td>
+        </tr>      
+      
+      <tr>
+  <td class = "date"><b>18 May 2022 9am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date113 = new Date('2022-05-18T09:00:00Z');
+      var day113 = date113.getDate();
+      const monthNames113 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month113 = monthNames113[date113.getMonth()];
+      var year113 = date113.getFullYear();
+      var strTime113 = day113 + " " + month113 + " " +  year113;
+      document.write(strTime113);
+      const dtf113 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone113 = dtf113.formatToParts(date113).find((part) => part.type == 'timeZoneName').value;
+      var hours113 = date113.getHours();
+      var minutes113 = date113.getMinutes();
+      var ampm113 = hours113 >= 12 ? 'pm' : 'am';
+      hours113 = hours113 % 12;
+      hours113 = hours113 ? hours113 : 12; // the hour '0' should be '12'
+      minutes113 = minutes113 < 10 ? '0'+minutes113 : minutes113;
+      var strTime2113 = hours113 + ':' + minutes113 +ampm113 + ' ' + "(" +zone113+")";
+      document.write("<br>");
+      document.write(strTime2113);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Johanna%20Ziegel%20(University%20of%20Bern%2C%20Switzerland)&dates=20220518T080000Z/20220518T091000Z&details=Speaker%3A%20%20Johanna%20Ziegel%20(University%20of%20Bern%2C%20Switzerland)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="johanna/johanna.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://www.imsv.unibe.ch/about_us/staff/prof_dr_ziegel_johanna/index_eng.html" target="_blank">Johanna Ziegel (University of Bern, Switzerland)</a></td>
+        <td class = "title">TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        TBA
+      </details></td>
+        <td>
+        
+        <b>Host:</b> TBA
+      <br>
+        <b>Questions: </b>TBA
+      </td>
+        </tr>    
 </tbody>
+
 </table>
 
 <br>
@@ -1593,6 +1630,110 @@ Based on a joint work with Anna Maria Fiori.
         <b>Questions: </b><a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
         </td>
         </tr>
+        
+             
+<tr>
+  <td class = "date"><b>23 February 2022 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date112 = new Date('2022-02-23T15:00:00Z');
+      var day112 = date112.getDate();
+      const monthNames112 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month112 = monthNames112[date112.getMonth()];
+      var year112 = date112.getFullYear();
+      var strTime112 = day112 + " " + month112 + " " +  year112;
+      document.write(strTime112);
+      const dtf112 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone112 = dtf112.formatToParts(date112).find((part) => part.type == 'timeZoneName').value;
+      var hours112 = date112.getHours();
+      var minutes112 = date112.getMinutes();
+      var ampm112 = hours112 >= 12 ? 'pm' : 'am';
+      hours112 = hours112 % 12;
+      hours112 = hours112 ? hours112 : 12; // the hour '0' should be '12'
+      minutes112 = minutes112 < 10 ? '0'+minutes112 : minutes112;
+      var strTime2112 = hours112 + ':' + minutes112 +ampm112 + ' ' + "(" +zone112+")";
+      document.write("<br>");
+      document.write(strTime2112);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Julien%20Trufin%20(Universit%C3%A9%20Libre%20de%20Bruxelles%2C%20Belgium)&dates=20220223T150000Z/20220223T161000Z&details=Speaker%3A%20Julien%20Trufin%20(Universit%C3%A9%20Libre%20de%20Bruxelles%2C%20Belgium)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3ATBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="julien/julien.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="http://homepages.ulb.ac.be/~jtrufin/" target="_blank"> Julien Trufin (Université Libre de Bruxelles, Belgium)</a></td>
+        <td class = "title"> Testing for more positive expectation dependence with application to model comparison and autocalibrated models.
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        Modern data science tools are effective to produce predictions that strongly correlate with responses.
+Model comparison can therefore be based on the strength of dependence between responses and their predictions.
+Positive expectation dependence turns out to be attractive in that respect. 
+The present talk proposes an effective testing procedure for this dependence concept and applies it to compare two models.
+A simulation study is performed to evaluate the performances of the proposed testing procedure.
+Empirical illustrations using insurance loss data demonstrate the relevance of the approach
+for model selection in supervised learning.
+The most positively expectation dependent predictor can then be autocalibrated to obtain its balance-corrected version that appears to be
+optimal with respect to Bregman, or forecast dominance.
+Under autocalibration, it is shown that Lorenz curve and concentration curve coincide and that the integral of the concentration
+curve is equivalent to Gini coefficient.
+      </details></td>
+        <td>
+        
+      <a href="julien/slides.pdf" target="_blank"> <b>Slides</b></a>
+         <br>
+          <br>
+        <b>Host:</b> <a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
+        <br>
+        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
+               
+        </td>
+        </tr>   
+
+<tr>
+  <td class = "date"><b>09 March 2022 9am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date113 = new Date('2022-03-09T09:00:00Z');
+      var day113 = date113.getDate();
+      const monthNames113 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month113 = monthNames113[date113.getMonth()];
+      var year113 = date113.getFullYear();
+      var strTime113 = day113 + " " + month113 + " " +  year113;
+      document.write(strTime113);
+      const dtf113 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone113 = dtf113.formatToParts(date113).find((part) => part.type == 'timeZoneName').value;
+      var hours113 = date113.getHours();
+      var minutes113 = date113.getMinutes();
+      var ampm113 = hours113 >= 12 ? 'pm' : 'am';
+      hours113 = hours113 % 12;
+      hours113 = hours113 ? hours113 : 12; // the hour '0' should be '12'
+      minutes113 = minutes113 < 10 ? '0'+minutes113 : minutes113;
+      var strTime2113 = hours113 + ':' + minutes113 +ampm113 + ' ' + "(" +zone113+")";
+      document.write("<br>");
+      document.write(strTime2113);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Fei%20Huang%20(University%20of%20New%20South%20Wales%2C%20Australia)&dates=20220309T090000Z/20220309T101000Z&details=Speaker%3A%20Fei%20Huang%20(University%20of%20New%20South%20Wales%2C%20Australia)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="fei/fei.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://www.unsw.edu.au/staff/fei-huang" target="_blank"> Fei Huang (University of New South Wales, Australia)</a></td>
+        <td class = "title">Insurance Discrimination and Pricing Fairness
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+On the issue of insurance discrimination, a grey area in regulation has resulted from the growing use of big data analytics by insurance companies – direct discrimination is prohibited, but indirect discrimination using proxies or more complex and opaque algorithms can be tolerated without restrictions. This phenomenon has recently attracted the attention of insurance regulators all over the world, and stricter insurance discrimination regulations are being discussed and considered by regulators. Meanwhile, various fairness criteria and fair machine learning algorithms have been proposed and flourish in the machine learning literature with the rapid growth of artificial intelligence (AI) in the past decade, which mostly focus on classification decisions. In this presentation, I will firstly review social and economic principles that can be used to assess the appropriateness of insurance discrimination. I will then introduce the fairness criteria that are potentially applicable to insurance pricing, match them with different levels of potential and existing anti-discrimination regulations, and implement them into a series of existing and newly proposed anti-discrimination insurance pricing models.  Finally, I will compare the outcome of different models from the perspectives of both group fairness and individual fairness and show the cost of fairness.      </details></td>
+        <td>
+        
+        <b>Host:</b> <a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
+        <br>
+        <b>Questions: </b><a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
+        </td>
+        </tr>   
 </tbody>
 </table>
 
