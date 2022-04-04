@@ -208,61 +208,116 @@ height: 100%;
 
 
 
+
+
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="christianf/christian.jpeg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2022-04-20T12:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2022-04-20T12:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://furrer.dk/christian/" target="_blank">Christian Furrer (University of Copenhagen, Denmark)
+</a>
+
+</div>
+
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/ArN0X2TI9Ug">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-  <b>Speaker: </b><a href="https://www.uni-siegen.de/fb6/src/mueller/" target="_blank"> Alfred Müller (University of Siegen, Germany)
-</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
- Decisions under uncertainty: sufficient conditions for almost stochastic dominance
- <br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-Decision making under risk in actuarial sciences as well as in other disciplines involves a ranking of distributions, which is typically based on a method for assigning a real number to a distribution using a risk measure, a premium principle or a context of expected utility. As it is typically difficult to assess a concrete risk measure or utility function it is a well established idea to use stochastic dominance rules in form of stochastic orders to compare distributions. However, it is often equally difficult to completely specify a distribution. Therefore it is an interesting question whether one can derive unambiguous decisions under partial knowledge of the distributions. In this talk we in particular address this question under the condition that we only know the mean and variance of the involved distributions or that we know the marginal distributions but not the copulas in a multivariate context. Under such assumptions we derive sufficient conditions for concepts of almost stochastic dominance that are based on restrictions on marginal utilities. The talk is based on joint work with Marco Scarsini, Ilia Tsetlin and Robert L. Winkler
 
+Change of measure techniques for scaled insurance cash flows<br> 
+<b>Abstract:</b>
+Incidental policyholder behavior, including free policy conversion and stochastic retirement, may have a significant impact on the market value of a life insurance contract; consequently, models should account for this. However, the inclusion of incidental policyholder behavior typically leads to duration effects and thus an increase in computational complexity. In this talk, I show how change of measure techniques can be used to conveniently deal with this added layer of complication.
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
 </div>
-
-
-
 </div>
 
 
 
-
-<br>
-<br>
 
 
 
@@ -387,50 +442,7 @@ window.player = player;
         
    
            
-<tr>
-  <td class = "date"><b>23 March 2022 3pm (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date114 = new Date('2022-03-23T15:00:00Z');
-      var day114 = date114.getDate();
-      const monthNames114 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month114 = monthNames114[date114.getMonth()];
-      var year114 = date114.getFullYear();
-      var strTime114 = day114 + " " + month114 + " " +  year114;
-      document.write(strTime114);
-      const dtf114 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone114 = dtf114.formatToParts(date114).find((part) => part.type == 'timeZoneName').value;
-      var hours114 = date114.getHours();
-      var minutes114 = date114.getMinutes();
-      var ampm114 = hours114 >= 12 ? 'pm' : 'am';
-      hours114 = hours114 % 12;
-      hours114 = hours114 ? hours114 : 12; // the hour '0' should be '12'
-      minutes114 = minutes114 < 10 ? '0'+minutes114 : minutes114;
-      var strTime2114 = hours114 + ':' + minutes114 +ampm114 + ' ' + "(" +zone114+")";
-      document.write("<br>");
-      document.write(strTime2114);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Alfred%20M%C3%BCller%20(University%20of%20Siegen%2C%20Germany)&dates=20220323T150000Z/20220323T161000Z&details=Speaker%3A%20Alfred%20M%C3%BCller%20(University%20of%20Siegen%2C%20Germany)%0A%0ATitle%3A%20Decisions under uncertainty: sufficient conditions for almost stochastic dominance%0A%0AAbstract%3A%20Decision making under risk in actuarial sciences as well as in other disciplines involves a ranking of distributions, which is typically based on a method for assigning a real number to a distribution using a risk measure, a premium principle  or a context of expected utility. As it is typically difficult to assess a concrete risk measure or utility function it is a well established idea to use stochastic dominance rules in form of stochastic orders to compare distributions. However, it is often equally difficult to completely specify a distribution. Therefore it is an interesting question whether one can derive unambiguous decisions under partial knowledge of the distributions. In this talk we in particular address this question under the condition that we only know the mean and variance of the involved distributions or that we know the marginal distributions but not the copulas in a multivariate context. Under such assumptions we derive sufficient conditions for concepts of almost stochastic dominance that are based on restrictions on marginal utilities. The talk is based on joint work with Marco Scarsini, Ilia Tsetlin and Robert L. Winkler%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="alfred/alfred.ics" download>
-        Outlook calendar
-      </a>
-        </td>
-        
-        <td class = "speaker"><a href="https://www.uni-siegen.de/fb6/src/mueller/" target="_blank">Alfred Müller (University of Siegen, Germany)</a></td>
-        <td class = "title">  Decisions under uncertainty: sufficient conditions for almost stochastic dominance
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-        Decision making under risk in actuarial sciences as well as in other disciplines involves a ranking of distributions, which is typically based on a method for assigning a real number to a distribution using a risk measure, a premium principle  or a context of expected utility. As it is typically difficult to assess a concrete risk measure or utility function it is a well established idea to use stochastic dominance rules in form of stochastic orders to compare distributions. However, it is often equally difficult to completely specify a distribution. Therefore it is an interesting question whether one can derive unambiguous decisions under partial knowledge of the distributions. In this talk we in particular address this question under the condition that we only know the mean and variance of the involved distributions or that we know the marginal distributions but not the copulas in a multivariate context. Under such assumptions we derive sufficient conditions for concepts of almost stochastic dominance that are based on restrictions on marginal utilities. The talk is based on joint work with Marco Scarsini, Ilia Tsetlin and Robert L. Winkler
-      </details></td>
-        <td>
-        
-        <b>Host:</b> <a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
-        <br>
-        <b>Questions: </b> <a href=" https://sas.uwaterloo.ca/~wang/"target="_blank"> Ruodu Wang</a>
-        </td>
-        </tr>  
+
         <tr>
     <td class = "date"> <b> 6 April 2022</b>
     </td>
@@ -1685,7 +1697,51 @@ On the issue of insurance discrimination, a grey area in regulation has resulted
         <br>
         <b>Questions: </b><a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
         </td>
-        </tr>   
+        </tr>
+        <tr>
+  <td class = "date"><b>23 March 2022 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date114 = new Date('2022-03-23T15:00:00Z');
+      var day114 = date114.getDate();
+      const monthNames114 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month114 = monthNames114[date114.getMonth()];
+      var year114 = date114.getFullYear();
+      var strTime114 = day114 + " " + month114 + " " +  year114;
+      document.write(strTime114);
+      const dtf114 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone114 = dtf114.formatToParts(date114).find((part) => part.type == 'timeZoneName').value;
+      var hours114 = date114.getHours();
+      var minutes114 = date114.getMinutes();
+      var ampm114 = hours114 >= 12 ? 'pm' : 'am';
+      hours114 = hours114 % 12;
+      hours114 = hours114 ? hours114 : 12; // the hour '0' should be '12'
+      minutes114 = minutes114 < 10 ? '0'+minutes114 : minutes114;
+      var strTime2114 = hours114 + ':' + minutes114 +ampm114 + ' ' + "(" +zone114+")";
+      document.write("<br>");
+      document.write(strTime2114);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Alfred%20M%C3%BCller%20(University%20of%20Siegen%2C%20Germany)&dates=20220323T150000Z/20220323T161000Z&details=Speaker%3A%20Alfred%20M%C3%BCller%20(University%20of%20Siegen%2C%20Germany)%0A%0ATitle%3A%20Decisions under uncertainty: sufficient conditions for almost stochastic dominance%0A%0AAbstract%3A%20Decision making under risk in actuarial sciences as well as in other disciplines involves a ranking of distributions, which is typically based on a method for assigning a real number to a distribution using a risk measure, a premium principle  or a context of expected utility. As it is typically difficult to assess a concrete risk measure or utility function it is a well established idea to use stochastic dominance rules in form of stochastic orders to compare distributions. However, it is often equally difficult to completely specify a distribution. Therefore it is an interesting question whether one can derive unambiguous decisions under partial knowledge of the distributions. In this talk we in particular address this question under the condition that we only know the mean and variance of the involved distributions or that we know the marginal distributions but not the copulas in a multivariate context. Under such assumptions we derive sufficient conditions for concepts of almost stochastic dominance that are based on restrictions on marginal utilities. The talk is based on joint work with Marco Scarsini, Ilia Tsetlin and Robert L. Winkler%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="alfred/alfred.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://www.uni-siegen.de/fb6/src/mueller/" target="_blank">Alfred Müller (University of Siegen, Germany)</a></td>
+        <td class = "title">  Decisions under uncertainty: sufficient conditions for almost stochastic dominance
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        Decision making under risk in actuarial sciences as well as in other disciplines involves a ranking of distributions, which is typically based on a method for assigning a real number to a distribution using a risk measure, a premium principle  or a context of expected utility. As it is typically difficult to assess a concrete risk measure or utility function it is a well established idea to use stochastic dominance rules in form of stochastic orders to compare distributions. However, it is often equally difficult to completely specify a distribution. Therefore it is an interesting question whether one can derive unambiguous decisions under partial knowledge of the distributions. In this talk we in particular address this question under the condition that we only know the mean and variance of the involved distributions or that we know the marginal distributions but not the copulas in a multivariate context. Under such assumptions we derive sufficient conditions for concepts of almost stochastic dominance that are based on restrictions on marginal utilities. The talk is based on joint work with Marco Scarsini, Ilia Tsetlin and Robert L. Winkler
+      </details></td>
+        <td>
+        
+        <b>Host:</b> <a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
+        <br>
+        <b>Questions: </b> <a href=" https://sas.uwaterloo.ca/~wang/"target="_blank"> Ruodu Wang</a>
+        </td>
+        </tr>  
 </tbody>
 </table>
 
