@@ -2,7 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
 CLASS:PUBLIC
-DESCRIPTION:Speaker: Benjamin Avanzi (The University of Melbourne\, Australia)\n\nTitle: TBA\n\nAbstract: TBA\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DESCRIPTION:Speaker: Benjamin Avanzi (The University of Melbourne\, Australia)\n\nTitle: Ensemble distributional forecasting for insurance loss reserving
+\n\nAbstract: Loss reserving generally focuses on identifying a single model that can generate superior predictive performance. However, different loss reserving models specialise in capturing different aspects of loss data. This is recognised in practice in the sense that results from different models are often considered, and sometimes combined. For instance, actuaries may take a weighted average of the prediction outcomes from various loss reserving models, often based on subjective assessments.
+ In this paper, we propose a framework to objectively combine (i.e. ensemble) multiple stochastic loss reserving models such that the strengths offered by different models can be utilised effectively. Criteria of choice consider the full distributional properties of the ensemble. A notable innovation of our framework is that it is tailored for the features inherent to reserving data. These include, for instance, accident, development, calendar, and claim maturity effects. Crucially, the relative importance and scarcity of data across accident periods renders the problem distinct from the traditional ensembling techniques in statistical learning.
+Our ensemble reserving framework is illustrated with a complex synthetic dataset. In the results, the optimised ensemble outperforms both (i) traditional model selection strategies, and (ii) an equally weighted ensemble. In particular, the improvement occurs not only with central estimates but also relevant quantiles, such as the 75th percentile of reserves (typically of interest to both insurers and regulators).
+This is joint work with Yanfeng Li, Bernard Wong, and Alan Xian\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
 DTSTART:20220601T080000Z
 DTEND:20220601T091000Z
 LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
