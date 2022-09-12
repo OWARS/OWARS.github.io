@@ -206,6 +206,116 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="jim.jpeg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2022-09-21T08:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2022-09-21T08:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="Jim Guszcza" target="_blank"> Jim Guszcza (US Chief Data Scientist, Deloitte Analytics
+)
+</a>
+
+</div>
+
+<br>
+
+
+<div class="container">
+<div class="row row-grid">
+
+
+  
+<div class="col-md-8">
+  <b>Title:</b>
+TBA
+<br> 
+<b>Abstract:</b>
+TBA
+      </div>
+
+<div class="col-md-4">
+</div>
+
+</div>
+</div>
+
+
+
+
 
 
 
@@ -316,16 +426,101 @@ window.player = player;
     <th>Misc</th>
   </tr>
 
-     
-      
-     
-         <tr>
-<td class = "date"></td>
+       <tr>
+  <td class = "date"><b>21 September 2022 8am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date115 = new Date('2022-09-21T08:00:00Z');
+      var day115 = date115.getDate();
+      const monthNames115 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month115 = monthNames115[date115.getMonth()];
+      var year115 = date115.getFullYear();
+      var strTime115 = day115 + " " + month115 + " " +  year115;
+      document.write(strTime115);
+      const dtf115 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone115 = dtf115.formatToParts(date115).find((part) => part.type == 'timeZoneName').value;
+      var hours115 = date115.getHours();
+      var minutes115 = date115.getMinutes();
+      var ampm115 = hours115 >= 12 ? 'pm' : 'am';
+      hours115 = hours115 % 12;
+      hours115 = hours115 ? hours115 : 12; // the hour '0' should be '12'
+      minutes115 = minutes115 < 10 ? '0'+minutes115 : minutes115;
+      var strTime2115 = hours115 + ':' + minutes115 +ampm115 + ' ' + "(" +zone115+")";
+      document.write("<br>");
+      document.write(strTime2115);
+      </script>
         
-        <td class = "speaker">summer break</td>
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Jim%20Guszcza%20%20(Deloitte%2C%20USA)&dates=20220921T080000Z/20220921T091000Z&details=Speaker%3A%20%20Jim%20Guszcza%20%20(Deloitte%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="jim/jim.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://www2.deloitte.com/us/en/profiles/jguszcza.html" target="_blank">Jim Guszcza
+ (Deloitte, USA)</a></td>
+        <td class = "title">TBA
+      
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        TBA
+      </details></td>
         <td>
-      </td>
-        </tr>    
+        
+        <b>Host:</b>  TBA
+        <br>
+        <b>Questions: </b>TBA
+        </td>
+        </tr>  
+      
+    <tr>
+  <td class = "date"><b>05 October 2022 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date116 = new Date('2022-10-05T15:00:00Z');
+      var day116 = date116.getDate();
+      const monthNames116 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month116 = monthNames116[date116.getMonth()];
+      var year116 = date116.getFullYear();
+      var strTime116 = day116 + " " + month116 + " " +  year116;
+      document.write(strTime116);
+      const dtf116 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone116 = dtf116.formatToParts(date116).find((part) => part.type == 'timeZoneName').value;
+      var hours116 = date116.getHours();
+      var minutes116 = date116.getMinutes();
+      var ampm116 = hours116 >= 12 ? 'pm' : 'am';
+      hours116 = hours116 % 12;
+      hours116 = hours116 ? hours116 : 12; // the hour '0' should be '12'
+      minutes116 = minutes116 < 10 ? '0'+minutes116 : minutes116;
+      var strTime2116 = hours116 + ':' + minutes116 +ampm116 + ' ' + "(" +zone116+")";
+      document.write("<br>");
+      document.write(strTime2116);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Sheldon%20Lin%20(University%20of%20Toronto%2C%20Canada)&dates=20221005T150000Z/20221005T161000Z&details=Speaker%3A%20Sheldon%20Lin%20(University%20of%20Toronto%2C%20Canada)%0A%0ATitle%3A%20An%20Efficient%20Simulation%20Scheme%20for%20the%20Valuation%20of%20Large%20Heterogeneous%20Insurance%20Portfolios%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="sheldon/sheldon.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://utstat.toronto.edu/sheldon/" target="_blank">Sheldon Lin (University of Toronto, Canada)</a></td>
+        <td class = "title">An Efficient Simulation Scheme for the Valuation of Large Heterogeneous Insurance Portfolios
+      
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+  TBA
+      </details></td>
+        <td>
+        
+        <b>Host:</b> TBA
+        <br>
+        <b>Questions: </b>TBA
+        </td>
+        </tr>   
+   
 </tbody>
 
 </table>
@@ -348,6 +543,483 @@ window.player = player;
   </tr>
 
 
+
+  <tr>
+  <td class = "date"><b>12 January 2022 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date109 = new Date('2022-01-12T15:00:00Z');
+      var day109 = date109.getDate();
+      const monthNames109 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month109 = monthNames109[date109.getMonth()];
+      var year109 = date109.getFullYear();
+      var strTime109 = day109 + " " + month109 + " " +  year109;
+      document.write(strTime109);
+      const dtf109 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone109 = dtf109.formatToParts(date109).find((part) => part.type == 'timeZoneName').value;
+      var hours109 = date109.getHours();
+      var minutes109 = date109.getMinutes();
+      var ampm109 = hours109 >= 12 ? 'pm' : 'am';
+      hours109 = hours109 % 12;
+      hours109 = hours109 ? hours109 : 12; // the hour '0' should be '12'
+      minutes109 = minutes109 < 10 ? '0'+minutes109 : minutes109;
+      var strTime2109 = hours109 + ':' + minutes109 +ampm109 + ' ' + "(" +zone109+")";
+      document.write("<br>");
+      document.write(strTime2109);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Virginia%20Young%20(University%20of%20Michigan%2C%20USA)&dates=20220112T150000Z/20220112T161000Z&details=Speaker%3A%20Virginia%20Young%20(University%20of%20Michigan%2C%20USA)%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="virginia/virginia.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://lsa.umich.edu/math/people/faculty/vryoung.html" target="_blank"> Virginia Young (University of Michigan, USA)</a>
+      
+        </td>
+        <td class = "title"> Stackelberg Differential Game for Insurance under Model Ambiguity
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+       We study a dynamic Stackelberg differential game between a buyer and a seller of insurance policies in a spectrally negative Levy framework, in which both parties are ambiguous about the intensity and severity of insurable losses. Both the buyer and seller aim to maximize their expected wealth, plus a penalty term that reflects ambiguity, over an exogenous random horizon. Under a mean-variance premium principle and a quadratic penalty for ambiguity, we obtain the equilibrium in closed form. Our main results show that the buyer’s robust optimal indemnity is a coinsurance with proportion less than one-half, which increases (resp. decreases) as the buyer (resp. seller) becomes more ambiguity averse. Also we show that the seller’s robust optimal premium rule equals the net premium under the buyer’s optimally distorted probability, which is the buyer’s “best hope,” and it exceeds the actuarially fair premium under the seller’s optimally distorted probability measure so is, thereby, acceptable to the seller
+      </details></td>
+        <td>
+                   
+         <b>Host:</b> <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/pietro-millossovich"target="_blank">Pietro Millossovich  </a>
+          <br>
+        <b>Questions: </b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
+
+        </td>
+        </tr>
+        
+                
+<tr>
+  <td class = "date"><b>26 January 2022 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date110 = new Date('2022-01-26T15:00:00Z');
+      var day110 = date110.getDate();
+      const monthNames110 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month110 = monthNames110[date110.getMonth()];
+      var year110 = date110.getFullYear();
+      var strTime110 = day110 + " " + month110 + " " +  year110;
+      document.write(strTime110);
+      const dtf110 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone110 = dtf110.formatToParts(date110).find((part) => part.type == 'timeZoneName').value;
+      var hours110 = date110.getHours();
+      var minutes110 = date110.getMinutes();
+      var ampm110 = hours110 >= 12 ? 'pm' : 'am';
+      hours110 = hours110 % 12;
+      hours110 = hours110 ? hours110 : 12; // the hour '0' should be '12'
+      minutes110 = minutes110 < 10 ? '0'+minutes110 : minutes110;
+      var strTime2110 = hours110 + ':' + minutes110 +ampm110 + ' ' + "(" +zone110+")";
+      document.write("<br>");
+      document.write(strTime2110);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Emanuela%20Rosazza%20Gianin%20(University%20of%20Milano-Bicocca%20%2C%20Italy)&dates=20220126T150000Z/20220126T161000Z&details=Speaker%3A%20Emanuela%20Rosazza%20Gianin%20(University%20of%20Milano-Bicocca%20%2C%20Italy)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="emanuela/emanuela.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://www.unimib.it/emanuela-rosazza-gianin" target="_blank"> Emanuela Rosazza Gianin (University of Milano-Bicocca , Italy)</a></td>
+        <td class = "title"> Generalized PELVE and applications to risk measures
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+         The continuing evolution of insurance and banking regulation has
+raised interest in the calibration of different risk measures associated
+with suitable confidence levels. In particular, Li and Wang (2019)
+have introduced a probability equivalent level (called PELVE) for the
+replacement of Value at Risk with Conditional Value at Risk.
+In this talk, we propose a new tool (generalized PELVE, or
+g-PELVE) that extends PELVE to more general pairs of monotone risk
+measures. Conditions for the existence
+and uniqueness of g-PELVE and additional properties for specific families of risk measures are discussed.
+A study of Generalized Pareto Distributions reveals
+an interesting correspondence between PELVE and g-PELVE, and explores
+their relationship with the tail index. An empirical application
+illustrates the usefulness of (g-)PELVE in characterizing tail behavior
+not only for individual asset returns, but also for possible portfolio
+combinations.
+Based on a joint work with Anna Maria Fiori.
+      </details></td>
+        <td>
+                       
+         <b>Host:</b> <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
+          <br>
+        <b>Questions: </b><a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
+        </td>
+        </tr>
+        
+             
+<tr>
+  <td class = "date"><b>23 February 2022 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date112 = new Date('2022-02-23T15:00:00Z');
+      var day112 = date112.getDate();
+      const monthNames112 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month112 = monthNames112[date112.getMonth()];
+      var year112 = date112.getFullYear();
+      var strTime112 = day112 + " " + month112 + " " +  year112;
+      document.write(strTime112);
+      const dtf112 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone112 = dtf112.formatToParts(date112).find((part) => part.type == 'timeZoneName').value;
+      var hours112 = date112.getHours();
+      var minutes112 = date112.getMinutes();
+      var ampm112 = hours112 >= 12 ? 'pm' : 'am';
+      hours112 = hours112 % 12;
+      hours112 = hours112 ? hours112 : 12; // the hour '0' should be '12'
+      minutes112 = minutes112 < 10 ? '0'+minutes112 : minutes112;
+      var strTime2112 = hours112 + ':' + minutes112 +ampm112 + ' ' + "(" +zone112+")";
+      document.write("<br>");
+      document.write(strTime2112);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Julien%20Trufin%20(Universit%C3%A9%20Libre%20de%20Bruxelles%2C%20Belgium)&dates=20220223T150000Z/20220223T161000Z&details=Speaker%3A%20Julien%20Trufin%20(Universit%C3%A9%20Libre%20de%20Bruxelles%2C%20Belgium)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3ATBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="julien/julien.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="http://homepages.ulb.ac.be/~jtrufin/" target="_blank"> Julien Trufin (Université Libre de Bruxelles, Belgium)</a></td>
+        <td class = "title"> Testing for more positive expectation dependence with application to model comparison and autocalibrated models.
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        Modern data science tools are effective to produce predictions that strongly correlate with responses.
+Model comparison can therefore be based on the strength of dependence between responses and their predictions.
+Positive expectation dependence turns out to be attractive in that respect. 
+The present talk proposes an effective testing procedure for this dependence concept and applies it to compare two models.
+A simulation study is performed to evaluate the performances of the proposed testing procedure.
+Empirical illustrations using insurance loss data demonstrate the relevance of the approach
+for model selection in supervised learning.
+The most positively expectation dependent predictor can then be autocalibrated to obtain its balance-corrected version that appears to be
+optimal with respect to Bregman, or forecast dominance.
+Under autocalibration, it is shown that Lorenz curve and concentration curve coincide and that the integral of the concentration
+curve is equivalent to Gini coefficient.
+      </details></td>
+        <td>
+        
+      <a href="julien/slides.pdf" target="_blank"> <b>Slides</b></a>
+         <br>
+          <br>
+        <b>Host:</b> <a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
+        <br>
+        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
+               
+        </td>
+        </tr>   
+
+<tr>
+  <td class = "date"><b>09 March 2022 9am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date113 = new Date('2022-03-09T09:00:00Z');
+      var day113 = date113.getDate();
+      const monthNames113 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month113 = monthNames113[date113.getMonth()];
+      var year113 = date113.getFullYear();
+      var strTime113 = day113 + " " + month113 + " " +  year113;
+      document.write(strTime113);
+      const dtf113 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone113 = dtf113.formatToParts(date113).find((part) => part.type == 'timeZoneName').value;
+      var hours113 = date113.getHours();
+      var minutes113 = date113.getMinutes();
+      var ampm113 = hours113 >= 12 ? 'pm' : 'am';
+      hours113 = hours113 % 12;
+      hours113 = hours113 ? hours113 : 12; // the hour '0' should be '12'
+      minutes113 = minutes113 < 10 ? '0'+minutes113 : minutes113;
+      var strTime2113 = hours113 + ':' + minutes113 +ampm113 + ' ' + "(" +zone113+")";
+      document.write("<br>");
+      document.write(strTime2113);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Fei%20Huang%20(University%20of%20New%20South%20Wales%2C%20Australia)&dates=20220309T090000Z/20220309T101000Z&details=Speaker%3A%20Fei%20Huang%20(University%20of%20New%20South%20Wales%2C%20Australia)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="fei/fei.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://www.unsw.edu.au/staff/fei-huang" target="_blank"> Fei Huang (University of New South Wales, Australia)</a></td>
+        <td class = "title">Insurance Discrimination and Pricing Fairness
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+On the issue of insurance discrimination, a grey area in regulation has resulted from the growing use of big data analytics by insurance companies – direct discrimination is prohibited, but indirect discrimination using proxies or more complex and opaque algorithms can be tolerated without restrictions. This phenomenon has recently attracted the attention of insurance regulators all over the world, and stricter insurance discrimination regulations are being discussed and considered by regulators. Meanwhile, various fairness criteria and fair machine learning algorithms have been proposed and flourish in the machine learning literature with the rapid growth of artificial intelligence (AI) in the past decade, which mostly focus on classification decisions. In this presentation, I will firstly review social and economic principles that can be used to assess the appropriateness of insurance discrimination. I will then introduce the fairness criteria that are potentially applicable to insurance pricing, match them with different levels of potential and existing anti-discrimination regulations, and implement them into a series of existing and newly proposed anti-discrimination insurance pricing models.  Finally, I will compare the outcome of different models from the perspectives of both group fairness and individual fairness and show the cost of fairness.      </details></td>
+        <td>
+        
+        <b>Host:</b> <a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
+        <br>
+        <b>Questions: </b><a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
+        </td>
+        </tr>
+        <tr>
+  <td class = "date"><b>23 March 2022 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date114 = new Date('2022-03-23T15:00:00Z');
+      var day114 = date114.getDate();
+      const monthNames114 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month114 = monthNames114[date114.getMonth()];
+      var year114 = date114.getFullYear();
+      var strTime114 = day114 + " " + month114 + " " +  year114;
+      document.write(strTime114);
+      const dtf114 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone114 = dtf114.formatToParts(date114).find((part) => part.type == 'timeZoneName').value;
+      var hours114 = date114.getHours();
+      var minutes114 = date114.getMinutes();
+      var ampm114 = hours114 >= 12 ? 'pm' : 'am';
+      hours114 = hours114 % 12;
+      hours114 = hours114 ? hours114 : 12; // the hour '0' should be '12'
+      minutes114 = minutes114 < 10 ? '0'+minutes114 : minutes114;
+      var strTime2114 = hours114 + ':' + minutes114 +ampm114 + ' ' + "(" +zone114+")";
+      document.write("<br>");
+      document.write(strTime2114);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Alfred%20M%C3%BCller%20(University%20of%20Siegen%2C%20Germany)&dates=20220323T150000Z/20220323T161000Z&details=Speaker%3A%20Alfred%20M%C3%BCller%20(University%20of%20Siegen%2C%20Germany)%0A%0ATitle%3A%20Decisions under uncertainty: sufficient conditions for almost stochastic dominance%0A%0AAbstract%3A%20Decision making under risk in actuarial sciences as well as in other disciplines involves a ranking of distributions, which is typically based on a method for assigning a real number to a distribution using a risk measure, a premium principle  or a context of expected utility. As it is typically difficult to assess a concrete risk measure or utility function it is a well established idea to use stochastic dominance rules in form of stochastic orders to compare distributions. However, it is often equally difficult to completely specify a distribution. Therefore it is an interesting question whether one can derive unambiguous decisions under partial knowledge of the distributions. In this talk we in particular address this question under the condition that we only know the mean and variance of the involved distributions or that we know the marginal distributions but not the copulas in a multivariate context. Under such assumptions we derive sufficient conditions for concepts of almost stochastic dominance that are based on restrictions on marginal utilities. The talk is based on joint work with Marco Scarsini, Ilia Tsetlin and Robert L. Winkler%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="alfred/alfred.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://www.uni-siegen.de/fb6/src/mueller/" target="_blank">Alfred Müller (University of Siegen, Germany)</a></td>
+        <td class = "title">  Decisions under uncertainty: sufficient conditions for almost stochastic dominance
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        Decision making under risk in actuarial sciences as well as in other disciplines involves a ranking of distributions, which is typically based on a method for assigning a real number to a distribution using a risk measure, a premium principle  or a context of expected utility. As it is typically difficult to assess a concrete risk measure or utility function it is a well established idea to use stochastic dominance rules in form of stochastic orders to compare distributions. However, it is often equally difficult to completely specify a distribution. Therefore it is an interesting question whether one can derive unambiguous decisions under partial knowledge of the distributions. In this talk we in particular address this question under the condition that we only know the mean and variance of the involved distributions or that we know the marginal distributions but not the copulas in a multivariate context. Under such assumptions we derive sufficient conditions for concepts of almost stochastic dominance that are based on restrictions on marginal utilities. The talk is based on joint work with Marco Scarsini, Ilia Tsetlin and Robert L. Winkler
+      </details></td>
+        <td>
+        
+        <b>Host:</b> <a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
+        <br>
+        <b>Questions: </b> <a href=" https://sas.uwaterloo.ca/~wang/"target="_blank"> Ruodu Wang</a>
+        </td>
+        </tr>  
+        
+        
+        <tr>
+    <td class = "date"> <b> 6 April 2022</b>
+    </td>
+
+     <td class = "speaker"><b>Spring Break</b></td>
+    <td class = "title"></td>
+  <td> </td>
+  </tr>
+<tr>
+  <td class = "date"><b>20 April 2022 12pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date111 = new Date('2022-04-20T12:00:00Z');
+      var day111 = date111.getDate();
+      const monthNames111 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month111 = monthNames111[date111.getMonth()];
+      var year111 = date111.getFullYear();
+      var strTime111 = day111 + " " + month111 + " " +  year111;
+      document.write(strTime111);
+      const dtf111 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone111 = dtf111.formatToParts(date111).find((part) => part.type == 'timeZoneName').value;
+      var hours111 = date111.getHours();
+      var minutes111 = date111.getMinutes();
+      var ampm111 = hours111 >= 12 ? 'pm' : 'am';
+      hours111 = hours111 % 12;
+      hours111 = hours111 ? hours111 : 12; // the hour '0' should be '12'
+      minutes111 = minutes111 < 10 ? '0'+minutes111 : minutes111;
+      var strTime2111 = hours111 + ':' + minutes111 +ampm111 + ' ' + "(" +zone111+")";
+      document.write("<br>");
+      document.write(strTime2111);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Christian%20Furrer%20(University%20of%20Copenhagen%2C%20Denmark)&dates=20220420T120000Z/20220420T131000Z&details=Speaker%3A%20Christian%20Furrer%20(University%20of%20Copenhagen%2C%20Denmark)%0A%0ATitle%3A%20Change%20of%20measure%20techniques%20for%20scaled%20insurance%20cash%20flows%0A%0AAbstract%3A%20Incidental%20policyholder%20behavior%2C%20including%20free%20policy%20conversion%20and%20stochastic%20retirement%2C%20may%20have%20a%20significant%20impact%20on%20the%20market%20value%20of%20a%20life%20insurance%20contract%3B%20consequently%2C%20models%20should%20account%20for%20this.%20However%2C%20the%20inclusion%20of%20incidental%20policyholder%20behavior%20typically%20leads%20to%20duration%20effects%20and%20thus%20an%20increase%20in%20computational%20complexity.%20In%20this%20talk%2C%20I%20show%20how%20change%20of%20measure%20techniques%20can%20be%20used%20to%20conveniently%20deal%20with%20this%20added%20layer%20of%20complication.%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="christianf/christianf.ics" download>
+        Outlook calendar
+      </a>
+        </td>
+        
+        <td class = "speaker"><a href="https://furrer.dk/christian/" target="_blank"> Christian Furrer (University of Copenhagen, Denmark)</a></td>
+        <td class = "title"> Change of measure techniques for scaled insurance cash flows
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+       Incidental policyholder behavior, including free policy conversion and stochastic retirement, may have a significant impact on the market value of a life insurance contract; consequently, models should account for this. However, the inclusion of incidental policyholder behavior typically leads to duration effects and thus an increase in computational complexity. In this talk, I show how change of measure techniques can be used to conveniently deal with this added layer of complication.
+      </details></td>
+        <td>
+        
+        <b>Host:</b> <a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
+        <br>
+        <b>Questions: </b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
+        </td>
+        </tr>   
+        
+    <tr>
+  <td class = "date"><b>04 May 2022 8am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date112 = new Date('2022-05-04T08:00:00Z');
+      var day112 = date112.getDate();
+      const monthNames112 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month112 = monthNames112[date112.getMonth()];
+      var year112 = date112.getFullYear();
+      var strTime112 = day112 + " " + month112 + " " +  year112;
+      document.write(strTime112);
+      const dtf112 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone112 = dtf112.formatToParts(date112).find((part) => part.type == 'timeZoneName').value;
+      var hours112 = date112.getHours();
+      var minutes112 = date112.getMinutes();
+      var ampm112 = hours112 >= 12 ? 'pm' : 'am';
+      hours112 = hours112 % 12;
+      hours112 = hours112 ? hours112 : 12; // the hour '0' should be '12'
+      minutes112 = minutes112 < 10 ? '0'+minutes112 : minutes112;
+      var strTime2112 = hours112 + ':' + minutes112 +ampm112 + ' ' + "(" +zone112+")";
+      document.write("<br>");
+      document.write(strTime2112);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Annamaria%20Olivieri%20(University%20of%20Parma%2C%20Italy)&dates=20220504T080000Z/20220504T091000Z&details=Speaker%3A%20%20Annamaria%20Olivieri%20(University%20of%20Parma%2C%20Italy)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="annamaria/annamaria.ics" download>
+        Outlook calendar
+      </a>
+    <p style="color:red;">  Please note that a previous version of this calender entry (which was available for a couple of days on this website) was one hour off. Please make sure you have saved the right time.</p>
+        </td>
+        
+        <td class = "speaker"><a href="https://personale.unipr.it/en/ugovdocenti/person/15493" target="_blank"> Annamaria Olivieri (University of Parma, Italy)</a></td>
+        <td class = "title">Flexible annuity designs meeting individuals’ longevity risk appetite (or unawareness) 
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        Despite the growing need for individuals to protect themselves from the longevity risk to which their assets will be exposed after retirement, the demand for products offering longevity guarantees, namely annuities, remains low. Possible reasons include the cost of guarantees and the rigidity of the traditional annuity design, which implies an irreversible decision at issue. This contrasts with the perspective of individuals who, because of their risk appetite or unawareness, seem to prefer to avoid non-revisable decisions, at least in the early stages of their post-retirement life, and to retain their longevity risk up to some higher age. 
+Flexibility in the annuity design could, at least partially, meet the prevailing individuals’ attitude. Flexibility can be introduced in different ways. We focus on two solutions. First, the guarantees can be relaxed, and the related costs can be reduced, by allowing the benefit amount to fluctuate (up or down) according to a given mortality/longevity experience. Second, instead of an upfront loading at issue, periodic fees could be charged, as they are more suitable to support a revision of the arrangement after issue. While the literature includes already several contributions on mortality/longevity-linked benefits, a pricing structure based on periodic fees has received little attention so far. We develop a discussion in this respect, considering mortality/longevity-linked annuities
+      </details></td>
+        <td>
+        
+        <b>Host:</b> <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andrés Villegas</a> 
+        <br>
+        <b>Questions: </b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
+        </td>
+        </tr> 
+        
+        
+         <tr>
+  <td class = "date"><b>18 May 2022 8am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date113 = new Date('2022-05-18T08:00:00Z');
+      var day113 = date113.getDate();
+      const monthNames113 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month113 = monthNames113[date113.getMonth()];
+      var year113 = date113.getFullYear();
+      var strTime113 = day113 + " " + month113 + " " +  year113;
+      document.write(strTime113);
+      const dtf113 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone113 = dtf113.formatToParts(date113).find((part) => part.type == 'timeZoneName').value;
+      var hours113 = date113.getHours();
+      var minutes113 = date113.getMinutes();
+      var ampm113 = hours113 >= 12 ? 'pm' : 'am';
+      hours113 = hours113 % 12;
+      hours113 = hours113 ? hours113 : 12; // the hour '0' should be '12'
+      minutes113 = minutes113 < 10 ? '0'+minutes113 : minutes113;
+      var strTime2113 = hours113 + ':' + minutes113 +ampm113 + ' ' + "(" +zone113+")";
+      document.write("<br>");
+      document.write(strTime2113);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Johanna%20Ziegel%20(University%20of%20Bern%2C%20Switzerland)&dates=20220518T080000Z/20220518T091000Z&details=Speaker%3A%20%20Johanna%20Ziegel%20(University%20of%20Bern%2C%20Switzerland)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="johanna/johanna.ics" download>
+        Outlook calendar
+      </a>
+          <p style="color:red;">  Please note that a previous version of this calender entry  was one hour off. Please make sure you have saved the right time.</p>
+
+        </td>
+        
+        <td class = "speaker"><a href="https://www.imsv.unibe.ch/about_us/staff/prof_dr_ziegel_johanna/index_eng.html" target="_blank">Johanna Ziegel (University of Bern, Switzerland)</a></td>
+        <td class = "title">Distributional (Single) Index Models
+
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+      A Distributional (Single) Index Model (DIM) is a semiparametric model for distributional regression, that is, estimation of conditional distributions given covariates. The method is a combination of classical single- index models for the estimation of the conditional mean of a response given covariates, and isotonic distributional regression. The model for the index is parametric, whereas the conditional distributions are estimated nonparametrically under a stochastic ordering constraint. We show consistency of our estimators and apply them to a highly challenging dataset on the length of stay (LoS) of patients in intensive care units. We use the model to provide skillful and calibrated probabilistic predictions for the LoS of individual patients, which outperform the available methods in the literature.
+      </details></td>
+        <td>
+        
+        <b>Host:</b> <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
+      <br>
+        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
+      </td>
+        </tr>    
+        
+                 <tr>
+<td class = "date"><b>01 June 2022 8am (UTC) </b> <br> In your local time: <br>
+  <script type="text/javascript">
+    var date114 = new Date('2022-06-01T08:00:00Z');
+    var day114 = date114.getDate();
+    const monthNames114 = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+    var month114 = monthNames114[date114.getMonth()];
+    var year114 = date114.getFullYear();
+    var strTime114 = day114 + " " + month114 + " " +  year114;
+    document.write(strTime114);
+    const dtf114 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+    var zone114 = dtf114.formatToParts(date114).find((part) => part.type == 'timeZoneName').value;
+    var hours114 = date114.getHours();
+    var minutes114 = date114.getMinutes();
+    var ampm114 = hours114 >= 12 ? 'pm' : 'am';
+    hours114 = hours114 % 12;
+    hours114 = hours114 ? hours114 : 12; // the hour '0' should be '12'
+    minutes114 = minutes114 < 10 ? '0'+minutes114 : minutes114;
+    var strTime2114 = hours114 + ':' + minutes114 +ampm114 + ' ' + "(" +zone114+")";
+    document.write("<br>");
+    document.write(strTime2114);
+    </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Benjamin%20Avanzi%20(The%20University%20of%20Melbourne%2C%20Australia)&dates=20220601T080000Z/20220601T091000Z&details=Speaker%3A%20Benjamin%20Avanzi%20(The%20University%20of%20Melbourne%2C%20Australia)%0A%0ATitle%3A%20Ensemble distributional forecasting for insurance loss reserving%0A%0AAbstract%3A%20Loss reserving generally focuses on identifying a single model that can generate superior predictive performance. However, different loss reserving models specialise in capturing different aspects of loss data. This is recognised in practice in the sense that results from different models are often considered, and sometimes combined. For instance, actuaries may take a weighted average of the prediction outcomes from various loss reserving models, often based on subjective assessments.
+ In this paper, we propose a framework to objectively combine (i.e. ensemble) multiple stochastic loss reserving models such that the strengths offered by different models can be utilised effectively. Criteria of choice consider the full distributional properties of the ensemble. A notable innovation of our framework is that it is tailored for the features inherent to reserving data. These include, for instance, accident, development, calendar, and claim maturity effects. Crucially, the relative importance and scarcity of data across accident periods renders the problem distinct from the traditional ensembling techniques in statistical learning.
+Our ensemble reserving framework is illustrated with a complex synthetic dataset. In the results, the optimised ensemble outperforms both (i) traditional model selection strategies, and (ii) an equally weighted ensemble. In particular, the improvement occurs not only with central estimates but also relevant quantiles, such as the 75th percentile of reserves (typically of interest to both insurers and regulators).
+This is joint work with Yanfeng Li, Bernard Wong, and Alan Xian%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="benjamin/benjamin.ics" download>
+        Outlook calendar
+      </a>
+
+        </td>
+        
+        <td class = "speaker"><a href="https://bavanzicv.netlify.app/" target="_blank">Benjamin Avanzi (The University of Melbourne, Australia)</a></td>
+        <td class = "title">Ensemble distributional forecasting for insurance loss reserving
+
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+  Loss reserving generally focuses on identifying a single model that can generate superior predictive performance. However, different loss reserving models specialise in capturing different aspects of loss data. This is recognised in practice in the sense that results from different models are often considered, and sometimes combined. For instance, actuaries may take a weighted average of the prediction outcomes from various loss reserving models, often based on subjective assessments.
+ In this paper, we propose a framework to objectively combine (i.e. ensemble) multiple stochastic loss reserving models such that the strengths offered by different models can be utilised effectively. Criteria of choice consider the full distributional properties of the ensemble. A notable innovation of our framework is that it is tailored for the features inherent to reserving data. These include, for instance, accident, development, calendar, and claim maturity effects. Crucially, the relative importance and scarcity of data across accident periods renders the problem distinct from the traditional ensembling techniques in statistical learning.
+Our ensemble reserving framework is illustrated with a complex synthetic dataset. In the results, the optimised ensemble outperforms both (i) traditional model selection strategies, and (ii) an equally weighted ensemble. In particular, the improvement occurs not only with central estimates but also relevant quantiles, such as the 75th percentile of reserves (typically of interest to both insurers and regulators).
+This is joint work with Yanfeng Li, Bernard Wong, and Alan Xian
+      </details></td>
+        <td>
+        
+        <b>Host:</b>  <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andrés Villegas</a> 
+      <br>
+        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
+      </td>
+        </tr>    
+        
+</tbody>
+</table>
+
+<br>
+<br>
+
+<details>
+<summary>Talks in 2021</summary>
+<table style="width:100%" class="table1">
+
+  <tr>
+    <th>Date & Time</th>
+    <th>Speaker</th>
+    <th>Title</th>
+    <th>Misc</th>
+  </tr>
 
     <tr>
     <td class = "date"><b>13 January 2021 4pm (UTC, London) </b> <br> In your local time: <br>
@@ -1224,471 +1896,13 @@ We analyse the consequences of portfolio compression on systemic risk. Portfolio
   <td>
     </td>
   </tr>
-  <tr>
-  <td class = "date"><b>12 January 2022 3pm (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date109 = new Date('2022-01-12T15:00:00Z');
-      var day109 = date109.getDate();
-      const monthNames109 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month109 = monthNames109[date109.getMonth()];
-      var year109 = date109.getFullYear();
-      var strTime109 = day109 + " " + month109 + " " +  year109;
-      document.write(strTime109);
-      const dtf109 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone109 = dtf109.formatToParts(date109).find((part) => part.type == 'timeZoneName').value;
-      var hours109 = date109.getHours();
-      var minutes109 = date109.getMinutes();
-      var ampm109 = hours109 >= 12 ? 'pm' : 'am';
-      hours109 = hours109 % 12;
-      hours109 = hours109 ? hours109 : 12; // the hour '0' should be '12'
-      minutes109 = minutes109 < 10 ? '0'+minutes109 : minutes109;
-      var strTime2109 = hours109 + ':' + minutes109 +ampm109 + ' ' + "(" +zone109+")";
-      document.write("<br>");
-      document.write(strTime2109);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Virginia%20Young%20(University%20of%20Michigan%2C%20USA)&dates=20220112T150000Z/20220112T161000Z&details=Speaker%3A%20Virginia%20Young%20(University%20of%20Michigan%2C%20USA)%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="virginia/virginia.ics" download>
-        Outlook calendar
-      </a>
-        </td>
-        
-        <td class = "speaker"><a href="https://lsa.umich.edu/math/people/faculty/vryoung.html" target="_blank"> Virginia Young (University of Michigan, USA)</a>
-      
-        </td>
-        <td class = "title"> Stackelberg Differential Game for Insurance under Model Ambiguity
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-       We study a dynamic Stackelberg differential game between a buyer and a seller of insurance policies in a spectrally negative Levy framework, in which both parties are ambiguous about the intensity and severity of insurable losses. Both the buyer and seller aim to maximize their expected wealth, plus a penalty term that reflects ambiguity, over an exogenous random horizon. Under a mean-variance premium principle and a quadratic penalty for ambiguity, we obtain the equilibrium in closed form. Our main results show that the buyer’s robust optimal indemnity is a coinsurance with proportion less than one-half, which increases (resp. decreases) as the buyer (resp. seller) becomes more ambiguity averse. Also we show that the seller’s robust optimal premium rule equals the net premium under the buyer’s optimally distorted probability, which is the buyer’s “best hope,” and it exceeds the actuarially fair premium under the seller’s optimally distorted probability measure so is, thereby, acceptable to the seller
-      </details></td>
-        <td>
-                   
-         <b>Host:</b> <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/pietro-millossovich"target="_blank">Pietro Millossovich  </a>
-          <br>
-        <b>Questions: </b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
+  </table>
+  </details>
+  
+  
+    <details>
 
-        </td>
-        </tr>
-        
-                
-<tr>
-  <td class = "date"><b>26 January 2022 3pm (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date110 = new Date('2022-01-26T15:00:00Z');
-      var day110 = date110.getDate();
-      const monthNames110 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month110 = monthNames110[date110.getMonth()];
-      var year110 = date110.getFullYear();
-      var strTime110 = day110 + " " + month110 + " " +  year110;
-      document.write(strTime110);
-      const dtf110 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone110 = dtf110.formatToParts(date110).find((part) => part.type == 'timeZoneName').value;
-      var hours110 = date110.getHours();
-      var minutes110 = date110.getMinutes();
-      var ampm110 = hours110 >= 12 ? 'pm' : 'am';
-      hours110 = hours110 % 12;
-      hours110 = hours110 ? hours110 : 12; // the hour '0' should be '12'
-      minutes110 = minutes110 < 10 ? '0'+minutes110 : minutes110;
-      var strTime2110 = hours110 + ':' + minutes110 +ampm110 + ' ' + "(" +zone110+")";
-      document.write("<br>");
-      document.write(strTime2110);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Emanuela%20Rosazza%20Gianin%20(University%20of%20Milano-Bicocca%20%2C%20Italy)&dates=20220126T150000Z/20220126T161000Z&details=Speaker%3A%20Emanuela%20Rosazza%20Gianin%20(University%20of%20Milano-Bicocca%20%2C%20Italy)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="emanuela/emanuela.ics" download>
-        Outlook calendar
-      </a>
-        </td>
-        
-        <td class = "speaker"><a href="https://www.unimib.it/emanuela-rosazza-gianin" target="_blank"> Emanuela Rosazza Gianin (University of Milano-Bicocca , Italy)</a></td>
-        <td class = "title"> Generalized PELVE and applications to risk measures
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-         The continuing evolution of insurance and banking regulation has
-raised interest in the calibration of different risk measures associated
-with suitable confidence levels. In particular, Li and Wang (2019)
-have introduced a probability equivalent level (called PELVE) for the
-replacement of Value at Risk with Conditional Value at Risk.
-In this talk, we propose a new tool (generalized PELVE, or
-g-PELVE) that extends PELVE to more general pairs of monotone risk
-measures. Conditions for the existence
-and uniqueness of g-PELVE and additional properties for specific families of risk measures are discussed.
-A study of Generalized Pareto Distributions reveals
-an interesting correspondence between PELVE and g-PELVE, and explores
-their relationship with the tail index. An empirical application
-illustrates the usefulness of (g-)PELVE in characterizing tail behavior
-not only for individual asset returns, but also for possible portfolio
-combinations.
-Based on a joint work with Anna Maria Fiori.
-      </details></td>
-        <td>
-                       
-         <b>Host:</b> <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
-          <br>
-        <b>Questions: </b><a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
-        </td>
-        </tr>
-        
-             
-<tr>
-  <td class = "date"><b>23 February 2022 3pm (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date112 = new Date('2022-02-23T15:00:00Z');
-      var day112 = date112.getDate();
-      const monthNames112 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month112 = monthNames112[date112.getMonth()];
-      var year112 = date112.getFullYear();
-      var strTime112 = day112 + " " + month112 + " " +  year112;
-      document.write(strTime112);
-      const dtf112 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone112 = dtf112.formatToParts(date112).find((part) => part.type == 'timeZoneName').value;
-      var hours112 = date112.getHours();
-      var minutes112 = date112.getMinutes();
-      var ampm112 = hours112 >= 12 ? 'pm' : 'am';
-      hours112 = hours112 % 12;
-      hours112 = hours112 ? hours112 : 12; // the hour '0' should be '12'
-      minutes112 = minutes112 < 10 ? '0'+minutes112 : minutes112;
-      var strTime2112 = hours112 + ':' + minutes112 +ampm112 + ' ' + "(" +zone112+")";
-      document.write("<br>");
-      document.write(strTime2112);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Julien%20Trufin%20(Universit%C3%A9%20Libre%20de%20Bruxelles%2C%20Belgium)&dates=20220223T150000Z/20220223T161000Z&details=Speaker%3A%20Julien%20Trufin%20(Universit%C3%A9%20Libre%20de%20Bruxelles%2C%20Belgium)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3ATBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="julien/julien.ics" download>
-        Outlook calendar
-      </a>
-        </td>
-        
-        <td class = "speaker"><a href="http://homepages.ulb.ac.be/~jtrufin/" target="_blank"> Julien Trufin (Université Libre de Bruxelles, Belgium)</a></td>
-        <td class = "title"> Testing for more positive expectation dependence with application to model comparison and autocalibrated models.
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-        Modern data science tools are effective to produce predictions that strongly correlate with responses.
-Model comparison can therefore be based on the strength of dependence between responses and their predictions.
-Positive expectation dependence turns out to be attractive in that respect. 
-The present talk proposes an effective testing procedure for this dependence concept and applies it to compare two models.
-A simulation study is performed to evaluate the performances of the proposed testing procedure.
-Empirical illustrations using insurance loss data demonstrate the relevance of the approach
-for model selection in supervised learning.
-The most positively expectation dependent predictor can then be autocalibrated to obtain its balance-corrected version that appears to be
-optimal with respect to Bregman, or forecast dominance.
-Under autocalibration, it is shown that Lorenz curve and concentration curve coincide and that the integral of the concentration
-curve is equivalent to Gini coefficient.
-      </details></td>
-        <td>
-        
-      <a href="julien/slides.pdf" target="_blank"> <b>Slides</b></a>
-         <br>
-          <br>
-        <b>Host:</b> <a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
-        <br>
-        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
-               
-        </td>
-        </tr>   
-
-<tr>
-  <td class = "date"><b>09 March 2022 9am (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date113 = new Date('2022-03-09T09:00:00Z');
-      var day113 = date113.getDate();
-      const monthNames113 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month113 = monthNames113[date113.getMonth()];
-      var year113 = date113.getFullYear();
-      var strTime113 = day113 + " " + month113 + " " +  year113;
-      document.write(strTime113);
-      const dtf113 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone113 = dtf113.formatToParts(date113).find((part) => part.type == 'timeZoneName').value;
-      var hours113 = date113.getHours();
-      var minutes113 = date113.getMinutes();
-      var ampm113 = hours113 >= 12 ? 'pm' : 'am';
-      hours113 = hours113 % 12;
-      hours113 = hours113 ? hours113 : 12; // the hour '0' should be '12'
-      minutes113 = minutes113 < 10 ? '0'+minutes113 : minutes113;
-      var strTime2113 = hours113 + ':' + minutes113 +ampm113 + ' ' + "(" +zone113+")";
-      document.write("<br>");
-      document.write(strTime2113);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Fei%20Huang%20(University%20of%20New%20South%20Wales%2C%20Australia)&dates=20220309T090000Z/20220309T101000Z&details=Speaker%3A%20Fei%20Huang%20(University%20of%20New%20South%20Wales%2C%20Australia)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="fei/fei.ics" download>
-        Outlook calendar
-      </a>
-        </td>
-        
-        <td class = "speaker"><a href="https://www.unsw.edu.au/staff/fei-huang" target="_blank"> Fei Huang (University of New South Wales, Australia)</a></td>
-        <td class = "title">Insurance Discrimination and Pricing Fairness
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-On the issue of insurance discrimination, a grey area in regulation has resulted from the growing use of big data analytics by insurance companies – direct discrimination is prohibited, but indirect discrimination using proxies or more complex and opaque algorithms can be tolerated without restrictions. This phenomenon has recently attracted the attention of insurance regulators all over the world, and stricter insurance discrimination regulations are being discussed and considered by regulators. Meanwhile, various fairness criteria and fair machine learning algorithms have been proposed and flourish in the machine learning literature with the rapid growth of artificial intelligence (AI) in the past decade, which mostly focus on classification decisions. In this presentation, I will firstly review social and economic principles that can be used to assess the appropriateness of insurance discrimination. I will then introduce the fairness criteria that are potentially applicable to insurance pricing, match them with different levels of potential and existing anti-discrimination regulations, and implement them into a series of existing and newly proposed anti-discrimination insurance pricing models.  Finally, I will compare the outcome of different models from the perspectives of both group fairness and individual fairness and show the cost of fairness.      </details></td>
-        <td>
-        
-        <b>Host:</b> <a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
-        <br>
-        <b>Questions: </b><a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
-        </td>
-        </tr>
-        <tr>
-  <td class = "date"><b>23 March 2022 3pm (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date114 = new Date('2022-03-23T15:00:00Z');
-      var day114 = date114.getDate();
-      const monthNames114 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month114 = monthNames114[date114.getMonth()];
-      var year114 = date114.getFullYear();
-      var strTime114 = day114 + " " + month114 + " " +  year114;
-      document.write(strTime114);
-      const dtf114 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone114 = dtf114.formatToParts(date114).find((part) => part.type == 'timeZoneName').value;
-      var hours114 = date114.getHours();
-      var minutes114 = date114.getMinutes();
-      var ampm114 = hours114 >= 12 ? 'pm' : 'am';
-      hours114 = hours114 % 12;
-      hours114 = hours114 ? hours114 : 12; // the hour '0' should be '12'
-      minutes114 = minutes114 < 10 ? '0'+minutes114 : minutes114;
-      var strTime2114 = hours114 + ':' + minutes114 +ampm114 + ' ' + "(" +zone114+")";
-      document.write("<br>");
-      document.write(strTime2114);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Alfred%20M%C3%BCller%20(University%20of%20Siegen%2C%20Germany)&dates=20220323T150000Z/20220323T161000Z&details=Speaker%3A%20Alfred%20M%C3%BCller%20(University%20of%20Siegen%2C%20Germany)%0A%0ATitle%3A%20Decisions under uncertainty: sufficient conditions for almost stochastic dominance%0A%0AAbstract%3A%20Decision making under risk in actuarial sciences as well as in other disciplines involves a ranking of distributions, which is typically based on a method for assigning a real number to a distribution using a risk measure, a premium principle  or a context of expected utility. As it is typically difficult to assess a concrete risk measure or utility function it is a well established idea to use stochastic dominance rules in form of stochastic orders to compare distributions. However, it is often equally difficult to completely specify a distribution. Therefore it is an interesting question whether one can derive unambiguous decisions under partial knowledge of the distributions. In this talk we in particular address this question under the condition that we only know the mean and variance of the involved distributions or that we know the marginal distributions but not the copulas in a multivariate context. Under such assumptions we derive sufficient conditions for concepts of almost stochastic dominance that are based on restrictions on marginal utilities. The talk is based on joint work with Marco Scarsini, Ilia Tsetlin and Robert L. Winkler%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="alfred/alfred.ics" download>
-        Outlook calendar
-      </a>
-        </td>
-        
-        <td class = "speaker"><a href="https://www.uni-siegen.de/fb6/src/mueller/" target="_blank">Alfred Müller (University of Siegen, Germany)</a></td>
-        <td class = "title">  Decisions under uncertainty: sufficient conditions for almost stochastic dominance
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-        Decision making under risk in actuarial sciences as well as in other disciplines involves a ranking of distributions, which is typically based on a method for assigning a real number to a distribution using a risk measure, a premium principle  or a context of expected utility. As it is typically difficult to assess a concrete risk measure or utility function it is a well established idea to use stochastic dominance rules in form of stochastic orders to compare distributions. However, it is often equally difficult to completely specify a distribution. Therefore it is an interesting question whether one can derive unambiguous decisions under partial knowledge of the distributions. In this talk we in particular address this question under the condition that we only know the mean and variance of the involved distributions or that we know the marginal distributions but not the copulas in a multivariate context. Under such assumptions we derive sufficient conditions for concepts of almost stochastic dominance that are based on restrictions on marginal utilities. The talk is based on joint work with Marco Scarsini, Ilia Tsetlin and Robert L. Winkler
-      </details></td>
-        <td>
-        
-        <b>Host:</b> <a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
-        <br>
-        <b>Questions: </b> <a href=" https://sas.uwaterloo.ca/~wang/"target="_blank"> Ruodu Wang</a>
-        </td>
-        </tr>  
-        
-        
-        <tr>
-    <td class = "date"> <b> 6 April 2022</b>
-    </td>
-
-     <td class = "speaker"><b>Spring Break</b></td>
-    <td class = "title"></td>
-  <td> </td>
-  </tr>
-<tr>
-  <td class = "date"><b>20 April 2022 12pm (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date111 = new Date('2022-04-20T12:00:00Z');
-      var day111 = date111.getDate();
-      const monthNames111 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month111 = monthNames111[date111.getMonth()];
-      var year111 = date111.getFullYear();
-      var strTime111 = day111 + " " + month111 + " " +  year111;
-      document.write(strTime111);
-      const dtf111 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone111 = dtf111.formatToParts(date111).find((part) => part.type == 'timeZoneName').value;
-      var hours111 = date111.getHours();
-      var minutes111 = date111.getMinutes();
-      var ampm111 = hours111 >= 12 ? 'pm' : 'am';
-      hours111 = hours111 % 12;
-      hours111 = hours111 ? hours111 : 12; // the hour '0' should be '12'
-      minutes111 = minutes111 < 10 ? '0'+minutes111 : minutes111;
-      var strTime2111 = hours111 + ':' + minutes111 +ampm111 + ' ' + "(" +zone111+")";
-      document.write("<br>");
-      document.write(strTime2111);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Christian%20Furrer%20(University%20of%20Copenhagen%2C%20Denmark)&dates=20220420T120000Z/20220420T131000Z&details=Speaker%3A%20Christian%20Furrer%20(University%20of%20Copenhagen%2C%20Denmark)%0A%0ATitle%3A%20Change%20of%20measure%20techniques%20for%20scaled%20insurance%20cash%20flows%0A%0AAbstract%3A%20Incidental%20policyholder%20behavior%2C%20including%20free%20policy%20conversion%20and%20stochastic%20retirement%2C%20may%20have%20a%20significant%20impact%20on%20the%20market%20value%20of%20a%20life%20insurance%20contract%3B%20consequently%2C%20models%20should%20account%20for%20this.%20However%2C%20the%20inclusion%20of%20incidental%20policyholder%20behavior%20typically%20leads%20to%20duration%20effects%20and%20thus%20an%20increase%20in%20computational%20complexity.%20In%20this%20talk%2C%20I%20show%20how%20change%20of%20measure%20techniques%20can%20be%20used%20to%20conveniently%20deal%20with%20this%20added%20layer%20of%20complication.%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="christianf/christianf.ics" download>
-        Outlook calendar
-      </a>
-        </td>
-        
-        <td class = "speaker"><a href="https://furrer.dk/christian/" target="_blank"> Christian Furrer (University of Copenhagen, Denmark)</a></td>
-        <td class = "title"> Change of measure techniques for scaled insurance cash flows
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-       Incidental policyholder behavior, including free policy conversion and stochastic retirement, may have a significant impact on the market value of a life insurance contract; consequently, models should account for this. However, the inclusion of incidental policyholder behavior typically leads to duration effects and thus an increase in computational complexity. In this talk, I show how change of measure techniques can be used to conveniently deal with this added layer of complication.
-      </details></td>
-        <td>
-        
-        <b>Host:</b> <a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
-        <br>
-        <b>Questions: </b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
-        </td>
-        </tr>   
-        
-    <tr>
-  <td class = "date"><b>04 May 2022 8am (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date112 = new Date('2022-05-04T08:00:00Z');
-      var day112 = date112.getDate();
-      const monthNames112 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month112 = monthNames112[date112.getMonth()];
-      var year112 = date112.getFullYear();
-      var strTime112 = day112 + " " + month112 + " " +  year112;
-      document.write(strTime112);
-      const dtf112 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone112 = dtf112.formatToParts(date112).find((part) => part.type == 'timeZoneName').value;
-      var hours112 = date112.getHours();
-      var minutes112 = date112.getMinutes();
-      var ampm112 = hours112 >= 12 ? 'pm' : 'am';
-      hours112 = hours112 % 12;
-      hours112 = hours112 ? hours112 : 12; // the hour '0' should be '12'
-      minutes112 = minutes112 < 10 ? '0'+minutes112 : minutes112;
-      var strTime2112 = hours112 + ':' + minutes112 +ampm112 + ' ' + "(" +zone112+")";
-      document.write("<br>");
-      document.write(strTime2112);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Annamaria%20Olivieri%20(University%20of%20Parma%2C%20Italy)&dates=20220504T080000Z/20220504T091000Z&details=Speaker%3A%20%20Annamaria%20Olivieri%20(University%20of%20Parma%2C%20Italy)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="annamaria/annamaria.ics" download>
-        Outlook calendar
-      </a>
-    <p style="color:red;">  Please note that a previous version of this calender entry (which was available for a couple of days on this website) was one hour off. Please make sure you have saved the right time.</p>
-        </td>
-        
-        <td class = "speaker"><a href="https://personale.unipr.it/en/ugovdocenti/person/15493" target="_blank"> Annamaria Olivieri (University of Parma, Italy)</a></td>
-        <td class = "title">Flexible annuity designs meeting individuals’ longevity risk appetite (or unawareness) 
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-        Despite the growing need for individuals to protect themselves from the longevity risk to which their assets will be exposed after retirement, the demand for products offering longevity guarantees, namely annuities, remains low. Possible reasons include the cost of guarantees and the rigidity of the traditional annuity design, which implies an irreversible decision at issue. This contrasts with the perspective of individuals who, because of their risk appetite or unawareness, seem to prefer to avoid non-revisable decisions, at least in the early stages of their post-retirement life, and to retain their longevity risk up to some higher age. 
-Flexibility in the annuity design could, at least partially, meet the prevailing individuals’ attitude. Flexibility can be introduced in different ways. We focus on two solutions. First, the guarantees can be relaxed, and the related costs can be reduced, by allowing the benefit amount to fluctuate (up or down) according to a given mortality/longevity experience. Second, instead of an upfront loading at issue, periodic fees could be charged, as they are more suitable to support a revision of the arrangement after issue. While the literature includes already several contributions on mortality/longevity-linked benefits, a pricing structure based on periodic fees has received little attention so far. We develop a discussion in this respect, considering mortality/longevity-linked annuities
-      </details></td>
-        <td>
-        
-        <b>Host:</b> <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andrés Villegas</a> 
-        <br>
-        <b>Questions: </b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
-        </td>
-        </tr> 
-         <tr>
-  <td class = "date"><b>18 May 2022 8am (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date113 = new Date('2022-05-18T08:00:00Z');
-      var day113 = date113.getDate();
-      const monthNames113 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month113 = monthNames113[date113.getMonth()];
-      var year113 = date113.getFullYear();
-      var strTime113 = day113 + " " + month113 + " " +  year113;
-      document.write(strTime113);
-      const dtf113 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone113 = dtf113.formatToParts(date113).find((part) => part.type == 'timeZoneName').value;
-      var hours113 = date113.getHours();
-      var minutes113 = date113.getMinutes();
-      var ampm113 = hours113 >= 12 ? 'pm' : 'am';
-      hours113 = hours113 % 12;
-      hours113 = hours113 ? hours113 : 12; // the hour '0' should be '12'
-      minutes113 = minutes113 < 10 ? '0'+minutes113 : minutes113;
-      var strTime2113 = hours113 + ':' + minutes113 +ampm113 + ' ' + "(" +zone113+")";
-      document.write("<br>");
-      document.write(strTime2113);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Johanna%20Ziegel%20(University%20of%20Bern%2C%20Switzerland)&dates=20220518T080000Z/20220518T091000Z&details=Speaker%3A%20%20Johanna%20Ziegel%20(University%20of%20Bern%2C%20Switzerland)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AFurther%20details%3A%20https%3A%2F%2Fowars.info%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="johanna/johanna.ics" download>
-        Outlook calendar
-      </a>
-          <p style="color:red;">  Please note that a previous version of this calender entry  was one hour off. Please make sure you have saved the right time.</p>
-
-        </td>
-        
-        <td class = "speaker"><a href="https://www.imsv.unibe.ch/about_us/staff/prof_dr_ziegel_johanna/index_eng.html" target="_blank">Johanna Ziegel (University of Bern, Switzerland)</a></td>
-        <td class = "title">Distributional (Single) Index Models
-
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-      A Distributional (Single) Index Model (DIM) is a semiparametric model for distributional regression, that is, estimation of conditional distributions given covariates. The method is a combination of classical single- index models for the estimation of the conditional mean of a response given covariates, and isotonic distributional regression. The model for the index is parametric, whereas the conditional distributions are estimated nonparametrically under a stochastic ordering constraint. We show consistency of our estimators and apply them to a highly challenging dataset on the length of stay (LoS) of patients in intensive care units. We use the model to provide skillful and calibrated probabilistic predictions for the LoS of individual patients, which outperform the available methods in the literature.
-      </details></td>
-        <td>
-        
-        <b>Host:</b> <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
-      <br>
-        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
-      </td>
-        </tr>    
-        
-                 <tr>
-<td class = "date"><b>01 June 2022 8am (UTC) </b> <br> In your local time: <br>
-  <script type="text/javascript">
-    var date114 = new Date('2022-06-01T08:00:00Z');
-    var day114 = date114.getDate();
-    const monthNames114 = ["January", "February", "March", "April", "May", "June",
-                           "July", "August", "September", "October", "November", "December"];
-    var month114 = monthNames114[date114.getMonth()];
-    var year114 = date114.getFullYear();
-    var strTime114 = day114 + " " + month114 + " " +  year114;
-    document.write(strTime114);
-    const dtf114 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-    var zone114 = dtf114.formatToParts(date114).find((part) => part.type == 'timeZoneName').value;
-    var hours114 = date114.getHours();
-    var minutes114 = date114.getMinutes();
-    var ampm114 = hours114 >= 12 ? 'pm' : 'am';
-    hours114 = hours114 % 12;
-    hours114 = hours114 ? hours114 : 12; // the hour '0' should be '12'
-    minutes114 = minutes114 < 10 ? '0'+minutes114 : minutes114;
-    var strTime2114 = hours114 + ':' + minutes114 +ampm114 + ' ' + "(" +zone114+")";
-    document.write("<br>");
-    document.write(strTime2114);
-    </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Benjamin%20Avanzi%20(The%20University%20of%20Melbourne%2C%20Australia)&dates=20220601T080000Z/20220601T091000Z&details=Speaker%3A%20Benjamin%20Avanzi%20(The%20University%20of%20Melbourne%2C%20Australia)%0A%0ATitle%3A%20Ensemble distributional forecasting for insurance loss reserving%0A%0AAbstract%3A%20Loss reserving generally focuses on identifying a single model that can generate superior predictive performance. However, different loss reserving models specialise in capturing different aspects of loss data. This is recognised in practice in the sense that results from different models are often considered, and sometimes combined. For instance, actuaries may take a weighted average of the prediction outcomes from various loss reserving models, often based on subjective assessments.
- In this paper, we propose a framework to objectively combine (i.e. ensemble) multiple stochastic loss reserving models such that the strengths offered by different models can be utilised effectively. Criteria of choice consider the full distributional properties of the ensemble. A notable innovation of our framework is that it is tailored for the features inherent to reserving data. These include, for instance, accident, development, calendar, and claim maturity effects. Crucially, the relative importance and scarcity of data across accident periods renders the problem distinct from the traditional ensembling techniques in statistical learning.
-Our ensemble reserving framework is illustrated with a complex synthetic dataset. In the results, the optimised ensemble outperforms both (i) traditional model selection strategies, and (ii) an equally weighted ensemble. In particular, the improvement occurs not only with central estimates but also relevant quantiles, such as the 75th percentile of reserves (typically of interest to both insurers and regulators).
-This is joint work with Yanfeng Li, Bernard Wong, and Alan Xian%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="benjamin/benjamin.ics" download>
-        Outlook calendar
-      </a>
-
-        </td>
-        
-        <td class = "speaker"><a href="https://bavanzicv.netlify.app/" target="_blank">Benjamin Avanzi (The University of Melbourne, Australia)</a></td>
-        <td class = "title">Ensemble distributional forecasting for insurance loss reserving
-
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-  Loss reserving generally focuses on identifying a single model that can generate superior predictive performance. However, different loss reserving models specialise in capturing different aspects of loss data. This is recognised in practice in the sense that results from different models are often considered, and sometimes combined. For instance, actuaries may take a weighted average of the prediction outcomes from various loss reserving models, often based on subjective assessments.
- In this paper, we propose a framework to objectively combine (i.e. ensemble) multiple stochastic loss reserving models such that the strengths offered by different models can be utilised effectively. Criteria of choice consider the full distributional properties of the ensemble. A notable innovation of our framework is that it is tailored for the features inherent to reserving data. These include, for instance, accident, development, calendar, and claim maturity effects. Crucially, the relative importance and scarcity of data across accident periods renders the problem distinct from the traditional ensembling techniques in statistical learning.
-Our ensemble reserving framework is illustrated with a complex synthetic dataset. In the results, the optimised ensemble outperforms both (i) traditional model selection strategies, and (ii) an equally weighted ensemble. In particular, the improvement occurs not only with central estimates but also relevant quantiles, such as the 75th percentile of reserves (typically of interest to both insurers and regulators).
-This is joint work with Yanfeng Li, Bernard Wong, and Alan Xian
-      </details></td>
-        <td>
-        
-        <b>Host:</b>  <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andrés Villegas</a> 
-      <br>
-        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
-      </td>
-        </tr>    
-        
-</tbody>
-</table>
-
-<br>
-<br>
-
-<details>
+  
 <summary>Talks in 2020</summary>
 <table style="width:100%" class="table1">
 
