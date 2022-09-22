@@ -206,114 +206,65 @@ height: 100%;
 
 
 
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
-</h2>
+
+
+
+<br>
+
+
+ <div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
 
-     
 
 
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="jim.jpeg" alt="Avatar" height="120" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2022-09-21T08:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2022-09-21T08:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="https://www2.deloitte.com/us/en/profiles/jguszcza.html" target="_blank"> Jim Guszcza (US Chief Data Scientist, Deloitte Analytics
-)
-</a>
-
-</div>
-
-<br>
-
-
-<div class="container">
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+
+
+
+
+
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/3zDySSVWKQE">
+</iframe>
+
+
+
+    
+
+</div>
 
   
-<div class="col-md-8">
+<div class="col-md-6">
+  <b>Speaker: </b><a href="https://www2.deloitte.com/us/en/profiles/jguszcza.html" target="_blank"> Jim Guszcza (Deloitte Analytics)
+</a>
+<br>
   <b>Title:</b>
-Professionalizing Artificial Intelligence:  Lessons from Actuarial Science
+ Professionalizing Artificial Intelligence: Lessons from Actuarial Science
 <br> 
-<b>Abstract:</b>
-Artificial Intelligence is often characterized in terms of “solving intelligence” or building machines that outperform humans at most economically meaningful work.  But for scientific, economic, as well as societal reasons, this paradigm is likely to give way to a more design-focused paradigm of creating human-machine hybrid intelligence systems. This talk will sketch the Hybrid Intelligence paradigm, and discuss various ways in which the needed field of Hybrid Intelligence engineering must adopt traits characteristic of the actuarial profession:  a respect for data limitations, an acknowledgment of the need to integrate algorithmic indications with local knowledge and informed judgment; and an ethos of ethical behavior and public service. The discussion will be motivated by examples from insurance and other domains. 
-      </div>
-
-<div class="col-md-4">
+<details>
+<summary>Abstract (click to expand)</summary>
+Abstract: Artificial Intelligence is often characterized in terms of “solving intelligence” or building machines that outperform humans at most economically meaningful work. But for scientific, economic, as well as societal reasons, this paradigm is likely to give way to a more design-focused paradigm of creating human-machine hybrid intelligence systems. This talk will sketch the Hybrid Intelligence paradigm, and discuss various ways in which the needed field of Hybrid Intelligence engineering must adopt traits characteristic of the actuarial profession: a respect for data limitations, an acknowledgment of the need to integrate algorithmic indications with local knowledge and informed judgment; and an ethos of ethical behavior and public service. The discussion will be motivated by examples from insurance and other domains.
+</details>
 </div>
 
-</div>
+<div class="col-md-2">
+
 </div>
 
 
+
+</div>
+
+
+
+
+<br>
+<br>
 
 
 
@@ -471,8 +422,13 @@ window.player = player;
         <b>Host:</b>  <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/pietro-millossovich"target="_blank">Pietro Millossovich  </a>
         <br>
         <b>Questions: </b><a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
+        
+        <br>
+              <a href="jim/Guszcza_OWARS_21Sept2022.pdf" target="_blank"> <b>Slides</b></a>
+
         </td>
         </tr>  
+        
       
     <tr>
   <td class = "date"><b>05 October 2022 3pm (UTC) </b> <br> In your local time: <br>
@@ -520,7 +476,238 @@ window.player = player;
         <b>Questions: </b>TBA
         </td>
         </tr>   
+        
+   <tr>
+  <td class = "date"><b>19 October 2022 8am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date117 = new Date('2022-10-19T08:00:00Z');
+      var day117 = date117.getDate();
+      const monthNames117 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month117 = monthNames117[date117.getMonth()];
+      var year117 = date117.getFullYear();
+      var strTime117 = day117 + " " + month117 + " " +  year117;
+      document.write(strTime117);
+      const dtf117 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone117 = dtf117.formatToParts(date117).find((part) => part.type == 'timeZoneName').value;
+      var hours117 = date117.getHours();
+      var minutes117 = date117.getMinutes();
+      var ampm117 = hours117 >= 12 ? 'pm' : 'am';
+      hours117 = hours117 % 12;
+      hours117 = hours117 ? hours117 : 12; // the hour '0' should be '12'
+      minutes117 = minutes117 < 10 ? '0'+minutes117 : minutes117;
+      var strTime2117 = hours117 + ':' + minutes117 +ampm117 + ' ' + "(" +zone117+")";
+      document.write("<br>");
+      document.write(strTime2117);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Anne%20Balter%20(Tilburg%20University%2C%20The%20Netherlands)&dates=20221019T080000Z/20221019T091000Z&details=Speaker%3A%20Anne%20Balter%20(Tilburg%20University%2C%20The%20Netherlands)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="annebalter/annebalter.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://sites.google.com/site/agbalter/home?authuser=0" target="_blank">Anne Balter (Tilburg University, The Netherlands)</a></td>
+        <td class = "title">TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+      TBA
+      </details></td>
+        <td>
+        
+        <b>Host:</b> TBA
+      <br>
+        <b>Questions: </b>TBA
+      </td>
+        </tr>   
+        
    
+   <tr>
+  <td class = "date"><b>02 November 2022 4pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date118 = new Date('2022-11-02T16:00:00Z');
+      var day118 = date118.getDate();
+      const monthNames118 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month118 = monthNames118[date118.getMonth()];
+      var year118 = date118.getFullYear();
+      var strTime118 = day118 + " " + month118 + " " +  year118;
+      document.write(strTime118);
+      const dtf118 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone118 = dtf118.formatToParts(date118).find((part) => part.type == 'timeZoneName').value;
+      var hours118 = date118.getHours();
+      var minutes118 = date118.getMinutes();
+      var ampm118 = hours118 >= 12 ? 'pm' : 'am';
+      hours118 = hours118 % 12;
+      hours118 = hours118 ? hours118 : 12; // the hour '0' should be '12'
+      minutes118 = minutes118 < 10 ? '0'+minutes118 : minutes118;
+      var strTime2118 = hours118 + ':' + minutes118 +ampm118 + ' ' + "(" +zone118+")";
+      document.write("<br>");
+      document.write(strTime2118);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Munir%20Hiabu%20(University%20of%20Copenhagen%2C%20Denmark)&dates=20221102T160000Z/20221102T171000Z&details=Speaker%3A%20Munir%20Hiabu%20(University%20of%20Copenhagen%2C%20Denmark)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="munirhiabu/munirhiabu.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://mhiabu.github.io/" target="_blank">Munir Hiabu (University of Copenhagen, Denmark)</a></td>
+        <td class = "title">TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        TBA
+      </details></td>
+        <td>
+        
+        <b>Host:</b> TBA
+      <br>
+        <b>Questions: </b>TBA
+      </td>
+        </tr>   
+        
+   <tr>
+  <td class = "date"><b>16 November 2022 9am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date119 = new Date('2022-11-16T09:00:00Z');
+      var day119 = date119.getDate();
+      const monthNames119 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month119 = monthNames119[date119.getMonth()];
+      var year119 = date119.getFullYear();
+      var strTime119 = day119 + " " + month119 + " " +  year119;
+      document.write(strTime119);
+      const dtf119 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone119 = dtf119.formatToParts(date119).find((part) => part.type == 'timeZoneName').value;
+      var hours119 = date119.getHours();
+      var minutes119 = date119.getMinutes();
+      var ampm119 = hours119 >= 12 ? 'pm' : 'am';
+      hours119 = hours119 % 12;
+      hours119 = hours119 ? hours119 : 12; // the hour '0' should be '12'
+      minutes119 = minutes119 < 10 ? '0'+minutes119 : minutes119;
+      var strTime2119 = hours119 + ':' + minutes119 +ampm119 + ' ' + "(" +zone119+")";
+      document.write("<br>");
+      document.write(strTime2119);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Munir%20Hiabu%20(University%20of%20Copenhagen%2C%20Denmark)&dates=20221102T160000Z/20221102T171000Z&details=Speaker%3A%20Munir%20Hiabu%20(University%20of%20Copenhagen%2C%20Denmark)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="mogenssteffensen/mogenssteffensen.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://sites.google.com/site/steffensenmogens/" target="_blank">Mogens Steffensen
+ (University of Copenhagen, Denmark)</a></td>
+        <td class = "title">TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        TBA
+      </details></td>
+        <td>
+        
+        <b>Host:</b> TBA
+      <br>
+        <b>Questions: </b>TBA
+      </td>
+        </tr>   
+        
+        <tr>
+  <td class = "date"><b>30 November 2022 4pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date120 = new Date('2022-11-30T16:00:00Z');
+      var day120 = date120.getDate();
+      const monthNames120 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month120 = monthNames120[date120.getMonth()];
+      var year120 = date120.getFullYear();
+      var strTime120 = day120 + " " + month120 + " " +  year120;
+      document.write(strTime120);
+      const dtf120 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone120 = dtf120.formatToParts(date120).find((part) => part.type == 'timeZoneName').value;
+      var hours120 = date120.getHours();
+      var minutes120 = date120.getMinutes();
+      var ampm120 = hours120 >= 12 ? 'pm' : 'am';
+      hours120 = hours120 % 12;
+      hours120 = hours120 ? hours120 : 12; // the hour '0' should be '12'
+      minutes120 = minutes120 < 10 ? '0'+minutes120 : minutes120;
+      var strTime2120 = hours120 + ':' + minutes120 +ampm120 + ' ' + "(" +zone120+")";
+      document.write("<br>");
+      document.write(strTime2120);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Brian%20Hartman%20(Brigham%20Young%20University%2C%20USA)&dates=20221130T160000Z/20221130T171000Z&details=Speaker%3A%20Brian%20Hartman%20(Brigham%20Young%20University%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="brianhartman/brianhartman.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://hartman.byu.edu/" target="_blank">Brian Hartman (Brigham Young University, USA)</a></td>
+        <td class = "title">TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        TBA
+      </details></td>
+        <td>
+        
+        <b>Host:</b> TBA
+      <br>
+        <b>Questions: </b>TBA
+      </td>
+        </tr>   
+   
+   <tr>
+  <td class = "date"><b>14 Decmber 2022 9am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date121 = new Date('2022-12-14T09:00:00Z');
+      var day121 = date121.getDate();
+      const monthNames121 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month121 = monthNames121[date121.getMonth()];
+      var year121 = date121.getFullYear();
+      var strTime121 = day121 + " " + month121 + " " +  year121;
+      document.write(strTime121);
+      const dtf121 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone121 = dtf121.formatToParts(date121).find((part) => part.type == 'timeZoneName').value;
+      var hours121 = date121.getHours();
+      var minutes121 = date121.getMinutes();
+      var ampm121 = hours121 >= 12 ? 'pm' : 'am';
+      hours121 = hours121 % 12;
+      hours121 = hours121 ? hours121 : 12; // the hour '0' should be '12'
+      minutes121 = minutes121 < 10 ? '0'+minutes121 : minutes121;
+      var strTime2121 = hours121 + ':' + minutes121 +ampm121 + ' ' + "(" +zone121+")";
+      document.write("<br>");
+      document.write(strTime2121);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Valeria%20Bignozzi%20(University%20of%20Milano-Bicocca%2C%20Italy)&dates=20221214T090000Z/20221214T101000Z&details=Speaker%3A%20Valeria%20Bignozzi%20(University%20of%20Milano-Bicocca%2C%20Italy)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="valeriabignozzi/valeriabignozzi.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://www.unimib.it/valeria-bignozzi" target="_blank">Valeria Bignozzi (University of Milano-Bicocca, Italy)</a></td>
+        <td class = "title">TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        TBA
+      </details></td>
+        <td>
+        
+        <b>Host:</b> TBA
+      <br>
+        <b>Questions: </b>TBA
+      </td>
+        </tr>   
 </tbody>
 
 </table>
