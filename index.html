@@ -213,52 +213,116 @@ height: 100%;
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
+
+
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
 </div>
 
+     
 
 
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="sheldon/Lin.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2022-10-05T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2022-10-05T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://utstat.toronto.edu/sheldon/" target="_blank"> Sheldon Lin (University of Toronto, Canada)
+</a>
+
+</div>
+
+<br>
+
+
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/c0GYPyrZkBk">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-  <b>Speaker: </b><a href="https://www2.deloitte.com/us/en/profiles/jguszcza.html" target="_blank"> Jim Guszcza (Deloitte Analytics)
-</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
- Professionalizing Artificial Intelligence: Lessons from Actuarial Science
+
+     An Efficient Simulation Scheme for the Valuation of Large Heterogeneous Insurance Portfolios
 <br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-Abstract: Artificial Intelligence is often characterized in terms of “solving intelligence” or building machines that outperform humans at most economically meaningful work. But for scientific, economic, as well as societal reasons, this paradigm is likely to give way to a more design-focused paradigm of creating human-machine hybrid intelligence systems. This talk will sketch the Hybrid Intelligence paradigm, and discuss various ways in which the needed field of Hybrid Intelligence engineering must adopt traits characteristic of the actuarial profession: a respect for data limitations, an acknowledgment of the need to integrate algorithmic indications with local knowledge and informed judgment; and an ethos of ethical behavior and public service. The discussion will be motivated by examples from insurance and other domains.
-</details>
+<b>Abstract:</b>
+Insurance policies are mostly individual specific, as policyholders possess different risk characteristics and choose different policy options to meet their needs. Thus, the probability distributions that underlie the insurance claims are policy specific and complex, as opposed to the common parametric distributions. As a result, calculating the quantities of interest (e.g. premiums, liabilities, etc.) can only be done via stochastic simulations individually. Moreover, in reality an insurance portfolio contains hundreds of thousands of policies. In other words, we are dealing with a very large and highly heterogeneous insurance portfolio. To obtain any quantity of interest via simulation across the entire portfolio is extremely time consuming and is very often prohibitive. In this talk, we propose an efficient simulation scheme that only involves the simulation of a very small number of the policies in the portfolio. The first step is to select this small set of policies using a population sampling technique, i.e. the Delta method, so that the entire portfolio is well represented by the selected policies. A tailor-made simulation algorithm is applied to those representative policies. We then identify a policy specific quantity or summary statistics that well describe the information from a policy (policy attributes and claims) and introduce a model (surrogate model) that links the quantity/statistics to the quantity of interest we intend to calculate. The surrogate model is estimated using the representative policies and is then used for extrapolation (to calculate the quantity for the rest of the policies). We illustrate this simulation scheme with two very different examples. One is the valuation and hedging of a variable annuity (VA) portfolio and the other is on the calculation of the Bayesian premiums of an auto insurance portfolio.
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
+</div>
 </div>
 
 
-
-</div>
 
 
 
@@ -377,57 +441,7 @@ window.player = player;
     <th>Misc</th>
   </tr>
 
-       <tr>
-  <td class = "date"><b>21 September 2022 8am (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date115 = new Date('2022-09-21T08:00:00Z');
-      var day115 = date115.getDate();
-      const monthNames115 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month115 = monthNames115[date115.getMonth()];
-      var year115 = date115.getFullYear();
-      var strTime115 = day115 + " " + month115 + " " +  year115;
-      document.write(strTime115);
-      const dtf115 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone115 = dtf115.formatToParts(date115).find((part) => part.type == 'timeZoneName').value;
-      var hours115 = date115.getHours();
-      var minutes115 = date115.getMinutes();
-      var ampm115 = hours115 >= 12 ? 'pm' : 'am';
-      hours115 = hours115 % 12;
-      hours115 = hours115 ? hours115 : 12; // the hour '0' should be '12'
-      minutes115 = minutes115 < 10 ? '0'+minutes115 : minutes115;
-      var strTime2115 = hours115 + ':' + minutes115 +ampm115 + ' ' + "(" +zone115+")";
-      document.write("<br>");
-      document.write(strTime2115);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Jim%20Guszcza%20%20(Deloitte%2C%20USA)&dates=20220921T080000Z/20220921T091000Z&details=Speaker%3A%20%20Jim%20Guszcza%20%20(Deloitte%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="jim/jim.ics" download>
-        Outlook calendar
-      </a>
-        
-        </td>
-        
-        <td class = "speaker"><a href="https://www2.deloitte.com/us/en/profiles/jguszcza.html" target="_blank">Jim Guszcza
- (Deloitte, USA)</a></td>
-        <td class = "title">Professionalizing Artificial Intelligence:  Lessons from Actuarial Science
-      
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-    Artificial Intelligence is often characterized in terms of “solving intelligence” or building machines that outperform humans at most economically meaningful work.  But for scientific, economic, as well as societal reasons, this paradigm is likely to give way to a more design-focused paradigm of creating human-machine hybrid intelligence systems. This talk will sketch the Hybrid Intelligence paradigm, and discuss various ways in which the needed field of Hybrid Intelligence engineering must adopt traits characteristic of the actuarial profession:  a respect for data limitations, an acknowledgment of the need to integrate algorithmic indications with local knowledge and informed judgment; and an ethos of ethical behavior and public service. The discussion will be motivated by examples from insurance and other domains.
-      </details></td>
-        <td>
-        
-        <b>Host:</b>  <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/pietro-millossovich"target="_blank">Pietro Millossovich  </a>
-        <br>
-        <b>Questions: </b><a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
-        
-        <br>
-              <a href="jim/Guszcza_OWARS_21Sept2022.pdf" target="_blank"> <b>Slides</b></a>
-
-        </td>
-        </tr>  
+     
         
       
     <tr>
@@ -471,9 +485,9 @@ window.player = player;
       </details></td>
         <td>
         
-        <b>Host:</b> TBA
+        <b>Host:</b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
         <br>
-        <b>Questions: </b>TBA
+        <b>Questions: </b><a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
         </td>
         </tr>   
         
@@ -595,15 +609,15 @@ window.player = player;
       </script>
         
         <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Mogens%20Steffensen%20(University%20of%20Copenhagen%2C%20Denmark)&dates=20221116T090000Z/20221116T101000Z&details=Speaker%3A%20Mogens%20Steffensen%20(University%20of%20Copenhagen%2C%20Denmark)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="mogenssteffensen/mogenssteffensen.ics" download>
+        Google calendar
+    
         Outlook calendar
-      </a>
+     
         
         </td>
         
-        <td class = "speaker"><a href="https://sites.google.com/site/steffensenmogens/" target="_blank">Mogens Steffensen
- (University of Copenhagen, Denmark)</a></td>
+        <td class = "speaker">TBA
+</td>
         <td class = "title">TBA
       <br> <details>
         <summary>Abstract (click to expand)</summary>
@@ -1190,6 +1204,57 @@ This is joint work with Yanfeng Li, Bernard Wong, and Alan Xian
         <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
       </td>
         </tr>    
+          <tr>
+  <td class = "date"><b>21 September 2022 8am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date115 = new Date('2022-09-21T08:00:00Z');
+      var day115 = date115.getDate();
+      const monthNames115 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month115 = monthNames115[date115.getMonth()];
+      var year115 = date115.getFullYear();
+      var strTime115 = day115 + " " + month115 + " " +  year115;
+      document.write(strTime115);
+      const dtf115 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone115 = dtf115.formatToParts(date115).find((part) => part.type == 'timeZoneName').value;
+      var hours115 = date115.getHours();
+      var minutes115 = date115.getMinutes();
+      var ampm115 = hours115 >= 12 ? 'pm' : 'am';
+      hours115 = hours115 % 12;
+      hours115 = hours115 ? hours115 : 12; // the hour '0' should be '12'
+      minutes115 = minutes115 < 10 ? '0'+minutes115 : minutes115;
+      var strTime2115 = hours115 + ':' + minutes115 +ampm115 + ' ' + "(" +zone115+")";
+      document.write("<br>");
+      document.write(strTime2115);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Jim%20Guszcza%20%20(Deloitte%2C%20USA)&dates=20220921T080000Z/20220921T091000Z&details=Speaker%3A%20%20Jim%20Guszcza%20%20(Deloitte%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="jim/jim.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://www2.deloitte.com/us/en/profiles/jguszcza.html" target="_blank">Jim Guszcza
+ (Deloitte, USA)</a></td>
+        <td class = "title">Professionalizing Artificial Intelligence:  Lessons from Actuarial Science
+      
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+    Artificial Intelligence is often characterized in terms of “solving intelligence” or building machines that outperform humans at most economically meaningful work.  But for scientific, economic, as well as societal reasons, this paradigm is likely to give way to a more design-focused paradigm of creating human-machine hybrid intelligence systems. This talk will sketch the Hybrid Intelligence paradigm, and discuss various ways in which the needed field of Hybrid Intelligence engineering must adopt traits characteristic of the actuarial profession:  a respect for data limitations, an acknowledgment of the need to integrate algorithmic indications with local knowledge and informed judgment; and an ethos of ethical behavior and public service. The discussion will be motivated by examples from insurance and other domains.
+      </details></td>
+        <td>
+        
+        <b>Host:</b>  <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/pietro-millossovich"target="_blank">Pietro Millossovich  </a>
+        <br>
+        <b>Questions: </b><a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas  </a>
+        
+        <br>
+              <a href="jim/Guszcza_OWARS_21Sept2022.pdf" target="_blank"> <b>Slides</b></a>
+
+        </td>
+        </tr>  
         
 </tbody>
 </table>
