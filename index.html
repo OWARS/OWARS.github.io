@@ -211,60 +211,118 @@ height: 100%;
 
 
 
+
+
+
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="annebalter/1gNaMiXCHz97hG8jT89Wxtdy12ETkvTAVDnmEksmr3xgOATrI2g.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2022-10-19T08:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2022-10-19T08:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://sites.google.com/site/agbalter/home?authuser=0" target="_blank"> Anne Balter (Tilburg University, The Netherlands)
+</a>
+
+</div>
+
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/k5h78o_DWmg">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b><a href="https://utstat.toronto.edu/sheldon/" target="_blank"> Sheldon Lin (University of Toronto, Canada)</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-     An Effective Simulation Scheme for the Valuation of Large Heterogeneous Insurance Portfolios
+
+     Robust Decisions for Heterogeneous Agents via Certainty Equivalents
 <br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-Insurance policies are mostly individual specific, as policyholders possess different risk characteristics and choose different policy options to meet their needs. Thus, the probability distributions that underlie the insurance claims are policy specific and complex, as opposed to the common parametric distributions. As a result, calculating the quantities of interest (e.g.  premiums, liabilities, etc.) can only be done via stochastic simulations individually. Moreover, in reality an insurance portfolio contains hundreds of thousands of policies. In other words, we are dealing with a very large and highly heterogeneous insurance portfolio. To obtain any quantity of interest via simulation across the entire portfolio is extremely time consuming and is very often prohibitive. In this talk, we propose an effective simulation scheme that only involves the simulation of a very small number of the policies in the portfolio. The first step is to select this small set of policies using a population sampling technique, i.e. the Delta method, so that the entire portfolio is well represented by the selected policies. A tailor-made simulation algorithm is applied to those representative policies. We then identify a policy specific quantity or summary statistics that well describe the information from a policy (policy attributes and claims) and introduce a model (surrogate model) that links the quantity/statistics to the quantity of interest we intend to calculate. The surrogate model is estimated using the representative policies and is then used for extrapolation (to calculate the quantity for the rest of the policies). We illustrate this simulation scheme with two very different examples. One is the valuation and hedging of a variable annuity (VA) portfolio and the other is on the calculation of the Bayesian premiums of an auto insurance portfolio.
-</details>
+<b>Abstract:</b>
+We study the problem of a planner who resolves risk-return trade-offs - like financial investment decisions - on behalf of a collective of agents with heterogeneous risk preferences. The planner's objective is a two-stage utility functional where an outer utility function is applied to the distribution of the agents' certainty equivalents from a given decision. Assuming lognormal risks and heterogeneous power utility preferences for the agents, we characterize optimal behavior in a setting where the planner can let each agent choose between different options from a fixed menu of possible decisions, leading to a grouping of the agents by risk preferences. These optimal decision menus are derived first for the case where the planner knows the distribution of preferences exactly and then for a case where he faces uncertainty about this distribution, only having access to upper and lower bounds on agents' relative risk aversion. Finally, we provide tight bounds on the welfare loss from offering a finite menu of choices rather than fully personalized decisions.
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
 </div>
-
-
-
 </div>
 
 
 
-
-<br>
-<br>
 
 
 
@@ -503,10 +561,12 @@ Insurance policies are mostly individual specific, as policyholders possess diff
         </td>
         
         <td class = "speaker"><a href="https://mhiabu.github.io/" target="_blank">Munir Hiabu (University of Copenhagen, Denmark)</a></td>
-        <td class = "title">TBA
+        <td class = "title">        Planted Machine Learning: Letting performance and interpretability go hand in hand
+
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-        TBA
+The goal of Planted Machine Learning is to discover and learn low dimensional structures that can get more complex along a planted path. I will introduce Random Planted Forest –  an algorithm we have recently developed that seems to be competitive with state-of-the-art machine learning predictors with respect to accuracy while having favourable interpretability properties.  In the second part of the talk, we will contrast local explanations like SHAP values to the interpretation of global structures and by doing so touching topics on causality, fairness and variable importance.
+
       </details></td>
         <td>
         
