@@ -432,54 +432,7 @@ window.player = player;
 
      
         
-      
-    <tr>
-  <td class = "date"><b>05 October 2022 3pm (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date116 = new Date('2022-10-05T15:00:00Z');
-      var day116 = date116.getDate();
-      const monthNames116 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month116 = monthNames116[date116.getMonth()];
-      var year116 = date116.getFullYear();
-      var strTime116 = day116 + " " + month116 + " " +  year116;
-      document.write(strTime116);
-      const dtf116 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone116 = dtf116.formatToParts(date116).find((part) => part.type == 'timeZoneName').value;
-      var hours116 = date116.getHours();
-      var minutes116 = date116.getMinutes();
-      var ampm116 = hours116 >= 12 ? 'pm' : 'am';
-      hours116 = hours116 % 12;
-      hours116 = hours116 ? hours116 : 12; // the hour '0' should be '12'
-      minutes116 = minutes116 < 10 ? '0'+minutes116 : minutes116;
-      var strTime2116 = hours116 + ':' + minutes116 +ampm116 + ' ' + "(" +zone116+")";
-      document.write("<br>");
-      document.write(strTime2116);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Sheldon%20Lin%20(University%20of%20Toronto%2C%20Canada)&dates=20221005T150000Z/20221005T161000Z&details=Speaker%3A%20Sheldon%20Lin%20(University%20of%20Toronto%2C%20Canada)%0A%0ATitle%3A%20An%20Efficient%20Simulation%20Scheme%20for%20the%20Valuation%20of%20Large%20Heterogeneous%20Insurance%20Portfolios%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="sheldon/sheldon.ics" download>
-        Outlook calendar
-      </a>
-        
-        </td>
-        
-        <td class = "speaker"><a href="https://utstat.toronto.edu/sheldon/" target="_blank">Sheldon Lin (University of Toronto, Canada)</a></td>
-        <td class = "title">     An Effective Simulation Scheme for the Valuation of Large Heterogeneous Insurance Portfolios
-
-      
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-Insurance policies are mostly individual specific, as policyholders possess different risk characteristics and choose different policy options to meet their needs. Thus, the probability distributions that underlie the insurance claims are policy specific and complex, as opposed to the common parametric distributions. As a result, calculating the quantities of interest (e.g.  premiums, liabilities, etc.) can only be done via stochastic simulations individually. Moreover, in reality an insurance portfolio contains hundreds of thousands of policies. In other words, we are dealing with a very large and highly heterogeneous insurance portfolio. To obtain any quantity of interest via simulation across the entire portfolio is extremely time consuming and is very often prohibitive. In this talk, we propose an effective simulation scheme that only involves the simulation of a very small number of the policies in the portfolio. The first step is to select this small set of policies using a population sampling technique, i.e. the Delta method, so that the entire portfolio is well represented by the selected policies. A tailor-made simulation algorithm is applied to those representative policies. We then identify a policy specific quantity or summary statistics that well describe the information from a policy (policy attributes and claims) and introduce a model (surrogate model) that links the quantity/statistics to the quantity of interest we intend to calculate. The surrogate model is estimated using the representative policies and is then used for extrapolation (to calculate the quantity for the rest of the policies). We illustrate this simulation scheme with two very different examples. One is the valuation and hedging of a variable annuity (VA) portfolio and the other is on the calculation of the Bayesian premiums of an auto insurance portfolio.
-      </details></td>
-        <td>
-        
-        <b>Host:</b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
-        <br>
-        <b>Questions: </b><a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
-        </td>
-        </tr>   
+ 
         
    <tr>
   <td class = "date"><b>19 October 2022 8am (UTC) </b> <br> In your local time: <br>
@@ -521,9 +474,9 @@ Insurance policies are mostly individual specific, as policyholders possess diff
       </details></td>
         <td>
         
-        <b>Host:</b> TBA
+        <b>Host:</b> <a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
       <br>
-        <b>Questions: </b>TBA
+        <b>Questions: </b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
       </td>
         </tr>   
         
@@ -570,9 +523,9 @@ The goal of Planted Machine Learning is to discover and learn low dimensional st
       </details></td>
         <td>
         
-        <b>Host:</b> TBA
+        <b>Host:</b> <a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
       <br>
-        <b>Questions: </b>TBA
+        <b>Questions: </b> <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/pietro-millossovich"target="_blank">Pietro Millossovich  </a>
       </td>
         </tr>   
         
@@ -663,9 +616,9 @@ The goal of Planted Machine Learning is to discover and learn low dimensional st
       </details></td>
         <td>
         
-        <b>Host:</b> TBA
-      <br>
-        <b>Questions: </b>TBA
+        <b>Host:</b> <a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
+        <br>
+        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
       </td>
         </tr>   
    
@@ -709,9 +662,9 @@ The goal of Planted Machine Learning is to discover and learn low dimensional st
       </details></td>
         <td>
         
-        <b>Host:</b> TBA
+        <b>Host:</b> <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andrés Villegas</a> 
       <br>
-        <b>Questions: </b>TBA
+        <b>Questions: </b><a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/pietro-millossovich"target="_blank">Pietro Millossovich  </a>
       </td>
         </tr>   
 </tbody>
@@ -1247,6 +1200,54 @@ This is joint work with Yanfeng Li, Bernard Wong, and Alan Xian
 
         </td>
         </tr>  
+             
+    <tr>
+  <td class = "date"><b>05 October 2022 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date116 = new Date('2022-10-05T15:00:00Z');
+      var day116 = date116.getDate();
+      const monthNames116 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month116 = monthNames116[date116.getMonth()];
+      var year116 = date116.getFullYear();
+      var strTime116 = day116 + " " + month116 + " " +  year116;
+      document.write(strTime116);
+      const dtf116 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone116 = dtf116.formatToParts(date116).find((part) => part.type == 'timeZoneName').value;
+      var hours116 = date116.getHours();
+      var minutes116 = date116.getMinutes();
+      var ampm116 = hours116 >= 12 ? 'pm' : 'am';
+      hours116 = hours116 % 12;
+      hours116 = hours116 ? hours116 : 12; // the hour '0' should be '12'
+      minutes116 = minutes116 < 10 ? '0'+minutes116 : minutes116;
+      var strTime2116 = hours116 + ':' + minutes116 +ampm116 + ' ' + "(" +zone116+")";
+      document.write("<br>");
+      document.write(strTime2116);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20%20Sheldon%20Lin%20(University%20of%20Toronto%2C%20Canada)&dates=20221005T150000Z/20221005T161000Z&details=Speaker%3A%20Sheldon%20Lin%20(University%20of%20Toronto%2C%20Canada)%0A%0ATitle%3A%20An%20Efficient%20Simulation%20Scheme%20for%20the%20Valuation%20of%20Large%20Heterogeneous%20Insurance%20Portfolios%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="sheldon/sheldon.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://utstat.toronto.edu/sheldon/" target="_blank">Sheldon Lin (University of Toronto, Canada)</a></td>
+        <td class = "title">     An Effective Simulation Scheme for the Valuation of Large Heterogeneous Insurance Portfolios
+
+      
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+Insurance policies are mostly individual specific, as policyholders possess different risk characteristics and choose different policy options to meet their needs. Thus, the probability distributions that underlie the insurance claims are policy specific and complex, as opposed to the common parametric distributions. As a result, calculating the quantities of interest (e.g.  premiums, liabilities, etc.) can only be done via stochastic simulations individually. Moreover, in reality an insurance portfolio contains hundreds of thousands of policies. In other words, we are dealing with a very large and highly heterogeneous insurance portfolio. To obtain any quantity of interest via simulation across the entire portfolio is extremely time consuming and is very often prohibitive. In this talk, we propose an effective simulation scheme that only involves the simulation of a very small number of the policies in the portfolio. The first step is to select this small set of policies using a population sampling technique, i.e. the Delta method, so that the entire portfolio is well represented by the selected policies. A tailor-made simulation algorithm is applied to those representative policies. We then identify a policy specific quantity or summary statistics that well describe the information from a policy (policy attributes and claims) and introduce a model (surrogate model) that links the quantity/statistics to the quantity of interest we intend to calculate. The surrogate model is estimated using the representative policies and is then used for extrapolation (to calculate the quantity for the rest of the policies). We illustrate this simulation scheme with two very different examples. One is the valuation and hedging of a variable annuity (VA) portfolio and the other is on the calculation of the Bayesian premiums of an auto insurance portfolio.
+      </details></td>
+        <td>
+        
+        <b>Host:</b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
+        <br>
+        <b>Questions: </b><a href="https://utstat.toronto.edu/pesenti/"target="_blank">Silvana Pesenti </a>
+        </td>
+        </tr>   
         
 </tbody>
 </table>
