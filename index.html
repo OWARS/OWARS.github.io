@@ -212,61 +212,113 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="valeriabignozzi/Valeria-Bignozzi.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2022-12-14T09:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2022-12-14T09:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://www.unimib.it/valeria-bignozzi" target="_blank"> Valeria Bignozzi (University of Milano-Bicocca, Italy)
+</a>
+
+</div>
 
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/IiKxfCkKM3M">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b><a href="https://hartman.byu.edu/" target="_blank">Brian Hartman (Brigham Young University, USA)</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-     A Multivariate Spatiotemporal Model for County-Level Mortality Data in the Contiguous United States
+
+  Inter-order relations between moments of a Student t distribution, with an application to L_p-quantiles
 <br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-Using a number of modern predictive modeling methods, we seek to understand the factors that drive mortality in the contiguous United States. The mortality data we use is indexed by county and year as well as grouped into 18 different age bins. We propose a model that adds two important contributions to existing mortality studies. First, instead of building mortality models separately by age or treating age as a fixed covariate, we treat age as a random effect. This is an improvement over previous models because it allows the model in one age group to borrow strength and information from other age groups that are nearby. The result is a multivariate spatiotemporal model and is estimated using Integrated Nested Laplace Approximations (INLA). Second, we utilize Gaussian Processes to create nonlinear covariate effects for predictors such as unemployment rate, race, and education level. This allows for a more flexible relationship to be modeled between mortality and these important predictors. Understanding that the United States is expansive and diverse, we also allow for many of these effects to vary by location. The amount of flexibility of our model in how predictors relate to mortality has not been used in previous mortality studies and will result in a more accurate model and a more complete understanding of the factors that drive mortality. Both the multivariate nature of the model as well as the non-linear predictors that have an interaction with space will advance the study of mortality beyond what has been done previously and will allow us to better examine the often complicated relationships between the predictors and mortality in different regions.
-</details>
+<b>Abstract:</b>
+In this work we  focus on a class of risk measures denoted  L_p-quantiles, which represent a class of generalized quantiles defined through an asymmetric p-power loss function. In particular, we show that for a Student t distribution with n degrees of freedom,  the L_{n−j+1}-quantile and the L_j -quantile coincide at any confidence level τ in (0, 1). This result is based on inter-order formulas for partial and complete moments of the Student t distribution. We show how the partial moment of order n − j about any real value m can be expressed in terms of the partial moment of order j − 1 for j in {1, . . . , n}. Closed form expressions for the complete moments are also established.
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
+</div>
 </div>
 
-
-
-</div>
-
-
-
-
-<br>
-<br>
 
 
 
@@ -380,52 +432,7 @@ window.player = player;
         
  
   
-        
-        <tr>
-  <td class = "date"><b>30 November 2022 4pm (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date120 = new Date('2022-11-30T16:00:00Z');
-      var day120 = date120.getDate();
-      const monthNames120 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month120 = monthNames120[date120.getMonth()];
-      var year120 = date120.getFullYear();
-      var strTime120 = day120 + " " + month120 + " " +  year120;
-      document.write(strTime120);
-      const dtf120 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone120 = dtf120.formatToParts(date120).find((part) => part.type == 'timeZoneName').value;
-      var hours120 = date120.getHours();
-      var minutes120 = date120.getMinutes();
-      var ampm120 = hours120 >= 12 ? 'pm' : 'am';
-      hours120 = hours120 % 12;
-      hours120 = hours120 ? hours120 : 12; // the hour '0' should be '12'
-      minutes120 = minutes120 < 10 ? '0'+minutes120 : minutes120;
-      var strTime2120 = hours120 + ':' + minutes120 +ampm120 + ' ' + "(" +zone120+")";
-      document.write("<br>");
-      document.write(strTime2120);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Brian%20Hartman%20(Brigham%20Young%20University%2C%20USA)&dates=20221130T160000Z/20221130T171000Z&details=Speaker%3A%20Brian%20Hartman%20(Brigham%20Young%20University%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="brianhartman/brianhartman.ics" download>
-        Outlook calendar
-      </a>
-        
-        </td>
-        
-        <td class = "speaker"><a href="https://hartman.byu.edu/" target="_blank">Brian Hartman (Brigham Young University, USA)</a></td>
-        <td class = "title">A Multivariate Spatiotemporal Model for County-Level Mortality Data in the Contiguous United States
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-       Using a number of modern predictive modeling methods, we seek to understand the factors that drive mortality in the contiguous United States. The mortality data we use is indexed by county and year as well as grouped into 18 different age bins. We propose a model that adds two important contributions to existing mortality studies. First, instead of building mortality models separately by age or treating age as a fixed covariate, we treat age as a random effect. This is an improvement over previous models because it allows the model in one age group to borrow strength and information from other age groups that are nearby. The result is a multivariate spatiotemporal model and is estimated using Integrated Nested Laplace Approximations (INLA). Second, we utilize Gaussian Processes to create nonlinear covariate effects for predictors such as unemployment rate, race, and education level. This allows for a more flexible relationship to be modeled between mortality and these important predictors. Understanding that the United States is expansive and diverse, we also allow for many of these effects to vary by location. The amount of flexibility of our model in how predictors relate to mortality has not been used in previous mortality studies and will result in a more accurate model and a more complete understanding of the factors that drive mortality. Both the multivariate nature of the model as well as the non-linear predictors that have an interaction with space will advance the study of mortality beyond what has been done previously and will allow us to better examine the often complicated relationships between the predictors and mortality in different regions.
-      </details></td>
-        <td>
-        
-        <b>Host:</b> <a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
-        <br>
-        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
-      </td>
-        </tr>   
+     
    
    <tr>
   <td class = "date"><b>14 Decmber 2022 9am (UTC) </b> <br> In your local time: <br>
@@ -460,10 +467,11 @@ window.player = player;
         </td>
         
         <td class = "speaker"><a href="https://www.unimib.it/valeria-bignozzi" target="_blank">Valeria Bignozzi (University of Milano-Bicocca, Italy)</a></td>
-        <td class = "title">TBA
+        <td class = "title">Inter-order relations between moments of a Student t distribution, with an application to L_p-quantiles
+
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-        TBA
+      In this work we  focus on a class of risk measures denoted  L_p-quantiles, which represent a class of generalized quantiles defined through an asymmetric p-power loss function. In particular, we show that for a Student t distribution with n degrees of freedom,  the L_{n−j+1}-quantile and the L_j -quantile coincide at any confidence level τ in (0, 1). This result is based on inter-order formulas for partial and complete moments of the Student t distribution. We show how the partial moment of order n − j about any real value m can be expressed in terms of the partial moment of order j − 1 for j in {1, . . . , n}. Closed form expressions for the complete moments are also established.
       </details></td>
         <td>
         
@@ -1168,7 +1176,52 @@ The goal of Planted Machine Learning is to discover and learn low dimensional st
    
       </td>
         </tr> 
+           
+        <tr>
+  <td class = "date"><b>30 November 2022 4pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date120 = new Date('2022-11-30T16:00:00Z');
+      var day120 = date120.getDate();
+      const monthNames120 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month120 = monthNames120[date120.getMonth()];
+      var year120 = date120.getFullYear();
+      var strTime120 = day120 + " " + month120 + " " +  year120;
+      document.write(strTime120);
+      const dtf120 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone120 = dtf120.formatToParts(date120).find((part) => part.type == 'timeZoneName').value;
+      var hours120 = date120.getHours();
+      var minutes120 = date120.getMinutes();
+      var ampm120 = hours120 >= 12 ? 'pm' : 'am';
+      hours120 = hours120 % 12;
+      hours120 = hours120 ? hours120 : 12; // the hour '0' should be '12'
+      minutes120 = minutes120 < 10 ? '0'+minutes120 : minutes120;
+      var strTime2120 = hours120 + ':' + minutes120 +ampm120 + ' ' + "(" +zone120+")";
+      document.write("<br>");
+      document.write(strTime2120);
+      </script>
         
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Brian%20Hartman%20(Brigham%20Young%20University%2C%20USA)&dates=20221130T160000Z/20221130T171000Z&details=Speaker%3A%20Brian%20Hartman%20(Brigham%20Young%20University%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="brianhartman/brianhartman.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://hartman.byu.edu/" target="_blank">Brian Hartman (Brigham Young University, USA)</a></td>
+        <td class = "title">A Multivariate Spatiotemporal Model for County-Level Mortality Data in the Contiguous United States
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+       Using a number of modern predictive modeling methods, we seek to understand the factors that drive mortality in the contiguous United States. The mortality data we use is indexed by county and year as well as grouped into 18 different age bins. We propose a model that adds two important contributions to existing mortality studies. First, instead of building mortality models separately by age or treating age as a fixed covariate, we treat age as a random effect. This is an improvement over previous models because it allows the model in one age group to borrow strength and information from other age groups that are nearby. The result is a multivariate spatiotemporal model and is estimated using Integrated Nested Laplace Approximations (INLA). Second, we utilize Gaussian Processes to create nonlinear covariate effects for predictors such as unemployment rate, race, and education level. This allows for a more flexible relationship to be modeled between mortality and these important predictors. Understanding that the United States is expansive and diverse, we also allow for many of these effects to vary by location. The amount of flexibility of our model in how predictors relate to mortality has not been used in previous mortality studies and will result in a more accurate model and a more complete understanding of the factors that drive mortality. Both the multivariate nature of the model as well as the non-linear predictors that have an interaction with space will advance the study of mortality beyond what has been done previously and will allow us to better examine the often complicated relationships between the predictors and mortality in different regions.
+      </details></td>
+        <td>
+        
+        <b>Host:</b> <a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
+        <br>
+        <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
+      </td>
+        </tr>   
 </tbody>
 </table>
 
