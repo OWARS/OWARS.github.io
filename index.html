@@ -1215,7 +1215,9 @@ The goal of Planted Machine Learning is to discover and learn low dimensional st
         <summary>Abstract (click to expand)</summary>
        Using a number of modern predictive modeling methods, we seek to understand the factors that drive mortality in the contiguous United States. The mortality data we use is indexed by county and year as well as grouped into 18 different age bins. We propose a model that adds two important contributions to existing mortality studies. First, instead of building mortality models separately by age or treating age as a fixed covariate, we treat age as a random effect. This is an improvement over previous models because it allows the model in one age group to borrow strength and information from other age groups that are nearby. The result is a multivariate spatiotemporal model and is estimated using Integrated Nested Laplace Approximations (INLA). Second, we utilize Gaussian Processes to create nonlinear covariate effects for predictors such as unemployment rate, race, and education level. This allows for a more flexible relationship to be modeled between mortality and these important predictors. Understanding that the United States is expansive and diverse, we also allow for many of these effects to vary by location. The amount of flexibility of our model in how predictors relate to mortality has not been used in previous mortality studies and will result in a more accurate model and a more complete understanding of the factors that drive mortality. Both the multivariate nature of the model as well as the non-linear predictors that have an interaction with space will advance the study of mortality beyond what has been done previously and will allow us to better examine the often complicated relationships between the predictors and mortality in different regions.
       </details></td>
-        <td>
+        <td>   <a href="brianhartman/OneWorld.pdf">Slides</a>
+        <br>
+                <br>
         
         <b>Host:</b> <a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
         <br>
@@ -1273,14 +1275,16 @@ document.write(strTime);
     </td>
 
      <td class = "speaker"><a href="http://www.math.uwaterloo.ca/~mhofert/" target="_blank"> Marius Hofert (University of Waterloo, Canada)</a></td>
-    <td class = "title"> Quasi-random sampling for multivariate distributions via generative neural networks.
+    <td class = "title"> Statistical methods for understanding and decoding evolutionary processes
+
 <br> <details>
 <summary>Abstract (click to expand)</summary>
-A novel approach based on generative neural networks is introduced for constructing quasi-random number generators for multivariate models with any underlying copula in order to estimate expectations with variance reduction. So far, quasi-random number generators for multivariate distributions required a careful design, exploiting specific properties (such as conditional distributions) of the implied copula or the underlying quasi-Monte Carlo point set, and were only tractable for a small number of models. Utilizing specific generative neural networks allows one to construct quasi-random number generators for a much larger variety of multivariate distributions without such restrictions. Once trained with a pseudo-random sample, these neural networks only require a multivariate standard uniform randomized quasi-Monte Carlo point set as input and are thus fast in estimating expectations under dependence with variance reduction. Reproducible numerical examples are considered to demonstrate the approach. Emphasis is put on ideas rather than mathematical proofs.
-<br>
-<br>
-Bio:
-Marius Hofert is an Associate Professor of Statistics in the Department of Statistics and Actuarial Science at University of Waterloo, Canada. He obtained his PhD in Mathematics from University of Ulm in 2010. He then held a postdoctoral research position at RiskLab, ETH Zürich. Before joining University of Waterloo, he had a guest professorship in the Department of Mathematics at Technische Universität München and a visiting assistant professorship in the Department of Applied Mathematics at University of Washington, Seattle. Marius' research interests are Computational Statistics and Data Science (data visualization, parallel computing, software development in R), Dependence Modeling with Copulas (high dimensional problems, hierarchical models, random number generation, computational aspects, graphical approaches) and Quantitative Risk Management (risk aggregation, risk measures, computational challenges).
+Two of my major research interests are statistical methods for
+(a) understanding genetic diversity within populations, and
+(b) decoding mutational processes in cancer evolution.
+In this talk I will describe the core probability models in these two areas of molecular evolution.
+In particular I plan to emphasize recent developments and challenges that could serve as foundations for future collaborations.    
+ 
 </details></td>
   <td><a href="marius/slides_marius_hofert.pdf" target="_blank">Slides</a>
     </td>
