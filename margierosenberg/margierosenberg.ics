@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Speaker: Margie Rosenberg (University of Wisconsin-Madison\, USA)\n\nTitle: TBA\n\nAbstract: TBA\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20230315T150000Z
+DTEND:20230315T160000Z
+LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
+SUMMARY;LANGUAGE=en-us:[OWARS] Margie Rosenberg (University of Wisconsin-Madison, USA)
+END:VEVENT
+END:VCALENDAR

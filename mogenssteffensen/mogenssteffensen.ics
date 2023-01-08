@@ -2,9 +2,9 @@ BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
 CLASS:PUBLIC
-DESCRIPTION:Speaker: Mogens Steffensen (University of Copenhagen\, Denmark)\n\nTitle: TBA\n\nAbstract: TBA\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
-DTSTART:20221116T090000Z
-DTEND:20221116T101000Z
+DESCRIPTION:Speaker: Mogens Steffensen (University of Copenhagen\, Denmark)\n\nTitle: Optimal consumption\, investment\, and insurance under state-dependent risk aversion\n\nAbstract: We formalize a consumption-investment-insurance problem with the distinction of a state-dependent relative risk aversion. The state-dependence refers to the state of the finite state Markov chain that also formalizes insurable risks such as health and lifetime uncertainty. We derive and analyze the implicit solution to the problem\, compare it with special cases in the literature\, and illustrate the range of results in a disability model where the relative risk aversion is preserved\, decreases\, or increases upon disability. We also discuss whether the approach is appropriate to deal with uncertainty in relative risk aversion and consider some alternative ideas.\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20230118T160000Z
+DTEND:20230118T170000Z
 LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
 SUMMARY;LANGUAGE=en-us:[OWARS] Mogens Steffensen (University of Copenhagen, Denmark)
 END:VEVENT
