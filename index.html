@@ -213,129 +213,61 @@ height: 100%;
 
 
 
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
-</h2>
+<br>
+
+
+ <div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
 
-     
 
 
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="montserratguillen/montserratguillen.jpg" alt="Avatar" height="200" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2023-02-15T16:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2023-02-15T16:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="http://www.ub.edu/riskcenter/guillen/" target="_blank"> Montserrat Guillen (University of Barcelona, Spain)
-</a>
-
-</div>
-
-<br>
-
-
-<div class="container">
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+
+
+
+
+
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/3wpCRRTbwiM">
+</iframe>
+
+
+
+    
+
+</div>
 
   
-<div class="col-md-8">
+<div class="col-md-6">
+<b>Speaker: </b><a href="http://www.ub.edu/riskcenter/guillen/" target="_blank"> Montserrat Guillen (University of Barcelona, Spain)</a>
+<br>
   <b>Title:</b>
-
-    Motor insurance with telematics driving data
+Motor insurance with telematics driving data
 <br> 
-<b>Abstract:</b>
-        Many insurance companies collect telematics data about drivers’ exposure to
-traffic (distance driven and type of road), their driving behavior (excess
-speed, aggressiveness, operating hours) and contextual information
-(weather conditions, traffic intensity). Actuaries use this information to
-improve motor insurance ratemaking. Several recent proposals will be
-presented, mostly using traditional GLM models. In addition, personalized
-driving risk indicators can also promote driving safety. Illustrations with
- several real data sets provided by insurance companies will answer
-questions: (1) How are pay-per-mile insurance schemes be designed? (2)
-How can near-miss telematics be used to identify risky drivers? (3) What is
-the power of risk analytics and percentile charts to monitor drivers? Come
-results on integrating weather conditions will also be discussed.
-      </div>
-
-<div class="col-md-4">
+<details>
+<summary>Abstract (click to expand)</summary>
+Many insurance companies collect telematics data about drivers??? exposure to traffic (distance driven and type of road), their driving behavior (excess speed, aggressiveness, operating hours) and contextual information (weather conditions, traffic intensity). Actuaries use this information to improve motor insurance ratemaking. Several recent proposals will be presented, mostly using traditional GLM models. In addition, personalized driving risk indicators can also promote driving safety. Illustrations with several real data sets provided by insurance companies will answer questions: (1) How are pay-per-mile insurance schemes be designed? (2) How can near-miss telematics be used to identify risky drivers? (3) What is the power of risk analytics and percentile charts to monitor drivers? Come results on integrating weather conditions will also be discussed.
+</details>
 </div>
 
+<div class="col-md-2">
+
 </div>
+
+
+
 </div>
 
 
 
 
-
-
+<br>
+<br>
 
 
 
@@ -482,7 +414,7 @@ window.player = player;
       
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-        Many insurance companies collect telematics data about drivers’ exposure to
+        Many insurance companies collect telematics data about drivers??? exposure to
 traffic (distance driven and type of road), their driving behavior (excess
 speed, aggressiveness, operating hours) and contextual information
 (weather conditions, traffic intensity). Actuaries use this information to
@@ -589,9 +521,9 @@ TBA        <td>
       
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-      Oral diseases include dental cavities, gum disease, oral and facial pain, as well as mouth and throat cancers (https://www.who.int/news‐room/fact‐sheets/detail/oral‐health). These problems are cumulative and can result in serious health problems as we age, when these issues are not treated (https://www.nidcr.nih.gov/research/data‐statistics/surgeon‐general).
+      Oral diseases include dental cavities, gum disease, oral and facial pain, as well as mouth and throat cancers (https://www.who.int/news???room/fact???sheets/detail/oral???health). These problems are cumulative and can result in serious health problems as we age, when these issues are not treated (https://www.nidcr.nih.gov/research/data???statistics/surgeon???general).
 In this work, we focus on Medicare beneficiaries in the US (65+ population) to examine the status of their teeth, along with any barriers to receiving dental care services on their reported general health status. Medicare, the federal health program for those over 65, does not automatically cover beneficiaries for their dental care needs.
-We use the 2017‐2018 National Health and Nutrition Examination Survey (NHANES) questionnaire. Mobile exam data are available where a licensed dental provider examines the status of each tooth. We create a new dentition status variable that summaries the state of the mouth of the participant into 5 groups: (a) all natural teeth, excluding crowns, (b) those with all teeth positions filled with a combination of natural and restored teeth (crowns, dentures, and implants), (c) those who wear dentures for all teeth positions, (d) those with no natural nor restored teeth (edentulous), and (e) those with less than a full mouth filled with either natural or restored teeth. The first three groups have some form of a tooth in all positions, while the latter two groups are either without any teeth or with fewer than a full mouth of teeth. Any barriers to receiving dental care services reflected the prior 12 months. More than half of the Medicare population have less than a full mouth of teeth, while 15% have complete dentures or are edentulous. Using logistic regression, we find that those with barriers to dental care services have a differential level of associations by dentition status with general health status. Compared to those with all natural teeth, those who have all dentures are significantly more likely to have fair or poor general health status, while the odds ratio for those who are edentulous is smaller in level and not significant. In a sub‐group analysis focusing only on those who are either wearing complete dentures or are edentulous, we find that the barriers to dental care services is not significant factor of fair or poor general health status, yet fair or poor oral health status is a significant factor of fair or poor general health status.        <td>
+We use the 2017???2018 National Health and Nutrition Examination Survey (NHANES) questionnaire. Mobile exam data are available where a licensed dental provider examines the status of each tooth. We create a new dentition status variable that summaries the state of the mouth of the participant into 5 groups: (a) all natural teeth, excluding crowns, (b) those with all teeth positions filled with a combination of natural and restored teeth (crowns, dentures, and implants), (c) those who wear dentures for all teeth positions, (d) those with no natural nor restored teeth (edentulous), and (e) those with less than a full mouth filled with either natural or restored teeth. The first three groups have some form of a tooth in all positions, while the latter two groups are either without any teeth or with fewer than a full mouth of teeth. Any barriers to receiving dental care services reflected the prior 12 months. More than half of the Medicare population have less than a full mouth of teeth, while 15% have complete dentures or are edentulous. Using logistic regression, we find that those with barriers to dental care services have a differential level of associations by dentition status with general health status. Compared to those with all natural teeth, those who have all dentures are significantly more likely to have fair or poor general health status, while the odds ratio for those who are edentulous is smaller in level and not significant. In a sub???group analysis focusing only on those who are either wearing complete dentures or are edentulous, we find that the barriers to dental care services is not significant factor of fair or poor general health status, yet fair or poor oral health status is a significant factor of fair or poor general health status.        <td>
         </details>
         <b>Host:</b>TBA
       <br>
@@ -660,7 +592,7 @@ We use the 2017‐2018 National Health and Nutrition Examination Survey (NHANES)
         <td class = "title"> Stackelberg Differential Game for Insurance under Model Ambiguity
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-       We study a dynamic Stackelberg differential game between a buyer and a seller of insurance policies in a spectrally negative Levy framework, in which both parties are ambiguous about the intensity and severity of insurable losses. Both the buyer and seller aim to maximize their expected wealth, plus a penalty term that reflects ambiguity, over an exogenous random horizon. Under a mean-variance premium principle and a quadratic penalty for ambiguity, we obtain the equilibrium in closed form. Our main results show that the buyer’s robust optimal indemnity is a coinsurance with proportion less than one-half, which increases (resp. decreases) as the buyer (resp. seller) becomes more ambiguity averse. Also we show that the seller’s robust optimal premium rule equals the net premium under the buyer’s optimally distorted probability, which is the buyer’s “best hope,” and it exceeds the actuarially fair premium under the seller’s optimally distorted probability measure so is, thereby, acceptable to the seller
+       We study a dynamic Stackelberg differential game between a buyer and a seller of insurance policies in a spectrally negative Levy framework, in which both parties are ambiguous about the intensity and severity of insurable losses. Both the buyer and seller aim to maximize their expected wealth, plus a penalty term that reflects ambiguity, over an exogenous random horizon. Under a mean-variance premium principle and a quadratic penalty for ambiguity, we obtain the equilibrium in closed form. Our main results show that the buyer???s robust optimal indemnity is a coinsurance with proportion less than one-half, which increases (resp. decreases) as the buyer (resp. seller) becomes more ambiguity averse. Also we show that the seller???s robust optimal premium rule equals the net premium under the buyer???s optimally distorted probability, which is the buyer???s ???best hope,??? and it exceeds the actuarially fair premium under the seller???s optimally distorted probability measure so is, thereby, acceptable to the seller
       </details></td>
         <td>
                    
@@ -764,7 +696,7 @@ Based on a joint work with Anna Maria Fiori.
       </a>
         </td>
         
-        <td class = "speaker"><a href="http://homepages.ulb.ac.be/~jtrufin/" target="_blank"> Julien Trufin (Université Libre de Bruxelles, Belgium)</a></td>
+        <td class = "speaker"><a href="http://homepages.ulb.ac.be/~jtrufin/" target="_blank"> Julien Trufin (Universit?? Libre de Bruxelles, Belgium)</a></td>
         <td class = "title"> Testing for more positive expectation dependence with application to model comparison and autocalibrated models.
       <br> <details>
         <summary>Abstract (click to expand)</summary>
@@ -827,7 +759,7 @@ curve is equivalent to Gini coefficient.
         <td class = "title">Insurance Discrimination and Pricing Fairness
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-On the issue of insurance discrimination, a grey area in regulation has resulted from the growing use of big data analytics by insurance companies – direct discrimination is prohibited, but indirect discrimination using proxies or more complex and opaque algorithms can be tolerated without restrictions. This phenomenon has recently attracted the attention of insurance regulators all over the world, and stricter insurance discrimination regulations are being discussed and considered by regulators. Meanwhile, various fairness criteria and fair machine learning algorithms have been proposed and flourish in the machine learning literature with the rapid growth of artificial intelligence (AI) in the past decade, which mostly focus on classification decisions. In this presentation, I will firstly review social and economic principles that can be used to assess the appropriateness of insurance discrimination. I will then introduce the fairness criteria that are potentially applicable to insurance pricing, match them with different levels of potential and existing anti-discrimination regulations, and implement them into a series of existing and newly proposed anti-discrimination insurance pricing models.  Finally, I will compare the outcome of different models from the perspectives of both group fairness and individual fairness and show the cost of fairness.      </details></td>
+On the issue of insurance discrimination, a grey area in regulation has resulted from the growing use of big data analytics by insurance companies ??? direct discrimination is prohibited, but indirect discrimination using proxies or more complex and opaque algorithms can be tolerated without restrictions. This phenomenon has recently attracted the attention of insurance regulators all over the world, and stricter insurance discrimination regulations are being discussed and considered by regulators. Meanwhile, various fairness criteria and fair machine learning algorithms have been proposed and flourish in the machine learning literature with the rapid growth of artificial intelligence (AI) in the past decade, which mostly focus on classification decisions. In this presentation, I will firstly review social and economic principles that can be used to assess the appropriateness of insurance discrimination. I will then introduce the fairness criteria that are potentially applicable to insurance pricing, match them with different levels of potential and existing anti-discrimination regulations, and implement them into a series of existing and newly proposed anti-discrimination insurance pricing models.  Finally, I will compare the outcome of different models from the perspectives of both group fairness and individual fairness and show the cost of fairness.      </details></td>
         <td>
         
         <b>Host:</b> <a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
@@ -866,7 +798,7 @@ On the issue of insurance discrimination, a grey area in regulation has resulted
       </a>
         </td>
         
-        <td class = "speaker"><a href="https://www.uni-siegen.de/fb6/src/mueller/" target="_blank">Alfred Müller (University of Siegen, Germany)</a></td>
+        <td class = "speaker"><a href="https://www.uni-siegen.de/fb6/src/mueller/" target="_blank">Alfred M??ller (University of Siegen, Germany)</a></td>
         <td class = "title">  Decisions under uncertainty: sufficient conditions for almost stochastic dominance
       <br> <details>
         <summary>Abstract (click to expand)</summary>
@@ -967,15 +899,15 @@ On the issue of insurance discrimination, a grey area in regulation has resulted
         </td>
         
         <td class = "speaker"><a href="https://personale.unipr.it/en/ugovdocenti/person/15493" target="_blank"> Annamaria Olivieri (University of Parma, Italy)</a></td>
-        <td class = "title">Flexible annuity designs meeting individuals’ longevity risk appetite (or unawareness) 
+        <td class = "title">Flexible annuity designs meeting individuals??? longevity risk appetite (or unawareness) 
       <br> <details>
         <summary>Abstract (click to expand)</summary>
         Despite the growing need for individuals to protect themselves from the longevity risk to which their assets will be exposed after retirement, the demand for products offering longevity guarantees, namely annuities, remains low. Possible reasons include the cost of guarantees and the rigidity of the traditional annuity design, which implies an irreversible decision at issue. This contrasts with the perspective of individuals who, because of their risk appetite or unawareness, seem to prefer to avoid non-revisable decisions, at least in the early stages of their post-retirement life, and to retain their longevity risk up to some higher age. 
-Flexibility in the annuity design could, at least partially, meet the prevailing individuals’ attitude. Flexibility can be introduced in different ways. We focus on two solutions. First, the guarantees can be relaxed, and the related costs can be reduced, by allowing the benefit amount to fluctuate (up or down) according to a given mortality/longevity experience. Second, instead of an upfront loading at issue, periodic fees could be charged, as they are more suitable to support a revision of the arrangement after issue. While the literature includes already several contributions on mortality/longevity-linked benefits, a pricing structure based on periodic fees has received little attention so far. We develop a discussion in this respect, considering mortality/longevity-linked annuities
+Flexibility in the annuity design could, at least partially, meet the prevailing individuals??? attitude. Flexibility can be introduced in different ways. We focus on two solutions. First, the guarantees can be relaxed, and the related costs can be reduced, by allowing the benefit amount to fluctuate (up or down) according to a given mortality/longevity experience. Second, instead of an upfront loading at issue, periodic fees could be charged, as they are more suitable to support a revision of the arrangement after issue. While the literature includes already several contributions on mortality/longevity-linked benefits, a pricing structure based on periodic fees has received little attention so far. We develop a discussion in this respect, considering mortality/longevity-linked annuities
       </details></td>
         <td>
         
-        <b>Host:</b> <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andrés Villegas</a> 
+        <b>Host:</b> <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andr??s Villegas</a> 
         <br>
         <b>Questions: </b><a href="https://jalonsogarcia.weebly.com/"target="_blank">Jennifer Alonso Garcia </a>
         </td>
@@ -1077,7 +1009,7 @@ This is joint work with Yanfeng Li, Bernard Wong, and Alan Xian
       </details></td>
         <td>
         
-        <b>Host:</b>  <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andrés Villegas</a> 
+        <b>Host:</b>  <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andr??s Villegas</a> 
       <br>
         <b>Questions: </b><a href="https://mhiabu.github.io/" target="_blank"> Munir Hiabu </a>
       </td>
@@ -1120,7 +1052,7 @@ This is joint work with Yanfeng Li, Bernard Wong, and Alan Xian
       
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-    Artificial Intelligence is often characterized in terms of “solving intelligence” or building machines that outperform humans at most economically meaningful work.  But for scientific, economic, as well as societal reasons, this paradigm is likely to give way to a more design-focused paradigm of creating human-machine hybrid intelligence systems. This talk will sketch the Hybrid Intelligence paradigm, and discuss various ways in which the needed field of Hybrid Intelligence engineering must adopt traits characteristic of the actuarial profession:  a respect for data limitations, an acknowledgment of the need to integrate algorithmic indications with local knowledge and informed judgment; and an ethos of ethical behavior and public service. The discussion will be motivated by examples from insurance and other domains.
+    Artificial Intelligence is often characterized in terms of ???solving intelligence??? or building machines that outperform humans at most economically meaningful work.  But for scientific, economic, as well as societal reasons, this paradigm is likely to give way to a more design-focused paradigm of creating human-machine hybrid intelligence systems. This talk will sketch the Hybrid Intelligence paradigm, and discuss various ways in which the needed field of Hybrid Intelligence engineering must adopt traits characteristic of the actuarial profession:  a respect for data limitations, an acknowledgment of the need to integrate algorithmic indications with local knowledge and informed judgment; and an ethos of ethical behavior and public service. The discussion will be motivated by examples from insurance and other domains.
       </details></td>
         <td>
         
@@ -1269,7 +1201,7 @@ Insurance policies are mostly individual specific, as policyholders possess diff
 
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-The goal of Planted Machine Learning is to discover and learn low dimensional structures that can get more complex along a planted path. I will introduce Random Planted Forest –  an algorithm we have recently developed that seems to be competitive with state-of-the-art machine learning predictors with respect to accuracy while having favourable interpretability properties.  In the second part of the talk, we will contrast local explanations like SHAP values to the interpretation of global structures and by doing so touching topics on causality, fairness and variable importance.
+The goal of Planted Machine Learning is to discover and learn low dimensional structures that can get more complex along a planted path. I will introduce Random Planted Forest ???  an algorithm we have recently developed that seems to be competitive with state-of-the-art machine learning predictors with respect to accuracy while having favourable interpretability properties.  In the second part of the talk, we will contrast local explanations like SHAP values to the interpretation of global structures and by doing so touching topics on causality, fairness and variable importance.
 
       </details></td>
         <td>        <a href="https://mhiabu.github.io/talk2.html">Slides</a>
@@ -1381,11 +1313,11 @@ The goal of Planted Machine Learning is to discover and learn low dimensional st
 
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-      In this work we  focus on a class of risk measures denoted  L_p-quantiles, which represent a class of generalized quantiles defined through an asymmetric p-power loss function. In particular, we show that for a Student t distribution with n degrees of freedom,  the L_{n−j+1}-quantile and the L_j -quantile coincide at any confidence level τ in (0, 1). This result is based on inter-order formulas for partial and complete moments of the Student t distribution. We show how the partial moment of order n − j about any real value m can be expressed in terms of the partial moment of order j − 1 for j in {1, . . . , n}. Closed form expressions for the complete moments are also established.
+      In this work we  focus on a class of risk measures denoted  L_p-quantiles, which represent a class of generalized quantiles defined through an asymmetric p-power loss function. In particular, we show that for a Student t distribution with n degrees of freedom,  the L_{n???j+1}-quantile and the L_j -quantile coincide at any confidence level ?? in (0, 1). This result is based on inter-order formulas for partial and complete moments of the Student t distribution. We show how the partial moment of order n ??? j about any real value m can be expressed in terms of the partial moment of order j ??? 1 for j in {1, . . . , n}. Closed form expressions for the complete moments are also established.
       </details></td>
         <td>
         
-        <b>Host:</b> <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andrés Villegas</a> 
+        <b>Host:</b> <a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andr??s Villegas</a> 
       <br>
         <b>Questions: </b><a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/pietro-millossovich"target="_blank">Pietro Millossovich  </a>
       </td>
@@ -1894,11 +1826,11 @@ document.write(strTime27);
 </a>
     </td>
 
-     <td class = "speaker"><a href="https://scholar.google.be/citations?user=-R5x1_QAAAAJ&hl=en" target="_blank">  María Óskarsdóttir (Reykjavik University, Iceland)</a></td>
+     <td class = "speaker"><a href="https://scholar.google.be/citations?user=-R5x1_QAAAAJ&hl=en" target="_blank">  Mar??a ??skarsd??ttir (Reykjavik University, Iceland)</a></td>
     <td class = "title"> Social network analytics for supervised fraud detection in insurance and beyond
 <br> <details>
 <summary>Abstract (click to expand)</summary>
-Fraud occurs in the insurance industry when policyholders file claims that are exaggerated or based on intentional damage. In organized crime, such as fraud, social relations are important as they provide access to co-offenders, profitable opportunities and invigorate trust. In this talk, we present a novel approach to detect fraudulent insurance claims using bipartite networks of claims and involved parties that represent the social structures of collaborating fraudsters. We compute fraud scores based on influence from the fraudulent claims in the network and extract features using the fraud scores and the claims’ neighborhood. We combine these network features with the intrinsic features in a supervised model with fraud as the target variable. The high performance of the model with all features indicates that the network features provide valuable information which complements the information contributed by the intrinsic features. The resulting model can be used to flag suspicious claims. We also discuss applications of our proposed method in other areas, such as credit scoring.
+Fraud occurs in the insurance industry when policyholders file claims that are exaggerated or based on intentional damage. In organized crime, such as fraud, social relations are important as they provide access to co-offenders, profitable opportunities and invigorate trust. In this talk, we present a novel approach to detect fraudulent insurance claims using bipartite networks of claims and involved parties that represent the social structures of collaborating fraudsters. We compute fraud scores based on influence from the fraudulent claims in the network and extract features using the fraud scores and the claims??? neighborhood. We combine these network features with the intrinsic features in a supervised model with fraud as the target variable. The high performance of the model with all features indicates that the network features provide valuable information which complements the information contributed by the intrinsic features. The resulting model can be used to flag suspicious claims. We also discuss applications of our proposed method in other areas, such as credit scoring.
 </details></td>
   <td>
     </td>
@@ -2024,7 +1956,7 @@ The underwriting cycle refers to the repetitive patterns of ups and downs in pre
     <td class = "title"> Optimal dividend payment under constraints
 <br> <details>
 <summary>Abstract (click to expand)</summary>
-In this talk we will discuss the problem of optimal dividend rate payment (with a giving ceiling on dividend rates) for a surplus process under the additional constraint of drawdown; that is dividend rates should not decrease more than a given fraction b∈(0,1) of the historical peak. We also address the case in which b=1, this corresponds to a ratcheting constraint on dividends (i.e. the dividend payment rate can never decrease). We maximize the expectation of the discounted cumulative dividend payment up to ruin time. Using the Dynamic Programming Principle, we can show that the optimal value function is the unique viscosity solution of the corresponding two dimensional Hamilton-Jacobi-Bellman equation. In the case that the surplus follows a Brownian motion and the dividend payment rates have a ratcheting constraint, we find the value function corresponding to one-curve strategies (that are the natural extension to two dimensions of the threshold strategies). In these type of strategies, the curve partitions the state space in two regions: one in which the dividends are paid at the current dividend rate and the other in which the dividend rates increases. Afterwards,we use calculus of variations in order to obtain the best value function among these type of curve strategies. The optimal curve is obtained as the unique solution of an ODE. In the case that the dividend payment rate has a drawdown constraint we  find value functions corresponding to two-curve strategies. In these type of strategies, the two curves partition the state space in three regions:a region in which dividends are paid at b times the historical peak rate (minimum rate allowed), a region (that is located in between the two curves) in which dividend rates are paid at the historical peak and a region in which dividend rates increases above the historical peak. One more time, we use calculus of variations to obtain the best strategy but this time among these two-curves strategies. These optimal two curves are obtained as the unique solution of a system of  ODE's. We  present numerical examples and show how the drawdown case, as b decreases from 1 to 0, approach the (usual) one dimensional problem without constraints on dividend rates (which corresponds to b=0). Additionally, we study the limit problem when the ceiling on dividend rates go to infinity.
+In this talk we will discuss the problem of optimal dividend rate payment (with a giving ceiling on dividend rates) for a surplus process under the additional constraint of drawdown; that is dividend rates should not decrease more than a given fraction b???(0,1) of the historical peak. We also address the case in which b=1, this corresponds to a ratcheting constraint on dividends (i.e. the dividend payment rate can never decrease). We maximize the expectation of the discounted cumulative dividend payment up to ruin time. Using the Dynamic Programming Principle, we can show that the optimal value function is the unique viscosity solution of the corresponding two dimensional Hamilton-Jacobi-Bellman equation. In the case that the surplus follows a Brownian motion and the dividend payment rates have a ratcheting constraint, we find the value function corresponding to one-curve strategies (that are the natural extension to two dimensions of the threshold strategies). In these type of strategies, the curve partitions the state space in two regions: one in which the dividends are paid at the current dividend rate and the other in which the dividend rates increases. Afterwards,we use calculus of variations in order to obtain the best value function among these type of curve strategies. The optimal curve is obtained as the unique solution of an ODE. In the case that the dividend payment rate has a drawdown constraint we  find value functions corresponding to two-curve strategies. In these type of strategies, the two curves partition the state space in three regions:a region in which dividends are paid at b times the historical peak rate (minimum rate allowed), a region (that is located in between the two curves) in which dividend rates are paid at the historical peak and a region in which dividend rates increases above the historical peak. One more time, we use calculus of variations to obtain the best strategy but this time among these two-curves strategies. These optimal two curves are obtained as the unique solution of a system of  ODE's. We  present numerical examples and show how the drawdown case, as b decreases from 1 to 0, approach the (usual) one dimensional problem without constraints on dividend rates (which corresponds to b=0). Additionally, we study the limit problem when the ceiling on dividend rates go to infinity.
     This is a joint work with Hansjoerg Albrecher and Pablo Azcue.
 </details></td>
   <td>
@@ -2105,11 +2037,11 @@ https://hal.archives-ouvertes.fr/hal-02564462v2
     </a>
       </td>
 
-     <td class = "speaker"><a href="https://business.wisc.edu/directory/profile/daniel-bauer/" target="_blank">  Daniel Bauer (University of Wisconsin–Madison, USA)</a></td>
+     <td class = "speaker"><a href="https://business.wisc.edu/directory/profile/daniel-bauer/" target="_blank">  Daniel Bauer (University of Wisconsin???Madison, USA)</a></td>
     <td class = "title"> The Marginal Cost of Risk and Capital Allocation in a Property and Casualty Insurance Company (with Qiheng Guo and George H. Zanjani)
 <br> <details>
 <summary>Abstract (click to expand)</summary>
-We develop a multi-period profit maximization model for a property and casualty (P&C) insurance company and use it for determining the marginal cost of risk for different lines of business and resulting economic capital allocations. In contrast to previous literature, our model features a loss structure that matches the characteristics of a P&C company, comprising so-called “short-tailed” and “long-tailed” business lines with different expected settlement terms. As one key contribution, our theoretical and numerical results show that lines with different terms are assessed differently, depending on the company’s financial situation.
+We develop a multi-period profit maximization model for a property and casualty (P&C) insurance company and use it for determining the marginal cost of risk for different lines of business and resulting economic capital allocations. In contrast to previous literature, our model features a loss structure that matches the characteristics of a P&C company, comprising so-called ???short-tailed??? and ???long-tailed??? business lines with different expected settlement terms. As one key contribution, our theoretical and numerical results show that lines with different terms are assessed differently, depending on the company???s financial situation.
 Paper link:
 <a href="https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf">
  https://danielbaueracademic.files.wordpress.com/2021/09/guobauerzanjani_pandcallocation.pdf
@@ -2155,7 +2087,7 @@ Paper link:
 <br> <details>
 <summary>Abstract (click to expand)</summary>
 We study market-consistent valuation of liability cash flows motivated by current regulatory frameworks for the insurance industry. Building on the theory on multiple-prior optimal stopping we propose a valuation functional with sound economic properties that applies to any liability cash flow. Whereas a replicable cash flow is assigned the market value of the replicating portfolio, a cash flow that is not fully replicable is assigned a value which is the sum of the market value of a replicating portfolio and a positive margin. The margin is a direct consequence of considering a hypothetical transfer of the liability cash flow from an insurance company to an empty corporate entity set up with the sole purpose to manage the liability run-off, subject to repeated capital requirements, and considering the valuation of this entity from the owner's perspective taking model uncertainty into account. Aiming for applicability, we consider a detailed insurance application and explain how the optimisation problems over sets of probability measures can be cast as simpler optimisation problems over parameter sets corresponding to parameterised density processes appearing in applications.
-Joint work with Hampus Engsner and Julie Thøgersen
+Joint work with Hampus Engsner and Julie Th??gersen
 </details></td>
   <td>
     </td>
@@ -2198,7 +2130,7 @@ Joint work with Hampus Engsner and Julie Thøgersen
     <td class = "title"> Duration-Hedging Trades, Return Momentum and Reversal
 <br> <details>
 <summary>Abstract (click to expand)</summary>
-We study the duration-hedging trades of duration-sensitive strategic investors, i.e., pensions and life insurers. We use longevity shocks to identify their duration-hedging trades. Longevity shocks affect these investors’ liability duration and induce them to adjust their asset duration. When longevity shocks are low (high), they buy more short- (long-) duration stocks and sell more long- (short-) duration stocks. Because prior winners (losers) have shorter (longer) duration, they behave like momentum (contrarian) traders when longevity shocks are low (high). We further verify this channel using capital flows and cross-state longevity variations.
+We study the duration-hedging trades of duration-sensitive strategic investors, i.e., pensions and life insurers. We use longevity shocks to identify their duration-hedging trades. Longevity shocks affect these investors??? liability duration and induce them to adjust their asset duration. When longevity shocks are low (high), they buy more short- (long-) duration stocks and sell more long- (short-) duration stocks. Because prior winners (losers) have shorter (longer) duration, they behave like momentum (contrarian) traders when longevity shocks are low (high). We further verify this channel using capital flows and cross-state longevity variations.
 </details></td>
   <td>
     </td>
@@ -2236,7 +2168,7 @@ We study the duration-hedging trades of duration-sensitive strategic investors, 
     </a>
       </td>
 
-     <td class = "speaker"><a href="https://annemackay.github.io/" target="_blank">   Anne MacKay	(UQAM Montréal, Canada)</a></td>
+     <td class = "speaker"><a href="https://annemackay.github.io/" target="_blank">   Anne MacKay	(UQAM Montr??al, Canada)</a></td>
     <td class = "title"> VIX-linked fee analysis via continuous-time Markov chain methods
 <br> <details>
 <summary>Abstract (click to expand)</summary>
@@ -2486,11 +2418,11 @@ document.write(strTime);
 Implications for annuity pricing <br> <details>
 <summary>Abstract (click to expand)</summary>
 <p>
-This presentation – which admittedly is rather speculative – examines the financial implications of a sudden shock to mortality on the pricing of pension & life annuities. Now, a textbook approach would suggest that holding interest rates constant, an increase in mortality reduces the discounted value of longevity-contingent claims. Stated simply, life insurance gets expensive and annuities become cheaper. However, if the shock to mortality actually weeds-out the frail and merely advances imminent deaths, then survivors will find that (counter-intuitively) annuities are suddenly dearer. Add plummeting interest rates and depressed equity markets to the mix and soon-to-be retirees might be facing an exceedingly higher "cost of retirement" post 2020.
+This presentation ??? which admittedly is rather speculative ??? examines the financial implications of a sudden shock to mortality on the pricing of pension & life annuities. Now, a textbook approach would suggest that holding interest rates constant, an increase in mortality reduces the discounted value of longevity-contingent claims. Stated simply, life insurance gets expensive and annuities become cheaper. However, if the shock to mortality actually weeds-out the frail and merely advances imminent deaths, then survivors will find that (counter-intuitively) annuities are suddenly dearer. Add plummeting interest rates and depressed equity markets to the mix and soon-to-be retirees might be facing an exceedingly higher "cost of retirement" post 2020.
 
 Technically speaking these matters tie into so-called compensation laws and the convergence of the term structure of (stochastic) mortality at very advanced ages. These matters also relate to the distinction between chronological age versus biological age and the relevant clock for measuring any shocks to mortality.
 
-In sum, this (conjectural) presentation speculates on how to “think” about covid-19 from the perspective of retirement income planning. One thing is for certain, the first-order independence between shocks to mortality (i.e. the insurance measure) and the economy (i.e. the financial measure) can no longer be assumed, even for textbook actuarial models.
+In sum, this (conjectural) presentation speculates on how to ???think??? about covid-19 from the perspective of retirement income planning. One thing is for certain, the first-order independence between shocks to mortality (i.e. the insurance measure) and the economy (i.e. the financial measure) can no longer be assumed, even for textbook actuarial models.
 
 </p>
 </details></td>
@@ -2585,7 +2517,7 @@ document.write(strTime);
     <td class = "title">Claims reserving in non-life insurance: old and new adventures<br> <details>
 <summary>Abstract (click to expand)</summary>
 <p>
-Claims reserving deals with the prediction of the remaining development of reported, open claims (the reported but not settled reserve) and unreported claims (the incurred but not reported reserve). Micro-level or granular reserving approaches the reserving problem by using granular, detailed data on the development of individual claims. In this talk we briefly present recent work on modelling the number of incurred but not reported (ibnr) claims. We continue with presenting a modular, yet interpretable framework for including claim- and policy-specific covariates in reserving models for reported but not settled (rbns) claims. In this framework, reserving models are tailed to the portfolio at hand by adding building blocks for the events (e.g. settlement, payment, …) registered over the lifetime of a claim. This talk concentrates on a specific model structure with three events describing the development of a claim : the time to settlement, the number of payments and the size of each payment. We propose model selection techniques for predictive models adapted for censored data to select the relevant covariates in these models and demonstrate how the selected covariates determine the granularity of our reserving model. We illustrate the method with case studies on real life insurance data sets. These case studies provide new insights in the covariates driving the development of claims and demonstrate the accuracy and robustness of the reserving methodology over time.
+Claims reserving deals with the prediction of the remaining development of reported, open claims (the reported but not settled reserve) and unreported claims (the incurred but not reported reserve). Micro-level or granular reserving approaches the reserving problem by using granular, detailed data on the development of individual claims. In this talk we briefly present recent work on modelling the number of incurred but not reported (ibnr) claims. We continue with presenting a modular, yet interpretable framework for including claim- and policy-specific covariates in reserving models for reported but not settled (rbns) claims. In this framework, reserving models are tailed to the portfolio at hand by adding building blocks for the events (e.g. settlement, payment, ???) registered over the lifetime of a claim. This talk concentrates on a specific model structure with three events describing the development of a claim : the time to settlement, the number of payments and the size of each payment. We propose model selection techniques for predictive models adapted for censored data to select the relevant covariates in these models and demonstrate how the selected covariates determine the granularity of our reserving model. We illustrate the method with case studies on real life insurance data sets. These case studies provide new insights in the covariates driving the development of claims and demonstrate the accuracy and robustness of the reserving methodology over time.
 The talk is based on joint work with Jonas Crevecoeur, Roel Verbelen and Gerda Claeskens.
 </p>
 </details></td>
@@ -2851,7 +2783,7 @@ document.write(strTime);
 <br> <details>
 <summary>Abstract (click to expand)</summary>
 <p>
-In this talk, we survey recent attempts to forecast mortality rates using deep neural networks and contrast several successful approaches. Building on these, we show how time series of mortality rates can be processed using neural networks that are specialized to deal with sequential data, such as recurrent and convolutional networks. We propose a relatively simple convolutional network model for forecasting mortality rates that can be interpreted as a generalization of the Lee–Carter model, allowing for its components to be evaluated in familiar terms. This model produces highly accurate forecasts on the Human Mortality Database, and, without further modification, generalizes well to the United States Mortality Database.
+In this talk, we survey recent attempts to forecast mortality rates using deep neural networks and contrast several successful approaches. Building on these, we show how time series of mortality rates can be processed using neural networks that are specialized to deal with sequential data, such as recurrent and convolutional networks. We propose a relatively simple convolutional network model for forecasting mortality rates that can be interpreted as a generalization of the Lee???Carter model, allowing for its components to be evaluated in familiar terms. This model produces highly accurate forecasts on the Human Mortality Database, and, without further modification, generalizes well to the United States Mortality Database.
 </p>
 </details></td>
   <td>
@@ -2944,7 +2876,7 @@ document.write(strTime);
 </a>
     </td>
 
-     <td class = "speaker"> <s> Melina Mailhot (Concordia University, Canada)</s> <br> <a href="https://www.concordia.ca/artsci/math-stats/faculty.html?fpid=frederic-godin" target="_blank">  Frédéric Godin (Concordia University, Canada)</a> </td>
+     <td class = "speaker"> <s> Melina Mailhot (Concordia University, Canada)</s> <br> <a href="https://www.concordia.ca/artsci/math-stats/faculty.html?fpid=frederic-godin" target="_blank">  Fr??d??ric Godin (Concordia University, Canada)</a> </td>
     <td class = "title">A mixed bond and equity fund model for the valuation of segregated fund policies
 <br> <details>
 <summary>Abstract (click to expand)</summary>
@@ -3055,7 +2987,7 @@ document.write(strTime);
 <br> <details>
 <summary>Abstract (click to expand)</summary>
 <p>
-We propose an asymptotic theory for distribution forecasting from the log-normal chain-ladder model. The theory overcomes the difficulty of convoluting log-normal variables and takes estimation error into account. The results differ from that of the over-dispersed Poisson model and from the chain-ladder-based bootstrap. We embed the log-normal chain-ladder model in a class of infinitely divisible distributions called the generalized log-normal chain-ladder model. The asymptotic theory uses small σ asymptotics where the dimension of the reserving triangle is kept fixed while the standard deviation is assumed to decrease. The resulting asymptotic forecast distributions follow t distributions. The theory is supported by simulations and an empirical application.
+We propose an asymptotic theory for distribution forecasting from the log-normal chain-ladder model. The theory overcomes the difficulty of convoluting log-normal variables and takes estimation error into account. The results differ from that of the over-dispersed Poisson model and from the chain-ladder-based bootstrap. We embed the log-normal chain-ladder model in a class of infinitely divisible distributions called the generalized log-normal chain-ladder model. The asymptotic theory uses small ?? asymptotics where the dimension of the reserving triangle is kept fixed while the standard deviation is assumed to decrease. The resulting asymptotic forecast distributions follow t distributions. The theory is supported by simulations and an empirical application.
 
 I will also present an application of the chain-ladder to now-casting covid deaths in the English hospitals.
 </p>
@@ -3201,8 +3133,8 @@ In the second part, we consider a reform idea for state pension schemes. The dec
 <br> <details>
 <summary>Abstract (click to expand)</summary>
 <p>
-The large majority of risk-sharing transactions involve only few counterparties. This implies that each of them could influence not only the design of the risk-sharing contracts, but also their prices.  In other words, in these transactions, agents possess the market power to impact both sharing and pricing. Depending on the nature of the risk-sharing, an agent’s strategic set of choices could be associated to questions like: How much risk should I share? How much risk averse should I appear? Which subjective beliefs should I reveal in the transaction?
-Under oligopolistic risk-sharing settings, we establish some novel agents’ strategies based on the above questions that lead to different games among the risk-sharers. We then develop theoretical results on the induced Nash equilibria and compare them to the Pareto optimal ones. This comparison appears to have some common insightful features for all games. For example, Nash risk-sharing is different than the Pareto optimal one for any non-trivial situation and most importantly agents with relatively low risk aversion get higher gains in Nash than in Pareto equilibrium.
+The large majority of risk-sharing transactions involve only few counterparties. This implies that each of them could influence not only the design of the risk-sharing contracts, but also their prices.  In other words, in these transactions, agents possess the market power to impact both sharing and pricing. Depending on the nature of the risk-sharing, an agent???s strategic set of choices could be associated to questions like: How much risk should I share? How much risk averse should I appear? Which subjective beliefs should I reveal in the transaction?
+Under oligopolistic risk-sharing settings, we establish some novel agents??? strategies based on the above questions that lead to different games among the risk-sharers. We then develop theoretical results on the induced Nash equilibria and compare them to the Pareto optimal ones. This comparison appears to have some common insightful features for all games. For example, Nash risk-sharing is different than the Pareto optimal one for any non-trivial situation and most importantly agents with relatively low risk aversion get higher gains in Nash than in Pareto equilibrium.
 The talk aims to present the highlights of a related series of papers and state and discuss some open research problems.
 </p>
 </details></td>
@@ -3239,17 +3171,17 @@ The talk aims to present the highlights of a related series of papers and state 
 
 </p><h3>Organizers</h3>
 <l>
-<li><a href="https://jalonsogarcia.weebly.com/" target="_blank">Jennifer Alonso García</a> (Department of Mathematics, Université Libre de Bruxelles)</li>
+<li><a href="https://jalonsogarcia.weebly.com/" target="_blank">Jennifer Alonso Garc??a</a> (Department of Mathematics, Universit?? Libre de Bruxelles)</li>
 <li><a href="https://mhiabu.github.io/index.html" target="_blank">Munir Hiabu</a> (Department of Mathematical Sciences, University of Copenhagen)</li>
 <li><a href="https://www.cass.city.ac.uk/faculties-and-research/experts/pietro-millossovich" target="_blank">Pietro Millossovich</a> (Cass Business School, City, University of London; DEAMS, University of Trieste)</li>
 <li><a href="https://pesenti.utstat.utoronto.ca" target="_blank">Silvana Pesenti</a> (Department of Statistical Sciences, University of Toronto)</li>
 <li><a href="https://www.cass.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas</a> (Cass Business School, City, University of London)</li>
-<li><a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andrés Villegas</a> (School of Risk and Actuarial Studies, University of New South Wales)
+<li><a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andr??s Villegas</a> (School of Risk and Actuarial Studies, University of New South Wales)
 </li>
 </l>
 
 </p><h3 id="scientific">Scientific Advisory Board</h3>
-Arnold-Gaille,	Séverine	(Université de Lausanne)
+Arnold-Gaille,	S??verine	(Universit?? de Lausanne)
 <br>
 Avanzi,	Benjamin	(University of Melbourne)
 <br>
@@ -3279,11 +3211,11 @@ Furman, Ed (York University)
 <br>
 Ghossoub,	Mario	(University of Waterloo)
 <br>
-Guillén,	Montserrat	(Universidad de Barcelona)
+Guill??n,	Montserrat	(Universidad de Barcelona)
 <br>
 Hillairet,	Caroline	(ENSAE)
 <br>
-Kaakai,	Sarah	(Le Mans Université)
+Kaakai,	Sarah	(Le Mans Universit??)
 <br>
 Khosla,	Shahib	(Strathmore University)
 <br>
@@ -3291,13 +3223,13 @@ Kleinow,	Thorsten	(Heriot Watt University)
 <br>
 Lindholm,	Mathias	(Stockholm University)
 <br>
-Loisel,	Stéphane	(ISFA, Université Lyon 1)
+Loisel,	St??phane	(ISFA, Universit?? Lyon 1)
 <br>
-Londoño,	Jaime	(National University of Colombia)
+Londo??o,	Jaime	(National University of Colombia)
 <br>
 Ludkovski,	Mike	(University of California Santa Barbara)
 <br>
-MacKay,	Anne	(Université de Québec à Montreal)
+MacKay,	Anne	(Universit?? de Qu??bec ?? Montreal)
 <br>
 Richman, Ronald (QED Actuaries & Consultants)
 <br>
@@ -3311,7 +3243,7 @@ Vanduffel,	Steven	(Vrije Universiteit Brussel)
 <br>
 Weke,	Patrick	(University of Nairobi)
 <br>
-Wüthrich,	Mario	(ETH Zurich)
+W??thrich,	Mario	(ETH Zurich)
 
 
 <br><hr><p>
