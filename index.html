@@ -63,8 +63,7 @@ html {
 
 
 <style>
-head {
-}
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -206,68 +205,112 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
 
 
+<div class="round" style="font-size:120%">
 
+<img class="img-responsive" src="peterhieber/1588176307808.jpeg" alt="Avatar" height="120" align='left' border-radius= "50%" >
 
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date("2023-03-01T08:00:00Z")
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
 
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2023-03-01T08:00:00Z").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function() {
 
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://sites.google.com/view/peter-hieber/" target="_blank"> Peter Hieber (HEC Lausanne, Switzerland)</a>
+
+</div>
 
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/3wpCRRTbwiM">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b><a href="http://www.ub.edu/riskcenter/guillen/" target="_blank"> Montserrat Guillen (University of Barcelona, Spain)</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-Motor insurance with telematics driving data
+
+     An Efficient Simulation Scheme for the Valuation of Large Heterogeneous Insurance Portfolios
 <br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-Many insurance companies collect telematics data about drivers’ exposure to traffic (distance driven and type of road), their driving behavior (excess speed, aggressiveness, operating hours) and contextual information (weather conditions, traffic intensity). Actuaries use this information to improve motor insurance ratemaking. Several recent proposals will be presented, mostly using traditional GLM models. In addition, personalized driving risk indicators can also promote driving safety. Illustrations with several real data sets provided by insurance companies will answer questions: (1) How are pay-per-mile insurance schemes be designed? (2) How can near-miss telematics be used to identify risky drivers? (3) What is the power of risk analytics and percentile charts to monitor drivers? Come results on integrating weather conditions will also be discussed.
-</details>
+<b>Abstract:</b>
+Insurance policies are mostly individual specific, as policyholders possess different risk characteristics and choose different policy options to meet their needs. Thus, the probability distributions that underlie the insurance claims are policy specific and complex, as opposed to the common parametric distributions. As a result, calculating the quantities of interest (e.g. premiums, liabilities, etc.) can only be done via stochastic simulations individually. Moreover, in reality an insurance portfolio contains hundreds of thousands of policies. In other words, we are dealing with a very large and highly heterogeneous insurance portfolio. To obtain any quantity of interest via simulation across the entire portfolio is extremely time consuming and is very often prohibitive. In this talk, we propose an efficient simulation scheme that only involves the simulation of a very small number of the policies in the portfolio. The first step is to select this small set of policies using a population sampling technique, i.e. the Delta method, so that the entire portfolio is well represented by the selected policies. A tailor-made simulation algorithm is applied to those representative policies. We then identify a policy specific quantity or summary statistics that well describe the information from a policy (policy attributes and claims) and introduce a model (surrogate model) that links the quantity/statistics to the quantity of interest we intend to calculate. The surrogate model is estimated using the representative policies and is then used for extrapolation (to calculate the quantity for the rest of the policies). We illustrate this simulation scheme with two very different examples. One is the valuation and hedging of a variable annuity (VA) portfolio and the other is on the calculation of the Bayesian premiums of an auto insurance portfolio.
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
+</div>
 </div>
 
-
-
-</div>
-
-
-
-
-<br>
-<br>
 
 
 
@@ -375,66 +418,7 @@ window.player = player;
     <th>Misc</th>
   </tr>
 
-   <tr>
-  <td class = "date"><b>15 February 2023 4pm (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date123 = new Date('2023-02-15T16:00:00Z');
-      var day123 = date123.getDate();
-      const monthNames123 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month123 = monthNames123[date123.getMonth()];
-      var year123 = date123.getFullYear();
-      var strTime123 = day123 + " " + month123 + " " +  year123;
-      document.write(strTime123);
-      const dtf123 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone123 = dtf123.formatToParts(date123).find((part) => part.type == 'timeZoneName').value;
-      var hours123 = date123.getHours();
-      var minutes123 = date123.getMinutes();
-      var ampm123 = hours123 >= 12 ? 'pm' : 'am';
-      hours123 = hours123 % 12;
-      hours123 = hours123 ? hours123 : 12; // the hour '0' should be '12'
-      minutes123 = minutes123 < 10 ? '0'+minutes123 : minutes123;
-      var strTime2123 = hours123 + ':' + minutes123 +ampm123 + ' ' + "(" +zone123+")";
-      document.write("<br>");
-      document.write(strTime2123);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Montserrat%20Guillen%20(University%20of%20Barcelona%2C%20Spain)&dates=20230215T160000Z/20230215T170000Z&details=Speaker%3A%20Montserrat%20Guillen%20(University%20of%20Barcelona%2C%20Spain)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
-        target="_blank">Google calendar</a>
-        <a href="montserratguillen/montserratguillen.ics" download>
-        Outlook calendar
-      </a>
-        
-        </td>
-        
-        <td class = "speaker"><a href="http://www.ub.edu/riskcenter/guillen/" target="_blank">Montserrat Guillen (University of Barcelona, Spain)</a>
-        
-        <td class = "title">Motor insurance with telematics driving data
-      
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-        Many insurance companies collect telematics data about drivers’ exposure to
-traffic (distance driven and type of road), their driving behavior (excess
-speed, aggressiveness, operating hours) and contextual information
-(weather conditions, traffic intensity). Actuaries use this information to
-improve motor insurance ratemaking. Several recent proposals will be
-presented, mostly using traditional GLM models. In addition, personalized
-driving risk indicators can also promote driving safety. Illustrations with
- several real data sets provided by insurance companies will answer
-questions: (1) How are pay-per-mile insurance schemes be designed? (2)
-How can near-miss telematics be used to identify risky drivers? (3) What is
-the power of risk analytics and percentile charts to monitor drivers? Come
-results on integrating weather conditions will also be discussed.
-        </details>
-        </td>
- <td>
-        
-        <b>Host:</b>TBA
-        <br>
-        <b>Questions: </b>TBA
-        </td>
-</tr>   
+   
         
 
   
@@ -670,13 +654,13 @@ Based on a joint work with Anna Maria Fiori.
     <script type="text/javascript">
       var date112 = new Date('2022-02-23T15:00:00Z');
       var day112 = date112.getDate();
-      const monthNames112 = ["January", "February", "March", "April", "May", "June",
+      var monthNames112 = ["January", "February", "March", "April", "May", "June",
                              "July", "August", "September", "October", "November", "December"];
       var month112 = monthNames112[date112.getMonth()];
       var year112 = date112.getFullYear();
       var strTime112 = day112 + " " + month112 + " " +  year112;
       document.write(strTime112);
-      const dtf112 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var dtf112 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
       var zone112 = dtf112.formatToParts(date112).find((part) => part.type == 'timeZoneName').value;
       var hours112 = date112.getHours();
       var minutes112 = date112.getMinutes();
@@ -729,13 +713,13 @@ curve is equivalent to Gini coefficient.
     <script type="text/javascript">
       var date113 = new Date('2022-03-09T09:00:00Z');
       var day113 = date113.getDate();
-      const monthNames113 = ["January", "February", "March", "April", "May", "June",
+      var monthNames113 = ["January", "February", "March", "April", "May", "June",
                              "July", "August", "September", "October", "November", "December"];
       var month113 = monthNames113[date113.getMonth()];
       var year113 = date113.getFullYear();
       var strTime113 = day113 + " " + month113 + " " +  year113;
       document.write(strTime113);
-      const dtf113 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var dtf113 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
       var zone113 = dtf113.formatToParts(date113).find((part) => part.type == 'timeZoneName').value;
       var hours113 = date113.getHours();
       var minutes113 = date113.getMinutes();
@@ -772,13 +756,13 @@ curve is equivalent to Gini coefficient.
     <script type="text/javascript">
       var date114 = new Date('2022-03-23T15:00:00Z');
       var day114 = date114.getDate();
-      const monthNames114 = ["January", "February", "March", "April", "May", "June",
+      var monthNames114 = ["January", "February", "March", "April", "May", "June",
                              "July", "August", "September", "October", "November", "December"];
       var month114 = monthNames114[date114.getMonth()];
       var year114 = date114.getFullYear();
       var strTime114 = day114 + " " + month114 + " " +  year114;
       document.write(strTime114);
-      const dtf114 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var dtf114 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
       var zone114 = dtf114.formatToParts(date114).find((part) => part.type == 'timeZoneName').value;
       var hours114 = date114.getHours();
       var minutes114 = date114.getMinutes();
@@ -1366,6 +1350,66 @@ Insurance policies are mostly individual specific, as policyholders possess diff
         <br>
         <b>Questions: </b>TBA
         </td>
+        </tr> 
+        <tr>
+          <td class = "date"><b>15 February 2023 4pm (UTC) </b> <br> In your local time: <br>
+            <script type="text/javascript">
+              var date123 = new Date('2023-02-15T16:00:00Z');
+              var day123 = date123.getDate();
+              const monthNames123 = ["January", "February", "March", "April", "May", "June",
+                                     "July", "August", "September", "October", "November", "December"];
+              var month123 = monthNames123[date123.getMonth()];
+              var year123 = date123.getFullYear();
+              var strTime123 = day123 + " " + month123 + " " +  year123;
+              document.write(strTime123);
+              const dtf123 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+              var zone123 = dtf123.formatToParts(date123).find((part) => part.type == 'timeZoneName').value;
+              var hours123 = date123.getHours();
+              var minutes123 = date123.getMinutes();
+              var ampm123 = hours123 >= 12 ? 'pm' : 'am';
+              hours123 = hours123 % 12;
+              hours123 = hours123 ? hours123 : 12; // the hour '0' should be '12'
+              minutes123 = minutes123 < 10 ? '0'+minutes123 : minutes123;
+              var strTime2123 = hours123 + ':' + minutes123 +ampm123 + ' ' + "(" +zone123+")";
+              document.write("<br>");
+              document.write(strTime2123);
+              </script>
+                
+                <br>
+                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Montserrat%20Guillen%20(University%20of%20Barcelona%2C%20Spain)&dates=20230215T160000Z/20230215T170000Z&details=Speaker%3A%20Montserrat%20Guillen%20(University%20of%20Barcelona%2C%20Spain)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
+                target="_blank">Google calendar</a>
+                <a href="montserratguillen/montserratguillen.ics" download>
+                Outlook calendar
+              </a>
+                
+                </td>
+                
+                <td class = "speaker"><a href="http://www.ub.edu/riskcenter/guillen/" target="_blank">Montserrat Guillen (University of Barcelona, Spain)</a>
+                
+                <td class = "title">Motor insurance with telematics driving data
+              
+              <br> <details>
+                <summary>Abstract (click to expand)</summary>
+                Many insurance companies collect telematics data about drivers’ exposure to
+        traffic (distance driven and type of road), their driving behavior (excess
+        speed, aggressiveness, operating hours) and contextual information
+        (weather conditions, traffic intensity). Actuaries use this information to
+        improve motor insurance ratemaking. Several recent proposals will be
+        presented, mostly using traditional GLM models. In addition, personalized
+        driving risk indicators can also promote driving safety. Illustrations with
+         several real data sets provided by insurance companies will answer
+        questions: (1) How are pay-per-mile insurance schemes be designed? (2)
+        How can near-miss telematics be used to identify risky drivers? (3) What is
+        the power of risk analytics and percentile charts to monitor drivers? Come
+        results on integrating weather conditions will also be discussed.
+                </details>
+                </td>
+         <td>
+                
+                <b>Host:</b>TBA
+                <br>
+                <b>Questions: </b>TBA
+                </td>
         </tr> 
 </tbody>
 </table>
