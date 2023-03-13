@@ -203,63 +203,111 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
 
 
+<div class="round" style="font-size:120%">
 
+<img class="img-responsive" src="margierosenberg/margierosenberg.jpeg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2023-03-15T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2023-03-15T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://business.wisc.edu/directory/profile/margie-rosenberg/" target="_blank">
+   Margie Rosenberg (University of Wisconsin-Madison, USA)
+</a>
+
+</div>
 
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/BHCfbuTOahM">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b><a href="https://sites.google.com/view/peter-hieber/" target="_blank">  Peter Hieber (HEC Lausanne, Switzerland)</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-  Designing mutual insurance schemes of heterogeneous risks<br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-The tendency of insurance providers to refrain from offering long-term guarantees on investment or mortality risk has shifted attention to mutual risk pooling schemes like (modern) tontines, pooled annuities, or group self-annuitization schemes. There are at least two reasons why it is advantageous to pool policyholders with different risks (for example mortality pools with policyholders of different age and/or health): (1) This allows to increase pool sizes, leading to a reduction in risks. (2) Pooling opposing risks like mortality and morbidity risks helps to further diversify and reduce adverse selection effects. This talk discusses the design of such heterogeneous mutual insurance schemes. It covers aspects of risk sharing as well as risk management and the actuarial fairness of the introduced schemes.
-</details>
+
+  The Importance of Oral Health and Accessibility to Dental Care Services for Medicare Beneficiaries on their General Health Status<br> 
+<b>Abstract:</b>
+Oral diseases include dental cavities, gum disease, oral and facial pain, as well as mouth and throat cancers (https://www.who.int/news‐room/fact‐sheets/detail/oral‐health). These problems are cumulative and can result in serious health problems as we age, when these issues are not treated (https://www.nidcr.nih.gov/research/data‐statistics/surgeon‐general). In this work, we focus on Medicare beneficiaries in the US (65+ population) to examine the status of their teeth, along with any barriers to receiving dental care services on their reported general health status. Medicare, the federal health program for those over 65, does not automatically cover beneficiaries for their dental care needs. We use the 2017‐2018 National Health and Nutrition Examination Survey (NHANES) questionnaire. Mobile exam data are available where a licensed dental provider examines the status of each tooth. We create a new dentition status variable that summaries the state of the mouth of the participant into 5 groups: (a) all natural teeth, excluding crowns, (b) those with all teeth positions filled with a combination of natural and restored teeth (crowns, dentures, and implants), (c) those who wear dentures for all teeth positions, (d) those with no natural nor restored teeth (edentulous), and (e) those with less than a full mouth filled with either natural or restored teeth. The first three groups have some form of a tooth in all positions, while the latter two groups are either without any teeth or with fewer than a full mouth of teeth. Any barriers to receiving dental care services reflected the prior 12 months. More than half of the Medicare population have less than a full mouth of teeth, while 15% have complete dentures or are edentulous. Using logistic regression, we find that those with barriers to dental care services have a differential level of associations by dentition status with general health status. Compared to those with all natural teeth, those who have all dentures are significantly more likely to have fair or poor general health status, while the odds ratio for those who are edentulous is smaller in level and not significant. In a sub‐group analysis focusing only on those who are either wearing complete dentures or are edentulous, we find that the barriers to dental care services is not significant factor of fair or poor general health status, yet fair or poor oral health status is a significant factor of fair or poor general health status.      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
 </div>
-
-
-
 </div>
-
-
-
-
-<br>
-<br>
 
 
 
@@ -295,39 +343,84 @@ The tendency of insurance providers to refrain from offering long-term guarantee
 <li>The Zoom link will also be available on this <a href="https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01" target="_blank">google doc link</a> 15min prior to a scheduled talk.   </li>
 <li>By signing up to the OWARS mailing list you will receive emails with newly scheduled talks (nothing more).
 Sign up here:
-<!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:500px;}
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="https://usyd.us4.list-manage.com/subscribe/post?u=8c3a3579d2bddc6732f94eb41&amp;id=6963d65cf5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<h2>Subscribe</h2>
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-<div class="mc-field-group">
-	<label for="mce-NAME">Name  <span class="asterisk">*</span>
-</label>
-	<input type="text" value="" name="NAME" class="required" id="mce-NAME">
-</div>
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8c3a3579d2bddc6732f94eb41_6963d65cf5" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
+
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<form method="post" name="subscribeform" id="subscribeform" enctype="multipart/form-data">
+    <table border=0>
+        <tr>
+            <td><div class="required">Email</div></td>
+            <td class="attributeinput"><input type=text name="email" value="" id="email" size="40"></td>
+        </tr>
+        <tr>
+            <td><div class="required">First name</div></td>
+            <td class="attributeinput">
+                <input type=text name="attribute1" id="attribute1" class="attributeinput" size="40" value="">
+            </td>
+        </tr>
+        <tr>
+            <td><div class="required">Last name</div></td>
+            <td class="attributeinput">
+                <input type=text name="attribute2" id="attribute2" class="attributeinput" size="40" value="">
+            </td>
+        </tr>
+    </table>
+    <input type=hidden name="htmlemail" value="1">
+    <input type="hidden" name="list[6]" value="signup"  />
+    <input type="hidden" name="subscribe" value="subscribe"/>
+    <div style="display:none"><input type="text" name="VerificationCodeX" value="" size="20"></div>
+    <button class='button' 
+        onclick="if (checkform()) {submitForm();} return false;"
+    >Subscribe</button>
+    <div id="result" style="color: red;"></div>
 </form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[6]='NAME';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
+
+<script type="text/javascript">
+function checkform()
+{
+    re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (!(re.test(jQuery("#email").val()))) {
+        jQuery("#result").empty().append("Please enter a valid email address");
+        jQuery("#email").focus();
+        return false;
+    }
+
+    if (jQuery("#attribute1").val() == "") {
+        jQuery("#result").empty().append("Please enter your " + "First name");
+        jQuery("#attribute1").focus();
+        return false;
+    }
+    if (jQuery("#attribute2").val() == "") {
+        jQuery("#result").empty().append("Please enter your " + "Last name");
+        jQuery("#attribute2").focus();
+        return false;
+    }
+
+    return true;
+}
+
+function submitForm() {
+    successMessage = 'Thank you for your registration. Please check your email to confirm.';
+    data = jQuery('#subscribeform').serialize();
+    jQuery.ajax( {
+        type: 'POST',
+        data: data,
+        url: 'https://mailinglist.owars.info/?p=asubscribe&id=1',
+        dataType: 'html',
+        success: function (data, status, request) {
+            jQuery("#result").empty().append(data != '' ? data : successMessage);
+            jQuery('#attribute1').val('');
+            jQuery('#attribute2').val('');
+            jQuery('#email').val('');
+        },
+        error: function (request, status, error) { alert('Sorry, we were unable to process your subscription.'); }
+    });
+}
+
+</script>
 
 
 
@@ -374,49 +467,7 @@ window.player = player;
         
 
   
-  <tr>
-  <td class = "date"><b>01 March 2023 8am (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date124 = new Date('2023-03-01T08:00:00Z');
-      var day124 = date124.getDate();
-      const monthNames124 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month124 = monthNames124[date124.getMonth()];
-      var year124 = date124.getFullYear();
-      var strTime124 = day124 + " " + month124 + " " +  year124;
-      document.write(strTime124);
-      const dtf124 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone124 = dtf124.formatToParts(date124).find((part) => part.type == 'timeZoneName').value;
-      var hours124 = date124.getHours();
-      var minutes124 = date124.getMinutes();
-      var ampm124 = hours124 >= 12 ? 'pm' : 'am';
-      hours124 = hours124 % 12;
-      hours124 = hours124 ? hours124 : 12; // the hour '0' should be '12'
-      minutes124 = minutes124 < 10 ? '0'+minutes124 : minutes124;
-      var strTime2124 = hours124 + ':' + minutes124 +ampm124 + ' ' + "(" +zone124+")";
-      document.write("<br>");
-      document.write(strTime2124);
-      </script>
-        
-        <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Peter%20Hieber%20(HEC%20Lausanne%2C%20Switzerland)&dates=20230301T080000Z/20230301T090000Z&details=Speaker%3A%20Peter%20Hieber%20(HEC%20Lausanne%2C%20Switzerland)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
-        target="_blank">Google calendar</a>
-        <a href="peterhieber/peterhieber.ics" download>
-        Outlook calendar
-      </a>
-        
-        </td>
-        
-        <td class = "speaker"><a href="https://sites.google.com/view/peter-hieber/" target="_blank">Peter Hieber (HEC Lausanne, Switzerland)</a></td>
-        <td class = "title">Designing mutual insurance schemes of heterogeneous risks
-      
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-        The tendency of insurance providers to refrain from offering long-term guarantees on investment or mortality risk has shifted attention to mutual risk pooling schemes like (modern) tontines, pooled annuities, or group self-annuitization schemes. There are at least two reasons why it is advantageous to pool policyholders with different risks (for example mortality pools with policyholders of different age and/or health): (1) This allows to increase pool sizes, leading to a reduction in risks. (2) Pooling opposing risks like mortality and morbidity risks helps to further diversify and reduce adverse selection effects. This talk discusses the design of such heterogeneous mutual insurance schemes. It covers aspects of risk sharing as well as risk management and the actuarial fairness of the introduced schemes.       <td>
-          </details>
-        <br>
-        </td>
-        </tr>    
+   
 <tr>
   <td class = "date"><b>15 March 2023 3pm (UTC) </b> <br> In your local time: <br>
     <script type="text/javascript">
@@ -1359,6 +1410,49 @@ Insurance policies are mostly individual specific, as policyholders possess diff
                 <b>Questions: </b>TBA
                 </td>
         </tr> 
+        <tr>
+          <td class = "date"><b>01 March 2023 8am (UTC) </b> <br> In your local time: <br>
+            <script type="text/javascript">
+              var date124 = new Date('2023-03-01T08:00:00Z');
+              var day124 = date124.getDate();
+              const monthNames124 = ["January", "February", "March", "April", "May", "June",
+                                     "July", "August", "September", "October", "November", "December"];
+              var month124 = monthNames124[date124.getMonth()];
+              var year124 = date124.getFullYear();
+              var strTime124 = day124 + " " + month124 + " " +  year124;
+              document.write(strTime124);
+              const dtf124 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+              var zone124 = dtf124.formatToParts(date124).find((part) => part.type == 'timeZoneName').value;
+              var hours124 = date124.getHours();
+              var minutes124 = date124.getMinutes();
+              var ampm124 = hours124 >= 12 ? 'pm' : 'am';
+              hours124 = hours124 % 12;
+              hours124 = hours124 ? hours124 : 12; // the hour '0' should be '12'
+              minutes124 = minutes124 < 10 ? '0'+minutes124 : minutes124;
+              var strTime2124 = hours124 + ':' + minutes124 +ampm124 + ' ' + "(" +zone124+")";
+              document.write("<br>");
+              document.write(strTime2124);
+              </script>
+                
+                <br>
+                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Peter%20Hieber%20(HEC%20Lausanne%2C%20Switzerland)&dates=20230301T080000Z/20230301T090000Z&details=Speaker%3A%20Peter%20Hieber%20(HEC%20Lausanne%2C%20Switzerland)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
+                target="_blank">Google calendar</a>
+                <a href="peterhieber/peterhieber.ics" download>
+                Outlook calendar
+              </a>
+                
+                </td>
+                
+                <td class = "speaker"><a href="https://sites.google.com/view/peter-hieber/" target="_blank">Peter Hieber (HEC Lausanne, Switzerland)</a></td>
+                <td class = "title">Designing mutual insurance schemes of heterogeneous risks
+              
+              <br> <details>
+                <summary>Abstract (click to expand)</summary>
+                The tendency of insurance providers to refrain from offering long-term guarantees on investment or mortality risk has shifted attention to mutual risk pooling schemes like (modern) tontines, pooled annuities, or group self-annuitization schemes. There are at least two reasons why it is advantageous to pool policyholders with different risks (for example mortality pools with policyholders of different age and/or health): (1) This allows to increase pool sizes, leading to a reduction in risks. (2) Pooling opposing risks like mortality and morbidity risks helps to further diversify and reduce adverse selection effects. This talk discusses the design of such heterogeneous mutual insurance schemes. It covers aspects of risk sharing as well as risk management and the actuarial fairness of the introduced schemes.       <td>
+                  </details>
+                <br>
+                </td>
+                </tr>  
 </tbody>
 </table>
 
