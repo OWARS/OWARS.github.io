@@ -415,53 +415,222 @@ window.player = player;
 
   
    
+
+        
+
+           
+  <tr>
+    <td class = "date"><b>29 March 2023 8am (UTC) </b> <br> In your local time: <br>
+      <script type="text/javascript">
+        var date126 = new Date('2023-03-29T08:00:00Z');
+        var day126 = date126.getDate();
+        const monthNames126 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month126 = monthNames126[date126.getMonth()];
+        var year126 = date126.getFullYear();
+        var strTime126 = day126 + " " + month126 + " " +  year126;
+        document.write(strTime126);
+        const dtf126 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone126 = dtf126.formatToParts(date126).find((part) => part.type == 'timeZoneName').value;
+        var hours126 = date126.getHours();
+        var minutes126 = date126.getMinutes();
+        var ampm126 = hours126 >= 12 ? 'pm' : 'am';
+        hours126 = hours126 % 12;
+        hours126 = hours126 ? hours126 : 12; // the hour '0' should be '12'
+        minutes126 = minutes126 < 10 ? '0'+minutes126 : minutes126;
+        var strTime2126 = hours126 + ':' + minutes126 +ampm126 + ' ' + "(" +zone126+")";
+        document.write("<br>");
+        document.write(strTime2126);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Salvatore%20Scognamiglio%20(University%20of%20Naples%20Parthenope%2C%20Italy)&dates=20230329T080000Z/20230329T091000Z&details=Speaker%3A%20Salvatore%20Scognamiglio%20(University%20of%20Naples%20Parthenope%2C%20Italy)%0A%0ATitle%3A%20Accurate%20and%20Explainable%20Mortality%20Forecasting%20with%20the%20LocalGLMnet%0A%0AAbstract%3A%20%20%20%20%20%20%20%20%20%20%20Recently%2C%20accurate%20forecasting%20of%20mortality%20rates%20with%20deep%20learning%20models%20has%20been%20investigated%20in%20several%20papers%20in%20the%20actuarial%20literature.%20Most%20of%20the%20models%20proposed%20to%20date%20are%20not%20explainable%2C%20making%20it%20difficult%20to%20communicate%20the%20basis%20on%20which%20mortality%20forecasts%20have%20been%20made.%20We%20adapt%20the%20LocalGLMnet%20of%20Richman%20and%20W%C3%BCthrich%20(2023)%20to%20produce%20explainable%20forecasts%20of%20mortality%20rates%20using%20locally%20connected%20neural%20networks%2C%20and%20we%20show%20that%20these%20can%20be%20interpreted%20as%20autoregressive%20time-series%20models%20of%20mortality%20rates.%20These%20forecasts%20are%20shown%20to%20be%20highly%20accurate%20on%20the%20Human%20Mortality%20Database%20and%20the%20United%20States%20Mortality%20Database.%20Finally%2C%20we%20show%20how%20regularizing%20the%20LocalGLMnet%20can%20produce%20improved%20forecasts%2C%20and%20that%20by%20applying%20auto-encoders%2C%20observations%20of%20mortality%20rates%20can%20be%20denoised%20to%20improve%20forecasts%20even%20further.%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
+        target="_blank">Google calendar</a>
+          <a href="salvatorescognamiglio/salvatorescognamiglio.ics" download>
+          Outlook calendar
+        </a>
+          
+          </td>
+          
+          <td class = "speaker"><a href="https://www.disaq.uniparthenope.it/personale/" target="_blank">Salvatore Scognamiglio (University of Naples Parthenope, Italy)</a></td>
+          <td class = "title">Accurate and Explainable Mortality Forecasting with the LocalGLMnet
+        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+          Recently, accurate forecasting of mortality rates with deep learning models has been investigated in several papers in the actuarial literature. Most of the models proposed to date are not explainable, making it difficult to communicate the basis on which mortality forecasts have been made. We adapt the LocalGLMnet of Richman and Wüthrich (2023) to produce explainable forecasts of mortality rates using locally connected neural networks, and we show that these can be interpreted as autoregressive time-series models of mortality rates. These forecasts are shown to be highly accurate on the Human Mortality Database and the United States Mortality Database. Finally, we show how regularizing the LocalGLMnet can produce improved forecasts, and that by applying auto-encoders, observations of mortality rates can be denoised to improve forecasts even further.
+        <br>
+        </td>
+        <td></td>
+          </tr> 
+
+  <tr>
+            <td class = "date"><b>26 April 2023 3pm (UTC) </b> <br> In your local time: <br>
+              <script type="text/javascript">
+                var date127 = new Date('2023-04-26T15:00:00Z');
+                var day127 = date127.getDate();
+                const monthNames127 = ["January", "February", "March", "April", "May", "June",
+                                       "July", "August", "September", "October", "November", "December"];
+                var month127 = monthNames127[date127.getMonth()];
+                var year127 = date127.getFullYear();
+                var strTime127 = day127 + " " + month127 + " " +  year127;
+                document.write(strTime127);
+                const dtf127 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+                var zone127 = dtf127.formatToParts(date127).find((part) => part.type == 'timeZoneName').value;
+                var hours127 = date127.getHours();
+                var minutes127 = date127.getMinutes();
+                var ampm127 = hours127 >= 12 ? 'pm' : 'am';
+                hours127 = hours127 % 12;
+                hours127 = hours127 ? hours127 : 12; // the hour '0' should be '12'
+                minutes127 = minutes127 < 10 ? '0'+minutes127 : minutes127;
+                var strTime2127 = hours127 + ':' + minutes127 +ampm127 + ' ' + "(" +zone127+")";
+                document.write("<br>");
+                document.write(strTime2127);
+                </script>
+                  
+                  <br>
+                  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Mar%C3%ADa%20del%20Carmen%20Boado-Penas%20(Heriot-Watt%20University%2C%20UK)&dates=20230426T150000Z/20230426T161000Z&details=Speaker%3A%20Mar%C3%ADa%20del%20Carmen%20Boado-Penas%20(Heriot-Watt%20University%2C%20UK)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
+                target="_blank">Google calendar</a>
+                  <a href="mariadelcarmenboadopenas/mariadelcarmenboadopenas.ics" download>
+                  Outlook calendar
+                </a>
+                  
+                  </td>
+                  
+                  <td class = "speaker"><a href="https://researchportal.hw.ac.uk/en/persons/maria-del-carmen-boado-penas" target="_blank">María del Carmen Boado-Penas (Heriot-Watt University, UK)</a></td>
+                  <td class = "title">TBA
+                <br> <details>
+                  <summary>Abstract (click to expand)</summary>
+TBA                <br>
+                </td>
+                <td></td>
+
+  </tr> 
+   
 <tr>
-  <td class = "date"><b>15 March 2023 3pm (UTC) </b> <br> In your local time: <br>
+  <td class = "date"><b>10 May 2023 8am (UTC) </b> <br> In your local time: <br>
     <script type="text/javascript">
-      var date125 = new Date('2023-03-15T15:00:00Z');
-      var day125 = date125.getDate();
-      const monthNames125 = ["January", "February", "March", "April", "May", "June",
+      var date128 = new Date('2023-05-10T08:00:00Z');
+      var day128 = date128.getDate();
+      const monthNames128 = ["January", "February", "March", "April", "May", "June",
                              "July", "August", "September", "October", "November", "December"];
-      var month125 = monthNames125[date125.getMonth()];
-      var year125 = date125.getFullYear();
-      var strTime125 = day125 + " " + month125 + " " +  year125;
-      document.write(strTime125);
-      const dtf125 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone125 = dtf125.formatToParts(date125).find((part) => part.type == 'timeZoneName').value;
-      var hours125 = date125.getHours();
-      var minutes125 = date125.getMinutes();
-      var ampm125 = hours125 >= 12 ? 'pm' : 'am';
-      hours125 = hours125 % 12;
-      hours125 = hours125 ? hours125 : 12; // the hour '0' should be '12'
-      minutes125 = minutes125 < 10 ? '0'+minutes125 : minutes125;
-      var strTime2125 = hours125 + ':' + minutes125 +ampm125 + ' ' + "(" +zone125+")";
+      var month128 = monthNames128[date128.getMonth()];
+      var year128 = date128.getFullYear();
+      var strTime128 = day128 + " " + month128 + " " +  year128;
+      document.write(strTime128);
+      const dtf128 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone128 = dtf128.formatToParts(date128).find((part) => part.type == 'timeZoneName').value;
+      var hours128 = date128.getHours();
+      var minutes128 = date128.getMinutes();
+      var ampm128 = hours128 >= 12 ? 'pm' : 'am';
+      hours128 = hours128 % 12;
+      hours128 = hours128 ? hours128 : 12; // the hour '0' should be '12'
+      minutes128 = minutes128 < 10 ? '0'+minutes128 : minutes128;
+      var strTime2128 = hours128 + ':' + minutes128 +ampm128 + ' ' + "(" +zone128+")";
       document.write("<br>");
-      document.write(strTime2125);
+      document.write(strTime2128);
       </script>
         
         <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Margie%20Rosenberg%20(University%20of%20Wisconsin-Madison%2C%20USA)&dates=20230315T150000Z/20230315T160000Z&details=Speaker%3A%20Margie%20Rosenberg%20(University%20of%20Wisconsin-Madison%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Tolulope%20Fadina%20(University%20of%20Essex%2C%20UK)&dates=20230510T080000Z/20230510T091000Z&details=Speaker%3A%20Tolulope%20Fadina%20(University%20of%20Essex%2C%20UK)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
       target="_blank">Google calendar</a>
-        <a href="margierosenberg/margierosenberg.ics" download>
+        <a href="tolulopefadina/tolulopefadina.ics" download>
         Outlook calendar
       </a>
         
         </td>
         
-        <td class = "speaker"><a href="https://business.wisc.edu/directory/profile/margie-rosenberg/" target="_blank">Margie Rosenberg (University of Wisconsin-Madison, USA)</a></td>
-        <td class = "title">The Importance of Oral Health and Accessibility to Dental Care Services for Medicare Beneficiaries on their General Health Status 
-      
+        <td class = "speaker"><a href="https://www.essex.ac.uk/people/fadin62709/tolulope-fadina" target="_blank">Tolulope Fadina (University of Essex, UK)</a></td>
+        <td class = "title">TBA
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-        Oral diseases include dental cavities, gum disease, oral and facial pain, as well as mouth and throat cancers (https://www.who.int/news‐room/fact‐sheets/detail/oral‐health). These problems are cumulative and can result in serious health problems as we age, when these issues are not treated (https://www.nidcr.nih.gov/research/data‐statistics/surgeon‐general).
-        In this work, we focus on Medicare beneficiaries in the US (65+ population) to examine the status of their teeth, along with any barriers to receiving dental care services on their reported general health status. Medicare, the federal health program for those over 65, does not automatically cover beneficiaries for their dental care needs.
-We use the 2017‐2018 National Health and Nutrition Examination Survey (NHANES) questionnaire. Mobile exam data are available where a licensed dental provider examines the status of each tooth. We create a new dentition status variable that summaries the state of the mouth of the participant into 5 groups: (a) all natural teeth, excluding crowns, (b) those with all teeth positions filled with a combination of natural and restored teeth (crowns, dentures, and implants), (c) those who wear dentures for all teeth positions, (d) those with no natural nor restored teeth (edentulous), and (e) those with less than a full mouth filled with either natural or restored teeth. The first three groups have some form of a tooth in all positions, while the latter two groups are either without any teeth or with fewer than a full mouth of teeth. Any barriers to receiving dental care services reflected the prior 12 months. More than half of the Medicare population have less than a full mouth of teeth, while 15% have complete dentures or are edentulous. Using logistic regression, we find that those with barriers to dental care services have a differential level of associations by dentition status with general health status. Compared to those with all natural teeth, those who have all dentures are significantly more likely to have fair or poor general health status, while the odds ratio for those who are edentulous is smaller in level and not significant. In a sub‐group analysis focusing only on those who are either wearing complete dentures or are edentulous, we find that the barriers to dental care services is not significant factor of fair or poor general health status, yet fair or poor oral health status is a significant factor of fair or poor general health status.        <td>
-</details>
-      <br>
+TBA                <br>
       </td>
-        </tr> 
-                
-   
+      <td></td>
+
+</tr> 
+<tr>
+  <td class = "date"><b>24 May 2023 4pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date129 = new Date('2023-05-24T16:00:00Z');
+      var day129 = date129.getDate();
+      const monthNames129 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month129 = monthNames129[date129.getMonth()];
+      var year129 = date129.getFullYear();
+      var strTime129 = day129 + " " + month129 + " " +  year129;
+      document.write(strTime129);
+      const dtf129 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone129 = dtf129.formatToParts(date129).find((part) => part.type == 'timeZoneName').value;
+      var hours129 = date129.getHours();
+      var minutes129 = date129.getMinutes();
+      var ampm129 = hours129 >= 12 ? 'pm' : 'am';
+      hours129 = hours129 % 12;
+      hours129 = hours129 ? hours129 : 12; // the hour '0' should be '12'
+      minutes129 = minutes129 < 10 ? '0'+minutes129 : minutes129;
+      var strTime2129 = hours129 + ':' + minutes129 +ampm129 + ' ' + "(" +zone129+")";
+      document.write("<br>");
+      document.write(strTime2129);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Mike%20Ludkovski%20(University%20of%20California%20-%20Santa%20Barbara%2C%20USA)&dates=20230524T160000Z/20230524T171000Z&details=Speaker%3A%20Mike%20Ludkovski%20(University%20of%20California%20-%20Santa%20Barbara%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
+      target="_blank">Google calendar</a>
+        <a href="mikeludkovski/mikeludkovski.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://ludkovski.faculty.pstat.ucsb.edu/" target="_blank">Mike Ludkovski (University of California - Santa Barbara, USA)</a></td>
+        <td class = "title">TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+TBA                <br>
+      </td>
+      <td></td>
+
+</tr> 
+<tr>
+  <td class = "date"><b>07 June 2023 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date130 = new Date('2023-06-07T15:00:00Z');
+      var day130 = date130.getDate();
+      const monthNames130 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month130 = monthNames130[date130.getMonth()];
+      var year130 = date130.getFullYear();
+      var strTime130 = day130 + " " + month130 + " " +  year130;
+      document.write(strTime130);
+      const dtf130 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone130 = dtf130.formatToParts(date130).find((part) => part.type == 'timeZoneName').value;
+      var hours130 = date130.getHours();
+      var minutes130 = date130.getMinutes();
+      var ampm130 = hours130 >= 12 ? 'pm' : 'am';
+      hours130 = hours130 % 12;
+      hours130 = hours130 ? hours130 : 12; // the hour '0' should be '12'
+      minutes130 = minutes130 < 10 ? '0'+minutes130 : minutes130;
+      var strTime2130 = hours130 + ':' + minutes130 +ampm130 + ' ' + "(" +zone130+")";
+      document.write("<br>");
+      document.write(strTime2130);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Runhuan%20Feng%20(University%20of%20Illinois%20at%20Urbana-Champaign%2C%20USA)&dates=20230607T150000Z/20230607T161000Z&details=Speaker%3A%20Runhuan%20Feng%20(University%20of%20Illinois%20at%20Urbana-Champaign%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
+      target="_blank">Google calendar</a>
+        <a href="runhuanfeng/runhuanfeng.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://faculty.math.illinois.edu/~rfeng/" target="_blank">Runhuan Feng (University of Illinois at Urbana-Champaign, USA)</a></td>
+        <td class = "title">TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+TBA                <br>
+      </td>
+      <td></td>
+
+</tr> 
 </tbody>
 
 </table>
@@ -1400,6 +1569,53 @@ Insurance policies are mostly individual specific, as policyholders possess diff
                 <br>
                 </td>
                 </tr>  
+
+                <tr>
+                  <td class = "date"><b>15 March 2023 3pm (UTC) </b> <br> In your local time: <br>
+                    <script type="text/javascript">
+                      var date125 = new Date('2023-03-15T15:00:00Z');
+                      var day125 = date125.getDate();
+                      const monthNames125 = ["January", "February", "March", "April", "May", "June",
+                                             "July", "August", "September", "October", "November", "December"];
+                      var month125 = monthNames125[date125.getMonth()];
+                      var year125 = date125.getFullYear();
+                      var strTime125 = day125 + " " + month125 + " " +  year125;
+                      document.write(strTime125);
+                      const dtf125 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+                      var zone125 = dtf125.formatToParts(date125).find((part) => part.type == 'timeZoneName').value;
+                      var hours125 = date125.getHours();
+                      var minutes125 = date125.getMinutes();
+                      var ampm125 = hours125 >= 12 ? 'pm' : 'am';
+                      hours125 = hours125 % 12;
+                      hours125 = hours125 ? hours125 : 12; // the hour '0' should be '12'
+                      minutes125 = minutes125 < 10 ? '0'+minutes125 : minutes125;
+                      var strTime2125 = hours125 + ':' + minutes125 +ampm125 + ' ' + "(" +zone125+")";
+                      document.write("<br>");
+                      document.write(strTime2125);
+                      </script>
+                        
+                        <br>
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Margie%20Rosenberg%20(University%20of%20Wisconsin-Madison%2C%20USA)&dates=20230315T150000Z/20230315T160000Z&details=Speaker%3A%20Margie%20Rosenberg%20(University%20of%20Wisconsin-Madison%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
+                      target="_blank">Google calendar</a>
+                        <a href="margierosenberg/margierosenberg.ics" download>
+                        Outlook calendar
+                      </a>
+                        
+                        </td>
+                        
+                        <td class = "speaker"><a href="https://business.wisc.edu/directory/profile/margie-rosenberg/" target="_blank">Margie Rosenberg (University of Wisconsin-Madison, USA)</a></td>
+                        <td class = "title">The Importance of Oral Health and Accessibility to Dental Care Services for Medicare Beneficiaries on their General Health Status 
+                      
+                      <br> <details>
+                        <summary>Abstract (click to expand)</summary>
+                        Oral diseases include dental cavities, gum disease, oral and facial pain, as well as mouth and throat cancers (https://www.who.int/news‐room/fact‐sheets/detail/oral‐health). These problems are cumulative and can result in serious health problems as we age, when these issues are not treated (https://www.nidcr.nih.gov/research/data‐statistics/surgeon‐general).
+                        In this work, we focus on Medicare beneficiaries in the US (65+ population) to examine the status of their teeth, along with any barriers to receiving dental care services on their reported general health status. Medicare, the federal health program for those over 65, does not automatically cover beneficiaries for their dental care needs.
+                We use the 2017‐2018 National Health and Nutrition Examination Survey (NHANES) questionnaire. Mobile exam data are available where a licensed dental provider examines the status of each tooth. We create a new dentition status variable that summaries the state of the mouth of the participant into 5 groups: (a) all natural teeth, excluding crowns, (b) those with all teeth positions filled with a combination of natural and restored teeth (crowns, dentures, and implants), (c) those who wear dentures for all teeth positions, (d) those with no natural nor restored teeth (edentulous), and (e) those with less than a full mouth filled with either natural or restored teeth. The first three groups have some form of a tooth in all positions, while the latter two groups are either without any teeth or with fewer than a full mouth of teeth. Any barriers to receiving dental care services reflected the prior 12 months. More than half of the Medicare population have less than a full mouth of teeth, while 15% have complete dentures or are edentulous. Using logistic regression, we find that those with barriers to dental care services have a differential level of associations by dentition status with general health status. Compared to those with all natural teeth, those who have all dentures are significantly more likely to have fair or poor general health status, while the odds ratio for those who are edentulous is smaller in level and not significant. In a sub‐group analysis focusing only on those who are either wearing complete dentures or are edentulous, we find that the barriers to dental care services is not significant factor of fair or poor general health status, yet fair or poor oral health status is a significant factor of fair or poor general health status.        <td>
+                </details>
+                      <br>
+                      </td>
+                        </tr> 
+                 
 </tbody>
 </table>
 

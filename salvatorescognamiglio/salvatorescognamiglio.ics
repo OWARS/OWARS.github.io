@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+CLASS:PUBLIC
+DESCRIPTION:Speaker: Salvatore Scognamiglio (University of Naples Parthenope\, Italy)\n\nTitle: Accurate and Explainable Mortality Forecasting with the LocalGLMnet\n\nAbstract:           Recently\, accurate forecasting of mortality rates with deep learning models has been investigated in several papers in the actuarial literature. Most of the models proposed to date are not explainable\, making it difficult to communicate the basis on which mortality forecasts have been made. We adapt the LocalGLMnet of Richman and Wüthrich (2023) to produce explainable forecasts of mortality rates using locally connected neural networks\, and we show that these can be interpreted as autoregressive time-series models of mortality rates. These forecasts are shown to be highly accurate on the Human Mortality Database and the United States Mortality Database. Finally\, we show how regularizing the LocalGLMnet can produce improved forecasts\, and that by applying auto-encoders\, observations of mortality rates can be denoised to improve forecasts even further.\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20230329T080000Z
+DTEND:20230329T091000Z
+LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
+SUMMARY;LANGUAGE=en-us:[OWARS] Salvatore Scognamiglio (University of Naples Parthenope, Italy)
+END:VEVENT
+END:VCALENDAR
