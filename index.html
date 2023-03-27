@@ -206,59 +206,114 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="salvatorescognamiglio/Salvatore-Scognamiglio.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2023-03-29T08:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = date25.getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://scholar.google.com/citations?user=sBpbnk8AAAAJ&hl=en" target="_blank">Salvatore Scognamiglio (University of Naples Parthenope, Italy)
+</a>
+
+</div>
 
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/N2aAm5CoVtg">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b><a href="https://business.wisc.edu/directory/profile/margie-rosenberg/" target="_blank"> Margie Rosenberg (University of Wisconsin-Madison, USA)</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-  The Importance of Oral Health and Accessibility to Dental Care Services for Medicare Beneficiaries on their General Health Status<br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-Oral diseases include dental cavities, gum disease, oral and facial pain, as well as mouth and throat cancers (https://www.who.int/news‐room/fact‐sheets/detail/oral‐health). These problems are cumulative and can result in serious health problems as we age, when these issues are not treated (https://www.nidcr.nih.gov/research/data‐statistics/surgeon‐general). In this work, we focus on Medicare beneficiaries in the US (65+ population) to examine the status of their teeth, along with any barriers to receiving dental care services on their reported general health status. Medicare, the federal health program for those over 65, does not automatically cover beneficiaries for their dental care needs. We use the 2017‐2018 National Health and Nutrition Examination Survey (NHANES) questionnaire. Mobile exam data are available where a licensed dental provider examines the status of each tooth. We create a new dentition status variable that summaries the state of the mouth of the participant into 5 groups: (a) all natural teeth, excluding crowns, (b) those with all teeth positions filled with a combination of natural and restored teeth (crowns, dentures, and implants), (c) those who wear dentures for all teeth positions, (d) those with no natural nor restored teeth (edentulous), and (e) those with less than a full mouth filled with either natural or restored teeth. The first three groups have some form of a tooth in all positions, while the latter two groups are either without any teeth or with fewer than a full mouth of teeth. Any barriers to receiving dental care services reflected the prior 12 months. More than half of the Medicare population have less than a full mouth of teeth, while 15% have complete dentures or are edentulous. Using logistic regression, we find that those with barriers to dental care services have a differential level of associations by dentition status with general health status. Compared to those with all natural teeth, those who have all dentures are significantly more likely to have fair or poor general health status, while the odds ratio for those who are edentulous is smaller in level and not significant. In a sub‐group analysis focusing only on those who are either wearing complete dentures or are edentulous, we find that the barriers to dental care services is not significant factor of fair or poor general health status, yet fair or poor oral health status is a significant factor of fair or poor general health status.</details>
+
+  Accurate and Explainable Mortality Forecasting with the LocalGLMnet<br> 
+<b>Abstract:</b>
+Recently, accurate forecasting of mortality rates with deep learning models has been investigated in several papers in the actuarial literature. Most of the models proposed to date are not explainable, making it difficult to communicate the basis on which mortality forecasts have been made. We adapt the LocalGLMnet of Richman and Wüthrich (2023) to produce explainable forecasts of mortality rates using locally connected neural networks, and we show that these can be interpreted as autoregressive time-series models of mortality rates. These forecasts are shown to be highly accurate on the Human Mortality Database and the United States Mortality Database. Finally, we show how regularizing the LocalGLMnet can produce improved forecasts, and that by applying auto-encoders, observations of mortality rates can be denoised to improve forecasts even further.
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
+</div>
 </div>
 
 
 
-</div>
-
-
-
-
-<br>
-<br>
 
 
 
@@ -452,7 +507,7 @@ window.player = player;
           
           </td>
           
-          <td class = "speaker"><a href="https://www.disaq.uniparthenope.it/personale/" target="_blank">Salvatore Scognamiglio (University of Naples Parthenope, Italy)</a></td>
+          <td class = "speaker"><a href="https://scholar.google.com/citations?user=sBpbnk8AAAAJ&hl=en" target="_blank">Salvatore Scognamiglio (University of Naples Parthenope, Italy)</a></td>
           <td class = "title">Accurate and Explainable Mortality Forecasting with the LocalGLMnet
         <br> <details>
           <summary>Abstract (click to expand)</summary>
@@ -506,7 +561,9 @@ TBA                <br>
   </tr> 
    
 <tr>
-  <td class = "date"><b>10 May 2023 8am (UTC) </b> <br> In your local time: <br>
+  <td class = "date">
+    <s>
+    <b>10 May 2023 8am (UTC) </b> <br> In your local time: <br>
     <script type="text/javascript">
       var date128 = new Date('2023-05-10T08:00:00Z');
       var day128 = date128.getDate();
@@ -528,22 +585,16 @@ TBA                <br>
       document.write("<br>");
       document.write(strTime2128);
       </script>
-        
+        </s>
         <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Tolulope%20Fadina%20(University%20of%20Essex%2C%20UK)&dates=20230510T080000Z/20230510T091000Z&details=Speaker%3A%20Tolulope%20Fadina%20(University%20of%20Essex%2C%20UK)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
-      target="_blank">Google calendar</a>
-        <a href="tolulopefadina/tolulopefadina.ics" download>
-        Outlook calendar
-      </a>
+  
         
         </td>
         
-        <td class = "speaker"><a href="https://www.essex.ac.uk/people/fadin62709/tolulope-fadina" target="_blank">Tolulope Fadina (University of Essex, UK)</a></td>
-        <td class = "title">TBA
-      <br> <details>
-        <summary>Abstract (click to expand)</summary>
-TBA                <br>
-      </td>
+        <td class = "speaker">
+          <s>
+          <a href="https://www.essex.ac.uk/people/fadin62709/tolulope-fadina" target="_blank">Tolulope Fadina (University of Essex, UK)</a></s></td>
+        <td class = "title"></td>
       <td></td>
 
 </tr> 
