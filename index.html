@@ -210,61 +210,111 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="mariadelcarmenboadopenas//Carmen-Boado-Penas.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2023-04-26T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2023-04-26T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://researchportal.hw.ac.uk/en/persons/maria-del-carmen-boado-penas" target="_blank"> María del Carmen Boado-Penas (Heriot-Watt University, UK)
+</a>
+
+</div>
+
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/_lWUNh_DKro">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b><a href="https://scholar.google.com/citations?user=sBpbnk8AAAAJ&hl=en" target="_blank"> Salvatore Scognamiglio (University of Naples Parthenope, Italy)</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-  Accurate and Explainable Mortality Forecasting with the LocalGLMnet
+  Automatic balancing mechanisms for public pension schemes: Past, present and future
   <br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-Recently, accurate forecasting of mortality rates with deep learning models has been investigated in several papers in the actuarial literature. Most of the models proposed to date are not explainable, making it difficult to communicate the basis on which mortality forecasts have been made. We adapt the LocalGLMnet of Richman and Wüthrich (2023) to produce explainable forecasts of mortality rates using locally connected neural networks, and we show that these can be interpreted as autoregressive time-series models of mortality rates. These forecasts are shown to be highly accurate on the Human Mortality Database and the United States Mortality Database. Finally, we show how regularizing the LocalGLMnet can produce improved forecasts, and that by applying auto-encoders, observations of mortality rates can be denoised to improve forecasts even further.
-</details>
+<b>Abstract:</b>
+Public pension systems are usually financed on a pay-as-you-go (PAYG) basis where pensions for retirees are paid by the contributions of the working-age population. With continuous improvements in life expectancy and a decrease in birth rate, pensions are paid over a longer time horizon while the income from contributions become smaller. In this respect, in PAYG schemes, automatic balancing mechanism (ABMs) can be designed to restore the financial sustainability of the system. ABMs can be defined as a set of pre-determined measures established by law to be applied immediately as required according to an indicator that reflects the financial health of the system. Most countries around the world have already legislated and included different types of mechanisms into their pension systems. This work aims to explore different mechanisms that have been set up and analyses their effectiveness. A theoretical construction for the ABM is also proposed and different methods are suggested to guide the system back onto the road to long-term financial stability and at the same time ensure pension adequacy.
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
 </div>
-
-
-
 </div>
-
-
-
-
-<br>
-<br>
-
 
 
 
@@ -426,49 +476,7 @@ window.player = player;
 
         
 
-           
-  <tr>
-    <td class = "date"><b>29 March 2023 8am (UTC) </b> <br> In your local time: <br>
-      <script type="text/javascript">
-        var date126 = new Date('2023-03-29T08:00:00Z');
-        var day126 = date126.getDate();
-        const monthNames126 = ["January", "February", "March", "April", "May", "June",
-                               "July", "August", "September", "October", "November", "December"];
-        var month126 = monthNames126[date126.getMonth()];
-        var year126 = date126.getFullYear();
-        var strTime126 = day126 + " " + month126 + " " +  year126;
-        document.write(strTime126);
-        const dtf126 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-        var zone126 = dtf126.formatToParts(date126).find((part) => part.type == 'timeZoneName').value;
-        var hours126 = date126.getHours();
-        var minutes126 = date126.getMinutes();
-        var ampm126 = hours126 >= 12 ? 'pm' : 'am';
-        hours126 = hours126 % 12;
-        hours126 = hours126 ? hours126 : 12; // the hour '0' should be '12'
-        minutes126 = minutes126 < 10 ? '0'+minutes126 : minutes126;
-        var strTime2126 = hours126 + ':' + minutes126 +ampm126 + ' ' + "(" +zone126+")";
-        document.write("<br>");
-        document.write(strTime2126);
-        </script>
-          
-          <br>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Salvatore%20Scognamiglio%20(University%20of%20Naples%20Parthenope%2C%20Italy)&dates=20230329T080000Z/20230329T091000Z&details=Speaker%3A%20Salvatore%20Scognamiglio%20(University%20of%20Naples%20Parthenope%2C%20Italy)%0A%0ATitle%3A%20Accurate%20and%20Explainable%20Mortality%20Forecasting%20with%20the%20LocalGLMnet%0A%0AAbstract%3A%20%20%20%20%20%20%20%20%20%20%20Recently%2C%20accurate%20forecasting%20of%20mortality%20rates%20with%20deep%20learning%20models%20has%20been%20investigated%20in%20several%20papers%20in%20the%20actuarial%20literature.%20Most%20of%20the%20models%20proposed%20to%20date%20are%20not%20explainable%2C%20making%20it%20difficult%20to%20communicate%20the%20basis%20on%20which%20mortality%20forecasts%20have%20been%20made.%20We%20adapt%20the%20LocalGLMnet%20of%20Richman%20and%20W%C3%BCthrich%20(2023)%20to%20produce%20explainable%20forecasts%20of%20mortality%20rates%20using%20locally%20connected%20neural%20networks%2C%20and%20we%20show%20that%20these%20can%20be%20interpreted%20as%20autoregressive%20time-series%20models%20of%20mortality%20rates.%20These%20forecasts%20are%20shown%20to%20be%20highly%20accurate%20on%20the%20Human%20Mortality%20Database%20and%20the%20United%20States%20Mortality%20Database.%20Finally%2C%20we%20show%20how%20regularizing%20the%20LocalGLMnet%20can%20produce%20improved%20forecasts%2C%20and%20that%20by%20applying%20auto-encoders%2C%20observations%20of%20mortality%20rates%20can%20be%20denoised%20to%20improve%20forecasts%20even%20further.%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
-        target="_blank">Google calendar</a>
-          <a href="salvatorescognamiglio/salvatorescognamiglio.ics" download>
-          Outlook calendar
-        </a>
-          
-          </td>
-          
-          <td class = "speaker"><a href="https://scholar.google.com/citations?user=sBpbnk8AAAAJ&hl=en" target="_blank">Salvatore Scognamiglio (University of Naples Parthenope, Italy)</a></td>
-          <td class = "title">Accurate and Explainable Mortality Forecasting with the LocalGLMnet
-        <br> <details>
-          <summary>Abstract (click to expand)</summary>
-          Recently, accurate forecasting of mortality rates with deep learning models has been investigated in several papers in the actuarial literature. Most of the models proposed to date are not explainable, making it difficult to communicate the basis on which mortality forecasts have been made. We adapt the LocalGLMnet of Richman and Wüthrich (2023) to produce explainable forecasts of mortality rates using locally connected neural networks, and we show that these can be interpreted as autoregressive time-series models of mortality rates. These forecasts are shown to be highly accurate on the Human Mortality Database and the United States Mortality Database. Finally, we show how regularizing the LocalGLMnet can produce improved forecasts, and that by applying auto-encoders, observations of mortality rates can be denoised to improve forecasts even further.
-        <br>
-        </td>
-        <td></td>
-          </tr> 
+
 
   <tr>
             <td class = "date"><b>26 April 2023 3pm (UTC) </b> <br> In your local time: <br>
@@ -504,10 +512,10 @@ window.player = player;
                   </td>
                   
                   <td class = "speaker"><a href="https://researchportal.hw.ac.uk/en/persons/maria-del-carmen-boado-penas" target="_blank">María del Carmen Boado-Penas (Heriot-Watt University, UK)</a></td>
-                  <td class = "title">TBA
+                  <td class = "title">Automatic balancing mechanisms for public pension schemes: Past, present and future
                 <br> <details>
                   <summary>Abstract (click to expand)</summary>
-TBA                <br>
+                  Public pension systems are usually financed on a pay-as-you-go (PAYG) basis where pensions for retirees are paid by the contributions of the working-age population. With continuous improvements in life expectancy and a decrease in birth rate, pensions are paid over a longer time horizon while the income from contributions become smaller. In this respect, in PAYG schemes, automatic balancing mechanism (ABMs) can be designed to restore the financial sustainability of the system. ABMs can be defined as a set of pre-determined measures established by law to be applied immediately as required according to an indicator that reflects the financial health of the system. Most countries around the world have already legislated and included different types of mechanisms into their pension systems. This work aims to explore different mechanisms that have been set up and analyses their effectiveness. A theoretical construction for the ABM is also proposed and different methods are suggested to guide the system back onto the road to long-term financial stability and at the same time ensure pension adequacy.              <br>
                 </td>
                 <td></td>
 
@@ -1619,6 +1627,49 @@ Insurance policies are mostly individual specific, as policyholders possess diff
                       <br>
                       </td>
                         </tr> 
+                                   
+  <tr>
+    <td class = "date"><b>29 March 2023 8am (UTC) </b> <br> In your local time: <br>
+      <script type="text/javascript">
+        var date126 = new Date('2023-03-29T08:00:00Z');
+        var day126 = date126.getDate();
+        const monthNames126 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month126 = monthNames126[date126.getMonth()];
+        var year126 = date126.getFullYear();
+        var strTime126 = day126 + " " + month126 + " " +  year126;
+        document.write(strTime126);
+        const dtf126 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone126 = dtf126.formatToParts(date126).find((part) => part.type == 'timeZoneName').value;
+        var hours126 = date126.getHours();
+        var minutes126 = date126.getMinutes();
+        var ampm126 = hours126 >= 12 ? 'pm' : 'am';
+        hours126 = hours126 % 12;
+        hours126 = hours126 ? hours126 : 12; // the hour '0' should be '12'
+        minutes126 = minutes126 < 10 ? '0'+minutes126 : minutes126;
+        var strTime2126 = hours126 + ':' + minutes126 +ampm126 + ' ' + "(" +zone126+")";
+        document.write("<br>");
+        document.write(strTime2126);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Salvatore%20Scognamiglio%20(University%20of%20Naples%20Parthenope%2C%20Italy)&dates=20230329T080000Z/20230329T091000Z&details=Speaker%3A%20Salvatore%20Scognamiglio%20(University%20of%20Naples%20Parthenope%2C%20Italy)%0A%0ATitle%3A%20Accurate%20and%20Explainable%20Mortality%20Forecasting%20with%20the%20LocalGLMnet%0A%0AAbstract%3A%20%20%20%20%20%20%20%20%20%20%20Recently%2C%20accurate%20forecasting%20of%20mortality%20rates%20with%20deep%20learning%20models%20has%20been%20investigated%20in%20several%20papers%20in%20the%20actuarial%20literature.%20Most%20of%20the%20models%20proposed%20to%20date%20are%20not%20explainable%2C%20making%20it%20difficult%20to%20communicate%20the%20basis%20on%20which%20mortality%20forecasts%20have%20been%20made.%20We%20adapt%20the%20LocalGLMnet%20of%20Richman%20and%20W%C3%BCthrich%20(2023)%20to%20produce%20explainable%20forecasts%20of%20mortality%20rates%20using%20locally%20connected%20neural%20networks%2C%20and%20we%20show%20that%20these%20can%20be%20interpreted%20as%20autoregressive%20time-series%20models%20of%20mortality%20rates.%20These%20forecasts%20are%20shown%20to%20be%20highly%20accurate%20on%20the%20Human%20Mortality%20Database%20and%20the%20United%20States%20Mortality%20Database.%20Finally%2C%20we%20show%20how%20regularizing%20the%20LocalGLMnet%20can%20produce%20improved%20forecasts%2C%20and%20that%20by%20applying%20auto-encoders%2C%20observations%20of%20mortality%20rates%20can%20be%20denoised%20to%20improve%20forecasts%20even%20further.%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
+        target="_blank">Google calendar</a>
+          <a href="salvatorescognamiglio/salvatorescognamiglio.ics" download>
+          Outlook calendar
+        </a>
+          
+          </td>
+          
+          <td class = "speaker"><a href="https://scholar.google.com/citations?user=sBpbnk8AAAAJ&hl=en" target="_blank">Salvatore Scognamiglio (University of Naples Parthenope, Italy)</a></td>
+          <td class = "title">Accurate and Explainable Mortality Forecasting with the LocalGLMnet
+        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+          Recently, accurate forecasting of mortality rates with deep learning models has been investigated in several papers in the actuarial literature. Most of the models proposed to date are not explainable, making it difficult to communicate the basis on which mortality forecasts have been made. We adapt the LocalGLMnet of Richman and Wüthrich (2023) to produce explainable forecasts of mortality rates using locally connected neural networks, and we show that these can be interpreted as autoregressive time-series models of mortality rates. These forecasts are shown to be highly accurate on the Human Mortality Database and the United States Mortality Database. Finally, we show how regularizing the LocalGLMnet can produce improved forecasts, and that by applying auto-encoders, observations of mortality rates can be denoised to improve forecasts even further.
+        <br>
+        </td>
+        <td></td>
+          </tr> 
                  
 </tbody>
 </table>
