@@ -208,64 +208,111 @@ height: 100%;
 
 
 
+
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="mikeludkovski/Ludkovski-web2016small_1.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2023-05-24T16:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2023-05-24T16:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://ludkovski.pstat.ucsb.edu/" target="_blank"> Mike Ludkovski (University of California - Santa Barbara, USA)
+</a>
+
+</div>
+
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/RsUpSEgqth8">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b><a href="https://researchportal.hw.ac.uk/en/persons/maria-del-carmen-boado-penas" target="_blank"> María del Carmen Boado-Penas (Heriot-Watt University, UK)</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-  Automatic balancing mechanisms for public pension schemes: Past, present and future
-<br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-Public pension systems are usually financed on a pay-as-you-go (PAYG) basis where pensions for retirees are paid by the contributions of the working-age population. With continuous improvements in life expectancy and a decrease in birth rate, pensions are paid over a longer time horizon while the income from contributions become smaller. In this respect, in PAYG schemes, automatic balancing mechanism (ABMs) can be designed to restore the financial sustainability of the system. ABMs can be defined as a set of pre-determined measures established by law to be applied immediately as required according to an indicator that reflects the financial health of the system. Most countries around the world have already legislated and included different types of mechanisms into their pension systems. This work aims to explore different mechanisms that have been set up and analyses their effectiveness. A theoretical construction for the ABM is also proposed and different methods are suggested to guide the system back onto the road to long-term financial stability and at the same time ensure pension adequacy.
-</details>
+  Expressive Mortality Models through Gaussian Process Kernels <br> 
+<b>Abstract:</b>
+I will discuss a flexible Gaussian Process (GP) framework for learning the covariance structure of Age- and Year-specific mortality surfaces. Utilizing the additive and multiplicative structure of GP kernels, we design a genetic programming algorithm to search for the most expressive kernel for a given population. Our compositional search builds off the Age-Period-Cohort (APC) paradigm to construct a covariance prior best matching the spatio-temporal dynamics of a mortality dataset. We apply the resulting genetic algorithm (GA) on synthetic case studies to validate the ability of the GA to recover APC structure, and on real-life national-level datasets from the Human Mortality Database. Our machine-learning based analysis provides novel insight into the presence/absence of Cohort effects in different populations, and into the relative smoothness of mortality surfaces along the Age and Year dimensions. Our modelling work is done with the PyTorch libraries in Python and provides an in-depth investigation of employing GA to aid in compositional kernel search for GP surrogates. This is joint work with Jimmy Risk (Cal Poly Pomona) and is based on <a href="https://arxiv.org/abs/2305.01728">https://arxiv.org/abs/2305.01728</a>
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
 </div>
-
-
-
 </div>
-
-
-
-
-<br>
-<br>
-
-
-
-
 
 
 
@@ -429,87 +476,7 @@ window.player = player;
 
 
 
-  <tr>
-            <td class = "date"><b>26 April 2023 3pm (UTC) </b> <br> In your local time: <br>
-              <script type="text/javascript">
-                var date127 = new Date('2023-04-26T15:00:00Z');
-                var day127 = date127.getDate();
-                const monthNames127 = ["January", "February", "March", "April", "May", "June",
-                                       "July", "August", "September", "October", "November", "December"];
-                var month127 = monthNames127[date127.getMonth()];
-                var year127 = date127.getFullYear();
-                var strTime127 = day127 + " " + month127 + " " +  year127;
-                document.write(strTime127);
-                const dtf127 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-                var zone127 = dtf127.formatToParts(date127).find((part) => part.type == 'timeZoneName').value;
-                var hours127 = date127.getHours();
-                var minutes127 = date127.getMinutes();
-                var ampm127 = hours127 >= 12 ? 'pm' : 'am';
-                hours127 = hours127 % 12;
-                hours127 = hours127 ? hours127 : 12; // the hour '0' should be '12'
-                minutes127 = minutes127 < 10 ? '0'+minutes127 : minutes127;
-                var strTime2127 = hours127 + ':' + minutes127 +ampm127 + ' ' + "(" +zone127+")";
-                document.write("<br>");
-                document.write(strTime2127);
-                </script>
-                  
-                  <br>
-                  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Mar%C3%ADa%20del%20Carmen%20Boado-Penas%20(Heriot-Watt%20University%2C%20UK)&dates=20230426T150000Z/20230426T161000Z&details=Speaker%3A%20Mar%C3%ADa%20del%20Carmen%20Boado-Penas%20(Heriot-Watt%20University%2C%20UK)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
-                target="_blank">Google calendar</a>
-                  <a href="mariadelcarmenboadopenas/mariadelcarmenboadopenas.ics" download>
-                  Outlook calendar
-                </a>
-                  
-                  </td>
-                  
-                  <td class = "speaker"><a href="https://researchportal.hw.ac.uk/en/persons/maria-del-carmen-boado-penas" target="_blank">María del Carmen Boado-Penas (Heriot-Watt University, UK)</a></td>
-                  <td class = "title">Automatic balancing mechanisms for public pension schemes: Past, present and future
-                <br> <details>
-                  <summary>Abstract (click to expand)</summary>
-                  Public pension systems are usually financed on a pay-as-you-go (PAYG) basis where pensions for retirees are paid by the contributions of the working-age population. With continuous improvements in life expectancy and a decrease in birth rate, pensions are paid over a longer time horizon while the income from contributions become smaller. In this respect, in PAYG schemes, automatic balancing mechanism (ABMs) can be designed to restore the financial sustainability of the system. ABMs can be defined as a set of pre-determined measures established by law to be applied immediately as required according to an indicator that reflects the financial health of the system. Most countries around the world have already legislated and included different types of mechanisms into their pension systems. This work aims to explore different mechanisms that have been set up and analyses their effectiveness. A theoretical construction for the ABM is also proposed and different methods are suggested to guide the system back onto the road to long-term financial stability and at the same time ensure pension adequacy.              <br>
-                </td>
-                <td></td>
 
-  </tr> 
-   
-<tr>
-  <td class = "date">
-    <s>
-    <b>10 May 2023 8am (UTC) </b> <br> In your local time: <br>
-    <script type="text/javascript">
-      var date128 = new Date('2023-05-10T08:00:00Z');
-      var day128 = date128.getDate();
-      const monthNames128 = ["January", "February", "March", "April", "May", "June",
-                             "July", "August", "September", "October", "November", "December"];
-      var month128 = monthNames128[date128.getMonth()];
-      var year128 = date128.getFullYear();
-      var strTime128 = day128 + " " + month128 + " " +  year128;
-      document.write(strTime128);
-      const dtf128 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone128 = dtf128.formatToParts(date128).find((part) => part.type == 'timeZoneName').value;
-      var hours128 = date128.getHours();
-      var minutes128 = date128.getMinutes();
-      var ampm128 = hours128 >= 12 ? 'pm' : 'am';
-      hours128 = hours128 % 12;
-      hours128 = hours128 ? hours128 : 12; // the hour '0' should be '12'
-      minutes128 = minutes128 < 10 ? '0'+minutes128 : minutes128;
-      var strTime2128 = hours128 + ':' + minutes128 +ampm128 + ' ' + "(" +zone128+")";
-      document.write("<br>");
-      document.write(strTime2128);
-      </script>
-        </s>
-        <br>
-  
-        
-        </td>
-        
-        <td class = "speaker">
-          <s>
-          <a href="https://www.essex.ac.uk/people/fadin62709/tolulope-fadina" target="_blank">Tolulope Fadina (University of Essex, UK)</a></s></td>
-        <td class = "title"></td>
-      <td></td>
-
-</tr> 
 <tr>
   <td class = "date"><b>24 May 2023 4pm (UTC) </b> <br> In your local time: <br>
     <script type="text/javascript">
@@ -543,11 +510,11 @@ window.player = player;
         
         </td>
         
-        <td class = "speaker"><a href="https://ludkovski.faculty.pstat.ucsb.edu/" target="_blank">Mike Ludkovski (University of California - Santa Barbara, USA)</a></td>
-        <td class = "title">TBA
+        <td class = "speaker"><a href="https://ludkovski.pstat.ucsb.edu/" target="_blank">Mike Ludkovski (University of California - Santa Barbara, USA)</a></td>
+        <td class = "title">Expressive Mortality Models through Gaussian Process Kernels
       <br> <details>
         <summary>Abstract (click to expand)</summary>
-TBA                <br>
+I will discuss a flexible Gaussian Process (GP) framework for learning the covariance structure of Age- and Year-specific mortality surfaces. Utilizing the additive and multiplicative structure of GP kernels, we design a genetic programming algorithm to search for the most expressive kernel for a given population. Our compositional search builds off the Age-Period-Cohort (APC) paradigm to construct a covariance prior best matching the spatio-temporal dynamics of a mortality dataset. We apply the resulting genetic algorithm (GA) on synthetic case studies to validate the ability of the GA to recover APC structure, and on real-life national-level datasets from the Human Mortality Database. Our machine-learning based analysis provides novel insight into the presence/absence of Cohort effects in different populations, and into the relative smoothness of mortality surfaces along the Age and Year dimensions. Our modelling work is done with the PyTorch libraries in Python and provides an in-depth investigation of employing GA to aid in compositional kernel search for GP surrogates. This is joint work with Jimmy Risk (Cal Poly Pomona) and is based on <a href="https://arxiv.org/abs/2305.01728">https://arxiv.org/abs/2305.01728</a>        <br>
       </td>
       <td></td>
 
@@ -1621,6 +1588,88 @@ Insurance policies are mostly individual specific, as policyholders possess diff
         </td>
         <td></td>
           </tr> 
+
+            <tr>
+            <td class = "date"><b>26 April 2023 3pm (UTC) </b> <br> In your local time: <br>
+              <script type="text/javascript">
+                var date127 = new Date('2023-04-26T15:00:00Z');
+                var day127 = date127.getDate();
+                const monthNames127 = ["January", "February", "March", "April", "May", "June",
+                                       "July", "August", "September", "October", "November", "December"];
+                var month127 = monthNames127[date127.getMonth()];
+                var year127 = date127.getFullYear();
+                var strTime127 = day127 + " " + month127 + " " +  year127;
+                document.write(strTime127);
+                const dtf127 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+                var zone127 = dtf127.formatToParts(date127).find((part) => part.type == 'timeZoneName').value;
+                var hours127 = date127.getHours();
+                var minutes127 = date127.getMinutes();
+                var ampm127 = hours127 >= 12 ? 'pm' : 'am';
+                hours127 = hours127 % 12;
+                hours127 = hours127 ? hours127 : 12; // the hour '0' should be '12'
+                minutes127 = minutes127 < 10 ? '0'+minutes127 : minutes127;
+                var strTime2127 = hours127 + ':' + minutes127 +ampm127 + ' ' + "(" +zone127+")";
+                document.write("<br>");
+                document.write(strTime2127);
+                </script>
+                  
+                  <br>
+                  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Mar%C3%ADa%20del%20Carmen%20Boado-Penas%20(Heriot-Watt%20University%2C%20UK)&dates=20230426T150000Z/20230426T161000Z&details=Speaker%3A%20Mar%C3%ADa%20del%20Carmen%20Boado-Penas%20(Heriot-Watt%20University%2C%20UK)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" 
+                target="_blank">Google calendar</a>
+                  <a href="mariadelcarmenboadopenas/mariadelcarmenboadopenas.ics" download>
+                  Outlook calendar
+                </a>
+                  
+                  </td>
+                  
+                  <td class = "speaker"><a href="https://researchportal.hw.ac.uk/en/persons/maria-del-carmen-boado-penas" target="_blank">María del Carmen Boado-Penas (Heriot-Watt University, UK)</a></td>
+                  <td class = "title">Automatic balancing mechanisms for public pension schemes: Past, present and future
+                <br> <details>
+                  <summary>Abstract (click to expand)</summary>
+                  Public pension systems are usually financed on a pay-as-you-go (PAYG) basis where pensions for retirees are paid by the contributions of the working-age population. With continuous improvements in life expectancy and a decrease in birth rate, pensions are paid over a longer time horizon while the income from contributions become smaller. In this respect, in PAYG schemes, automatic balancing mechanism (ABMs) can be designed to restore the financial sustainability of the system. ABMs can be defined as a set of pre-determined measures established by law to be applied immediately as required according to an indicator that reflects the financial health of the system. Most countries around the world have already legislated and included different types of mechanisms into their pension systems. This work aims to explore different mechanisms that have been set up and analyses their effectiveness. A theoretical construction for the ABM is also proposed and different methods are suggested to guide the system back onto the road to long-term financial stability and at the same time ensure pension adequacy.              <br>
+                </td>
+                <td></td>
+
+  </tr> 
+   
+<tr>
+  <td class = "date">
+    <s>
+    <b>10 May 2023 8am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date128 = new Date('2023-05-10T08:00:00Z');
+      var day128 = date128.getDate();
+      const monthNames128 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month128 = monthNames128[date128.getMonth()];
+      var year128 = date128.getFullYear();
+      var strTime128 = day128 + " " + month128 + " " +  year128;
+      document.write(strTime128);
+      const dtf128 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone128 = dtf128.formatToParts(date128).find((part) => part.type == 'timeZoneName').value;
+      var hours128 = date128.getHours();
+      var minutes128 = date128.getMinutes();
+      var ampm128 = hours128 >= 12 ? 'pm' : 'am';
+      hours128 = hours128 % 12;
+      hours128 = hours128 ? hours128 : 12; // the hour '0' should be '12'
+      minutes128 = minutes128 < 10 ? '0'+minutes128 : minutes128;
+      var strTime2128 = hours128 + ':' + minutes128 +ampm128 + ' ' + "(" +zone128+")";
+      document.write("<br>");
+      document.write(strTime2128);
+      </script>
+        </s>
+        <br>
+  
+        
+        </td>
+        
+        <td class = "speaker">
+          <s>
+          <a href="https://www.essex.ac.uk/people/fadin62709/tolulope-fadina" target="_blank">Tolulope Fadina (University of Essex, UK)</a></s></td>
+        <td class = "title"></td>
+      <td></td>
+
+</tr> 
                  
 </tbody>
 </table>
