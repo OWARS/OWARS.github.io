@@ -207,51 +207,112 @@ height: 100%;
 
 
 
-<br>
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
+</h2>
 </div>
 
+     
 
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="RalfKorn/Ralf_Korn.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2023-09-27T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2023-09-27T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://www.mathematik.uni-kl.de/en/fima/people/korn" target="_blank"> Ralf Korn (TU Kaiserslautern, Germany)
+</a>
+
+</div>
+
+<br>
+<br>
 
 <div class="row row-grid">
 
-<div class="col-md-4">
 
 
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/9JSI3wkwKLQ">
-</iframe>
-
-
-
-    
-
-</div>
-
-  
-<div class="col-md-6">
-<b>Speaker: </b><a href="https://sites.google.com/site/zoubin019/" target="_blank">Bin Zou (University of Connecticut, USA)</a>
-<br>
+  <div class="col-5">
   <b>Title:</b>
-  Reinsurance Games with Multiple Reinsurers<br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-In this talk, I will share our recent progress on reinsurance games under model ambiguity between one representative insurer and multiple reinsurers. We first review a tractable, continuous-time Stackelberg game framework for such a problem in the degenerate case of one reinsurer. We then consider a general case with n reinsurers, all applying the variance premium principle in pricing but with possibly different loadings. The interaction between the insurer and each of the n reinsurers is modelled by a Stackelberg game, and the competition among the reinsurers is resolved by a non-cooperative Nash game. We show that, in equilibrium, the insurer purchases a positive amount of proportional reinsurance from each reinsurer. Last, we conduct a comparison study on the reinsurance structures and find that the insurer always prefers the tree structure to the chain reinstruct. (Based on joint works with Jingyi Cao, Dongchen Li, and Virginia Young.)
-</details>
-</div>
 
-<div class="col-md-2">
-
-</div>
+  Optimal portfolios with sustainable assets: aspects for life insurers 
+  <br> 
+<b>Abstract:</b>
+Since August 2022 customers in Germany have to be asked if they are interested in sustainable investment when entering a pension contract. Hence, the provider has to be prepared to offer suitable investment opportunities. Further, the provider has to manage the new risks and chances of those assets in the whole portfolio. We therefore especially look at possible consequences for optimal portfolio decisions of a life insurer and suggest modeling approaches for the evolution of the demand and the sustainability ratings for sustainable assets. We will solve various portfolio problems under sustainability constraints explicitly and suggest further research topics. As a special feature for a life insurer, we particularly look at the role of the actuarial reserve fund and the annual declaration of its return.
+      </div>
 
 
+
+
+      <div class="col-4">
+      </div>
 
 </div>
 
@@ -259,8 +320,6 @@ In this talk, I will share our recent progress on reinsurance games under model 
 
 
 <br>
-<br>
-
 
 
 
@@ -415,48 +474,7 @@ window.player = player;
   </tr>
 
    
-  <tr>
-    <td class = "date"><b>13 September 2023 3pm (UTC) </b> <br> In your local time: <br>
-      <script type="text/javascript">
-        var date131 = new Date('2023-09-13T15:00:00Z');
-        var day131 = date131.getDate();
-        const monthNames131 = ["January", "February", "March", "April", "May", "June",
-                               "July", "August", "September", "October", "November", "December"];
-        var month131 = monthNames131[date131.getMonth()];
-        var year131 = date131.getFullYear();
-        var strTime131 = day131 + " " + month131 + " " +  year131;
-        document.write(strTime131);
-        const dtf131 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-        var zone131 = dtf131.formatToParts(date131).find((part) => part.type == 'timeZoneName').value;
-        var hours131 = date131.getHours();
-        var minutes131 = date131.getMinutes();
-        var ampm131 = hours131 >= 12 ? 'pm' : 'am';
-        hours131 = hours131 % 12;
-        hours131 = hours131 ? hours131 : 12; // the hour '0' should be '12'
-        minutes131 = minutes131 < 10 ? '0'+minutes131 : minutes131;
-        var strTime2131 = hours131 + ':' + minutes131 +ampm131 + ' ' + "(" +zone131+")";
-        document.write("<br>");
-        document.write(strTime2131);
-        </script>
-          
-          <br>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Bin%20Zou%20(University%20of%20Connecticut%2C%20USA)&dates=20230913T150000Z/20230913T161000Z&details=Speaker%3A%20Bin%20Zou%20(University%20of%20Connecticut%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-          <a href="BinZou/BinZou.ics" download>
-          Outlook calendar
-        </a>
-          
-          </td>
-          
-          <td class = "speaker"><a href="https://sites.google.com/site/zoubin019/" target="_blank">Bin Zou (University of Connecticut, USA)</a></td>
-          <td class = "title">Reinsurance Games with Multiple Reinsurers
-        
-        <br> <details>
-          <summary>Abstract (click to expand)</summary>
-          In this talk, I will share our recent progress on reinsurance games under model ambiguity between one representative insurer and multiple reinsurers. We first review a tractable, continuous-time Stackelberg game framework for such a problem in the degenerate case of one reinsurer. We then consider a general case with n reinsurers, all applying the variance premium principle in pricing but with possibly different loadings. The interaction between the insurer and each of the n reinsurers is modelled by a Stackelberg game, and the competition among the reinsurers is resolved by a non-cooperative Nash game. We show that, in equilibrium, the insurer purchases a positive amount of proportional reinsurance from each reinsurer. Last, we conduct a comparison study on the reinsurance structures and find that the insurer always prefers the tree structure to the chain reinstruct. (Based on joint works with Jingyi Cao, Dongchen Li, and Virginia Young.)   </details></td>
-          <td>
-        
-          </td>
-  </tr>        
+    
 
   <tr>
     <td class = "date"><b>27 September 2023 3pmm (UTC) </b> <br> In your local time: <br>
@@ -491,11 +509,11 @@ window.player = player;
           </td>
           
           <td class = "speaker"><a href="https://www.mathematik.uni-kl.de/en/fima/people/korn" target="_blank">Ralf Korn (TU Kaiserslautern, Germany)</a></td>
-          <td class = "title">TBA
+          <td class = "title">Optimal portfolios with sustainable assets: aspects for life insurers 
         
         <br> <details>
           <summary>Abstract (click to expand)</summary>
-        TBA    </details></td>
+          Since August 2022 customers in Germany have to be asked if they are interested in sustainable investment when entering a pension contract. Hence, the provider has to be prepared to offer suitable investment opportunities. Further, the provider has to manage the new risks and chances of those assets in the whole portfolio. We therefore especially look at possible consequences for optimal portfolio decisions of a life insurer and suggest modeling approaches for the evolution of the demand and the sustainability ratings for sustainable assets. We will solve various portfolio problems under sustainability constraints explicitly and suggest further research topics. As a special feature for a life insurer, we particularly look at the role of the actuarial reserve fund and the annual declaration of its return.   </details></td>
           <td>
         
           </td>
@@ -1146,6 +1164,48 @@ I will discuss a flexible Gaussian Process (GP) framework for learning the covar
       <td></td>
 
 </tr>     
+<tr>
+  <td class = "date"><b>13 September 2023 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date131 = new Date('2023-09-13T15:00:00Z');
+      var day131 = date131.getDate();
+      const monthNames131 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month131 = monthNames131[date131.getMonth()];
+      var year131 = date131.getFullYear();
+      var strTime131 = day131 + " " + month131 + " " +  year131;
+      document.write(strTime131);
+      const dtf131 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone131 = dtf131.formatToParts(date131).find((part) => part.type == 'timeZoneName').value;
+      var hours131 = date131.getHours();
+      var minutes131 = date131.getMinutes();
+      var ampm131 = hours131 >= 12 ? 'pm' : 'am';
+      hours131 = hours131 % 12;
+      hours131 = hours131 ? hours131 : 12; // the hour '0' should be '12'
+      minutes131 = minutes131 < 10 ? '0'+minutes131 : minutes131;
+      var strTime2131 = hours131 + ':' + minutes131 +ampm131 + ' ' + "(" +zone131+")";
+      document.write("<br>");
+      document.write(strTime2131);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Bin%20Zou%20(University%20of%20Connecticut%2C%20USA)&dates=20230913T150000Z/20230913T161000Z&details=Speaker%3A%20Bin%20Zou%20(University%20of%20Connecticut%2C%20USA)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="BinZou/BinZou.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://sites.google.com/site/zoubin019/" target="_blank">Bin Zou (University of Connecticut, USA)</a></td>
+        <td class = "title">Reinsurance Games with Multiple Reinsurers
+      
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        In this talk, I will share our recent progress on reinsurance games under model ambiguity between one representative insurer and multiple reinsurers. We first review a tractable, continuous-time Stackelberg game framework for such a problem in the degenerate case of one reinsurer. We then consider a general case with n reinsurers, all applying the variance premium principle in pricing but with possibly different loadings. The interaction between the insurer and each of the n reinsurers is modelled by a Stackelberg game, and the competition among the reinsurers is resolved by a non-cooperative Nash game. We show that, in equilibrium, the insurer purchases a positive amount of proportional reinsurance from each reinsurer. Last, we conduct a comparison study on the reinsurance structures and find that the insurer always prefers the tree structure to the chain reinstruct. (Based on joint works with Jingyi Cao, Dongchen Li, and Virginia Young.)   </details></td>
+        <td>
+      
+        </td>
+</tr>    
 </tbody>
 </table>
 <br>
