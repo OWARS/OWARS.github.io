@@ -2,9 +2,9 @@ BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
 CLASS:PUBLIC
-DESCRIPTION:Speaker: Peng Shi (University of Wisconsin\, USA)\nTitle: TBA\n\nAbstract: TBA\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
-DTSTART:20231025T150000Z
-DTEND:20231025T161000Z
+DESCRIPTION:Speaker: Peng Shi (University of Wisconsin\, USA)\n\nTitle: TBA\n\nAbstract: TBA\n\nThe zoom link will be available 15 minutes before the seminar on the following link: https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01\n
+DTSTART:20240214T150000Z
+DTEND:20240214T161000Z
 LOCATION:https://docs.google.com/document/d/1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8/edit?ts=5e9f9a01
 SUMMARY;LANGUAGE=en-us:[OWARS] Peng Shi (University of Wisconsin, USA)
 END:VEVENT
