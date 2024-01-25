@@ -205,64 +205,112 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
-
-<br>
-
-
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
+</h2>
 </div>
 
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="EricUlm/photo.jpeg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2024-01-31T09:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2024-01-31T09:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://people.wgtn.ac.nz/eric.ulm" target="_blank"> Eric Ulm (Victoria University of Wellington, New Zealand)
+</a>
+
+</div>
+
+<br>
 
 
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/x0hzGfuMlMM">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b>><a href="https://www.math.cit.tum.de/en/math/people/professors/czado-claudia/" target="_blank"> Claudia Czado </a> and 
-<a href="https://www.math.cit.tum.de/en/math/people/academic-staff/ariane-hanebeck/" target="_blank">Ariane Hanebeck </a>  (Technical University of Munich, Germany)
-</a>
-<br>
-  <b>Title:</b>
-  Dependence models for mortalities using a copula state-space approach<br> 
-<details>
-<summary>Abstract (click to expand)</summary>
-We investigate how the COVID-19 pandemic has affected mortality experience of major causes, and more importantly how COVID-19 has changed the dependence structure across these causes. This enables us to gain more insights into the potential impact of COVID-19 on future life expectancy, and conduct scenario-based projections. For this we propose a dynamic copula state space approach, which quantifies and visualizes the joint dynamics across major causes of death, both before and during the pandemic. Based on US weekly mortality data from January 2015 to November 2022, we find that COVID-19 has elevated the mortality level for a majority of causes, and has changed the dependence structure across these causes. This work is joint with Han Li, Centre for Actuarial Studies, Department of Economics, The University of Melbourne, Australia.
-
-</details>
+<div class="col-md-5">
+  <b>Title:</b> Analytic Valuation of Guaranteed Lifetime Withdrawal Benefits
+  <br>
+  <b>Abstract:</b>
+We exhibit and solve the partial differential equation that must be satisfied by Guaranteed Lifetime Withdrawal Benefits (GLWB) embedded in variable annuity contract when the benefit base for the withdrawals is the continuous running maximum of the fund (i.e. a ratchet GLWB) and the force of mortality is constant. We show that the fair fees are significantly higher in this case and highly sensitive to the withdrawal rate, risk-free rate, mortality rate and volatility. The value of the ratchet GLWB including fees is smaller when fund performance is poor and larger when fund performance is good which may make these policies less desirable to risk-averse policyholders.
 </div>
-
-<div class="col-md-2">
-
+<div class="col-md-4">
 </div>
-
-
 
 </div>
 
 
 
 
-<br>
-<br>
+
 
 
 
@@ -425,52 +473,6 @@ window.player = player;
    
     
 
-  <tr>
-    <td class = "date"><b>17 January 2024 3pm (UTC) </b> <br> In your local time: <br>
-      <script type="text/javascript">
-        var date138 = new Date('2024-01-17T15:00:00Z');
-        var day138 = date138.getDate();
-        const monthNames138 = ["January", "February", "March", "April", "May", "June",
-                               "July", "August", "September", "October", "November", "December"];
-        var month138 = monthNames138[date138.getMonth()];
-        var year138 = date138.getFullYear();
-        var strTime138 = day138 + " " + month138 + " " +  year138;
-        document.write(strTime138);
-        const dtf138 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-        var zone138 = dtf138.formatToParts(date138).find((part) => part.type == 'timeZoneName').value;
-        var hours138 = date138.getHours();
-        var minutes138 = date138.getMinutes();
-        var ampm138 = hours138 >= 12 ? 'pm' : 'am';
-        hours138 = hours138 % 12;
-        hours138 = hours138 ? hours138 : 12; // the hour '0' should be '12'
-        minutes138 = minutes138 < 10 ? '0'+minutes138 : minutes138;
-        var strTime2138 = hours138 + ':' + minutes138 +ampm138 + ' ' + "(" +zone138+")";
-        document.write("<br>");
-        document.write(strTime2138);
-        </script>
-          
-          <br>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Claudia%20Czado%20(Technical%20University%20of%20Munich%2C%20Germany)&dates=20240117T150000Z/20240117T161000Z&details=Speaker%3A%20Claudia%20Czado%20(Technical%20University%20of%20Munich%2C%20Germany)%0A%0ATitle%3A%20Dependence%20models%20for%20mortalities%20using%20a%0Acopula%20state-space%20approach%0A%0AAbstract%3A%20We%20investigate%20how%20the%20COVID-19%20pandemic%20has%20affected%20mortality%20experience%20of%20major%20causes%2C%20and%20more%20importantly%20how%20COVID-19%20has%20changed%20the%20dependence%20structure%20across%20these%20causes.%20This%20enables%20us%20to%20gain%20more%20insights%20into%20the%20potential%20impact%20of%20COVID-19%20on%20future%20life%20expectancy%2C%20and%20conduct%20scenario-based%20projections.%20For%20this%20we%20propose%20a%20dynamic%20copula%20state%20space%20approach%2C%20which%20quantifies%20and%20visualizes%20the%20joint%20dynamics%20across%20major%20causes%20of%20death%2C%20both%20before%20and%20during%20the%20pandemic.%20Based%20on%20US%20weekly%20mortality%20data%20from%20January%202015%20to%20November%202022%2C%20we%20find%20that%20COVID-19%20has%20elevated%20the%20mortality%20level%20for%20a%20majority%20of%20causes%2C%20and%20has%20changed%20the%20dependence%20structure%20across%20these%20causes.%0AThis%20work%20is%20joint%20with%20Han%20Li%2C%20Centre%20for%20Actuarial%20Studies%2C%20Department%20of%20Economics%2C%20The%20University%20of%20Melbourne%2C%20Australia.%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-          <a href="ClaudiaCzado/ClaudiaCzado.ics" download>
-          Outlook calendar
-        </a>
-          
-          </td>
-          
-          <td class = "speaker"><a href="https://www.math.cit.tum.de/en/math/people/professors/czado-claudia/" target="_blank">Claudia Czado </a> and <a href="https://www.math.cit.tum.de/en/math/people/academic-staff/ariane-hanebeck/" target="_blank">Ariane Hanebeck </a> (Technical University of Munich, Germany)</td>
-          <td class = "title">Dependence models for mortalities using a
-            copula state-space approach  
-        
-        <br> <details>
-          <summary>Abstract (click to expand)</summary>
-          We investigate how the COVID-19 pandemic has affected mortality experience of major causes, and more importantly how COVID-19 has changed the dependence structure across these causes. This enables us to gain more insights into the potential impact of COVID-19 on future life expectancy, and conduct scenario-based projections. For this we propose a dynamic copula state space approach, which quantifies and visualizes the joint dynamics across major causes of death, both before and during the pandemic. Based on US weekly mortality data from January 2015 to November 2022, we find that COVID-19 has elevated the mortality level for a majority of causes, and has changed the dependence structure across these causes.
-          This work is joint with Han Li, Centre for Actuarial Studies, Department of Economics, The University of Melbourne, Australia.
-         </details></td>
-      
-          <td>
-  
-          </td>
-  </tr>  
 
   <tr>
     <td class = "date"><b>31 January 2024 9am (UTC) </b> <br> In your local time: <br>
@@ -505,11 +507,11 @@ window.player = player;
           </td>
           
           <td class = "speaker"><a href="https://people.wgtn.ac.nz/eric.ulm" target="_blank">Eric Ulm (Victoria University of Wellington, New Zealand)</a></td>
-          <td class = "title">TBA
+          <td class = "title">Analytic Valuation of Guaranteed Lifetime Withdrawal Benefits
         
         <br> <details>
           <summary>Abstract (click to expand)</summary>
-          TBA   </details></td>
+          We exhibit and solve the partial differential equation that must be satisfied by Guaranteed Lifetime Withdrawal Benefits (GLWB) embedded in variable annuity contract when the benefit base for the withdrawals is the continuous running maximum of the fund (i.e. a ratchet GLWB) and the force of mortality is constant. We show that the fair fees are significantly higher in this case and highly sensitive to the withdrawal rate, risk-free rate, mortality rate and volatility. The value of the ratchet GLWB including fees is smaller when fund performance is poor and larger when fund performance is good which may make these policies less desirable to risk-averse policyholders.  </details></td>
       
           <td>
   
@@ -575,9 +577,67 @@ window.player = player;
 
 <H2 STYLE="clear:left">Past Talks</H2>
 </div>
-<br>
-<br>
 
+
+<table style="width:100%" class="table1">
+
+  <tr>
+    <th>Date & Time</th>
+    <th>Speaker</th>
+    <th>Title</th>
+    <th>Misc</th>
+  </tr>
+
+<tr>
+  <td class = "date"><b>17 January 2024 3pm (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date138 = new Date('2024-01-17T15:00:00Z');
+      var day138 = date138.getDate();
+      const monthNames138 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month138 = monthNames138[date138.getMonth()];
+      var year138 = date138.getFullYear();
+      var strTime138 = day138 + " " + month138 + " " +  year138;
+      document.write(strTime138);
+      const dtf138 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone138 = dtf138.formatToParts(date138).find((part) => part.type == 'timeZoneName').value;
+      var hours138 = date138.getHours();
+      var minutes138 = date138.getMinutes();
+      var ampm138 = hours138 >= 12 ? 'pm' : 'am';
+      hours138 = hours138 % 12;
+      hours138 = hours138 ? hours138 : 12; // the hour '0' should be '12'
+      minutes138 = minutes138 < 10 ? '0'+minutes138 : minutes138;
+      var strTime2138 = hours138 + ':' + minutes138 +ampm138 + ' ' + "(" +zone138+")";
+      document.write("<br>");
+      document.write(strTime2138);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Claudia%20Czado%20(Technical%20University%20of%20Munich%2C%20Germany)&dates=20240117T150000Z/20240117T161000Z&details=Speaker%3A%20Claudia%20Czado%20(Technical%20University%20of%20Munich%2C%20Germany)%0A%0ATitle%3A%20Dependence%20models%20for%20mortalities%20using%20a%0Acopula%20state-space%20approach%0A%0AAbstract%3A%20We%20investigate%20how%20the%20COVID-19%20pandemic%20has%20affected%20mortality%20experience%20of%20major%20causes%2C%20and%20more%20importantly%20how%20COVID-19%20has%20changed%20the%20dependence%20structure%20across%20these%20causes.%20This%20enables%20us%20to%20gain%20more%20insights%20into%20the%20potential%20impact%20of%20COVID-19%20on%20future%20life%20expectancy%2C%20and%20conduct%20scenario-based%20projections.%20For%20this%20we%20propose%20a%20dynamic%20copula%20state%20space%20approach%2C%20which%20quantifies%20and%20visualizes%20the%20joint%20dynamics%20across%20major%20causes%20of%20death%2C%20both%20before%20and%20during%20the%20pandemic.%20Based%20on%20US%20weekly%20mortality%20data%20from%20January%202015%20to%20November%202022%2C%20we%20find%20that%20COVID-19%20has%20elevated%20the%20mortality%20level%20for%20a%20majority%20of%20causes%2C%20and%20has%20changed%20the%20dependence%20structure%20across%20these%20causes.%0AThis%20work%20is%20joint%20with%20Han%20Li%2C%20Centre%20for%20Actuarial%20Studies%2C%20Department%20of%20Economics%2C%20The%20University%20of%20Melbourne%2C%20Australia.%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="ClaudiaCzado/ClaudiaCzado.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://www.math.cit.tum.de/en/math/people/professors/czado-claudia/" target="_blank">Claudia Czado </a> and <a href="https://www.math.cit.tum.de/en/math/people/academic-staff/ariane-hanebeck/" target="_blank">Ariane Hanebeck </a> (Technical University of Munich, Germany)</td>
+        <td class = "title">Dependence models for mortalities using a
+          copula state-space approach  
+      
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        We investigate how the COVID-19 pandemic has affected mortality experience of major causes, and more importantly how COVID-19 has changed the dependence structure across these causes. This enables us to gain more insights into the potential impact of COVID-19 on future life expectancy, and conduct scenario-based projections. For this we propose a dynamic copula state space approach, which quantifies and visualizes the joint dynamics across major causes of death, both before and during the pandemic. Based on US weekly mortality data from January 2015 to November 2022, we find that COVID-19 has elevated the mortality level for a majority of causes, and has changed the dependence structure across these causes.
+        This work is joint with Han Li, Centre for Actuarial Studies, Department of Economics, The University of Melbourne, Australia.
+       </details></td>
+    
+        <td>
+
+        </td>
+</tr>  
+
+</table>
+
+<br>
 
 <details>
   <summary>Talks in 2023</summary>
