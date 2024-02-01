@@ -205,107 +205,64 @@ height: 100%;
 
 
 
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
-</h2>
+
+
+<br>
+
+
+ <div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
 
-     
-
-
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="EricUlm/photo.jpeg" alt="Avatar" height="120" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2024-01-31T09:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2024-01-31T09:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="https://people.wgtn.ac.nz/eric.ulm" target="_blank"> Eric Ulm (Victoria University of Wellington, New Zealand)
-</a>
-
-</div>
-
-<br>
 
 
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+
+
+
+
+
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/XY9bj6phBCs">
+</iframe>
+
+
+
+    
+
+</div>
 
   
-<div class="col-md-5">
-  <b>Title:</b> Analytic Valuation of Guaranteed Lifetime Withdrawal Benefits
-  <br>
-  <b>Abstract:</b>
+<div class="col-md-6">
+<b>Speaker: </b>><a href="https://people.wgtn.ac.nz/eric.ulm" target="_blank">Eric Ulm (Victoria University of Wellington, New Zealand)
+</a>
+<br>
+  <b>Title:</b>
+  Analytic Valuation of Guaranteed Lifetime Withdrawal Benefits<details>
+<summary>Abstract (click to expand)</summary>
 We exhibit and solve the partial differential equation that must be satisfied by Guaranteed Lifetime Withdrawal Benefits (GLWB) embedded in variable annuity contract when the benefit base for the withdrawals is the continuous running maximum of the fund (i.e. a ratchet GLWB) and the force of mortality is constant. We show that the fair fees are significantly higher in this case and highly sensitive to the withdrawal rate, risk-free rate, mortality rate and volatility. The value of the ratchet GLWB including fees is smaller when fund performance is poor and larger when fund performance is good which may make these policies less desirable to risk-averse policyholders.
-</div>
-<div class="col-md-4">
+
+</details>
 </div>
 
+<div class="col-md-2">
+
 </div>
+
+
+
+</div>
+
+
+
+
+<br>
+<br>
+
 
 
 
@@ -474,49 +431,6 @@ window.player = player;
     
 
 
-  <tr>
-    <td class = "date"><b>31 January 2024 9am (UTC) </b> <br> In your local time: <br>
-      <script type="text/javascript">
-        var date139 = new Date('2024-01-31T09:00:00Z');
-        var day139 = date139.getDate();
-        const monthNames139 = ["January", "February", "March", "April", "May", "June",
-                               "July", "August", "September", "October", "November", "December"];
-        var month139 = monthNames139[date139.getMonth()];
-        var year139 = date139.getFullYear();
-        var strTime139 = day139 + " " + month139 + " " +  year139;
-        document.write(strTime139);
-        const dtf139 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-        var zone139 = dtf139.formatToParts(date139).find((part) => part.type == 'timeZoneName').value;
-        var hours139 = date139.getHours();
-        var minutes139 = date139.getMinutes();
-        var ampm139 = hours139 >= 12 ? 'pm' : 'am';
-        hours139 = hours139 % 12;
-        hours139 = hours139 ? hours139 : 12; // the hour '0' should be '12'
-        minutes139 = minutes139 < 10 ? '0'+minutes139 : minutes139;
-        var strTime2139 = hours139 + ':' + minutes139 +ampm139 + ' ' + "(" +zone139+")";
-        document.write("<br>");
-        document.write(strTime2139);
-        </script>
-          
-          <br>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Eric%20Ulm%20(Victoria%20University%20of%20Wellington%2C%20New%20Zealand)&dates=20240131T090000Z/20240131T101000Z&details=Speaker%3A%20Eric%20Ulm%20(Victoria%20University%20of%20Wellington%2C%20New%20Zealand)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-          <a href="EricUlm/EricUlm.ics" download>
-          Outlook calendar
-        </a>
-          
-          </td>
-          
-          <td class = "speaker"><a href="https://people.wgtn.ac.nz/eric.ulm" target="_blank">Eric Ulm (Victoria University of Wellington, New Zealand)</a></td>
-          <td class = "title">Analytic Valuation of Guaranteed Lifetime Withdrawal Benefits
-        
-        <br> <details>
-          <summary>Abstract (click to expand)</summary>
-          We exhibit and solve the partial differential equation that must be satisfied by Guaranteed Lifetime Withdrawal Benefits (GLWB) embedded in variable annuity contract when the benefit base for the withdrawals is the continuous running maximum of the fund (i.e. a ratchet GLWB) and the force of mortality is constant. We show that the fair fees are significantly higher in this case and highly sensitive to the withdrawal rate, risk-free rate, mortality rate and volatility. The value of the ratchet GLWB including fees is smaller when fund performance is poor and larger when fund performance is good which may make these policies less desirable to risk-averse policyholders.  </details></td>
-      
-          <td>
-  
-          </td>
-  </tr>  
 
   <tr>
     <td class = "date"><b>14 February 2024 3pm (UTC) </b> <br> In your local time: <br>
@@ -551,11 +465,12 @@ window.player = player;
           </td>
           
           <td class = "speaker"><a href="https://business.wisc.edu/directory/profile/peng-shi/" target="_blank">Peng Shi (University of Wisconsin, USA)</a></td>
-          <td class = "title">TBA
+          <td class = "title">A Copula Model for Marked Point Process with A Terminal Event: An Application in Dynamic Prediction of Insurance Claims
         
         <br> <details>
           <summary>Abstract (click to expand)</summary>
-          TBA   </details></td>
+          Accurate prediction of an insurer’s outstanding liabilities is crucial for maintaining the financial health of the insurance sector. This study is driven by the imperative for insurers to dynamically forecast unpaid losses using the granular transaction data on individual claims. We introduce a copula-based point process framework to model the recurrent events of payment transactions from an insurance claim, where the longitudinal payment amounts and the time-to-settlement outcome are formulated as the marks and the terminal event of the counting process, respectively. The dependencies among the three components are characterized using the method of pair copula constructions. We further develop a stage-wise strategy for parameter estimation and illustrate its desirable properties with numerical experiments. Real data applications further illustrate that our proposed joint model enhances the insurer's decision making in claims management and risk financing operations.
+</details></td>
       
           <td>
   
@@ -635,6 +550,50 @@ window.player = player;
         </td>
 </tr>  
 
+
+<tr>
+  <td class = "date"><b>31 January 2024 9am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date139 = new Date('2024-01-31T09:00:00Z');
+      var day139 = date139.getDate();
+      const monthNames139 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month139 = monthNames139[date139.getMonth()];
+      var year139 = date139.getFullYear();
+      var strTime139 = day139 + " " + month139 + " " +  year139;
+      document.write(strTime139);
+      const dtf139 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone139 = dtf139.formatToParts(date139).find((part) => part.type == 'timeZoneName').value;
+      var hours139 = date139.getHours();
+      var minutes139 = date139.getMinutes();
+      var ampm139 = hours139 >= 12 ? 'pm' : 'am';
+      hours139 = hours139 % 12;
+      hours139 = hours139 ? hours139 : 12; // the hour '0' should be '12'
+      minutes139 = minutes139 < 10 ? '0'+minutes139 : minutes139;
+      var strTime2139 = hours139 + ':' + minutes139 +ampm139 + ' ' + "(" +zone139+")";
+      document.write("<br>");
+      document.write(strTime2139);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Eric%20Ulm%20(Victoria%20University%20of%20Wellington%2C%20New%20Zealand)&dates=20240131T090000Z/20240131T101000Z&details=Speaker%3A%20Eric%20Ulm%20(Victoria%20University%20of%20Wellington%2C%20New%20Zealand)%0A%0ATitle%3A%20TBA%0A%0AAbstract%3A%20TBA%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="EricUlm/EricUlm.ics" download>
+        Outlook calendar
+      </a>
+        
+        </td>
+        
+        <td class = "speaker"><a href="https://people.wgtn.ac.nz/eric.ulm" target="_blank">Eric Ulm (Victoria University of Wellington, New Zealand)</a></td>
+        <td class = "title">Analytic Valuation of Guaranteed Lifetime Withdrawal Benefits
+      
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        We exhibit and solve the partial differential equation that must be satisfied by Guaranteed Lifetime Withdrawal Benefits (GLWB) embedded in variable annuity contract when the benefit base for the withdrawals is the continuous running maximum of the fund (i.e. a ratchet GLWB) and the force of mortality is constant. We show that the fair fees are significantly higher in this case and highly sensitive to the withdrawal rate, risk-free rate, mortality rate and volatility. The value of the ratchet GLWB including fees is smaller when fund performance is poor and larger when fund performance is good which may make these policies less desirable to risk-averse policyholders.  </details></td>
+    
+        <td>
+
+        </td>
+</tr>  
 </table>
 
 <br>
