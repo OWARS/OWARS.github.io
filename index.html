@@ -208,60 +208,113 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="PengShi/Peng_Shi_512x512-266x266.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2024-02-14T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2024-02-14T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://business.wisc.edu/directory/profile/peng-shi/" target="_blank"> Peng Shi (University of Wisconsin, USA)
+</a>
+
+</div>
+
 <br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
-
-
-
+<div class="container">
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/XY9bj6phBCs">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b>><a href="https://people.wgtn.ac.nz/eric.ulm" target="_blank">Eric Ulm (Victoria University of Wellington, New Zealand)
-</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-  Analytic Valuation of Guaranteed Lifetime Withdrawal Benefits<details>
-<summary>Abstract (click to expand)</summary>
-We exhibit and solve the partial differential equation that must be satisfied by Guaranteed Lifetime Withdrawal Benefits (GLWB) embedded in variable annuity contract when the benefit base for the withdrawals is the continuous running maximum of the fund (i.e. a ratchet GLWB) and the force of mortality is constant. We show that the fair fees are significantly higher in this case and highly sensitive to the withdrawal rate, risk-free rate, mortality rate and volatility. The value of the ratchet GLWB including fees is smaller when fund performance is poor and larger when fund performance is good which may make these policies less desirable to risk-averse policyholders.
 
-</details>
+  A Copula Model for Marked Point Process with A Terminal Event: An Application in Dynamic Prediction of Insurance Claims<br> 
+<b>Abstract:</b>
+Accurate prediction of an insurer’s outstanding liabilities is crucial for maintaining the financial health of the insurance sector. This study is driven by the imperative for insurers to dynamically forecast unpaid losses using the granular transaction data on individual claims. We introduce a copula-based point process framework to model the recurrent events of payment transactions from an insurance claim, where the longitudinal payment amounts and the time-to-settlement outcome are formulated as the marks and the terminal event of the counting process, respectively. The dependencies among the three components are characterized using the method of pair copula constructions. We further develop a stage-wise strategy for parameter estimation and illustrate its desirable properties with numerical experiments. Real data applications further illustrate that our proposed joint model enhances the insurer's decision making in claims management and risk financing operations.
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
 </div>
-
-
-
 </div>
 
 
-
-
-<br>
-<br>
 
 
 
@@ -427,11 +480,6 @@ window.player = player;
     <th>Misc</th>
   </tr>
 
-   
-    
-
-
-
   <tr>
     <td class = "date"><b>14 February 2024 3pm (UTC) </b> <br> In your local time: <br>
       <script type="text/javascript">
@@ -470,16 +518,281 @@ window.player = player;
         <br> <details>
           <summary>Abstract (click to expand)</summary>
           Accurate prediction of an insurer’s outstanding liabilities is crucial for maintaining the financial health of the insurance sector. This study is driven by the imperative for insurers to dynamically forecast unpaid losses using the granular transaction data on individual claims. We introduce a copula-based point process framework to model the recurrent events of payment transactions from an insurance claim, where the longitudinal payment amounts and the time-to-settlement outcome are formulated as the marks and the terminal event of the counting process, respectively. The dependencies among the three components are characterized using the method of pair copula constructions. We further develop a stage-wise strategy for parameter estimation and illustrate its desirable properties with numerical experiments. Real data applications further illustrate that our proposed joint model enhances the insurer's decision making in claims management and risk financing operations.
-</details></td>
+  </details></td>
       
           <td>
   
           </td>
   </tr>  
- 
+  
+   
+    
+  <tr>
+    <td class = "date"><b>13 March 2024 3pm (UTC) </b> <br> In your local time: <br>
+      <script type="text/javascript">
+        var date141 = new Date('2024-03-13T15:00:00Z');
+        var day141 = date141.getDate();
+        const monthNames141 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month141 = monthNames141[date141.getMonth()];
+        var year141 = date141.getFullYear();
+        var strTime141 = day141 + " " + month141 + " " +  year141;
+        document.write(strTime141);
+        const dtf141 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone141 = dtf141.formatToParts(date141).find((part) => part.type == 'timeZoneName').value;
+        var hours141 = date141.getHours();
+        var minutes141 = date141.getMinutes();
+        var ampm141 = hours141 >= 12 ? 'pm' : 'am';
+        hours141 = hours141 % 12;
+        hours141 = hours141 ? hours141 : 12; // the hour '0' should be '12'
+        minutes141 = minutes141 < 10 ? '0'+minutes141 : minutes141;
+        var strTime2141 = hours141 + ':' + minutes141 +ampm141 + ' ' + "(" +zone141+")";
+        document.write("<br>");
+        document.write(strTime2141);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Marie-Pier%20C%C3%B4t%C3%A9%20(Universit%C3%A9%20Laval%2C%20Canada)&dates=20240313T150000Z/20240313T161000Z&details=Speaker%3A%20Marie-Pier%20C%C3%B4t%C3%A9%20(Universit%C3%A9%20Laval%2C%20Canada)%20%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="marie-pier-cote/marie-pier-cote.ics" download>
+          Outlook calendar
+        </a>
+          
+          </td>
+          
+          <td class = "speaker"><a href="https://iid.ulaval.ca/equipes/marie-pier-cote/" target="_blank">Marie-Pier Côté (Université Laval, Canada) </a> </td>
+          <td class = "title">  TBA
+        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+          TBA
+         </details></td>
+      
+          <td>
+  
+          </td>
+  </tr>  
+  
+  <tr>
+    <td class = "date"><b>10 April 2024 3pm (UTC) </b> <br> In your local time: <br>
+      <script type="text/javascript">
+        var date142 = new Date('2024-04-10T15:00:00Z');
+        var day142 = date142.getDate();
+        const monthNames142 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month142 = monthNames142[date142.getMonth()];
+        var year142 = date142.getFullYear();
+        var strTime142 = day142 + " " + month142 + " " +  year142;
+        document.write(strTime142);
+        const dtf142 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone142 = dtf142.formatToParts(date142).find((part) => part.type == 'timeZoneName').value;
+        var hours142 = date142.getHours();
+        var minutes142 = date142.getMinutes();
+        var ampm142 = hours142 >= 12 ? 'pm' : 'am';
+        hours142 = hours142 % 12;
+        hours142 = hours142 ? hours142 : 12; // the hour '0' should be '12'
+        minutes142 = minutes142 < 10 ? '0'+minutes142 : minutes142;
+        var strTime2142 = hours142 + ':' + minutes142 +ampm142 + ' ' + "(" +zone142+")";
+        document.write("<br>");
+        document.write(strTime2142);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Christian%20Genest%20(McGill%20University%2C%20Canada)%20&dates=20240410T150000Z/20240410T161000Z&details=Speaker%3A%20Christian%20Genest%20(McGill%20University%2C%20Canada)%20%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="Christian_Genest/Christian_Genest.ics" download>
+          Outlook calendar
+        </a>
+          
+          </td>
+          
+          <td class = "speaker"><a href="https://www.mcgill.ca/mathstat/christian-genest" target="_blank">Christian Genest (McGill University, Canada) </a> </td>
+          <td class = "title">  TBA
+        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+          TBA
+         </details></td>
+      
+          <td>
+  
+          </td>
+  </tr>  
+  
+  <tr>
+    <td class = "date"><b>24 April 2024 3pm (UTC) </b> <br> In your local time: <br>
+      <script type="text/javascript">
+        var date143 = new Date('2024-04-24T15:00:00Z');
+        var day143 = date143.getDate();
+        const monthNames143 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month143 = monthNames143[date143.getMonth()];
+        var year143 = date143.getFullYear();
+        var strTime143 = day143 + " " + month143 + " " +  year143;
+        document.write(strTime143);
+        const dtf143 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone143 = dtf143.formatToParts(date143).find((part) => part.type == 'timeZoneName').value;
+        var hours143 = date143.getHours();
+        var minutes143 = date143.getMinutes();
+        var ampm143 = hours143 >= 12 ? 'pm' : 'am';
+        hours143 = hours143 % 12;
+        hours143 = hours143 ? hours143 : 12; // the hour '0' should be '12'
+        minutes143 = minutes143 < 10 ? '0'+minutes143 : minutes143;
+        var strTime2143 = hours143 + ':' + minutes143 +ampm143 + ' ' + "(" +zone143+")";
+        document.write("<br>");
+        document.write(strTime2143);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Mario%20Ghossoub%20(University%20of%20Waterloo%2C%20Canada)&dates=20240424T150000Z/20240424T161000Z&details=Speaker%3A%20Mario%20Ghossoub%20(University%20of%20Waterloo%2C%20Canada)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="Mario_Ghossoub/Mario_Ghossoub.ics" download>
+          Outlook calendar
+        </a>
+          
+          </td>
+          
+          <td class = "speaker"><a href="https://sites.google.com/site/marioghossoub/" target="_blank">Mario Ghossoub (University of Waterloo, Canada) </a> </td>
+          <td class = "title">  TBA
+        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+          TBA
+         </details></td>
+      
+          <td>
+  
+          </td>
+  </tr>  
+  
+  <tr>
+    <td class = "date"><b>08 May 2024 3pm (UTC) </b> <br> In your local time: <br>
+      <script type="text/javascript">
+        var date144 = new Date('2024-05-08T15:00:00Z');
+        var day144 = date144.getDate();
+        const monthNames144 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month144 = monthNames144[date144.getMonth()];
+        var year144 = date144.getFullYear();
+        var strTime144 = day144 + " " + month144 + " " +  year144;
+        document.write(strTime144);
+        const dtf144 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone144 = dtf144.formatToParts(date144).find((part) => part.type == 'timeZoneName').value;
+        var hours144 = date144.getHours();
+        var minutes144 = date144.getMinutes();
+        var ampm144 = hours144 >= 12 ? 'pm' : 'am';
+        hours144 = hours144 % 12;
+        hours144 = hours144 ? hours144 : 12; // the hour '0' should be '12'
+        minutes144 = minutes144 < 10 ? '0'+minutes144 : minutes144;
+        var strTime2144 = hours144 + ':' + minutes144 +ampm144 + ' ' + "(" +zone144+")";
+        document.write("<br>");
+        document.write(strTime2144);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Corina%20Constantinescu%20(University%20of%20Liverpool%2C%20UK)&dates=20240508T150000Z/20240508T161000Z&details=Speaker%3A%20Corina%20Constantinescu%20(University%20of%20Liverpool%2C%20UK)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="CorinaConstantinescu/CorinaConstantinescu.ics" download>
+          Outlook calendar
+        </a>
+          
+          </td>
+          
+          <td class = "speaker"><a href="https://www.liverpool.ac.uk/mathematical-sciences/staff/dana-constantinescu/" target="_blank"> Corina Constantinescu (University of Liverpool, UK) </a> </td>
+          <td class = "title">  TBA
+        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+          TBA
+         </details></td>
+      
+          <td>
+  
+          </td>
+  </tr> 
+  
+  
+  <tr>
+    <td class = "date"><b>22 May 2024 8am (UTC) </b> <br> In your local time: <br>
+      <script type="text/javascript">
+        var date145 = new Date('2024-05-22T08:00:00Z');
+        var day145 = date145.getDate();
+        const monthNames145 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month145 = monthNames145[date145.getMonth()];
+        var year145 = date145.getFullYear();
+        var strTime145 = day145 + " " + month145 + " " +  year145;
+        document.write(strTime145);
+        const dtf145 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone145 = dtf145.formatToParts(date145).find((part) => part.type == 'timeZoneName').value;
+        var hours145 = date145.getHours();
+        var minutes145 = date145.getMinutes();
+        var ampm145 = hours145 >= 12 ? 'pm' : 'am';
+        hours145 = hours145 % 12;
+        hours145 = hours145 ? hours145 : 12; // the hour '0' should be '12'
+        minutes145 = minutes145 < 10 ? '0'+minutes145 : minutes145;
+        var strTime2145 = hours145 + ':' + minutes145 +ampm145 + ' ' + "(" +zone145+")";
+        document.write("<br>");
+        document.write(strTime2145);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Jae%20Kyung%20Woo%20(University%20of%20New%20South%20Wales%2C%20Australia)%20&dates=20240522T080000Z/20240522T091000Z&details=Speaker%3A%20Jae%20Kyung%20Woo%20(University%20of%20New%20South%20Wales%2C%20Australia)%20%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="Jae-Kyung-Woo/Jae-Kyung-Woo.ics" download>
+          Outlook calendar
+        </a>
+          
+          </td>
+          
+          <td class = "speaker"><a href="https://www.unsw.edu.au/staff/jae-kyung-woo" target="_blank"> Jae Kyung Woo (University of New South Wales, Australia) </a> </td>
+          <td class = "title">  TBA
+        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+          TBA
+         </details></td>
+      
+          <td>
+  
+          </td>
+  </tr>  
+  
 
-
-
+  <tr>
+    <td class = "date"><b>05 June 2024 3pm (UTC) </b> <br> In your local time: <br>
+      <script type="text/javascript">
+        var date146 = new Date('2024-06-05T15:00:00Z');
+        var day146 = date146.getDate();
+        const monthNames146 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month146 = monthNames146[date146.getMonth()];
+        var year146 = date146.getFullYear();
+        var strTime146 = day146 + " " + month146 + " " +  year146;
+        document.write(strTime146);
+        const dtf146 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone146 = dtf146.formatToParts(date146).find((part) => part.type == 'timeZoneName').value;
+        var hours146 = date146.getHours();
+        var minutes146 = date146.getMinutes();
+        var ampm146 = hours146 >= 12 ? 'pm' : 'am';
+        hours146 = hours146 % 12;
+        hours146 = hours146 ? hours146 : 12; // the hour '0' should be '12'
+        minutes146 = minutes146 < 10 ? '0'+minutes146 : minutes146;
+        var strTime2146 = hours146 + ':' + minutes146 +ampm146 + ' ' + "(" +zone146+")";
+        document.write("<br>");
+        document.write(strTime2146);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Karim%20Barigou%20(Universit%C3%A9%20Laval%2C%20Canada)&dates=20240605T150000Z/20240605T161000Z&details=Speaker%3A%20Karim%20Barigou%20(Universit%C3%A9%20Laval%2C%20Canada)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="Karim_Barigou/Karim_Barigou.ics" download>
+          Outlook calendar
+        </a>
+          
+          </td>
+          
+          <td class = "speaker"><a href="https://karimbarigou.com/" target="_blank"> Karim Barigou (Université Laval, Canada) </a> </td>
+          <td class = "title">  TBA
+        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+          TBA
+         </details></td>
+      
+          <td>
+  
+          </td>
+  </tr>  
+  
 
 
 </tbody>
@@ -594,6 +907,9 @@ window.player = player;
 
         </td>
 </tr>  
+
+
+
 </table>
 
 <br>
