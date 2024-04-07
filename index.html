@@ -209,61 +209,116 @@ height: 100%;
 
 
 
-<br>
 
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
+
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
 </div>
 
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="Christian_Genest/christian.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2024-04-10T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2024-04-10T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://www.mcgill.ca/mathstat/christian-genest" target="_blank">Christian Genest (McGill University, Canada) </a>
+
+</div>
+
+<br>
 
 
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/FhJxsAZjy_M">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b> <a href="https://iid.ulaval.ca/equipes/marie-pier-cote/" target="_blank"> Marie-Pier Côté (Université Laval, Canada)
-</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-  A flexible hierarchical insurance claims model with gradient boosting and copulas<details>
-<summary>Abstract (click to expand)</summary>
-Predicting future claims is an important task for actuaries, and sophisticating the claim modeling process allows insurers to be more competitive and to stay financially sound. We propose a hierarchical claim model that refines traditional methods by considering dependence between payment occurrences with a multinomial distribution and between payment amounts with copulas. We perform prediction with covariates using XGBoost, a scalable gradient boosting algorithm, gaining predictive power over the frequently used generalized linear models. The model construction and fitting is illustrated with a real auto insurance dataset from a large Canadian insurance company. The use of XGBoost is well suited for such big data containing a lot of insureds and covariates. Since the validity of the copula inference with gradient boosting margins has not been demonstrated in past literature, we perform a simulation study to assess the performance of methods based on ranks of residuals. We show some applications of our model and compare the performance with reference models. We conclude that the dependence components of our model improve the segmentation and better replicate the global stochasticity.
 
+  Sparse estimation within Pearson's system, with an application to financial market risk<br> 
+<b>Abstract:</b>
+Pearson's system is a rich class of models that includes many classical univariate distributions. It comprises all continuous densities whose logarithmic derivative can be expressed as a ratio of quadratic polynomials governed by a vector of coefficients. The estimation of a Pearson density is challenging, as small variations in can induce wild changes in the shape of the corresponding density. The authors show how to estimate and effectively through a penalized likelihood procedure involving differential regularization. The approach combines a penalized regression method and a profiled estimation technique. Simulations and an illustration with S&P 500 data suggest that the proposed method can improve market risk assessment substantially through value-at-risk and expected shortfall estimates that outperform those currently used by financial institutions and regulators.
+      </div>
 
-</details>
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
 </div>
-
-
-
 </div>
 
 
 
 
-<br>
-<br>
 
 
 
@@ -474,10 +529,10 @@ window.player = player;
           </td>
           
           <td class = "speaker"><a href="https://www.mcgill.ca/mathstat/christian-genest" target="_blank">Christian Genest (McGill University, Canada) </a> </td>
-          <td class = "title">  TBA
+          <td class = "title">  Sparse estimation within Pearson's system, with an application to financial market risk
         <br> <details>
           <summary>Abstract (click to expand)</summary>
-          TBA
+          Pearson's system is a rich class of models that includes many classical univariate distributions. It comprises all continuous densities whose logarithmic derivative can be expressed as a ratio of quadratic polynomials governed by a vector of coefficients. The estimation of a Pearson density is challenging, as small variations in can induce wild changes in the shape of the corresponding density. The authors show how to estimate and effectively through a penalized likelihood procedure involving differential regularization. The approach combines a penalized regression method and a profiled estimation technique. Simulations and an illustration with S&P 500 data suggest that the proposed method can improve market risk assessment substantially through value-at-risk and expected shortfall estimates that outperform those currently used by financial institutions and regulators.
          </details></td>
       
           <td>
