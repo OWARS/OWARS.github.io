@@ -203,6 +203,116 @@ height: 100%;
 
 
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="Karim_Barigou/Karim24-25-scaled.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2024-10-16T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2024-10-16T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://uclouvain.be/en/directories/karim.barigou" target="_blank"> Karim Barigou (UCLouvain, Belgium)
+</a>
+
+</div>
+
+<br>
+
+
+<div class="row row-grid">
+
+
+  
+<div class="col-md-8">
+  <b>Title:</b>
+
+  Bayesian mortality modelling with pandemics: a vanishing jump approach (Joint work with Julius Goes and Anne Leucht)<br> 
+<b>Abstract:</b>
+This paper extends the Lee-Carter model for single- and multi-populations to account for pandemic jump effects of vanishing kind, allowing for a more comprehensive and accurate representation of mortality rates during a pandemic, characterised by a high impact at the beginning and gradually vanishing effects over subsequent periods. While the Lee-Carter model is effective in capturing mortality trends, it may not be able to account for large, unexpected jumps in mortality rates caused by pandemics or wars. Existing models allow either for transient jumps with an effect of one period only or persistent jumps. However, there is no literature on estimating mortality time series with jumps having an effect over a small number of periods as typically observed in pandemics. The Bayesian approach allows to quantify the uncertainty around the parameter estimates. Empirical data from world wars and the COVID-19 pandemic shows the superiority of the proposed approach both in-sample and out-of sample, compared to models with a transitory shock effect.
+      </div>
+
+<div class="col-md-4">
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
 
 
 
@@ -387,7 +497,7 @@ window.player = player;
         </script>
           
           <br>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Karim%20Barigou%20(Universit%C3%A9%20Laval%2C%20Canada)&dates=20241016T150000Z/20241016T161000Z&details=Speaker%3A%20Karim%20Barigou%20(Universit%C3%A9%20Laval%2C%20Canada)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c/om%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Karim%20Barigou%20(UCLouvain%2C%20Belgium)&dates=20241016T150000Z/20241016T161000Z&details=Speaker%3A%20Karim%20Barigou%20(Universit%C3%A9%20Laval%2C%20Canada)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c/om%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
           <a href="Karim_Barigou/Karim_Barigou.ics" download>
           Outlook calendar
         </a>
@@ -396,12 +506,12 @@ window.player = player;
           </td>
           
           <td class = "speaker">
-         <a href="https://karimbarigou.com/" target="_blank"> Karim Barigou (Université Laval, Canada) </a>  </td>
+         <a href="https://uclouvain.be/en/directories/karim.barigou" target="_blank"> Karim Barigou (UCLouvain, Belgium) </a>  </td>
           <td class = "title">  
-             TBA
+            Bayesian mortality modelling with pandemics: a vanishing jump approach (Joint work with Julius Goes and Anne Leucht)
         <br> <details>
           <summary>Abstract (click to expand)</summary>
-          TBA
+          This paper extends the Lee-Carter model for single- and multi-populations to account for pandemic jump effects of vanishing kind, allowing for a more comprehensive and accurate representation of mortality rates during a pandemic, characterised by a high impact at the beginning and gradually vanishing effects over subsequent periods. While the Lee-Carter model is effective in capturing mortality trends, it may not be able to account for large, unexpected jumps in mortality rates caused by pandemics or wars. Existing models allow either for transient jumps with an effect of one period only or persistent jumps. However, there is no literature on estimating mortality time series with jumps having an effect over a small number of periods as typically observed in pandemics. The Bayesian approach allows to quantify the uncertainty around the parameter estimates. Empirical data from world wars and the COVID-19 pandemic shows the superiority of the proposed approach both in-sample and out-of sample, compared to models with a transitory shock effect.
          </details> </td>
       
           <td>
@@ -410,7 +520,7 @@ window.player = player;
   </tr>  
   
   <tr>
-    <td class = "date"><b>30 October 2024 9am (UTC) </b> <br> In your local time:  <br>
+    <td class = "date"><b><s>30 October 2024 9am (UTC) </b> <br> In your local time: <br>
       <script type="text/javascript">
         var date147 = new Date('2024-10-30T09:00:00Z');
         var day147 = date147.getDate();
@@ -438,21 +548,21 @@ window.player = player;
           <a href="ayse_arik/20241030-owars-ayse-arik-heriot-watt-university-uk.ics" download>
           Outlook calendar
         </a>
-        
+      </s> 
           
           </td>
           
-          <td class = "speaker">
-         <a href="https://researchportal.hw.ac.uk/en/persons/ayse-arik" target="_blank"> Ayse Arik (Heriot-Watt University, UK) </a>  </td>
-          <td class = "title">  
+          <td class = "speaker"> <s> 
+         <a href="https://researchportal.hw.ac.uk/en/persons/ayse-arik" target="_blank"> Ayse Arik (Heriot-Watt University, UK) </a>  </s> </td>
+          <td class = "title">  <s>
              TBA
         <br> <details>
           <summary>Abstract (click to expand)</summary>
           TBA
          </details></td>
-      
+        </s>
           <td>
-
+        postponed
           </td>
   </tr>  
   <tr>
