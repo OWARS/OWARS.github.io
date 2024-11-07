@@ -206,61 +206,115 @@ height: 100%;
 
 
 
-<br>
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
+</h2>
 </div>
 
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="malene_kallestrup/a6836502-b7c3-473d-9dcf-a3cb38d09771-new.jpg" alt="Avatar" height="200" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2024-11-13T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2024-11-13T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://www.au.dk/en/show/person/mkallestrup@econ.au.dk" target="_blank"> Malene Kallestrup-Lamb (Aarhus University, Denmark)
+</a>
+
+</div>
+
+<br>
 
 
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/gtIrxC5eEUM">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-4">
-<b>Speaker: </b><a href="https://uclouvain.be/en/directories/karim.barigou" target="_blank">Karim Barigou (UCLouvain, Belgium)
-</a>
-<br>
+<div class="col-md-5">
   <b>Title:</b>
-  Bayesian mortality modelling with pandemics: a vanishing jump approach (Joint work with Julius Goes and Anne Leucht)<details>
-<summary>Abstract (click to expand)</summary>
-This paper extends the Lee-Carter model for single- and multi-populations to account for pandemic jump effects of vanishing kind, allowing for a more comprehensive and accurate representation of mortality rates during a pandemic, characterised by a high impact at the beginning and gradually vanishing effects over subsequent periods. While the Lee-Carter model is effective in capturing mortality trends, it may not be able to account for large, unexpected jumps in mortality rates caused by pandemics or wars. Existing models allow either for transient jumps with an effect of one period only or persistent jumps. However, there is no literature on estimating mortality time series with jumps having an effect over a small number of periods as typically observed in pandemics. The Bayesian approach allows to quantify the uncertainty around the parameter estimates. Empirical data from world wars and the COVID-19 pandemic shows the superiority of the proposed approach both in-sample and out-of sample, compared to models with a transitory shock effect.
 
+  The Heterogeneity of Health Dynamics<br> 
+<b>Abstract:</b>
+This paper explores the dynamic relationship between socioeconomic status and health over time, particularly focusing on persistent health disparities across socioeconomic groups. Although the socioeconomic gradient in health is well-documented, most studies focus on health at a single point in time, overlooking how health trajectories evolve. We address this gap by analyzing the long-term health dynamics of a complete cohort of Danish individuals over 21 years using high-quality administrative data. Our findings reveal that lower socioeconomic groups not only start with poorer health but also face faster deterioration and greater difficulty in recovering from health shocks. Moreover, health disparities increase with age, with lower-educated individuals and males showing the greatest rise in inequality. We further analyze individual transitions across the health distribution, revealing that lower socioeconomic groups are more likely to remain in poor health or experience further declines, contributing to widening health inequality.
 
-</details>
+ 
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
+</div>
 </div>
 
 
-
-</div>
-
-
-
-
-<br>
-<br>
 
 
 
@@ -425,99 +479,6 @@ window.player = player;
  
 
   <tr>
-    <td class = "date"><b>16 October 2024 3pm (UTC) </b> <br> In your local time:  <br>
-      <script type="text/javascript">
-        var date146 = new Date('2024-10-16T15:00:00Z');
-        var day146 = date146.getDate();
-        const monthNames146 = ["January", "February", "March", "April", "May", "June",
-                               "July", "August", "September", "October", "November", "December"];
-        var month146 = monthNames146[date146.getMonth()];
-        var year146 = date146.getFullYear();
-        var strTime146 = day146 + " " + month146 + " " +  year146;
-        document.write(strTime146);
-        const dtf146 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-        var zone146 = dtf146.formatToParts(date146).find((part) => part.type == 'timeZoneName').value;
-        var hours146 = date146.getHours();
-        var minutes146 = date146.getMinutes();
-        var ampm146 = hours146 >= 12 ? 'pm' : 'am';
-        hours146 = hours146 % 12;
-        hours146 = hours146 ? hours146 : 12; // the hour '0' should be '12'
-        minutes146 = minutes146 < 10 ? '0'+minutes146 : minutes146;
-        var strTime2146 = hours146 + ':' + minutes146 +ampm146 + ' ' + "(" +zone146+")";
-        document.write("<br>");
-        document.write(strTime2146);
-        </script>
-          
-          <br>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Karim%20Barigou%20(UCLouvain%2C%20Belgium)&dates=20241016T150000Z/20241016T161000Z&details=Speaker%3A%20Karim%20Barigou%20(Universit%C3%A9%20Laval%2C%20Canada)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c/om%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-          <a href="Karim_Barigou/Karim_Barigou.ics" download>
-          Outlook calendar
-        </a>
-        
-          
-          </td>
-          
-          <td class = "speaker">
-         <a href="https://uclouvain.be/en/directories/karim.barigou" target="_blank"> Karim Barigou (UCLouvain, Belgium) </a>  </td>
-          <td class = "title">  
-            Bayesian mortality modelling with pandemics: a vanishing jump approach (Joint work with Julius Goes and Anne Leucht)
-        <br> <details>
-          <summary>Abstract (click to expand)</summary>
-          This paper extends the Lee-Carter model for single- and multi-populations to account for pandemic jump effects of vanishing kind, allowing for a more comprehensive and accurate representation of mortality rates during a pandemic, characterised by a high impact at the beginning and gradually vanishing effects over subsequent periods. While the Lee-Carter model is effective in capturing mortality trends, it may not be able to account for large, unexpected jumps in mortality rates caused by pandemics or wars. Existing models allow either for transient jumps with an effect of one period only or persistent jumps. However, there is no literature on estimating mortality time series with jumps having an effect over a small number of periods as typically observed in pandemics. The Bayesian approach allows to quantify the uncertainty around the parameter estimates. Empirical data from world wars and the COVID-19 pandemic shows the superiority of the proposed approach both in-sample and out-of sample, compared to models with a transitory shock effect.
-         </details> </td>
-      
-          <td>
-
-          </td>
-  </tr>  
-  
-  <tr>
-    <td class = "date"><b><s>30 October 2024 9am (UTC) </b> <br> In your local time: <br>
-      <script type="text/javascript">
-        var date147 = new Date('2024-10-30T09:00:00Z');
-        var day147 = date147.getDate();
-        const monthNames147 = ["January", "February", "March", "April", "May", "June",
-                               "July", "August", "September", "October", "November", "December"];
-        var month147 = monthNames147[date147.getMonth()];
-        var year147 = date147.getFullYear();
-        var strTime147 = day147 + " " + month147 + " " +  year147;
-        document.write(strTime147);
-        const dtf147 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-        var zone147 = dtf147.formatToParts(date147).find((part) => part.type == 'timeZoneName').value;
-        var hours147 = date147.getHours();
-        var minutes147 = date147.getMinutes();
-        var ampm147 = hours147 >= 12 ? 'pm' : 'am';
-        hours147 = hours147 % 12;
-        hours147 = hours147 ? hours147 : 12; // the hour '0' should be '12'
-        minutes147 = minutes147 < 10 ? '0'+minutes147 : minutes147;
-        var strTime2147 = hours147 + ':' + minutes147 +ampm147 + ' ' + "(" +zone147+")";
-        document.write("<br>");
-        document.write(strTime2147);
-        </script>
-          
-          <br>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Ayse%20Arik%20(Heriot-Watt%20University%2C%20UK)&dates=20241030T090000Z/20241030T101000Z&details=Speaker%3A%20Ayse%20Arik%20(Heriot-Watt%20University%2C%20UK)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-          <a href="ayse_arik/20241030-owars-ayse-arik-heriot-watt-university-uk.ics" download>
-          Outlook calendar
-        </a>
-      </s> 
-          
-          </td>
-          
-          <td class = "speaker"> <s> 
-         <a href="https://researchportal.hw.ac.uk/en/persons/ayse-arik" target="_blank"> Ayse Arik (Heriot-Watt University, UK) </a>  </s> </td>
-          <td class = "title">  <s>
-             TBA
-        <br> <details>
-          <summary>Abstract (click to expand)</summary>
-          TBA
-         </details></td>
-        </s>
-          <td>
-        postponed
-          </td>
-  </tr>  
-  <tr>
     <td class = "date"><b>13 November 2024 3pm (UTC) </b> <br> In your local time:  <br>
       <script type="text/javascript">
         var date148 = new Date('2024-11-13T15:00:00Z');
@@ -553,10 +514,12 @@ window.player = player;
           <td class = "speaker">
          <a href="https://www.au.dk/en/show/person/mkallestrup@econ.au.dk" target="_blank"> Malene Kallestrup-Lamb (Aarhus University, Denmark) </a>  </td>
           <td class = "title">  
-             TBA
+            The Heterogeneity of Health Dynamics
         <br> <details>
           <summary>Abstract (click to expand)</summary>
-          TBA
+          This paper explores the dynamic relationship between socioeconomic status and health over time, particularly focusing on persistent health disparities across socioeconomic groups. Although the socioeconomic gradient in health is well-documented, most studies focus on health at a single point in time, overlooking how health trajectories evolve. We address this gap by analyzing the long-term health dynamics of a complete cohort of Danish individuals over 21 years using high-quality administrative data. Our findings reveal that lower socioeconomic groups not only start with poorer health but also face faster deterioration and greater difficulty in recovering from health shocks. Moreover, health disparities increase with age, with lower-educated individuals and males showing the greatest rise in inequality. We further analyze individual transitions across the health distribution, revealing that lower socioeconomic groups are more likely to remain in poor health or experience further declines, contributing to widening health inequality.
+
+ 
          </details></td>
       
           <td>
@@ -1042,6 +1005,100 @@ This talk proposes innovative insurance products for couples, where benefits are
         </td>
 </tr>  
 
+
+<tr>
+  <td class = "date"><b>16 October 2024 3pm (UTC) </b> <br> In your local time:  <br>
+    <script type="text/javascript">
+      var date146 = new Date('2024-10-16T15:00:00Z');
+      var day146 = date146.getDate();
+      const monthNames146 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month146 = monthNames146[date146.getMonth()];
+      var year146 = date146.getFullYear();
+      var strTime146 = day146 + " " + month146 + " " +  year146;
+      document.write(strTime146);
+      const dtf146 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone146 = dtf146.formatToParts(date146).find((part) => part.type == 'timeZoneName').value;
+      var hours146 = date146.getHours();
+      var minutes146 = date146.getMinutes();
+      var ampm146 = hours146 >= 12 ? 'pm' : 'am';
+      hours146 = hours146 % 12;
+      hours146 = hours146 ? hours146 : 12; // the hour '0' should be '12'
+      minutes146 = minutes146 < 10 ? '0'+minutes146 : minutes146;
+      var strTime2146 = hours146 + ':' + minutes146 +ampm146 + ' ' + "(" +zone146+")";
+      document.write("<br>");
+      document.write(strTime2146);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Karim%20Barigou%20(UCLouvain%2C%20Belgium)&dates=20241016T150000Z/20241016T161000Z&details=Speaker%3A%20Karim%20Barigou%20(Universit%C3%A9%20Laval%2C%20Canada)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c/om%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="Karim_Barigou/Karim_Barigou.ics" download>
+        Outlook calendar
+      </a>
+      
+        
+        </td>
+        
+        <td class = "speaker">
+       <a href="https://uclouvain.be/en/directories/karim.barigou" target="_blank"> Karim Barigou (UCLouvain, Belgium) </a>  </td>
+        <td class = "title">  
+          Bayesian mortality modelling with pandemics: a vanishing jump approach (Joint work with Julius Goes and Anne Leucht)
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        This paper extends the Lee-Carter model for single- and multi-populations to account for pandemic jump effects of vanishing kind, allowing for a more comprehensive and accurate representation of mortality rates during a pandemic, characterised by a high impact at the beginning and gradually vanishing effects over subsequent periods. While the Lee-Carter model is effective in capturing mortality trends, it may not be able to account for large, unexpected jumps in mortality rates caused by pandemics or wars. Existing models allow either for transient jumps with an effect of one period only or persistent jumps. However, there is no literature on estimating mortality time series with jumps having an effect over a small number of periods as typically observed in pandemics. The Bayesian approach allows to quantify the uncertainty around the parameter estimates. Empirical data from world wars and the COVID-19 pandemic shows the superiority of the proposed approach both in-sample and out-of sample, compared to models with a transitory shock effect.
+       </details> </td>
+    
+        <td>
+
+        </td>
+</tr>  
+
+<tr>
+  <td class = "date"><b><s>30 October 2024 9am (UTC) </b> <br> In your local time: <br>
+    <script type="text/javascript">
+      var date147 = new Date('2024-10-30T09:00:00Z');
+      var day147 = date147.getDate();
+      const monthNames147 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month147 = monthNames147[date147.getMonth()];
+      var year147 = date147.getFullYear();
+      var strTime147 = day147 + " " + month147 + " " +  year147;
+      document.write(strTime147);
+      const dtf147 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone147 = dtf147.formatToParts(date147).find((part) => part.type == 'timeZoneName').value;
+      var hours147 = date147.getHours();
+      var minutes147 = date147.getMinutes();
+      var ampm147 = hours147 >= 12 ? 'pm' : 'am';
+      hours147 = hours147 % 12;
+      hours147 = hours147 ? hours147 : 12; // the hour '0' should be '12'
+      minutes147 = minutes147 < 10 ? '0'+minutes147 : minutes147;
+      var strTime2147 = hours147 + ':' + minutes147 +ampm147 + ' ' + "(" +zone147+")";
+      document.write("<br>");
+      document.write(strTime2147);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Ayse%20Arik%20(Heriot-Watt%20University%2C%20UK)&dates=20241030T090000Z/20241030T101000Z&details=Speaker%3A%20Ayse%20Arik%20(Heriot-Watt%20University%2C%20UK)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="ayse_arik/20241030-owars-ayse-arik-heriot-watt-university-uk.ics" download>
+        Outlook calendar
+      </a>
+    </s> 
+        
+        </td>
+        
+        <td class = "speaker"> <s> 
+       <a href="https://researchportal.hw.ac.uk/en/persons/ayse-arik" target="_blank"> Ayse Arik (Heriot-Watt University, UK) </a>  </s> </td>
+        <td class = "title">  <s>
+           TBA
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        TBA
+       </details></td>
+      </s>
+        <td>
+      postponed
+        </td>
+</tr>  
 </table>
 
 <br>
