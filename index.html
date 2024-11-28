@@ -207,116 +207,67 @@ height: 100%;
 
 
 
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
-</h2>
+
+<br>
+
+
+ <div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
 
-     
-
-
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="Thomas_Bernhardt/Photo.jpg" alt="Avatar" height="200" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2024-11-27T09:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2024-11-27T09:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="https://personalpages.manchester.ac.uk/staff/thomas.bernhardt/" target="_blank"> Thomas Bernhardt (University of Manchester, UK)
-</a>
-
-</div>
-
-<br>
 
 
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+
+
+
+
+
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/j0iszmQHq3Q">
+</iframe>
+
+
+
+    
+
+</div>
 
   
-<div class="col-md-5">
+<div class="col-md-6">
+<b>Speaker: </b><a href="https://personalpages.manchester.ac.uk/staff/thomas.bernhardt/" target="_blank">Thomas Bernhardt (University of Manchester, UK)
+</a>
+<br>
   <b>Title:</b>
+  Wealth heterogeneity in a pooled annuity fund<details>
+<summary>Abstract (click to expand)</summary>
+Pooled annuity funds are future retirement products that cope with uncertain mortality rates and require little solvency capital. The members of a pooled annuity fund receive a lifelong stream of income that fluctuates according to observed mortality rates over time. If assumed mortality rates change or differ from observed ones, the members' income will change. However, uncertainty about mortality rates is only one risk that negatively affects the stability of income payments. Wealth heterogeneity has an additional impact on the stability of income payments. The available fund for redistribution within the pool changes over time depending on the order in which members pass away. We can increase the stability of income payments through a deliberate choice of people we allow into the pool initially. We will introduce the concept of a beneficial group, which is a group that benefits from being together in terms of maximal income stability (ignoring other forms of risk). We will showcase how to find efficiently beneficial groups. We will apply our findings to inform actuaries about a criterion for income brackets for future pooled annuity funds.
 
-  Wealth heterogeneity in a pooled annuity fund <br> 
-<b>Abstract:</b>
-Pooled annuity funds are future retirement products that cope with uncertain mortality rates and require little solvency capital. The members of a pooled annuity fund receive a lifelong stream of income that fluctuates according to observed mortality rates over time. If assumed mortality rates change or differ from observed ones, the members' income will change.
-
-However, uncertainty about mortality rates is only one risk that negatively affects the stability of income payments. Wealth heterogeneity has an additional impact on the stability of income payments. The available fund for redistribution within the pool changes over time depending on the order in which members pass away. We can increase the stability of income payments through a deliberate choice of people we allow into the pool initially.
-
-We will introduce the concept of a beneficial group, which is a group that benefits from being together in terms of maximal income stability (ignoring other forms of risk). We will showcase how to find efficiently beneficial groups. We will apply our findings to inform actuaries about a criterion for income brackets for future pooled annuity funds.
-
- 
-      </div>
-
-<div class="col-md-4">
+</details>
 </div>
 
+<div class="col-md-2">
+
 </div>
+
+
+
 </div>
+
+
+
+
+<br>
+<br>
+
+
+
+
+
 
 
 
@@ -528,7 +479,7 @@ We will introduce the concept of a beneficial group, which is a group that benef
          </details></td>
       
           <td>
-
+<a href="Thomas_Bernhardt/OWARS-2024-Bernhardt.pdf">  Slides</a>
           </td>
   </tr> 
 
