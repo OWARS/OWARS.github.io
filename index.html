@@ -484,56 +484,6 @@ window.player = player;
 
   
 
-  <tr>
-    <td class = "date"><b>27 November 2024 9am (UTC) </b> <br> In your local time:  <br>
-      <script type="text/javascript">
-        var date149 = new Date('2024-11-27T09:00:00Z');
-        var day149 = date149.getDate();
-        const monthNames149 = ["January", "February", "March", "April", "May", "June",
-                               "July", "August", "September", "October", "November", "December"];
-        var month149 = monthNames149[date149.getMonth()];
-        var year149 = date149.getFullYear();
-        var strTime149 = day149 + " " + month149 + " " +  year149;
-        document.write(strTime149);
-        const dtf149 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-        var zone149 = dtf149.formatToParts(date149).find((part) => part.type == 'timeZoneName').value;
-        var hours149 = date149.getHours();
-        var minutes149 = date149.getMinutes();
-        var ampm149 = hours149 >= 12 ? 'pm' : 'am';
-        hours149 = hours149 % 12;
-        hours149 = hours149 ? hours149 : 12; // the hour '0' should be '12'
-        minutes149 = minutes149 < 10 ? '0'+minutes149 : minutes149;
-        var strTime2149 = hours149 + ':' + minutes149 +ampm149 + ' ' + "(" +zone149+")";
-        document.write("<br>");
-        document.write(strTime2149);
-        </script>
-          
-          <br>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Thomas%20Bernhardt%20(University%20of%20Manchester%2C%20UK)&dates=20241127T090000Z/20241127T101000Z&details=%5BOWARS%5D%20Thomas%20Bernhardt%20(University%20of%20Manchester%2C%20UK)%0ADate%20and%20Time%3A%20Nov%2027%2C%202024%209%3A00%20AM%20-%2010%3A10%20AM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Thomas%20Bernhardt%20(University%20of%20Manchester%2C%20UK)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-          <a href="Thomas_Bernhardt/20241127-owars-thomas-bernhardt-university-of-manchester-uk-.ics" download>
-          Outlook calendar
-        </a>
-        
-          
-          </td>
-          
-          <td class = "speaker">
-         <a href="https://personalpages.manchester.ac.uk/staff/thomas.bernhardt/" target="_blank"> Thomas Bernhardt (University of Manchester, UK) </a>  </td>
-          <td class = "title">  
-            Wealth heterogeneity in a pooled annuity fund
-        <br> <details>
-          <summary>Abstract (click to expand)</summary>
-          Pooled annuity funds are future retirement products that cope with uncertain mortality rates and require little solvency capital. The members of a pooled annuity fund receive a lifelong stream of income that fluctuates according to observed mortality rates over time. If assumed mortality rates change or differ from observed ones, the members' income will change.
-
-However, uncertainty about mortality rates is only one risk that negatively affects the stability of income payments. Wealth heterogeneity has an additional impact on the stability of income payments. The available fund for redistribution within the pool changes over time depending on the order in which members pass away. We can increase the stability of income payments through a deliberate choice of people we allow into the pool initially.
-
-We will introduce the concept of a beneficial group, which is a group that benefits from being together in terms of maximal income stability (ignoring other forms of risk). We will showcase how to find efficiently beneficial groups. We will apply our findings to inform actuaries about a criterion for income brackets for future pooled annuity funds.
-         </details></td>
-      
-          <td>
-<a href="Thomas_Bernhardt/OWARS-2024-Bernhardt.pdf">  Slides</a>
-          </td>
-  </tr> 
 
   <tr>
     <td class = "date"><b>11 December 2024 3pm (UTC) </b> <br> In your local time:  <br>
@@ -1109,6 +1059,58 @@ This talk proposes innovative insurance products for couples, where benefits are
     
         <td>
 
+        </td>
+</tr> 
+
+
+<tr>
+  <td class = "date"><b>27 November 2024 9am (UTC) </b> <br> In your local time:  <br>
+    <script type="text/javascript">
+      var date149 = new Date('2024-11-27T09:00:00Z');
+      var day149 = date149.getDate();
+      const monthNames149 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month149 = monthNames149[date149.getMonth()];
+      var year149 = date149.getFullYear();
+      var strTime149 = day149 + " " + month149 + " " +  year149;
+      document.write(strTime149);
+      const dtf149 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone149 = dtf149.formatToParts(date149).find((part) => part.type == 'timeZoneName').value;
+      var hours149 = date149.getHours();
+      var minutes149 = date149.getMinutes();
+      var ampm149 = hours149 >= 12 ? 'pm' : 'am';
+      hours149 = hours149 % 12;
+      hours149 = hours149 ? hours149 : 12; // the hour '0' should be '12'
+      minutes149 = minutes149 < 10 ? '0'+minutes149 : minutes149;
+      var strTime2149 = hours149 + ':' + minutes149 +ampm149 + ' ' + "(" +zone149+")";
+      document.write("<br>");
+      document.write(strTime2149);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Thomas%20Bernhardt%20(University%20of%20Manchester%2C%20UK)&dates=20241127T090000Z/20241127T101000Z&details=%5BOWARS%5D%20Thomas%20Bernhardt%20(University%20of%20Manchester%2C%20UK)%0ADate%20and%20Time%3A%20Nov%2027%2C%202024%209%3A00%20AM%20-%2010%3A10%20AM%0AVenue%3A%20https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01%0ASpeaker%3A%20Thomas%20Bernhardt%20(University%20of%20Manchester%2C%20UK)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="Thomas_Bernhardt/20241127-owars-thomas-bernhardt-university-of-manchester-uk-.ics" download>
+        Outlook calendar
+      </a>
+      
+        
+        </td>
+        
+        <td class = "speaker">
+       <a href="https://personalpages.manchester.ac.uk/staff/thomas.bernhardt/" target="_blank"> Thomas Bernhardt (University of Manchester, UK) </a>  </td>
+        <td class = "title">  
+          Wealth heterogeneity in a pooled annuity fund
+      <br> <details>
+        <summary>Abstract (click to expand)</summary>
+        Pooled annuity funds are future retirement products that cope with uncertain mortality rates and require little solvency capital. The members of a pooled annuity fund receive a lifelong stream of income that fluctuates according to observed mortality rates over time. If assumed mortality rates change or differ from observed ones, the members' income will change.
+
+However, uncertainty about mortality rates is only one risk that negatively affects the stability of income payments. Wealth heterogeneity has an additional impact on the stability of income payments. The available fund for redistribution within the pool changes over time depending on the order in which members pass away. We can increase the stability of income payments through a deliberate choice of people we allow into the pool initially.
+
+We will introduce the concept of a beneficial group, which is a group that benefits from being together in terms of maximal income stability (ignoring other forms of risk). We will showcase how to find efficiently beneficial groups. We will apply our findings to inform actuaries about a criterion for income brackets for future pooled annuity funds.
+       </details></td>
+    
+        <td>
+<a href="Thomas_Bernhardt/OWARS-2024-Bernhardt.pdf">  Slides</a>
         </td>
 </tr> 
 </table>
