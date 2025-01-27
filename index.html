@@ -207,60 +207,112 @@ height: 100%;
 
 
 
-<br>
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
- <div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
+</h2>
 </div>
 
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="merc-claramunt/Mercè-Claramunt.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2025-01-29T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2025-01-29T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://webgrec.ub.edu/webpages/personal/ang/000334_mmclaramunt.ub.edu.html" target="_blank"> Mercè Claramunt (University of Barcelona, Spain)
+</a>
+
+</div>
+
+<br>
 
 
 <div class="row row-grid">
 
-<div class="col-md-4">
-
-
-
-
-
-
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/Q1_T96cPr2M">
-</iframe>
-
-
-
-    
-
-</div>
 
   
-<div class="col-md-6">
-<b>Speaker: </b><a href="https://marlonmoresco.github.io/cv/" target="_blank">Marlon Moresco (Federal University of Rio Grande do Sul, Brazil)
-</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-  Set risk measures<details>
-<summary>Abstract (click to expand)</summary>
-In this talk, we introduce Set Risk Measures (SRMs), a novel extension of traditional risk measures to sets of random variables. Unlike classical risk measures, which evaluate the risk of individual random variables, SRMs are real-valued maps defined on the space of all non-empty, closed, and bounded sets of almost surely bounded random variables. This generalization enables the assessment of risk in contexts involving collections of uncertainties, such as systemic risk or portfolio optimization. We outline the axiomatic framework for SRMs, which parallels the classical approach but adapts to set operations, and present a dual representation theorem for convex SRMs using regular, finitely additive measures on the unit ball of the dual space of essentially bounded random variables. Special attention is given to worst-case SRMs, which measure risk by the supremum of individual risks within a set. Through examples, we demonstrate the versatility of this framework in financial and mathematical applications, including systemic risk analysis, portfolio management, and decision-making under uncertainty. This work significantly broadens the scope of risk measures, offering new tools for capturing and quantifying complex risks in diverse settings.
 
-</details>
+  The impact of occupational pension plans on the pension saving behaviour of Spanish households<br> 
+<b>Abstract:</b>
+The evolution of pension systems across Europe is influenced by the intricate dynamics among three pillars: public pensions, occupational pensions, and individual retirement savings. Against the backdrop of demographic changes and economic challenges, comprehending the relationship between these pillars is crucial for the optimal design of the entire system. This paper examines the connection between the second and third pension pillars in Spain, utilising data from the Spanish Survey of Household Finances 2020. The study employs logit and cluster analysis to explore how the promotion of occupational pension schemes influences the uptake of individual private pension plans, with a particular focus on the reference person within households. The results reveal that when assessing the impact of the second pillar on the third pillar, if the reference person is the participant in the occupational pension plan, the effect is negligible. However, if it is another household member, there is a 10.1% increase in the likelihood that the reference person possesses a third pillar instrument. In households with substantial real assets and anticipating lower future income, this percentage increases to 46%. Overall, the analysis emphasises the complementary nature of the individual and occupational pension pillars in Spain.
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
+</div>
 </div>
 
-
-
-</div>
-
-
-
-
-<br>
-<br>
 
 
 
