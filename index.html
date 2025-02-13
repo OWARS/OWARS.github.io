@@ -204,113 +204,51 @@ height: 100%;
 
 
 
+<br>
 
 
-
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
-
-</h2>
+<div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
-
-     
-
-
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="maud-thomas/LA255_pp copie.png" alt="Avatar" height="120" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2025-02-12T09:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2024-02-14T15:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="https://sites.google.com/site/maudthomaspro" target="_blank"> Maud Thomas (Université Lyon 1, France)
-</a>
-
-</div>
-
-<br>
-
 
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/https://youtu.be/NTQjgt6_8GQ">
+</iframe>
+
+</div>
 
   
-<div class="col-md-5">
-  <b>Title:</b>
-
-  Assessing Extreme Risk using Stochastic Simulation of Extremes<br> 
-<b>Abstract:</b>
-Risk management is particularly concerned with extreme events, but analysing these events is often hindered by the scarcity of data, especially in a multivariate context. This data scarcity complicates risk management efforts. Various tools can assess the risk posed by extreme events, even under extraordinary circumstances. This paper studies the evaluation of univariate risk for a given risk factor using metrics that account for its asymptotic dependence on other risk factors. Data availability is crucial, particularly for extreme events where it is often limited by the nature of the phenomenon itself, making estimation challenging. To address this issue, two non-parametric simulation algorithms based on multivariate extreme theory are developed. These algorithms aim to extend a sample of extremes jointly and conditionally for asymptotically dependent variables using stochastic simulation and multivariate Generalised Pareto Distributions. The approach is illustrated with numerical analyses of both simulated and real data to assess the accuracy of extreme risk metric estimations. Joint work with Nisrine Madhar and Juliette Legrand. 
-      </div>
-
 <div class="col-md-4">
+<b>Speaker: </b><a href="https://sites.google.com/site/maudthomaspro" target="_blank">Maud Thomas (Université Lyon 1, France)
+</a>
+<br>
+  <b>Title:</b>
+  Assessing Extreme Risk using Stochastic Simulation of Extremes
+  <br>
+  <b>Abstract </b>
+Risk management is particularly concerned with extreme events, but analysing these events is often hindered by the scarcity of data, especially in a multivariate context. This data scarcity complicates risk management efforts. Various tools can assess the risk posed by extreme events, even under extraordinary circumstances. This paper studies the evaluation of univariate risk for a given risk factor using metrics that account for its asymptotic dependence on other risk factors. Data availability is crucial, particularly for extreme events where it is often limited by the nature of the phenomenon itself, making estimation challenging. To address this issue, two non-parametric simulation algorithms based on multivariate extreme theory are developed. These algorithms aim to extend a sample of extremes jointly and conditionally for asymptotically dependent variables using stochastic simulation and multivariate Generalised Pareto Distributions. The approach is illustrated with numerical analyses of both simulated and real data to assess the accuracy of extreme risk metric estimations. Joint work with Nisrine Madhar and Juliette Legrand.
+
+</details>
 </div>
 
+<div class="col-md-2">
+
 </div>
+
+
+
 </div>
+
+
+
+
+<br>
+<br>
+
+
 
 
 
@@ -471,63 +409,6 @@ window.player = player;
    
     
 
-
-  
-
-
-
-
-
-
-  <tr>
-    <td class = "date"><b>12 February 2025 9am (UTC) </b> <br> In your local time:  <br>
-      <script type="text/javascript">
-        var date153 = new Date('2025-02-12T09:00:00Z');
-        var day153 = date153.getDate();
-        const monthNames153 = ["January", "February", "March", "April", "May", "June",
-                               "July", "August", "September", "October", "November", "December"];
-        var month153 = monthNames153[date153.getMonth()];
-        var year153 = date153.getFullYear();
-        var strTime153 = day153 + " " + month153 + " " +  year153;
-        document.write(strTime153);
-        const dtf153 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-        var zone153 = dtf153.formatToParts(date153).find((part) => part.type == 'timeZoneName').value;
-        var hours153 = date153.getHours();
-        var minutes153 = date153.getMinutes();
-        var ampm153 = hours153 >= 12 ? 'pm' : 'am';
-        hours153 = hours153 % 12;
-        hours153 = hours153 ? hours153 : 12; // the hour '0' should be '12'
-        minutes153 = minutes153 < 10 ? '0'+minutes153 : minutes153;
-        var strTime2153 = hours153 + ':' + minutes153 +ampm153 + ' ' + "(" +zone153+")";
-        document.write("<br>");
-        document.write(strTime2153);
-        </script>
-          
-          <br>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Maud%20Thomas%20(Universit%C3%A9%20Lyon%201%2C%20France)&dates=20250212T090000Z/20250212T101000Z&details=Speaker%3A%20Maud%20Thomas%20(Universit%C3%A9%20Lyon%201%2C%20France)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-          <a href="maud-thomas/20250212-owars-maud-thomas-universit-lyon-1-france-.ics" download>
-          Outlook calendar
-        </a>
-        
-          
-          </td>
-          
-          <td class = "speaker">
-         <a href="https://sites.google.com/site/maudthomaspro" target="_blank"> Maud Thomas (Université Lyon 1, France) </a>  </td>
-          <td class = "title">  
-            Assessing Extreme Risk using Stochastic Simulation of Extremes       <br> <details>
-          <summary>Abstract (click to expand)</summary>
-          Risk management is particularly concerned with extreme events, but analysing these events is often hindered by the scarcity of data, especially in a multivariate context. This data scarcity complicates risk management efforts. Various tools can assess the risk posed by extreme events, even under extraordinary circumstances. This paper studies the evaluation of univariate risk for a given risk factor using metrics that account for its asymptotic dependence on other risk factors. Data availability is crucial, particularly for extreme events where it is often limited by the nature of the phenomenon itself, making estimation challenging. To address this issue, two non-parametric simulation algorithms based on multivariate extreme theory are developed. These algorithms aim to extend a sample of extremes jointly and conditionally for asymptotically dependent variables using stochastic simulation and multivariate Generalised Pareto Distributions. The approach is illustrated with numerical analyses of both simulated and real data to assess the accuracy of extreme risk metric estimations. Joint work with Nisrine Madhar and Juliette Legrand. 
-         </details></td>
-      
-          <td>
-
-          </td>
-  </tr> 
-
-
-
-
   <tr>
     <td class = "date"><b>26 February 2025 3pm (UTC) </b> <br> In your local time:  <br>
       <script type="text/javascript">
@@ -573,6 +454,7 @@ TBA        <br> <details>
 
           </td>
   </tr> 
+  
 
 
 
@@ -581,8 +463,198 @@ TBA        <br> <details>
 
 
 
+  <tr>
+    <td class = "date"><b>26 March 2025 3pm (UTC) </b> <br> In your local time:  <br>
+      <script type="text/javascript">
+        var date155 = new Date('2025-03-26T15:00:00Z');
+        var day155 = date155.getDate();
+        const monthNames155 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month155 = monthNames155[date155.getMonth()];
+        var year155 = date155.getFullYear();
+        var strTime155 = day155 + " " + month155 + " " +  year155;
+        document.write(strTime155);
+        const dtf155 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone155 = dtf155.formatToParts(date155).find((part) => part.type == 'timeZoneName').value;
+        var hours155 = date155.getHours();
+        var minutes155 = date155.getMinutes();
+        var ampm155 = hours155 >= 12 ? 'pm' : 'am';
+        hours155 = hours155 % 12;
+        hours155 = hours155 ? hours155 : 12; // the hour '0' should be '12'
+        minutes155 = minutes155 < 10 ? '0'+minutes155 : minutes155;
+        var strTime2155 = hours155 + ':' + minutes155 +ampm155 + ' ' + "(" +zone155+")";
+        document.write("<br>");
+        document.write(strTime2155);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Hansjoerg%20Albrecher%20(Universit%C3%A9%20de%20Lausanne%2C%20Switzerland)&dates=20250326T150000Z/20250326T161000Z&details=Speaker%3A%20Hansjoerg%20Albrecher%20(Universit%C3%A9%20de%20Lausanne%2C%20Switzerland)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="hansjoerg-albrecher/20250326-owars-hansjoerg-albrecher-universit-de-lausanne-switzerland-.ics" download>
+          Outlook calendar
+        </a>
+        
+          
+          </td>
+          
+          <td class = "speaker">
+         <a href="https://people.unil.ch/hansjoergalbrecher/" target="_blank"> Hansjoerg Albrecher (Université de Lausanne, Switzerland) </a>  </td>
+          <td class = "title">  
+TBA        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+        TBA
+         </details></td>
+      
+          <td>
+
+          </td>
+  </tr> 
 
 
+
+
+  <tr>
+    <td class = "date"><b>09 April 2025 3pm (UTC) </b> <br> In your local time:  <br>
+      <script type="text/javascript">
+        var date156 = new Date('2025-04-09T15:00:00Z');
+        var day156 = date156.getDate();
+        const monthNames156 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month156 = monthNames156[date156.getMonth()];
+        var year156 = date156.getFullYear();
+        var strTime156 = day156 + " " + month156 + " " +  year156;
+        document.write(strTime156);
+        const dtf156 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone156 = dtf156.formatToParts(date156).find((part) => part.type == 'timeZoneName').value;
+        var hours156 = date156.getHours();
+        var minutes156 = date156.getMinutes();
+        var ampm156 = hours156 >= 12 ? 'pm' : 'am';
+        hours156 = hours156 % 12;
+        hours156 = hours156 ? hours156 : 12; // the hour '0' should be '12'
+        minutes156 = minutes156 < 10 ? '0'+minutes156 : minutes156;
+        var strTime2156 = hours156 + ':' + minutes156 +ampm156 + ' ' + "(" +zone156+")";
+        document.write("<br>");
+        document.write(strTime2156);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Etienne%20Marceau%20(Universite%20de%20Laval%2C%20Canada)&dates=20250409T150000Z/20250409T161000Z&details=Speaker%3A%20Etienne%20Marceau%20(Universite%20de%20Laval%2C%20Canada)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="etienne-marceau/20250409-owars-etienne-marceau-universite-de-laval-canada-.ics" download>
+          Outlook calendar
+        </a>
+        
+          
+          </td>
+          
+          <td class = "speaker">
+         <a href="https://www.fsg.ulaval.ca/corps-professoral/etienne-marceau" target="_blank"> Etienne Marceau (Universite de Laval, Canada) </a>  </td>
+          <td class = "title">  
+  TBA        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+        TBA
+         </details></td>
+      
+          <td>
+  
+          </td>
+  </tr> 
+
+
+
+
+  <tr>
+    <td class = "date"><b>14 May 2025 3pm (UTC) </b> <br> In your local time:  <br>
+      <script type="text/javascript">
+        var date157 = new Date('2025-05-14T15:00:00Z');
+        var day157 = date157.getDate();
+        const monthNames157 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month157 = monthNames157[date157.getMonth()];
+        var year157 = date157.getFullYear();
+        var strTime157 = day157 + " " + month157 + " " +  year157;
+        document.write(strTime157);
+        const dtf157 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone157 = dtf157.formatToParts(date157).find((part) => part.type == 'timeZoneName').value;
+        var hours157 = date157.getHours();
+        var minutes157 = date157.getMinutes();
+        var ampm157 = hours157 >= 12 ? 'pm' : 'am';
+        hours157 = hours157 % 12;
+        hours157 = hours157 ? hours157 : 12; // the hour '0' should be '12'
+        minutes157 = minutes157 < 10 ? '0'+minutes157 : minutes157;
+        var strTime2157 = hours157 + ':' + minutes157 +ampm157 + ' ' + "(" +zone157+")";
+        document.write("<br>");
+        document.write(strTime2157);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Andreas%20Tsanakas%20(City%20St%20George's%2C%20University%20of%20London%2C%20UK)&dates=20250514T150000Z/20250514T161000Z&details=Speaker%3A%20Andreas%20Tsanakas%20(City%20St%20George's%2C%20University%20of%20London%2C%20UK)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="andreas-tsanakas/20250514-owars-andreas-tsanakas-city-st-george-s-university-of-london-uk-.ics" download>
+          Outlook calendar
+        </a>
+        
+          
+          </td>
+          
+          <td class = "speaker">
+         <a href="https://www.bayes.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank"> Andreas Tsanakas (City St George's, University of London, UK) </a>  </td>
+          <td class = "title">  
+  TBA        <br> <details>
+          <summary>Abstract (click to expand)</summary>
+        TBA
+         </details></td>
+      
+          <td>
+  
+          </td>
+  </tr> 
+
+
+
+
+<tr>
+  <td class = "date"><b>28 May 2025 9am (UTC) </b> <br> In your local time:  <br>
+    <script type="text/javascript">
+      var date158 = new Date('2025-05-28T09:00:00Z');
+      var day158 = date158.getDate();
+      const monthNames158 = ["January", "February", "March", "April", "May", "June",
+                             "July", "August", "September", "October", "November", "December"];
+      var month158 = monthNames158[date158.getMonth()];
+      var year158 = date158.getFullYear();
+      var strTime158 = day158 + " " + month158 + " " +  year158;
+      document.write(strTime158);
+      const dtf158 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone158 = dtf158.formatToParts(date158).find((part) => part.type == 'timeZoneName').value;
+      var hours158 = date158.getHours();
+      var minutes158 = date158.getMinutes();
+      var ampm158 = hours158 >= 12 ? 'pm' : 'am';
+      hours158 = hours158 % 12;
+      hours158 = hours158 ? hours158 : 12; // the hour '0' should be '12'
+      minutes158 = minutes158 < 10 ? '0'+minutes158 : minutes158;
+      var strTime2158 = hours158 + ':' + minutes158 +ampm158 + ' ' + "(" +zone158+")";
+      document.write("<br>");
+      document.write(strTime2158);
+      </script>
+        
+        <br>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Kyunghyun%20Park%20(Nanyang%20Technological%20University%2C%20Singapore)&dates=20250528T090000Z/20250528T101000Z&details=Speaker%3A%20Kyunghyun%20Park%20(Nanyang%20Technological%20University%2C%20Singapore)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="kyunghyun-park/20250528-owars-kyunghyun-park-nanyang-technological-university-singapore-.ics" download>
+        Outlook calendar
+      </a>
+      
+        
+        </td>
+        
+        <td class = "speaker">
+       <a href="https://sites.google.com/view/kyunghyunpark" target="_blank"> Kyunghyun Park (Nanyang Technological University, Singapore) </a>  </td>
+        <td class = "title">  
+TBA        <br> <details>
+        <summary>Abstract (click to expand)</summary>
+      TBA
+       </details></td>
+    
+        <td>
+
+        </td>
+</tr> 
 
 </tbody>
 
@@ -706,6 +778,53 @@ Through examples, we demonstrate the versatility of this framework in financial 
           </td>
   </tr> 
 
+
+
+  <tr>
+    <td class = "date"><b>12 February 2025 9am (UTC) </b> <br> In your local time:  <br>
+      <script type="text/javascript">
+        var date153 = new Date('2025-02-12T09:00:00Z');
+        var day153 = date153.getDate();
+        const monthNames153 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month153 = monthNames153[date153.getMonth()];
+        var year153 = date153.getFullYear();
+        var strTime153 = day153 + " " + month153 + " " +  year153;
+        document.write(strTime153);
+        const dtf153 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone153 = dtf153.formatToParts(date153).find((part) => part.type == 'timeZoneName').value;
+        var hours153 = date153.getHours();
+        var minutes153 = date153.getMinutes();
+        var ampm153 = hours153 >= 12 ? 'pm' : 'am';
+        hours153 = hours153 % 12;
+        hours153 = hours153 ? hours153 : 12; // the hour '0' should be '12'
+        minutes153 = minutes153 < 10 ? '0'+minutes153 : minutes153;
+        var strTime2153 = hours153 + ':' + minutes153 +ampm153 + ' ' + "(" +zone153+")";
+        document.write("<br>");
+        document.write(strTime2153);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Maud%20Thomas%20(Universit%C3%A9%20Lyon%201%2C%20France)&dates=20250212T090000Z/20250212T101000Z&details=Speaker%3A%20Maud%20Thomas%20(Universit%C3%A9%20Lyon%201%2C%20France)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="maud-thomas/20250212-owars-maud-thomas-universit-lyon-1-france-.ics" download>
+          Outlook calendar
+        </a>
+        
+          
+          </td>
+          
+          <td class = "speaker">
+         <a href="https://sites.google.com/site/maudthomaspro" target="_blank"> Maud Thomas (Université Lyon 1, France) </a>  </td>
+          <td class = "title">  
+            Assessing Extreme Risk using Stochastic Simulation of Extremes       <br> <details>
+          <summary>Abstract (click to expand)</summary>
+          Risk management is particularly concerned with extreme events, but analysing these events is often hindered by the scarcity of data, especially in a multivariate context. This data scarcity complicates risk management efforts. Various tools can assess the risk posed by extreme events, even under extraordinary circumstances. This paper studies the evaluation of univariate risk for a given risk factor using metrics that account for its asymptotic dependence on other risk factors. Data availability is crucial, particularly for extreme events where it is often limited by the nature of the phenomenon itself, making estimation challenging. To address this issue, two non-parametric simulation algorithms based on multivariate extreme theory are developed. These algorithms aim to extend a sample of extremes jointly and conditionally for asymptotically dependent variables using stochastic simulation and multivariate Generalised Pareto Distributions. The approach is illustrated with numerical analyses of both simulated and real data to assess the accuracy of extreme risk metric estimations. Joint work with Nisrine Madhar and Juliette Legrand. 
+         </details></td>
+      
+          <td>
+
+          </td>
+  </tr> 
 
 
 </table>
