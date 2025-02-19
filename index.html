@@ -204,51 +204,112 @@ height: 100%;
 
 
 
+
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
+
+
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="renata-alcoforado/foto_perfil.png" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2025-02-26T15:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2025-02-26T15:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://sigaa.ufpe.br/sigaa/public/docente/portal.jsf?siape=2186798" target="_blank"> Renata Alcoforado (Universidade Federal do Pernambuco, Brazil)
+</a>
+
+</div>
+
 <br>
 
-
-<div class="heading" id="format">
-  <h2 style="clear:left" > Recording of last talk </h2> 
-</div>
 
 <div class="row row-grid">
 
-<div class="col-md-4">
-  
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/NTQjgt6_8GQ">
-</iframe>
-
-</div>
 
   
-<div class="col-md-4">
-<b>Speaker: </b><a href="https://sites.google.com/site/maudthomaspro" target="_blank">Maud Thomas (Université Lyon 1, France)
-</a>
-<br>
+<div class="col-md-8">
   <b>Title:</b>
-  Assessing Extreme Risk using Stochastic Simulation of Extremes
-  <br>
-  <b>Abstract </b>
-Risk management is particularly concerned with extreme events, but analysing these events is often hindered by the scarcity of data, especially in a multivariate context. This data scarcity complicates risk management efforts. Various tools can assess the risk posed by extreme events, even under extraordinary circumstances. This paper studies the evaluation of univariate risk for a given risk factor using metrics that account for its asymptotic dependence on other risk factors. Data availability is crucial, particularly for extreme events where it is often limited by the nature of the phenomenon itself, making estimation challenging. To address this issue, two non-parametric simulation algorithms based on multivariate extreme theory are developed. These algorithms aim to extend a sample of extremes jointly and conditionally for asymptotically dependent variables using stochastic simulation and multivariate Generalised Pareto Distributions. The approach is illustrated with numerical analyses of both simulated and real data to assess the accuracy of extreme risk metric estimations. Joint work with Nisrine Madhar and Juliette Legrand.
+  Socioeconomic benefits of the Brazilian INSS AtestMed programme<br> 
+<b>Abstract:</b>
+This study analyses forecast modelling with time series for INSS expenses related to the AtestMed programme within the Brazilian Welfare and Pension System. The AtestMed programme, a recent socioeconomic initiative by the Brazilian government, aims to manage benefit compensations due to temporary disability more efficiently. It is designed to improve and shorten delays in the processing and payment of compensations, leading to significant savings by reducing disability periods. The dataset used includes monthly monetary data from January 2021 to September 2024, adjusted for inflation according to the National Consumer Price Index (INPC). We examine the behaviour of INSS costs with and without the AtestMed programme, noting that it was implemented in July 2023. The methodology employs six different time series models (Simple, Holt and Holt-Winters Exponential Smoothing, ARMA, ARIMA and SARIMA) for analysing cost trends. By comparing the outcomes for total costs with and without AtestMed, this approach provides a deeper understanding of chronological as well as seasonal trends in INSS spending, anticipates variations, and optimises socioeconomic management. The forecasts generated from this study aim to enhance strategic decision-making within the scope of social security.
 
-</details>
+ 
+      </div>
+
+<div class="col-md-4">
 </div>
 
-<div class="col-md-2">
-
 </div>
-
-
-
 </div>
-
-
-
-
-<br>
-<br>
-
-
 
 
 
@@ -445,9 +506,9 @@ window.player = player;
           <td class = "speaker">
          <a href="https://sigaa.ufpe.br/sigaa/public/docente/portal.jsf?siape=2186798" target="_blank"> Renata Alcoforado (Universidade Federal do Pernambuco, Brazil) </a>  </td>
           <td class = "title">  
-TBA        <br> <details>
+            Socioeconomic benefits of the Brazilian INSS AtestMed programme       <br> <details>
           <summary>Abstract (click to expand)</summary>
-        TBA
+          This study analyses forecast modelling with time series for INSS expenses related to the AtestMed programme within the Brazilian Welfare and Pension System. The AtestMed programme, a recent socioeconomic initiative by the Brazilian government, aims to manage benefit compensations due to temporary disability more efficiently. It is designed to improve and shorten delays in the processing and payment of compensations, leading to significant savings by reducing disability periods. The dataset used includes monthly monetary data from January 2021 to September 2024, adjusted for inflation according to the National Consumer Price Index (INPC). We examine the behaviour of INSS costs with and without the AtestMed programme, noting that it was implemented in July 2023. The methodology employs six different time series models (Simple, Holt and Holt-Winters Exponential Smoothing, ARMA, ARIMA and SARIMA) for analysing cost trends. By comparing the outcomes for total costs with and without AtestMed, this approach provides a deeper understanding of chronological as well as seasonal trends in INSS spending, anticipates variations, and optimises socioeconomic management. The forecasts generated from this study aim to enhance strategic decision-making within the scope of social security.
          </details></td>
       
           <td>
