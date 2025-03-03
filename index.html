@@ -205,112 +205,63 @@ height: 100%;
 
 
 
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
-</h2>
+
+
+<br>
+
+
+ <div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
 
-     
-
-
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="renata-alcoforado/foto_perfil.png" alt="Avatar" height="120" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2025-02-26T15:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2025-02-26T15:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="https://sigaa.ufpe.br/sigaa/public/docente/portal.jsf?siape=2186798" target="_blank"> Renata Alcoforado (Universidade Federal do Pernambuco, Brazil)
-</a>
-
-</div>
-
-<br>
 
 
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+
+
+
+
+
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/igMIPKrldNw">
+</iframe>
+
+
+
+    
+
+</div>
 
   
-<div class="col-md-8">
+<div class="col-md-6">
+<b>Speaker: </b><a href="https://sigaa.ufpe.br/sigaa/public/docente/portal.jsf?siape=2186798" target="_blank"> Renata Alcoforado (Universidade Federal do Pernambuco, Brazil)
+</a>
+<br>
   <b>Title:</b>
-  Socioeconomic benefits of the Brazilian INSS AtestMed programme<br> 
-<b>Abstract:</b>
+  Socioeconomic benefits of the Brazilian INSS AtestMed programme <br>
+  <b>Abstract</b> 
 This study analyses forecast modelling with time series for INSS expenses related to the AtestMed programme within the Brazilian Welfare and Pension System. The AtestMed programme, a recent socioeconomic initiative by the Brazilian government, aims to manage benefit compensations due to temporary disability more efficiently. It is designed to improve and shorten delays in the processing and payment of compensations, leading to significant savings by reducing disability periods. The dataset used includes monthly monetary data from January 2021 to September 2024, adjusted for inflation according to the National Consumer Price Index (INPC). We examine the behaviour of INSS costs with and without the AtestMed programme, noting that it was implemented in July 2023. The methodology employs six different time series models (Simple, Holt and Holt-Winters Exponential Smoothing, ARMA, ARIMA and SARIMA) for analysing cost trends. By comparing the outcomes for total costs with and without AtestMed, this approach provides a deeper understanding of chronological as well as seasonal trends in INSS spending, anticipates variations, and optimises socioeconomic management. The forecasts generated from this study aim to enhance strategic decision-making within the scope of social security.
 
- 
-      </div>
-
-<div class="col-md-4">
-</div>
 
 </div>
+
+<div class="col-md-2">
+
 </div>
 
+
+
+</div>
+
+
+
+
+<br>
+<br>
 
 
 
@@ -468,54 +419,6 @@ window.player = player;
 
   
    
-    
-
-  <tr>
-    <td class = "date"><b>26 February 2025 3pm (UTC) </b> <br> In your local time:  <br>
-      <script type="text/javascript">
-        var date154 = new Date('2025-02-26T15:00:00Z');
-        var day154 = date154.getDate();
-        const monthNames154 = ["January", "February", "March", "April", "May", "June",
-                               "July", "August", "September", "October", "November", "December"];
-        var month154 = monthNames154[date154.getMonth()];
-        var year154 = date154.getFullYear();
-        var strTime154 = day154 + " " + month154 + " " +  year154;
-        document.write(strTime154);
-        const dtf154 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-        var zone154 = dtf154.formatToParts(date154).find((part) => part.type == 'timeZoneName').value;
-        var hours154 = date154.getHours();
-        var minutes154 = date154.getMinutes();
-        var ampm154 = hours154 >= 12 ? 'pm' : 'am';
-        hours154 = hours154 % 12;
-        hours154 = hours154 ? hours154 : 12; // the hour '0' should be '12'
-        minutes154 = minutes154 < 10 ? '0'+minutes154 : minutes154;
-        var strTime2154 = hours154 + ':' + minutes154 +ampm154 + ' ' + "(" +zone154+")";
-        document.write("<br>");
-        document.write(strTime2154);
-        </script>
-          
-          <br>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Renata%20Alcoforado%20(Universidade%20Federal%20do%20Pernambuco%2C%20Brazil)&dates=20250226T150000Z/20250226T161000Z&details=Speaker%3A%20Renata%20Alcoforado%20(Universidade%20Federal%20do%20Pernambuco%2C%20Brazil)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-          <a href="renata-alcoforado/20250226-owars-renata-alcoforado-universidade-federal-do-pernambuco-brazil-.ics" download>
-          Outlook calendar
-        </a>
-        
-          
-          </td>
-          
-          <td class = "speaker">
-         <a href="https://sigaa.ufpe.br/sigaa/public/docente/portal.jsf?siape=2186798" target="_blank"> Renata Alcoforado (Universidade Federal do Pernambuco, Brazil) </a>  </td>
-          <td class = "title">  
-            Socioeconomic benefits of the Brazilian INSS AtestMed programme       <br> <details>
-          <summary>Abstract (click to expand)</summary>
-          This study analyses forecast modelling with time series for INSS expenses related to the AtestMed programme within the Brazilian Welfare and Pension System. The AtestMed programme, a recent socioeconomic initiative by the Brazilian government, aims to manage benefit compensations due to temporary disability more efficiently. It is designed to improve and shorten delays in the processing and payment of compensations, leading to significant savings by reducing disability periods. The dataset used includes monthly monetary data from January 2021 to September 2024, adjusted for inflation according to the National Consumer Price Index (INPC). We examine the behaviour of INSS costs with and without the AtestMed programme, noting that it was implemented in July 2023. The methodology employs six different time series models (Simple, Holt and Holt-Winters Exponential Smoothing, ARMA, ARIMA and SARIMA) for analysing cost trends. By comparing the outcomes for total costs with and without AtestMed, this approach provides a deeper understanding of chronological as well as seasonal trends in INSS spending, anticipates variations, and optimises socioeconomic management. The forecasts generated from this study aim to enhance strategic decision-making within the scope of social security.
-         </details></td>
-      
-          <td>
-
-          </td>
-  </tr> 
-  
 
 
 
@@ -887,6 +790,54 @@ Through examples, we demonstrate the versatility of this framework in financial 
           </td>
   </tr> 
 
+    
+
+  <tr>
+    <td class = "date"><b>26 February 2025 3pm (UTC) </b> <br> In your local time:  <br>
+      <script type="text/javascript">
+        var date154 = new Date('2025-02-26T15:00:00Z');
+        var day154 = date154.getDate();
+        const monthNames154 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month154 = monthNames154[date154.getMonth()];
+        var year154 = date154.getFullYear();
+        var strTime154 = day154 + " " + month154 + " " +  year154;
+        document.write(strTime154);
+        const dtf154 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone154 = dtf154.formatToParts(date154).find((part) => part.type == 'timeZoneName').value;
+        var hours154 = date154.getHours();
+        var minutes154 = date154.getMinutes();
+        var ampm154 = hours154 >= 12 ? 'pm' : 'am';
+        hours154 = hours154 % 12;
+        hours154 = hours154 ? hours154 : 12; // the hour '0' should be '12'
+        minutes154 = minutes154 < 10 ? '0'+minutes154 : minutes154;
+        var strTime2154 = hours154 + ':' + minutes154 +ampm154 + ' ' + "(" +zone154+")";
+        document.write("<br>");
+        document.write(strTime2154);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Renata%20Alcoforado%20(Universidade%20Federal%20do%20Pernambuco%2C%20Brazil)&dates=20250226T150000Z/20250226T161000Z&details=Speaker%3A%20Renata%20Alcoforado%20(Universidade%20Federal%20do%20Pernambuco%2C%20Brazil)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="renata-alcoforado/20250226-owars-renata-alcoforado-universidade-federal-do-pernambuco-brazil-.ics" download>
+          Outlook calendar
+        </a>
+        
+          
+          </td>
+          
+          <td class = "speaker">
+         <a href="https://sigaa.ufpe.br/sigaa/public/docente/portal.jsf?siape=2186798" target="_blank"> Renata Alcoforado (Universidade Federal do Pernambuco, Brazil) </a>  </td>
+          <td class = "title">  
+            Socioeconomic benefits of the Brazilian INSS AtestMed programme       <br> <details>
+          <summary>Abstract (click to expand)</summary>
+          This study analyses forecast modelling with time series for INSS expenses related to the AtestMed programme within the Brazilian Welfare and Pension System. The AtestMed programme, a recent socioeconomic initiative by the Brazilian government, aims to manage benefit compensations due to temporary disability more efficiently. It is designed to improve and shorten delays in the processing and payment of compensations, leading to significant savings by reducing disability periods. The dataset used includes monthly monetary data from January 2021 to September 2024, adjusted for inflation according to the National Consumer Price Index (INPC). We examine the behaviour of INSS costs with and without the AtestMed programme, noting that it was implemented in July 2023. The methodology employs six different time series models (Simple, Holt and Holt-Winters Exponential Smoothing, ARMA, ARIMA and SARIMA) for analysing cost trends. By comparing the outcomes for total costs with and without AtestMed, this approach provides a deeper understanding of chronological as well as seasonal trends in INSS spending, anticipates variations, and optimises socioeconomic management. The forecasts generated from this study aim to enhance strategic decision-making within the scope of social security.
+         </details></td>
+      
+          <td>
+
+          </td>
+  </tr> 
+  
 
 </table>
 
