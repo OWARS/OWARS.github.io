@@ -206,113 +206,61 @@ height: 100%;
 
 
 
+<br>
 
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
-</h2>
+ <div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
 
-     
-
-
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="andreas-tsanakas/andreas-tsanakas-200px.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2025-05-14T15:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2025-05-14T15:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="https://www.bayes.citystgeorges.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank"> Andreas Tsanakas (City St George's, University of London, UK)
-</a>
-
-</div>
-
-<br>
 
 
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+
+
+
+
+
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/fpL4syck2nw">
+</iframe>
+
+
+
+    
+
+</div>
 
   
-<div class="col-md-8">
-  <b>Title:</b>
-
-  Sensitivity-based measures of discrimination in insurance pricing
-  <b>Abstract:</b>
-Different notions of fairness and discrimination have been extensively discussed in the machine learning, operations research, and insurance pricing literatures. As not all fairness criteria can be concurrently satisfied, metrics are needed that allow assessing the materiality of discriminatory effects and the trade-offs between various criteria. Methods from sensitivity analysis have been deployed for the measurement of demographic unfairness, that is, the statistical dependence of risk predictions on protected attributes. We produce a sensitivity-based measure for the distinct phenomenon of proxy discrimination, referring to the implicit inference of protected attributes from other covariates. For this, we first define a set of admissible prices that avoid proxy discrimination. Then, the measure is defined as the normalised $ L^2$-distance of a price from the closest element in that set. We use arguments from variance-based sensitivity analysis, to attribute the proxy discrimination measure to individual (or subsets of) covariates and investigate how properties of the data generating process are reflected in those metrics. Furthermore, we build on the global (i.e., portfolio-wide) measures of demographic unfairness and proxy discrimination to propose local (i.e., instance- or policyholder-specific) measures, which allow a fine-grained understanding of discriminatory effects. Finally, we apply the methods developed in the paper to a real-world insurance dataset, where ethnicity is a protected variable. We observe substantial proxy-discriminatory effects for one ethnic group and identify the key variables driving this.
+<div class="col-md-6">
+<b>Speaker: </b><a href="https://www.bayes.citystgeorges.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas (City St George's, University of London, UK)
+</a>
 <br>
+  <b>Title:</b>
+  Sensitivity-based measures of discrimination in insurance pricing <details>
+<summary>Abstract (click to expand)</summary>
+Different notions of fairness and discrimination have been extensively discussed in the machine learning, operations research, and insurance pricing literatures. As not all fairness criteria can be concurrently satisfied, metrics are needed that allow assessing the materiality of discriminatory effects and the trade-offs between various criteria. Methods from sensitivity analysis have been deployed for the measurement of demographic unfairness, that is, the statistical dependence of risk predictions on protected attributes. We produce a sensitivity-based measure for the distinct phenomenon of proxy discrimination, referring to the implicit inference of protected attributes from other covariates. For this, we first define a set of admissible prices that avoid proxy discrimination. Then, the measure is defined as the normalised $ L^2$-distance of a price from the closest element in that set. We use arguments from variance-based sensitivity analysis, to attribute the proxy discrimination measure to individual (or subsets of) covariates and investigate how properties of the data generating process are reflected in those metrics. Furthermore, we build on the global (i.e., portfolio-wide) measures of demographic unfairness and proxy discrimination to propose local (i.e., instance- or policyholder-specific) measures, which allow a fine-grained understanding of discriminatory effects. Finally, we apply the methods developed in the paper to a real-world insurance dataset, where ethnicity is a protected variable. We observe substantial proxy-discriminatory effects for one ethnic group and identify the key variables driving this.
 (joint with M. Lindholm, R. Richman, M. V. Wüthrich)
 
-<div class="col-md-4">
+</details>
 </div>
 
-</div>
+<div class="col-md-2">
+
 </div>
 
+
+
+</div>
+
+
+
+
+<br>
+<br>
 
 
 
