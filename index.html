@@ -207,119 +207,61 @@ height: 100%;
 
 
 
+<br>
 
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
 
-</h2>
+ <div class="heading" id="format">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
 
-     
-
-
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="kyunghyun-park/oda_11123019-1res.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2025-05-28T09:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2025-05-28T09:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="https://sites.google.com/view/kyunghyunpark" target="_blank">Kyunghyun Park (Nanyang Technological University, Singapore)
-</a>
-
-</div>
-
-<br>
 
 
 <div class="row row-grid">
 
+<div class="col-md-4">
+
+
+
+
+
+
+<iframe width="100%" height="315"
+src="https://www.youtube.com/embed/RTTSm0Le2p4">
+</iframe>
+
+
+
+    
+
+</div>
 
   
-<div class="col-md-6">
-  <b>Title:</b>
-
-  Mean-field game and control problems under uncertainty<br> 
-<b>Abstract:</b>
-In this talk, we explore frameworks for mean-field game and control problems under uncertainty. For mean-field games under uncertain transition probabilities, we prove the existence of a mean-field equilibrium and show that the resulting optimal policy forms an approximate Markov-Nash equilibrium in large non-cooperative N-agent systems under uncertainty. This part is based on joint work with Johannes Langner (Leibniz U. Hannover) and Ariel Neufeld (NTU Singapore). For mean-field control problems under common noise uncertainty, we establish a robust analog of the propagation of chaos between the cooperative N-agent model and mean-field control model with infinite population (i.e., conditional McKean-Vlasov system). We then prove the
-correspondence between the robust mean-field control problem and a lifted Markov-decision process on the space of probability measures under uncertainty, which leads to the characterization
-of robust open-loop policies. This part is based on joint work with Mathieu Laurière
-(NYU Shanghai) and Ariel Neufeld.
-      </div>
-
 <div class="col-md-4">
-</div>
+<b>Speaker: </b><a href="https://sites.google.com/view/kyunghyunpark" target="_blank">Kyunghyun Park (Nanyang Technological University, Singapore)
+</a>
+<br>
+  <b>Title:</b>
+  Mean-field game and control problems under uncertainty
+<br>
+  <b>Abstract </b>
+In this talk, we explore frameworks for mean-field game and control problems under uncertainty. For mean-field games under uncertain transition probabilities, we prove the existence of a mean-field equilibrium and show that the resulting optimal policy forms an approximate Markov-Nash equilibrium in large non-cooperative N-agent systems under uncertainty. This part is based on joint work with Johannes Langner (Leibniz U. Hannover) and Ariel Neufeld (NTU Singapore). For mean-field control problems under common noise uncertainty, we establish a robust analog of the propagation of chaos between the cooperative N-agent model and mean-field control model with infinite population (i.e., conditional McKean-Vlasov system). We then prove the correspondence between the robust mean-field control problem and a lifted Markov-decision process on the space of probability measures under uncertainty, which leads to the characterization of robust open-loop policies. This part is based on joint work with Mathieu Laurière (NYU Shanghai) and Ariel Neufeld.
+
 
 </div>
+
+<div class="col-md-2">
+
+</div>
+
+
+
 </div>
 
 
 
 
-
+<br>
+<br>
 
 
 
