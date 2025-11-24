@@ -201,8 +201,119 @@ height: 100%;
 
 <!-- change of mode (announce speaker/watch recording) from here. -->
 
+<div class="heading">
+  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+
+</h2>
+</div>
+
+     
 
 
+<div class="round" style="font-size:120%">
+
+<img class="img-responsive" src="andrew-cairns/andrewcairns.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
+
+<br>
+<b>When: </b>
+<script type="text/javascript"> 
+var date25 = new Date('2025-12-03T09:00:00Z')
+var day25 = date25.getDate();
+const monthNames25 = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+var month25 = monthNames25[date25.getMonth()];
+var year25 = date25.getFullYear();
+var strTime25 = day25 + " " + month25 + " " +  year25;
+localStorage.setItem('mytime0', strTime25);
+document.write(strTime25);
+document.write(" ");
+const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
+  var hours = date25.getHours();
+  var minutes = date25.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12; // the hour '0' should be '12'
+minutes = minutes < 10 ? '0'+minutes : minutes;
+var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
+localStorage.setItem('mytime1', strTime99);
+document.write(strTime99);
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("2025-12-03T09:00:00Z").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
+  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+ 
+  if (weeks > 0) {
+  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  }else if (weeks == 0 & distance>0) {
+    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Talk RUNNING";
+  } else if (distance <  (-1000 * 60 * 60)) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  };
+}, 1000);
+ 
+</script>
+
+<br>
+<b>Speaker: </b><a href="https://www.macs.hw.ac.uk/~andrewc/" target="_blank">Andrew Cairns (Heriot-Watt University, UK)
+</a>
+
+</div>
+
+<br>
+
+
+<div class="row row-grid">
+
+
+  
+<div class="col-md-6">
+  <b>Title:</b>
+
+  Modelling Mortality Inequalities in Scotland: The Index of Scottish Life Expectancy (THISLE)<br> 
+<b>Abstract:</b>
+Wen, Cairns and Kleinow (2023, 24; ASTIN & JRSS-A) introduced the Longevity Index for England (LIFE) using 
+socio-economic information about small neighbourhoods to predict mortality relative to national rates.
+In this talk, we discuss options to extend this to Scotland using a combination of publicly available census 
+and deprivation data as predictors. 
+We find that employment status and the level of educational attainment are important predictors.
+But other important predictors are marital status, and the presence of care homes. 
+We also find that the significance of these predictors varies by age and by sex. 
+Country of birth (or, as an alternative, national identity) has a smaller but still significant effect.
+We will discuss the interpretation of these findings and how the results can be combined with English
+data as we work towards a consistent, UK-wide version of the LIFE index.
+      </div>
+
+<div class="col-md-4">
+</div>
+
+</div>
+</div>
 
 
 <!-- End of change of mode here. -->
@@ -369,32 +480,32 @@ window.player = player;
 
 
 <tr>
-  <td class = "date"><b>28 May 2025 9am (UTC) </b> <br> In your local time:  <br>
+  <td class = "date"><b>3 December 2025 9am (UTC) </b> <br> In your local time:  <br>
     <script type="text/javascript">
-      var date158 = new Date('2025-05-28T09:00:00Z');
-      var day158 = date158.getDate();
-      const monthNames158 = ["January", "February", "March", "April", "May", "June",
+      var date159 = new Date('2025-12-03T09:00:00Z');
+      var day159 = date159.getDate();
+      const monthNames159 = ["January", "February", "March", "April", "May", "June",
                              "July", "August", "September", "October", "November", "December"];
-      var month158 = monthNames158[date158.getMonth()];
-      var year158 = date158.getFullYear();
-      var strTime158 = day158 + " " + month158 + " " +  year158;
-      document.write(strTime158);
-      const dtf158 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-      var zone158 = dtf158.formatToParts(date158).find((part) => part.type == 'timeZoneName').value;
-      var hours158 = date158.getHours();
-      var minutes158 = date158.getMinutes();
-      var ampm158 = hours158 >= 12 ? 'pm' : 'am';
-      hours158 = hours158 % 12;
-      hours158 = hours158 ? hours158 : 12; // the hour '0' should be '12'
-      minutes158 = minutes158 < 10 ? '0'+minutes158 : minutes158;
-      var strTime2158 = hours158 + ':' + minutes158 +ampm158 + ' ' + "(" +zone158+")";
+      var month159 = monthNames159[date159.getMonth()];
+      var year159 = date159.getFullYear();
+      var strTime159 = day159 + " " + month159 + " " +  year159;
+      document.write(strTime159);
+      const dtf159 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+      var zone159 = dtf159.formatToParts(date159).find((part) => part.type == 'timeZoneName').value;
+      var hours159 = date159.getHours();
+      var minutes159 = date159.getMinutes();
+      var ampm159 = hours159 >= 12 ? 'pm' : 'am';
+      hours159 = hours159 % 12;
+      hours159 = hours159 ? hours159 : 12; // the hour '0' should be '12'
+      minutes159 = minutes159 < 10 ? '0'+minutes159 : minutes159;
+      var strTime2159 = hours159 + ':' + minutes159 +ampm159 + ' ' + "(" +zone159+")";
       document.write("<br>");
-      document.write(strTime2158);
+      document.write(strTime2159);
       </script>
         
         <br>
-        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Kyunghyun%20Park%20(Nanyang%20Technological%20University%2C%20Singapore)&dates=20250528T090000Z/20250528T101000Z&details=Speaker%3A%20Kyunghyun%20Park%20(Nanyang%20Technological%20University%2C%20Singapore)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
-        <a href="kyunghyun-park/20250528-owars-kyunghyun-park-nanyang-technological-university-singapore-.ics" download>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Andrew%20Cairns%20(Heriot-Watt%20University%2C%20UK)&dates=20251203T090000Z/20251203T101000Z&details=Speaker%3A%20Andrew%20Cairns%20(Heriot-Watt%20University%2C%20UK)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+        <a href="andrew-cairns/20251203-owars-andrew-cairns-heriot-watt-university-.ics" download>
         Outlook calendar
       </a>
       
@@ -402,14 +513,20 @@ window.player = player;
         </td>
         
         <td class = "speaker">
-       <a href="https://sites.google.com/view/kyunghyunpark" target="_blank"> Kyunghyun Park (Nanyang Technological University, Singapore) </a>  </td>
+       <a href="https://www.macs.hw.ac.uk/~andrewc/" target="_blank"> Andrew Cairns (Heriot-Watt University, UK) </a>  </td>
         <td class = "title">  
-          Mean-field game and control problems under uncertainty<br> <details>
+          Modelling Mortality Inequalities in Scotland: <br> The Index of Scottish Life Expectancy (THISLE)<br> <details>
         <summary>Abstract (click to expand)</summary>
-        In this talk, we explore frameworks for mean-field game and control problems under uncertainty. For mean-field games under uncertain transition probabilities, we prove the existence of a mean-field equilibrium and show that the resulting optimal policy forms an approximate Markov-Nash equilibrium in large non-cooperative N-agent systems under uncertainty. This part is based on joint work with Johannes Langner (Leibniz U. Hannover) and Ariel Neufeld (NTU Singapore). For mean-field control problems under common noise uncertainty, we establish a robust analog of the propagation of chaos between the cooperative N-agent model and mean-field control model with infinite population (i.e., conditional McKean-Vlasov system). We then prove the
-        correspondence between the robust mean-field control problem and a lifted Markov-decision process on the space of probability measures under uncertainty, which leads to the characterization
-        of robust open-loop policies. This part is based on joint work with Mathieu Laurière
-        (NYU Shanghai) and Ariel Neufeld.
+        Wen, Cairns and Kleinow (2023, 24; ASTIN &amp; JRSS-A) introduced the Longevity Index for England (LIFE) using 
+        socio-economic information about small neighbourhoods to predict mortality relative to national rates.
+        In this talk, we discuss options to extend this to Scotland using a combination of publicly available census 
+        and deprivation data as predictors. 
+        We find that employment status and the level of educational attainment are important predictors.
+        But other important predictors are marital status, and the presence of care homes. 
+        We also find that the significance of these predictors varies by age and by sex. 
+        Country of birth (or, as an alternative, national identity) has a smaller but still significant effect.
+        We will discuss the interpretation of these findings and how the results can be combined with English
+        data as we work towards a consistent, UK-wide version of the LIFE index.
        </details></td>
     
         <td>
@@ -777,6 +894,56 @@ Through examples, we demonstrate the versatility of this framework in financial 
       
           <td>
   
+          </td>
+  </tr> 
+
+
+  <tr>
+    <td class = "date"><b>28 May 2025 9am (UTC) </b> <br> In your local time:  <br>
+      <script type="text/javascript">
+        var date158 = new Date('2025-05-28T09:00:00Z');
+        var day158 = date158.getDate();
+        const monthNames158 = ["January", "February", "March", "April", "May", "June",
+                               "July", "August", "September", "October", "November", "December"];
+        var month158 = monthNames158[date158.getMonth()];
+        var year158 = date158.getFullYear();
+        var strTime158 = day158 + " " + month158 + " " +  year158;
+        document.write(strTime158);
+        const dtf158 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
+        var zone158 = dtf158.formatToParts(date158).find((part) => part.type == 'timeZoneName').value;
+        var hours158 = date158.getHours();
+        var minutes158 = date158.getMinutes();
+        var ampm158 = hours158 >= 12 ? 'pm' : 'am';
+        hours158 = hours158 % 12;
+        hours158 = hours158 ? hours158 : 12; // the hour '0' should be '12'
+        minutes158 = minutes158 < 10 ? '0'+minutes158 : minutes158;
+        var strTime2158 = hours158 + ':' + minutes158 +ampm158 + ' ' + "(" +zone158+")";
+        document.write("<br>");
+        document.write(strTime2158);
+        </script>
+          
+          <br>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=%5BOWARS%5D%20Kyunghyun%20Park%20(Nanyang%20Technological%20University%2C%20Singapore)&dates=20250528T090000Z/20250528T101000Z&details=Speaker%3A%20Kyunghyun%20Park%20(Nanyang%20Technological%20University%2C%20Singapore)%0A%0AThe%20zoom%20link%20will%20be%20available%2015%20minutes%20before%20the%20seminar%20on%20the%20following%20link%3A%20https%3A%2F%2Fdocs.google.c%2Fom%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&location=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1ExsaDqghA0zJZZ-V4mBIT50W3_jmDJznfirjyz-EzC8%2Fedit%3Fts%3D5e9f9a01&trp=true&sf=true&output=xml#f" target="_blank">Google calendar</a>
+          <a href="kyunghyun-park/20250528-owars-kyunghyun-park-nanyang-technological-university-singapore-.ics" download>
+          Outlook calendar
+        </a>
+      
+        
+          </td>
+        
+          <td class = "speaker">
+         <a href="https://sites.google.com/view/kyunghyunpark" target="_blank"> Kyunghyun Park (Nanyang Technological University, Singapore) </a>  </td>
+          <td class = "title">  
+          Mean-field game and control problems under uncertainty<br> <details>
+          <summary>Abstract (click to expand)</summary>
+          In this talk, we explore frameworks for mean-field game and control problems under uncertainty. For mean-field games under uncertain transition probabilities, we prove the existence of a mean-field equilibrium and show that the resulting optimal policy forms an approximate Markov-Nash equilibrium in large non-cooperative N-agent systems under uncertainty. This part is based on joint work with Johannes Langner (Leibniz U. Hannover) and Ariel Neufeld (NTU Singapore). For mean-field control problems under common noise uncertainty, we establish a robust analog of the propagation of chaos between the cooperative N-agent model and mean-field control model with infinite population (i.e., conditional McKean-Vlasov system). We then prove the
+          correspondence between the robust mean-field control problem and a lifted Markov-decision process on the space of probability measures under uncertainty, which leads to the characterization
+          of robust open-loop policies. This part is based on joint work with Mathieu Laurière
+          (NYU Shanghai) and Ariel Neufeld.
+         </details></td>
+    
+          <td>
+
           </td>
   </tr> 
 
