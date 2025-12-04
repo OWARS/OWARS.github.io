@@ -2,175 +2,165 @@
 <html>
 <head>
 
-
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
-
-
-
-<script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
- <script>
-      document.addEventListener('DOMContentLoaded', () => {
-          const player = Plyr.setup('.js-player');
-      });
-</script>
-
-
-<style>
-html {
-  font-size: 14px;
-}
-</style>
-
-<style>
-html {
-  margin: 20px;
-}
-</style>
-
-<style>
-html {
-  margin-left: 40px;
-}
-</style>
-
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OWARS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>OWARS</title>
-<!--  <link rel="stylesheet" href="/Steely.css" type="text/css"> -->
-
-
 <style>
-* {
-  box-sizing: border-box;
-}
+  html {
+    font-size: 14px;
+  }
 
-.column {
-  float: left;
-  padding: 5px;
-}
+  body {
+    margin: 0;
+    font-family: 'Didact Gothic', 'Bahnschrift Light', sans-serif;
+    color: DarkSlateGrey;
+    background-color: #f8f9fa;
+    background-image: radial-gradient(circle at top left, #e9f5ff 0, #f8f9fa 55%);
+  }
 
-</style>
+  * {
+    box-sizing: border-box;
+  }
 
-  <style>
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  hr {
+    color: DarkCyan;
+  }
+
+  div.heading {
+    border-left: 4px solid DarkCyan;
+    padding-left: 10px;
+    margin: 2rem 0 1rem;
+  }
+
+  h2 {
+    margin: 10px 0;
+  }
+
+  a {
+    color: DarkCyan;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: LightBlue;
+    text-decoration: underline;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 10px;
+  }
+
+  table.table1 tr:nth-child(even) {
+    background-color: Lavender;
+  }
+
+  /* Ensure consistent column widths across all talk tables */
+  table.table1 td.date,
+  table.table1 th:nth-child(1) {
+    width: 22%;
+  }
+
+  table.table1 td.speaker,
+  table.table1 th:nth-child(2) {
+    width: 23%;
+  }
+
+  table.table1 td.title,
+  table.table1 th:nth-child(3) {
+    width: 35%;
+  }
+
+  table.table1 td.misc,
+  table.table1 th:nth-child(4) {
+    width: 20%;
+  }
+
   div.round img {
-  border-radius: 50%;
-}
-</style>
+    border-radius: 50%;
+  }
 
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+  }
 
-<style>
+  .navbar li {
+    float: left;
+  }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-th, td {
-  text-align: left;
-  padding: 10px;
-}
-td.date {
-  width: 250px;
-}
-td.speaker {
-  width: 200px;
-}
-td.title {
-  width: 500px;
-}
-td.misc {
-  width: 400px;
-}
+  .navbar li a {
+    display: block;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: DarkSlateGrey;
+    font-weight: 500;
+  }
 
+  .navbar li a:hover {
+    background-color: #f1f3f5;
+    color: DarkCyan;
+  }
 
-table.table1 tr:nth-child(even) {background-color: Lavender;}
+  @media (max-width: 576px) {
+    .navbar li {
+      float: none;
+    }
+  }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-h1 {text-align: center;}
-hr {color: DarkCyan;}
-body {
-  background-color: White;
-  margin-left: 40px;
-  margin-right: 40px;
-  font-family: 'Didact Gothic', 'Bahnschrift Light',sans-serif;
-  color: DarkSlateGrey;
+  .page-header {
+    background: linear-gradient(135deg, #e9f5ff 0%, #ffffff 100%);
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem 1rem;
+    margin-bottom: 1.75rem;
+    border: 1px solid #e9ecef;
+  }
 
-}
+  .page-header h1 {
+    margin-bottom: 0.5rem;
+  }
 
+  .page-header .lead {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 0.75rem;
+  }
 
-div.heading {
-  border-left-style: solid;
-  border-left-color: DarkCyan;
-  border-left-width: medium;
+  .hero-actions {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
 
-}
-h2 {margin: 10px;}
-
-a:hover {color: LightBlue;}
-a {
-  color: DarkCyan;
-  text-decoration: none;
-}
-</style>
-
-
-
-<style>
-div.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #1111;
-}
-
-div.navbar li {
-  float: left;
-}
-
-div.navbar li a {
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-div.navbar li a:hover {
-  background-color: #111;
-}
-</style>
-
-
-<style>
-div.videobox {
-  border: 5px solid darkblue;
-  height: 150px;
-  width: 150p ;
-}
-</style>
-
-<style>
-body {
-	margin: 0;
-}
-
-.plyr {
-height: 100%;
-}
-
-#wrapper{
-  justify-content:center;
-  width:100%;
-  height: 250px;
-  background-color: green;
-}
+  .hero-actions .btn {
+    margin: 0 0.25rem;
+  }
 </style>
 
 </head>
@@ -183,11 +173,14 @@ height: 100%;
 
 
 <body>
-
-<br>
-<h1>One World Actuarial Research Seminar</h1>
-  <div class="navbar">
-
+<div class="container py-4">
+  <div class="bg-white p-4 p-md-5 shadow-sm rounded">
+    <div class="page-header">
+      <h1>One World Actuarial Research Seminar</h1>
+      <p class="lead text-center mb-2">
+        A global online seminar series connecting researchers in actuarial science.
+      </p>
+      <div class="navbar mb-2">
 <ul>
       <li><a href="#format">Format</a></li>
   <li><a class="active" href="#howto">How to join</a></li>
@@ -197,124 +190,52 @@ height: 100%;
   <li><a href="#other">Other One World Seminars</a></li>
 </ul>
 </div>
-<hr>
+    </div>
 
 <!-- change of mode (announce speaker/watch recording) from here. -->
 
-<div class="heading">
-  <h2 style="clear:left" >Next Speaker  <p style="display:inline;font-size: 14px" id="demo"></p>
+<br>
 
-</h2>
+
+<div class="heading" id="recording">
+  <h2 style="clear:left" > Recording of last talk </h2> 
 </div>
-
-     
-
-
-<div class="round" style="font-size:120%">
-
-<img class="img-responsive" src="andrew-cairns/andrewcairns.jpg" alt="Avatar" height="120" align='left' border-radius= "50%" >
-
-<br>
-<b>When: </b>
-<script type="text/javascript"> 
-var date25 = new Date('2025-12-03T09:00:00Z')
-var day25 = date25.getDate();
-const monthNames25 = ["January", "February", "March", "April", "May", "June",
-                      "July", "August", "September", "October", "November", "December"];
-var month25 = monthNames25[date25.getMonth()];
-var year25 = date25.getFullYear();
-var strTime25 = day25 + " " + month25 + " " +  year25;
-localStorage.setItem('mytime0', strTime25);
-document.write(strTime25);
-document.write(" ");
-const dtf12 = Intl.DateTimeFormat(undefined, {timeZoneName: 'long'});
-  var zone12 = dtf12.formatToParts(date25).find((part) => part.type == 'timeZoneName').value;
-  var hours = date25.getHours();
-  var minutes = date25.getMinutes();
-  var ampm = hours >= 12 ? 'pm' : 'am';
-hours = hours % 12;
-hours = hours ? hours : 12; // the hour '0' should be '12'
-minutes = minutes < 10 ? '0'+minutes : minutes;
-var strTime99 = hours + ':' + minutes +ampm + ' ' + "(" +zone12+")";
-localStorage.setItem('mytime1', strTime99);
-document.write(strTime99);
-</script>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2025-12-03T09:00:00Z").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var weeks = Math.floor(distance / (1000 * 60 * 60 * 24*7));
-  var days = Math.floor(distance % (1000 * 60 * 60 * 24*7) / (1000 * 60 * 60*24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
- 
-  if (weeks > 0) {
-  document.getElementById("demo").innerHTML = weeks + " week " + days + " days " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  }else if (weeks == 0 & distance>0) {
-    document.getElementById("demo").innerHTML =  days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  } else if (distance <= 0 & distance >= - (1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Talk RUNNING";
-  } else if (distance <  (-1000 * 60 * 60)) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  };
-}, 1000);
- 
-</script>
-
-<br>
-<b>Speaker: </b><a href="https://www.macs.hw.ac.uk/~andrewc/" target="_blank">Andrew Cairns (Heriot-Watt University, UK)
-</a>
-
-</div>
-
-<br>
-
 
 <div class="row row-grid">
+  <div class="col-12 col-md-5 mb-3 mb-md-0">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item"
+              src="https://www.youtube.com/embed/KeiEZcqw_98"
+              allowfullscreen></iframe>
+    </div>
+  </div>
 
-
-  
-<div class="col-md-6">
-  <b>Title:</b>
-
-  Modelling Mortality Inequalities in Scotland: The Index of Scottish Life Expectancy (THISLE)<br> 
-<b>Abstract:</b>
-Wen, Cairns and Kleinow (2023, 24; ASTIN & JRSS-A) introduced the Longevity Index for England (LIFE) using 
-socio-economic information about small neighbourhoods to predict mortality relative to national rates.
-In this talk, we discuss options to extend this to Scotland using a combination of publicly available census 
-and deprivation data as predictors. 
-We find that employment status and the level of educational attainment are important predictors.
-But other important predictors are marital status, and the presence of care homes. 
-We also find that the significance of these predictors varies by age and by sex. 
-Country of birth (or, as an alternative, national identity) has a smaller but still significant effect.
-We will discuss the interpretation of these findings and how the results can be combined with English
-data as we work towards a consistent, UK-wide version of the LIFE index.
-      </div>
-
-<div class="col-md-4">
+  <div class="col-12 col-md-7">
+    <p class="mb-2">
+      <strong>Speaker:</strong>
+      <a href="https://www.macs.hw.ac.uk/~andrewc/" target="_blank">Andrew Cairns (Heriot-Watt University, UK)</a>
+    </p>
+    <p class="mb-2">
+      <strong>Title:</strong>
+      Modelling Mortality Inequalities in Scotland: The Index of Scottish Life Expectancy (THISLE)
+    </p>
+    <p class="mb-2"></p>
+      <strong>Abstract </strong>
+        Wen, Cairns and Kleinow (2023, 24; ASTIN &amp; JRSS-A) introduced the Longevity Index for England (LIFE) using
+        socio-economic information about small neighbourhoods to predict mortality relative to national rates.
+        In this talk, we discuss options to extend this to Scotland using a combination of publicly available census
+        and deprivation data as predictors.
+        We find that employment status and the level of educational attainment are important predictors.
+        But other important predictors are marital status, and the presence of care homes.
+        We also find that the significance of these predictors varies by age and by sex.
+        Country of birth (or, as an alternative, national identity) has a smaller but still significant effect.
+        We will discuss the interpretation of these findings and how the results can be combined with English
+        data as we work towards a consistent, UK-wide version of the LIFE index.
+      </p>
+  </div>
 </div>
 
-</div>
-</div>
-
+<br>
 
 <!-- End of change of mode here. -->
 
@@ -325,18 +246,17 @@ data as we work towards a consistent, UK-wide version of the LIFE index.
   <h2 style="clear:left" >Format</h2>
 </div>
 
-<l>
+<ul>
 <li>Talk: 50min Q&amp;A: 20min</li>
 <li>Wednesday fortnightly</li>
 <li>Rotating time slots to accommodate researchers from all time zones</li>
-</l>
+</ul>
 
 
-<l>
 <div class="heading" id="howto">
   <h2 style="clear:left">How to join</h2>
 </div>
-<l>
+<ul>
 
 <p style="font-family:Helvetica Neue;font-size: 14px">
 </p><li>We will use Zoom.</li>
@@ -429,7 +349,7 @@ function submitForm() {
 <a href="mailto:mh@math.ku.dk">mh@math.ku.dk</a>. </b> <br>
 You can unsubscribe <a href="https://mailinglist.owars.info/?p=unsubscribe" target="_blank">here</a>
 </li>
-</l>
+</ul>
 
 
 
@@ -4835,7 +4755,7 @@ The talk aims to present the highlights of a related series of papers and state 
 <p></p><hr><p id="organizers">
 
 </p><h3>Organizers</h3>
-<l>
+<ul>
   <li><a href="https://jennifer.alonso.garcia.web.ulb.be/ " target="_blank">Jennifer Alonso García</a> (Department of Mathematics, Université Libre de Bruxelles)</li>
   <li><a href="https://mhiabu.github.io/index.html" target="_blank">Munir Hiabu</a> (Department of Mathematical Sciences, University of Copenhagen)</li>
 <li><a href="https://www.cass.city.ac.uk/faculties-and-research/experts/pietro-millossovich" target="_blank">Pietro Millossovich</a> (Cass Business School, City, University of London; DEAMS, University of Trieste)</li>
@@ -4843,7 +4763,7 @@ The talk aims to present the highlights of a related series of papers and state 
 <li><a href="https://www.cass.city.ac.uk/faculties-and-research/experts/andreas-tsanakas" target="_blank">Andreas Tsanakas</a> (Cass Business School, City, University of London)</li>
 <li><a href="https://www.business.unsw.edu.au/our-people/andresvillegas" target="_blank">Andrés Villegas</a> (School of Risk and Actuarial Studies, University of New South Wales)
 </li>
-</l>
+</ul>
 
 </p><h3 id="scientific">Scientific Advisory Board</h3>
 Arnold-Gaille,	Séverine	(Université de Lausanne)
@@ -4914,7 +4834,7 @@ Wüthrich,	Mario	(ETH Zurich)
 <br><hr><p>
 
 </p><h3  id="other">Other Online Seminar Initiatives</h3>
-<l>
+<ul>
   <li><a href="https://www.wim.uni-mannheim.de/doering/one-world/" target="_blank">One World Probability Seminar</a> (One World name credit)</li>
 <li><a href="https://people.bath.ac.uk/mw2319/owpde/" target="_blank">One World PDE Seminar</a></li>
 <li><a href="https://sites.google.com/view/waves-ow/home">Waves in One World</a>
@@ -4939,13 +4859,9 @@ Wüthrich,	Mario	(ETH Zurich)
 <li><a href="http://www.iamp.org/page.php?page=page_seminar">One World Mathematical Physics Seminar</a></li>
 <li><a href="http://www.maths.usyd.edu.au/u/Asia-Pacific-APDESeminar/">Asia-Pacific Analysis and PDE Seminar</a></li>
 
-</l>
+</ul>
 
-
-
-
-
-
-
+</div>
+</div>
 </body>
 </html>
